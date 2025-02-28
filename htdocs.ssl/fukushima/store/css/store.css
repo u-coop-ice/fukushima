@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+
+#pagebody {
+    margin: 0 auto;
+    padding: 0 0 150px 0;
+		}
+
+/* 店舗画像
+---------------------------------------------------- */
+.s_name {
+  position: relative;
+  }
+
+.s_name p {
+  position: absolute;
+  color:#222;
+ font-weight: bold;
+  font-size: 1.3em;
+  bottom: 0;
+  right: 0;
+  padding: 5px 0px 4px 10px;
+  background: #fff;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+.s_name p {
+  font-size: 1em;
+  padding: 5px 0px 4px 10px;
+  text-transform: uppercase;
+}
+}
+
+@media (max-width: 480px) {
+.s_name p {
+  font-size: 0.9em;
+  padding: 1px 0px 1px 3px;
+  text-transform: uppercase;
+}
+}
+
+@media (max-width: 320px) {
+.s_name p {
+  font-size: 0.7em;
+}
+
+.s_name img {
+  width: 100%;
+  }
+}
+
+

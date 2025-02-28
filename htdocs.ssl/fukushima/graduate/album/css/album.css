@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* ----------------------------------------
+ * 追加
+ * ---------------------------------------- */
+.top_space10 {
+    margin-top: 10px;
+}
+.top_space20 {
+    margin-top: 20px;
+}
+.top_space30 {
+    margin-top: 30px;
+}
+.top_space40 {
+    margin-top: 40px;
+}
+.rev_ind07 {		/* 段落の頭 1文字分マイナス ※マーク使用時など */
+	padding: 0 0 0 0.7em;
+	text-indent: -0.7em;
+}
+
+#content .box dl {
+    margin: 0em 0;
+	padding: 0 0.5em;
+}
+#content .box dl dd {
+    padding-left: 1em;
+    margin-bottom: 0.6em;
+    line-height: 1.5;
+}
+#content .box ul, #content .box ol {
+    margin: 0;
+    margin-bottom: 0px;
+}
+@media (max-width: 767px) {
+h2 {			/* コンテンツタイトル用 */
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+	padding-bottom: 3px;
+	font-size: 150%;
+	border-bottom: 4px solid #aaa;
+}
+#content .box dl dd {
+    padding-left: 0em;
+    margin-bottom: 0.6em;
+    line-height: 1.5;
+}
+.box {
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #cccccc;
+}
+#content dl dd {
+    padding-left: 0em;
+    margin-bottom: 0.6em;
+    line-height: 1.5;
+}
+}
+
+
+/* ----------------------------------------
+ * topボタン関係
+ * ---------------------------------------- */
+.topmenu .label {
+    padding: 0.05em 1em;
+    line-height: 1.5;
+	margin-left: 5px;
+}
+.topmenu .btn {
+	font-size: 1.5em;
+    padding: 9px 5px;
+	box-shadow: none;
+	background: repeating-linear-gradient(to top, #27A7CB, #27A7CB, #32ACCE 1.5px, #75CCE4 3px);
+}
+@media (max-width: 768px) {
+.topmenu .btn {
+	font-size: 1.3em;
+    padding: 6px 5px;
+	box-shadow: none;
+}
+}
+.label-default.label-outline {
+  background-color:#fff;
+  border: solid 0px #666666;
+  color : #27A7CB;
+}
+.label-default[href]:hover, .label-default[href]:focus {
+  color: #fff;
+}
+.btn-square.btn-aqua        {background-color:#27A7CB;border:1px solid #27A7CB;color:#FFF;}
+.btn-square.btn-aqua:hover,
+.btn-square.btn-aqua:active {color:#FFF;background:#197f9e;border:1px solid #197f9e;background: repeating-linear-gradient(to top, #197f9e, #197f9e, #197f9e 1.5px, #32A0C2 3px);}
+
+
+
+/* ----------------------------------------
+ * スマホでの表の表示切り替え
+ * ---------------------------------------- */
+#content table.tblFull th, table.tblFull td {
+    margin: 0;
+    padding: 4px;
+    vertical-align: middle;
+    border-top: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    line-height: 1.4;
+}
+
+#content  .res_table table.tblFull {
+    border-bottom: 1px solid #dcdcdc;
+}
+#content  .res_table table.tblFull th {
+    padding: 8px;
+    line-height: 1.5;
+    vertical-align: middle;
+    text-align: center;
+}
+#content  .res_table table.tblFull td{
+    padding: 8px;
+    line-height: 1.5;
+    vertical-align: middle;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+#content .res_table table.tblFull td, #content  .res_table table.tblFull th {
+    padding: 8px 4px;
+    line-height: 1.5;
+    vertical-align: middle;
+    text-align: left;
+}
+#content .res_table table.tblFull {
+    border-bottom: 1px solid #dcdcdc;
+}
+#content .res_table table.tblFull td {
+    background-color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#content .res_table table.tblFull td .indent {
+    background-color: #FFFFFF;
+    padding-left: 3.7em;
+    padding-right: 1em;
+    text-indent: -3.2em;
+}
+#content .res_table table.tblFull td.title {
+    background-color: #f4f4f4;
+    padding-left: 5px;
+    border-bottom: 1px solid #dddddd;
+    text-indent:-2em;
+    padding-left:2em;
+
+}
+#content .res_table table.tblFull th.title {
+    background-color: #f4f4f4;
+    padding-left: 5px;
+    border-bottom: 1px solid #dddddd;
+    text-indent:-2em;
+    padding-left:2em;
+}
+#content table.tblFull th {
+    border-top: 1px solid #dcdcdc; 
+}
+#content .res_table table.tblFull td {
+    border-top: 0px solid #dcdcdc; 
+}
+#content table.tblFull td .td_bottom{
+    border-bottom: 1px solid #dcdcdc; 
+}
+#content .res_table table.tblFull td .td_top{
+    border-top: 1px solid #dcdcdc; 
+}
+#content .res_table table.tblFull tr.tr_top{
+    border-top: 1px solid #dcdcdc; 
+}
+#content .res_table table.tblFull td .td_bottom_b{
+    border-bottom: 3px solid #dcdcdc; 
+}
+
+ .res_table {
+    border-collapse: separate;
+    border-spacing: 0  20px;
+    margin:10px 5px;
+  }
+  .res_table thead {
+    display: none;
+  }
+  .res_table tr {
+    background-color: #f6f6f6;
+  }
+  .res_table td {
+    border: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .res_table td.col-6 {
+    float: left;
+    width: 50%;
+  }
+  .res_table td.txt-right {
+    text-align: right;
+  }
+  .res_table td:before {
+    content: attr(data-title) " ";
+  }
+    .res_table th {
+    border: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .res_table th.col-6 {
+    float: left;
+    width: 50%;
+  }
+  .res_table th.txt-right {
+    text-align: right;
+  }
+  .res_table th:before {
+    content: attr(data-title) " ";
+  }
+  .res_table .clear {
+    clear: both;
+  }
+}
+
+/* ----------------------------------------
+ * ページ内リンク
+ * --------------------------------------- */
+
+span.link-t-a {
+	position: relative;
+	top: 10px;/*左の数値を変えると、上下に調整します*/
+	display: block;
+}
+
+@media (max-width: 767px) {
+span.link-t-a {
+	position: relative;
+	top: 80px;/*左の数値を変えると、上下に調整します*/
+	display: block;
+}
+}
+
+

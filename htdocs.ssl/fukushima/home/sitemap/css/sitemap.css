@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+
+/* -----------------------------------------------
+
+	サイトマップ設定
+
+----------------------------------------------- */
+.container h1{
+	font-size: 36px;
+	text-align: center;
+	font-weight: bold;
+	padding: 15px 0;
+}
+.bloCol2{
+	display: flex;
+	justify-content: space-between;
+}
+.colLeft{
+	width: 45%;
+}
+.colRight{
+	width: 45%;
+}
+
+#content a{
+	text-decoration: none;
+}
+#content .hd a{
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+#content .hd a:hover{
+	text-decoration: underline;
+}
+.bloLineRound{
+	border: solid 1px #CCCCCC;
+	padding: 25px;
+	margin-bottom:20px;
+}
+#content.container ul.ulLink {
+    list-style: none;
+		padding-left: 0;
+}
+
+#content.container ul.ulLink ul {
+    list-style: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+#content.container ul.ulLink li {
+	padding: 1em 0 2px 0;
+}
+#content.container ul.ulLink li li {
+	padding: 2px 0 2px 16px;
+	background: url(..//images/arrow_blue_01.png) no-repeat 3px 0.6em;
+}
+#content.container ul.ulLink li li {
+	border-bottom: 1px dashed #888;
+}
+
+.container ul.ulLink >li > a{
+	font-size: 18px;
+	color: #333;
+	text-decoration: none;
+}
+
+.container ul.ulLink li > a > li > a{
+	font-size: 16px;
+	color: #333;
+	text-decoration: none;
+}
+.container ul.ulLink li a:hover{
+	text-decoration: underline;
+}
+a.linkBlank:after {
+	display: inline-block;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	background-position: 50%!important;
+	background-size: contain!important;
+	color: transparent;
+	text-indent: -9999px;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-left: 5px;
+	margin-right: 5px;
+	content: "";
+}
+a.linkBlank:after {
+	background: url(/shared/images/products/resp_icon_blank.png) no-repeat 0 0;
+	content: "別ウィンドウで開く";
+}
+/* SP */
+@media print, screen and (max-width: 767px) {
+	div.containerMain h1 {
+		font-size: 26px;
+	}
+	.colLeft{
+		width: 100%;
+	}
+	.colRight{
+		width: 100%;
+	}
+	.bloCol2{
+		display: block;
+	}
+}

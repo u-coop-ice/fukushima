@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+#content dl {
+	margin: 5px auto 5px 1em;
+}
+
+#content dl dt {
+}
+
+#content dl dd {
+	font-size: 100%;
+}
+
+
+#content dl.caption {
+	margin-left: 15px;
+	width: 100%;
+}
+
+#content dl.caption dt {
+	float: left;
+	width: 105px;
+}
+

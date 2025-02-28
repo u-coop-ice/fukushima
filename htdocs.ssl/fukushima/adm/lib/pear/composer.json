@@ -1,0 +1,19 @@
+{
+  "repositories": [
+    {
+        "type": "pear",
+        "url": "https://pear.php.net"
+    }
+  ],
+  "require": {
+    "pear-pear.php.net/pear": "*@stable",
+    "pear-pear.php.net/log": "*@stable",
+    "pear-pear.php.net/date_holidays": "*@alpha",
+    "pear-pear.php.net/date_holidays_japan": "0.1.2",
+    "pear-pear.php.net/http_session2": "*@beta",
+    "pear-pear.php.net/text_password": "*@stable",
+    "pear-pear.php.net/auth": "*@stable",
+    "pear-pear.php.net/calendar": "*",
+    "pear-pear.php.net/net_useragent_mobile": "*"
+  }
+}

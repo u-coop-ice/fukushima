@@ -1,0 +1,40 @@
+{assign var='page_title' value='サインイン'}
+{include file='header.tpl'}
+
+<div class="login">
+<div class="login-inner">
+<div class="center">
+<h5>
+<div class="logo-icon"><i class="fa fa-cogs"></i></div>{$page_title}</h5>
+
+
+<form method="post" action="{$self}{$query}">
+
+<div class="form-group">
+<label>
+<input type="text" name="username" id="username" class="form-control input-lg" placeholder="管理ユーザー名" value="{$post_username}"  />
+</label>
+</div>
+
+<div class="form-group">
+<label>
+<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" />
+</label>
+</div>
+
+
+<div class="row">
+<div class="col-xs-12 col-sm-12">
+<input class="btn btn-success btn-block" type="submit" name="login" value="サインイン" />
+</div>
+</div>
+</form>
+
+
+</div>
+
+
+</div>
+</div>
+
+{include file='footer.tpl'}

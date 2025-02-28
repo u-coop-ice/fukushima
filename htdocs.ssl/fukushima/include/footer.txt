@@ -1,0 +1,53 @@
+
+
+</div><!-- /content -->
+
+<div class="clear"></div>
+
+</div><!-- /container -->
+
+
+
+</div><!-- /pagebody -->
+
+
+
+
+
+
+<div id="global_footer">
+
+
+<!-- start of footer -->
+<div id="footer" class="container">
+
+<div id="footer_inner">
+
+
+<!-- ページTOPへジャンプ -->
+<p id="page2top">
+<a href="#wrapper" title="back to top"><i class="fa fa-chevron-up"></i></a>
+</p>
+
+
+<ul class="footer_nav">
+<li><a href="/home/privacypolicy/" class="leftside">プライバシー・ポリシー</a></li>
+<?php /*<li><a href="/app/user/?mode=membership">サイト利用規約</a></li>*/ ?>
+<li><a href="/store/#store_ask" title="お問い合わせ">お問い合わせ</a></li>
+<li><a href="/home/sitemap/" title="サイトマップ">サイトマップ</a></li>
+</ul>
+
+<p id="copyright">&copy; 2012- <?php echo(COOPNAME_EN);?></p>
+
+</div><!-- /footer_innner -->
+
+</div><!-- /footer -->
+
+</div><!-- /globalfooter -->
+
+
+
+</div><!-- /wrapper -->
+
+</body>
+</html>

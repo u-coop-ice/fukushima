@@ -1,0 +1,99 @@
+<!-- jquery -->
+
+<script type="text/javascript" src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.easing.1.3.js"></script>
+
+
+<link rel="stylesheet" href="/js/jquery/jquery.flexnav/jquery.flexnav.newlife.css" type="text/css" media="screen,print" />
+<script type="text/javascript" src="/js/jquery/jquery.flexnav/jquery.flexnav.tabnav.js"></script>
+
+
+<link type="text/css" href="/js/jquery/jquery.fancybox2/jquery.fancybox.css" rel="stylesheet" media="screen,print" />
+<script type="text/javascript" src="/js/jquery/jquery.fancybox2/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript" src="/js/jquery/jquery.cookie/jquery.cookie.js"></script>
+
+
+
+<link type="text/css" href="/css/import.css" rel="stylesheet" media="screen,print" />
+
+<script type="text/javascript" src="/css/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/lib/common.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+<?php
+if (!$is_login){
+?>
+
+$(function(){
+  $(".entry_step").each(function(){
+    $(this).fancybox({
+  padding: 10,
+  scrolling   : 'auto',
+  titleShow   : false,
+  width: $('window').innerWidth()*0.9,
+  maxWidth: 600,
+  height: $('window').innerHeight()*0.8,
+  minHeight: $('window').innerHeight()*0.5,
+  });
+
+  });
+});
+
+
+<?php
+}
+?>
+
+<?php
+if (SWITCH_MB){
+?>
+
+$(function(){
+//  tempURL = location.protocol + "//" + location.hostname + location.pathname;
+  var tempURL = "https://" + location.hostname + location.pathname+location.search;
+  tempURL = encodeURI(tempURL);
+  $("#login").fancybox({
+  'padding': 20,
+//  'width': $('window').innerWidth()*1.0,
+  'maxWidth': 380,
+//  'height': $('window').innerHeight()*1.0,
+<?php
+if ($_SESSION['config']['inherit']){
+?>
+  'maxHeight': 400,
+<?php
+} else {
+?>
+  'maxHeight': 320,
+<?php
+}
+?>
+  'autoSize': false,
+  'autoHeight': false,
+  'scrolling'   : 'no',
+  'type'    : 'iframe',
+  'href'  : "/app/user/signin.php?tempURL="+tempURL
+  });
+});
+
+<?php
+}
+?>
+
+//]]>
+</script>
+
+<!-- GA -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '<?php echo GOOGLE_CODE;?>', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- /GA -->
+

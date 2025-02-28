@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="keywords" content="福島大学,福島大,福島大学生協,福島大学生活協同組合,生協" />
+<meta name="description" content="福島大学生協は、受験生や在校生の皆さんの学生生活をサポートしています。店舗のご案内、受験・入学時のサポート、購買、食、旅行、共済、ショッピング、各種サービスなど。" />
+
+<title><?php if($title_text){echo $title_text;}echo(COOPNAME);?></title>
+
+

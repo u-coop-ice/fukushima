@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@import "./base.css";
+@import "./form.css";
+
+@media (min-width: 769px) {
+
+#global_header {
+	margin: 0;
+	height: 90px;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+#overheader {
+	position: absolute;
+	width: 100%;
+	bottom:0px;
+	height:32px;
+}
+
+#contentheader {
+	position: relative;
+	margin: 0 auto;
+	padding:0;
+	padding-top: 95px;
+	padding-bottom: 8px;
+}
+
+#global_tab #tab ul.flexnav li > ul {
+display: none;
+}
+#global_tab #tab ul.flexnav li > ul li {
+display: none;
+}
+}
+
+@media (max-width: 768px) {
+}

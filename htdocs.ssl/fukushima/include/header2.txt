@@ -1,0 +1,112 @@
+</head>
+
+<body>
+
+
+
+<div id="wrapper">
+
+
+<div id="pagebody">
+
+
+<!-- header -->
+<div id="global_header">
+<div id="header" class="container">
+<div id="header_inner" class="container">
+
+<h1><a href="/"><?php echo(COOPNAME);?> <?php echo(COOPNAME_EN);?></a></h1>
+
+
+
+<div id="status_header">
+<ul class="status">
+
+
+<?php
+//include('setting.php');
+?>
+<li class="navy"><a href="https://newlife.u-coop.or.jp/fukushima/" target="_blank">受験生・新入生はこちら</a></li>
+
+<?php
+/*
+<li><a href="/home/sitemap/" title="サイトマップ"><i class="fa fa-fw fa-sitemap"></i>サイトマップ</a></li>
+*/
+?>
+
+<li><a href="/store/#store_ask" title="お問い合わせ">お問い合わせ</a></li>
+
+<?php
+if($is_login){
+?>
+<li><a href="/app/user/?mode=list_mail" title="生協からのメッセージ">メッセージ
+<?php if($app_add['ct']){echo('<span class="cart_content">'.$app_add['ct'].'</span>');}?>
+</a></li>
+<?php
+}
+?>
+
+
+
+
+
+</ul>
+
+</div><!-- status_header -->
+</div><!-- /inner_header -->
+
+
+<div class="menu-button">
+<span class="icon"><i class="fa fa-bars"></i></span>
+menu</div>
+
+</div><!-- /header -->
+
+
+<div id="overheader">
+
+<div id="global_tab">
+
+<!-- tab -->
+<div id="tab">
+<ul class="flexnav" data-breakpoint="768">
+
+<?php
+include($_SERVER['DOCUMENT_ROOT'].'/include/tabmenu_s.txt');
+?>
+
+</ul><!-- /tab -->
+
+</div>
+
+
+
+<div class="clear"></div>
+
+</div><!-- /global_tab -->
+</div><!-- overeader-->
+
+
+</div><!-- /global_header -->
+
+<div class="clear"></div>
+
+
+
+<div id="container">
+
+<div id="contentheader" class="container">
+
+<!-- breadcrumb -->
+<div id="breadcrumb">
+<?php echo $breadcrumb;?></div>
+<!-- /breadcrumb -->
+
+</div><!-- contentheader -->
+
+
+<div class="clear"></div>
+
+
+<div id="content" class="container">
+

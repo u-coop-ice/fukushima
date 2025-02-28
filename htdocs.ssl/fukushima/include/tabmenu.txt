@@ -1,0 +1,235 @@
+
+<li id="global_home" class="<?php echo $focus['home'];?> xs-visible-block"><a href="/">HOME</a>
+<ul>
+
+<li class="<?php echo $focus['homeabout'];?> ic_store"><a href="/home/about/">大学生協とは</a></li>
+
+<li class="<?php echo $focus['hometime'];?> ic_store"><a href="/store/time/">営業時間</a></li>
+
+<li class="<?php echo $focus['homeucapp'];?> ic_store"><a href="/home/ucapp/">大学生協アプリ</a></li>
+
+<li class="<?php echo $focus['homeaccess'];?> ic_store"><a href="/store/#store_access">アクセスマップ</a></li>
+
+<li class="<?php echo $focus['homesodai'];?> ic_document"><a href="/home/sodaikai/">総代会</a></li>
+
+<?php
+/*
+<li class="<?php echo $focus['storeaccess'];?> ic_store">
+<a href="/store/access/">アクセス・マップ</a>
+</li>
+*/
+?>
+
+<li class="<?php echo $focus['homeprivacypolicy'];?> ic_document">
+<a href="/home/privacypolicy/">プライバシーポリシー</a>
+</li>
+
+<li class="<?php echo $focus['homecustomer_harassment'];?> ic_document">
+<a href="/home/customer_harassment/">従業員保護</a>
+</li>
+
+<li class="<?php echo $focus['hometeikan'];?> ic_document">
+<a href="/home/articles/">定款・規約・規則等</a>
+</li>
+
+<?php
+/*
+<li class="<?php echo $focus['appusermembership'];?> ic_document">
+<a href="/app/user/?mode=membership">サイト利用規約</a>
+</li>
+*/
+?>
+
+</ul>
+</li>
+
+
+
+
+
+
+<li id="global_store" class="<?php echo $focus['store'];?>"><a href="/store/">店舗</a>
+<ul>
+
+<li class="ic_store">
+<a href="/store/time/">営業時間</a>
+</li>
+
+<li class="ic_store">
+<a href="/store/react/">Re;act</a>
+</li>
+
+<li class="ic_foodservice">
+<a href="/foodservice/reaf/">リーフ</a>
+</li>
+
+<li class="ic_foodservice">
+<a href="/foodservice/green/">グリーン</a>
+</li>
+
+<?php
+/*
+<li class="<?php echo $focus['storeaccess'];?> ic_store">
+<a href="/store/access/">アクセス・マップ</a>
+</li>
+*/
+?>
+
+</ul>
+</li>
+
+
+
+
+
+<li id="global_newlife" class="<?php echo $focus['newlife'];?>"><a target="_blank" href="https://newlife.u-coop.or.jp/fukushima/">受験･入学</a>
+<ul>
+
+<li><a target="_blank" href="https://newlife.u-coop.or.jp/fukushima/">受験･入学サポートサイト <i class="fa fa-external-link"></i></a></li>
+
+</ul>
+</li>
+
+<li id="global_aid" class="<?php echo $focus['insurance'];?>"><a href="/insurance/">住まい･共済</a>
+<ul>
+
+<li><a href="https://www.tohoku.u-coop.com/fukushima_university" target="_blank">物件検索 <i class="fa fa-external-link"></i></a></li>
+
+<li><a href="http://kyosai.univcoop.or.jp/" target="_blank">学生総合共済 <i class="fa fa-external-link"></i></a></li>
+
+<li><a href="http://hoken.univcoop.or.jp/" target="_blank">大学生協保険サービス <i class="fa fa-external-link"></i></a></li>
+
+</ul>
+</li>
+
+
+
+
+
+<li id="global_foodservice" class="<?php echo $focus['foodservice'];?>"><a href="/foodservice/">食</a>
+<ul>
+
+<li class="ic_store">
+<a href="/store/time/">営業時間</a>
+</li>
+
+<li class="ic_foodservice">
+<a href="/foodservice/meal/">ミールパス</a>
+</li>
+
+<li class="ic_foodservice">
+<a href="/foodservice/reaf/">リーフ</a>
+</li>
+
+<li class="ic_foodservice">
+<a href="/foodservice/green/">グリーン</a>
+</li>
+
+<li class="ic_important">
+<a href="/foodservice/#anc_fs">食の安全の取り組み</a>
+</li>
+
+</ul>
+</li>
+
+<li id="global_career" class="<?php echo $focus['career'];?>"><a href="/career/">学内講座･資格</a>
+<ul>
+
+<li class="ic_career">
+<a href="https://uc-navi.jp/shikaku/CAREER-navi/?pNo=1" target="_blank">CAREER-navi<i class="fa fa-external-link"></i></a>
+</li>
+
+<li class="ic_career">
+<a href="/menkyo/fukushima/">自動車運転免許</a>
+</li>
+
+</ul>
+</li>
+
+
+<li id="global_menkyo" class="<?php echo $focus['menkyo'];?>"><a href="/menkyo/fukushima/">自動車学校</a>
+<ul>
+
+<li><a href="/menkyo/fukushima/school.php">提携校一覧</a></li>
+
+</ul>
+</li>
+
+<li id="global_shopping" class="<?php echo $focus['shopping'];?>"><a href="/shopping/">ショッピング･教科書</a>
+<ul>
+
+<li class="ic_book">
+<a href="https://www.honyaclub.com/shop/default.aspx?isb=a621" target="_blank">オンライン書店 HonyaClub.com <i class="fa fa-external-link"></i></a>
+</li>
+
+<li class="ic_book">
+<a href="https://coop-ebook.jp/contents/StaticPage.do?html=index" target="_blank">電子書籍サイト VarsityWave eBooks <i class="fa fa-external-link"></i></a>
+</li>
+
+<li class="ic_book">
+<a href="https://yosho.univcoop.jp/" target="_blank">大学生協洋書オンライン <i class="fa fa-external-link"></i></a>
+</li>
+
+<li class="ic_book">
+<a href="https://online.univ.coop/book_front/" target="_blank">大学生協 書籍Portal Site <i class="fa fa-external-link"></i></a>
+</li>
+</ul>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="global_graduate" class="<?php echo $focus['graduate'];?>"><a href="/graduate/">卒業</a>
+<ul>
+
+<li class="ic_book">
+<a href="/graduate/album/">卒業記念アルバム</a>
+</li>
+
+<?php /*
+<li class="ic_store">
+<a href="http://move.u-coop.or.jp/" target="_blank">引越しプラン<i class="fa fa-external-link"></i></a>
+</li>
+*/ ?>
+
+</ul>
+</li>
+
+
+
+
+
+<li id="global_travel" class="<?php echo $focus['travel'];?>"><a href="/travel/">旅行</a>
+<ul>
+
+<li><a href="/travel/#anc_domestic">国内旅行</a></li>
+
+<li><a href="/travel/#anc_overseas">海外旅行</a></li>
+
+</ul>
+</li>
+
+<li id="global_GI" class="<?php echo $focus['GI'];?>"><a href="/GI/">生協学生委員会</a>
+</li>
+
+
+
+
+
+
+
+

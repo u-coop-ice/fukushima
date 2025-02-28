@@ -1,0 +1,18 @@
+@charset "EUC-JP";
+
+
+#main table {
+	border-collapse:collapse;
+}
+
+
+#main table td {
+	vertical-align: top;
+	padding: 3px;
+	white-space:normal;
+	width: auto;
+	min-width: 3.5em;
+}
+
+
+

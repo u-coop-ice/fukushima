@@ -1,0 +1,21 @@
+#AuthType Basic
+#AuthName "Input your ID and Password."
+#AuthUserFile /www/etc/tohtech/.htpasswd
+#require valid-user
+
+#php_flag display_errors On
+#php_flag opcache.enable Off
+
+
+#ErrorDocument 503 https://www.fukushima.u-coop.or.jp/maintenance.html
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !maintenance\.html
+#RewriteCond %{REQUEST_FILENAME} !maintenance\.css
+#RewriteCond %{REQUEST_FILENAME} !logo_univcoop\.png
+#RewriteCond %{REQUEST_FILENAME} !logo_univcoop@2x\.png
+#RewriteCond %{REMOTE_ADDR} !=192.168.0.161
+#RewriteCond %{REMOTE_ADDR} !=210.159.199.195
+#RewriteRule ^.*$ - [R=503,L]
+#</IfModule>

@@ -1,0 +1,13 @@
+{
+  "require": {
+    "sendgrid/sendgrid": "7.*",
+    "payjp/payjp-php": "~1.0",
+    "phpoffice/phpword": "v0.17.*",
+    "phpoffice/phpspreadsheet": "*",
+    "holiday-jp/holiday_jp": "*",
+    "google/cloud-storage":"*",
+      "ncjoes/office-converter": "^1.0",
+      "google/cloud-recaptcha-enterprise":"*"
+  }
+}
+

@@ -1,0 +1,11 @@
+@charset "EUC-JP"
+
+/* for /insurance
+---------------------------------------------------- */
+div.col_l {
+	width: 400px;
+}
+
+div.col_r {
+	width: 234px;
+}

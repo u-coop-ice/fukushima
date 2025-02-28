@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+/** ************************************* **
+
+	TABLE CONTENTS
+	---------------------------
+		01. bootstrap機能拡張
+		02. 丸数字カウンターリスト
+		03. etc
+	---------------------------
+
+ ** ************************************* **/
+
+
+
+
+/** 06. bootstrap機能拡張
+ **************************************************************** **/
+ 
+ 
+ /* outline button style */
+.btn-outline{}
+.btn-outline.btn-default       {background:none;border:2px solid #ccc;color:#333;    background-color: #fff;}
+.btn-outline.btn-default:hover,
+.btn-outline.btn-default:active{color:#333;background:#ccc;border-color:#ccc;}
+.btn-outline.btn-primary       {background:none;border:2px solid #428bca;color:#428bca;background-color: #fff;}
+.btn-outline.btn-primary:hover,
+.btn-outline.btn-primary:active{color:#FFF;background:#428bca;border-color:#428bca;}
+.btn-outline.btn-success       {background:none;border:2px solid #5cb85c;color:#5cb85c;background-color: #fff;}
+.btn-outline.btn-success:hover,
+.btn-outline.btn-success:active{color:#FFF;background:#5cb85c;border-color:#5cb85c;}
+.btn-outline.btn-info          {background:none;border:2px solid #5bc0de;color:#5bc0de;background-color: #fff;}
+.btn-outline.btn-info:hover,
+.btn-outline.btn-info:active   {color:#FFF;background:#5bc0de;border-color:#5bc0de;}
+.btn-outline.btn-warning       {background:none;border:2px solid #f0ad4e;color:#f0ad4e;background-color: #fff;}
+.btn-outline.btn-warning:hover,
+.btn-outline.btn-warning:active{color:#FFF;background:#f0ad4e;border-color:#f0ad4e;}
+.btn-outline.btn-danger        {background:none;border:2px solid #d9534f;color:#d9534f;background-color: #fff;}
+.btn-outline.btn-danger:hover,
+.btn-outline.btn-danger:active {color:#FFF;background:#d9534f;border-color:#d9534f;}
+.btn-outline.btn-aqua        {background:none;border:2px solid #2f98b7;color:#2f98b7;background-color: #fff;}
+.btn-outline.btn-aqua:hover,
+.btn-outline.btn-aqua:active {color:#FFF;background:#197f9e;border-color:#197f9e;}
+.btn-outline.btn-rose        {background:none;border:2px solid #F56883;color:#F56883;background-color: #fff;}
+.btn-outline.btn-rose:hover,
+.btn-outline.btn-rose:active {color:#FFF;background:#D24A64;border:2px solid #D24A64;}
+
+
+/* border button style */
+.btn-border       {padding:4px 10px;}
+.btn-border.btn-xs{padding:0 3px;}
+.btn-border.btn-sm{padding:3px 8px;}
+.btn-border.btn-lg{padding:8px 14px;}
+.btn-border.btn-default       {border:3px solid #ccc;}
+.btn-border.btn-default:hover,
+.btn-border.btn-default:active{background:#ccc;border-color:#ccc;}
+.btn-border.btn-primary       {background:none;border:3px solid #428bca;color:#428bca;}
+.btn-border.btn-primary:hover,
+.btn-border.btn-primary:active{color:#FFF;background:#428bca;border-color:#428bca;}
+.btn-border.btn-success       {background:none;border:3px solid #5cb85c;color:#5cb85c;}
+.btn-border.btn-success:hover,
+.btn-border.btn-success:active{color:#FFF;background:#5cb85c;}
+.btn-border.btn-info          {background:none;border:3px solid #5bc0de;color:#5bc0de;}
+.btn-border.btn-info:hover,
+.btn-border.btn-info:active   {color:#FFF;background:#5bc0de;}
+.btn-border.btn-warning       {background:none;border:3px solid #f0ad4e;color:#f0ad4e;}
+.btn-border.btn-warning:hover,
+.btn-border.btn-warning:active{color:#FFF;background:#f0ad4e;}
+.btn-border.btn-danger        {background:none;border:3px solid #d9534f;color:#d9534f;}
+.btn-border.btn-danger:hover,
+.btn-border.btn-danger:active {color:#FFF;background:#d9534f;}
+.btn-border.btn-aqua        {background:none;border:3px solid #2f98b7;color:#2f98b7;}
+.btn-border.btn-aqua:hover,
+.btn-border.btn-aqua:active {color:#FFF;background:#197f9e;}
+.btn-border.btn-rose        {background:none;border:3px solid #F56883;color:#F56883;}
+.btn-border.btn-rose:hover,
+.btn-border.btn-rose:active {color:#FFF;background:#D24A64;}
+
+
+/* square button style */
+
+.btn-square{border-radius:0;}
+.btn-square.btn-xs{padding:0 3px;}
+.btn-square.btn-sm{padding:3px 8px;}
+.btn-square.btn-lg{padding:8px 14px;}
+
+
+.btn-navy       {background-color:#3C7EB7;border:3px solid #3C7EB7;color:#FFF;}
+.btn-navy:hover,
+.btn-navy:active{color:#FFF;background:#3B7DB5;border-color:#3B7DB5;}
+
+.btn-rose        {background-color:#F56883;border:3px solid #F56883;color:#FFF;}
+.btn-rose:hover,
+.btn-rose:active {color:#FFF;background:#D24A64;border:3px solid #D24A64;}
+
+
+
+.btn-square.btn-aqua        {background-color:#2f98b7;border:3px solid #2f98b7;color:#FFF;}
+.btn-square.btn-aqua:hover,
+.btn-square.btn-aqua:active {color:#FFF;background:#197f9e;border:3px solid #197f9e;}
+
+
+
+
+/* circle button style */
+.btn-circle.btn-xs{width:22px;height:22px;font-size:10px;border-radius:11px;line-height:1.6;padding:3px 0;}
+.btn-circle.btn-sm{width:30px;height:30px;font-size:12px;border-radius:15px;line-height:1.6;padding:6px 0;}
+.btn-circle       {width:34px;height:34px;font-size:16px;border-radius:17px;line-height:1.33;padding:6px 4px;text-align:center;}
+.btn-circle.btn-lg{width:46px;height:46px;font-size:22px;border-radius:23px;line-height:1.2;}
+
+/* round button style */
+.btn-round.btn-xs{border-radius:11px;}
+.btn-round.btn-sm{border-radius:22.5px;}
+.btn-round       {border-radius:17px;}
+.btn-round.btn-lg{border-radius:23px;}
+
+/* Bootstrapのガター幅を調整するための汎用CSS */
+.row-0{ margin-left:0px;  margin-right:0px}
+.row-0 >div{ padding-right:0px;  padding-left:0px}
+.row-10{ margin-left:-5px;  margin-right:-5px}
+.row-10 >div{ padding-right:5px;  padding-left:5px}
+.row-20{ margin-left:-10px;  margin-right:-10px}
+.row-20 >div{ padding-right:10px;  padding-left:10px}
+.row-30{ margin-left:-15px;  margin-right:-15px}
+.row-30 >div{ padding-right:15px;  padding-left:15px}
+.row-40{ margin-left:-20px;  margin-right:-20px}
+.row-40 >div{ padding-right:20px;  padding-left:20px}
+.row-50{ margin-left:-25px;  margin-right:-25px}
+.row-50 >div{ padding-right:25px;  padding-left:25px}   
+
+
+
+/** 03. 丸数字カウンターリスト
+ **************************************************************** **/
+ol.calender_list {
+	counter-reset: my-counter;
+	list-style: none;
+	padding: 0;
+}
+
+#content ol.calender_list > li {
+	margin-bottom: 10px;
+	padding-left: 30px;
+	position: relative;
+	line-height: 1.5;
+}
+
+ol.calender_list > li:before {
+	content: counter(my-counter);
+	counter-increment: my-counter;
+	background-color: #31234F;
+	color: #fff;
+	display: block;
+	float: left;
+	line-height: 24px;
+	margin-top: -2px;
+	margin-right: 10px;
+	margin-left: -31px;
+	text-align: center;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+ol.calender_list.back_green > li::before {
+	background-color: #27AE60;
+}
+
+
+/** box
+ **************************************************************** **/
+.box_gray {
+  background-color: #f3f8f7;
+  padding: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.yellow {
+ color:#ffff00;
+}
+
+.h1 {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}

@@ -1,0 +1,13 @@
+<div class="btn_univ">
+
+<div class="container-fluid">
+<div class="row">
+<div class="btn-group btn-group-justified" role="group">
+<a href="#coop" class="btn btn-success"><span class="hidden-xs">福島</span>大学生協とは<i class="fa fa-fw fa-chevron-down"></i></a>
+<a href="#ucapp" class="btn btn-success">アプリで組合員証</a>
+<a href="#store" class="btn btn-success">店舗紹介<i class="fa fa-fw fa-chevron-down"></i></a>
+</div>
+</div><!--/row-->
+</div>
+
+</div>

@@ -1,0 +1,260 @@
+@charset "UTF-8"; 
+
+/** ************************************* **
+
+	TABLE CONTENTS
+	---------------------------
+		01. Globals
+		02. Buttons
+	---------------------------
+
+ ** ************************************* **/
+
+/** 01. Globals
+ **************************************************************** **/
+.content_inner {
+	background: #ffe419;/*背景色*/
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+	.content_inner {
+		margin: 0 -15px 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.content_inner {
+		padding: 10px;
+	}
+}
+
+.contact.w {
+	border: solid #D6DBDF 0px;
+}
+
+.visible-xxs-block {
+		display: none;
+}
+
+@media (max-width: 480px) {
+	.visible-xxs-block {
+		display: block !important;
+	}
+}
+
+
+/*===== Headings =====*/
+h2.youtube01 {
+	background: #4bacc6;/*背景色*/
+	border-bottom: hidden;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-size: 220%;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	padding: 0.5em;/*文字まわり（上下左右）の余白*/
+	position: relative;
+}
+
+h2.youtube01:after {
+	background: url(../images/youtube_p01.png) no-repeat;
+	background-size: contain;
+	bottom: -80px;
+	content: "";
+	display: inline-block;
+	height: 180px;
+	width: 180px;
+	margin: 0 0 0 5px;
+	position: absolute;
+	right: 10px;
+	vertical-align: middle;
+}
+
+h3.youtube02 {
+	border-bottom: 0px solid #b11216;
+	font-size: 160%;
+	line-height: 1.5;
+}
+
+h2.youtube03 {
+	background: #ffe419;/*背景色*/
+	border-bottom: hidden;
+	color: #ff457b;
+	font-size: 180%;
+	line-height: 1.3;
+	margin-bottom: 40px;
+	padding: 0.5em;/*文字まわり（上下左右）の余白*/
+	position: relative;
+	text-align: center;
+}
+
+h2.youtube03::after {
+	background: url(../images/youtube_p05.png) no-repeat;
+	background-size: contain;
+	bottom: -0px;
+	content: "";
+	display: inline-block;
+	height: 130px;
+	width: 130px;
+	margin: 0 0 0 5px;
+	position: absolute;
+	right: 10px;
+	vertical-align: middle;
+}
+
+h4.blue {
+	color: #4bacc6;
+	margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+	h2.youtube01 {
+		font-size: 170%;
+	}
+
+	h2.youtube01::after {
+		width: 150px;
+		height: 150px;
+		bottom: -50px;
+	}
+	
+	h2.youtube03 {
+		font-size: 150%;
+	}
+	
+	h2.youtube03::after {
+		width: 80px;
+		height: 80px;
+		right: 10px;
+		bottom: -0px;
+	}
+	
+	h3.youtube02 {
+		font-size: 120%;
+	}
+}
+
+@media (max-width: 480px) {
+	h2.youtube01 {
+		font-size: 160%;
+		margin-bottom: 50px;
+	}
+	
+	h2.youtube01::after {
+		width: 110px;
+		height: 110px;
+		bottom: -70px;
+		right: 5px;
+	}
+	
+	h3.youtube02 {
+		font-size: 110%;
+	}
+	
+	h2.youtube03 {
+		font-size: 150%;
+		margin-bottom: 80px;
+	}
+	
+	h2.youtube03::after {
+		content: "";
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		margin: 0 0 0 5px;
+		background: url(../images/youtube_p05.png) no-repeat;
+		background-size: contain;
+		vertical-align: middle;
+		position: absolute;
+		right: 35%;
+		bottom: -70px;
+	}
+	
+	h4.blue {
+		font-size: 110%;
+	}
+}
+
+/*===== Text =====*/
+.ls01 {
+	letter-spacing: 0.1em;
+}
+
+.meiryo {
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+
+
+
+
+
+/** 02. Buttons
+ **************************************************************** **/
+.btn {
+	white-space: normal;
+}
+
+.btn-square {
+	border-radius: 0;
+}
+
+.btn-info {
+	color: #fff;
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		-webkit-transition-timing-function: ease;
+			 -o-transition-timing-function: ease;
+					transition-timing-function: ease;
+	-webkit-transition-duration: .0s;
+			 -o-transition-duration: .0s;
+					transition-duration: .0s;
+	-webkit-transition-property: all;
+			 -o-transition-property: all;
+					transition-property: all;
+					padding: 10px 10px;
+}
+
+.btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+	cursor: not-allowed;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	opacity: 1;
+	background-color: #8b8b8b;
+	border-color: #8b8b8b;
+}
+
+/*===== Buttons icon =====*/
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*===== Back to home Buttons =====*/
+#content a.btn_home {
+	display: inline-block; 
+	min-width: 120px;
+	padding: 8px 24px;
+	margin: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	background: transparent;
+	border-color: rgba(66,172,194,0.90);
+	border-style: solid;
+	border-width: 1px;
+	color: rgba(66,172,194,0.90);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+#content a.btn_home:hover {
+	background-color: rgba(66,172,194,0.90); 
+	color: #fff; 
+	cursor: pointer;
+}
+
+

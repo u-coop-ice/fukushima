@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/*
+--------------------------------------------------
+SITEMAP style
+author: HPG ogiwara
+version: Aug 2020
+--------------------------------------------------*/
+
+.btn {
+	white-space: normal;
+}
+
+.alert-danger2 {
+  color: #fff;
+  background-color: #ea1c0d;
+  border-color: #ea1c0d;
+	border-radius: 0;
+}
+
+#content .md {
+		font-size: 150%;
+}
+#content .bg {
+		font-size: 200%;
+}
+#content .sm {
+		font-size: 130%;
+}
+@media all and (max-width: 515px) {
+		#content .flexbox .flexitem {
+				padding: 0.5rem;
+				width: auto;
+		}
+		#content .bg {
+				font-size: 5.6vw;
+		}
+		#content .md {
+				font-size: 5.3vw;
+		}
+		#content .sm {
+				font-size: 4.3vw;
+		}
+}
+
+
+
+
+/*行間調整*/
+#content .lh10 {
+	line-height: 1.0;
+}
+#content .lh11 {
+	line-height: 1.1;
+}
+#content .lh12 {
+	line-height: 1.2;
+}
+#content .lh13 {
+	line-height: 1.3;
+}
+#content .lh14 {
+	line-height: 1.4;
+}
+#content .lh15 {
+	line-height: 1.5;
+}
+#content .lh16 {
+	line-height: 1.6;
+}
+#content .lh17 {
+	line-height: 1.7;
+}
+#content .lh18 {
+	line-height: 1.8;
+}
+#content .lh19 {
+	line-height: 1.9;
+}
+#content .lh20 {
+	line-height: 2.0;
+}

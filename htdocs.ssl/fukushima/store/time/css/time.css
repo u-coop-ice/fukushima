@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+/* businesshours 追加
+---------------------------------------------------- */
+div.vlr {
+width:5px;
+padding-left:35px;
+}
+
+#content table.tblFull.table-middle th, #content table.tblFull.table-middle td {
+	vertical-align: middle;
+	text-align: center;
+}
+
+#content table.tblFull.table-middle th {
+	font-weight: normal;
+}
+
+
+#content table.tblFull.em09 {
+    font-size: 90%;
+}
+#content table.tblFull {
+	margin: 0px auto;
+}
+.table-responsive {
+	border: 0px solid #ddd;
+}
+
+/*===== ヘッター固定table =====*/
+.sticky_table_wrapper {
+	overflow: scroll;
+	height: 75vh;
+}
+
+@media (max-width: 768px) {
+.sticky_table_wrapper {
+	overflow: scroll;
+	height: 48vh;
+}
+}
+#content table.sticky_table {
+	-webkit-font-smoothing: antialiased;
+	border-collapse: separate;
+}
+#content table.sticky_table tr {
+	background-color: #fff;
+}
+#content table.sticky_table th{
+	padding: 8px;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	border: 1px solid #bbb;
+	border-right: 0px;
+	border-bottom: 0px;  /* 追記箇所 */
+}
+#content table.sticky_table td {
+	padding: 8px;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	border: 1px solid #bbb;
+	border-right: 0px;
+	border-bottom: 0px;  /* 追記箇所 */
+	font-size: 1em;
+}
+@media (max-width: 768px) {
+#content table.sticky_table td {
+	font-size: 0.8em;
+}
+}
+
+#content table.sticky_table td:last-child{
+	border-right: 1px solid #bbb;
+}
+/*#content table.sticky_table thead tr{
+	background-color: #eee;
+}*/
+#content table.sticky_table th{
+	font-family: "JapanSans90","Lucida Grande", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", Verdana, sans-serif;
+	background-color: #eee;
+}
+#content table.sticky_table tr:last-child th.last {
+	border-bottom: 1px solid #bbb;
+}
+#content table.sticky_table th .js70{
+	font-family: "JapanSans70","Lucida Grande", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", Verdana, sans-serif;
+}
+#content table.sticky_table thead th:first-child {
+	z-index: 1;
+}
+#content table.sticky_table thead th {
+	/* 縦スクロール時に固定する */
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	/* tbody内のセルより手前に表示する */
+	z-index: 7;
+	border-bottom: solid 1px #bbb;
+}
+
+/*#content table.sticky_table thead th.last {
+	border-right: 1px solid #bbb;
+}
+#content table.sticky_table th.last_btm {
+	border-bottom: 1px solid #bbb;
+}*/
+#content table.sticky_table thead th:before{
+	content: "";
+	position: absolute;
+	top: -0.1px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#content table.sticky_table tbody tr td:first-child {
+			position: sticky;
+			left: -0.5px;
+			background: #fff;
+			border-left: solid 1px #bbb;
+		}
+#content table.sticky_table tbody tr td:nth-child(2) {
+			position: sticky;
+			left: 47px;
+			background: #fff;
+			border-right: solid 1px #bbb;
+		}
+
+@media (max-width: 768px) {
+#content table.sticky_table tbody tr td:first-child {
+			position: sticky;
+			left: -0.5px;
+			background: #fff;
+			border-left: solid 1px #bbb;
+		}
+#content table.sticky_table tbody tr td:nth-child(2) {
+position: sticky;
+left: 45px;background: #fff;
+border-right: solid 1px #bbb;
+}
+}
+
+
+#content table.sticky_table thead th.child2 {
+	/* 縦スクロール時に固定する */
+	position: -webkit-sticky;
+	position: sticky;
+	top: 37px;
+	left: 106px;
+	/* tbody内のセルより手前に表示する */
+	z-index: 6;
+	border-bottom: 1px solid #bbb;
+	border-left: solid 1px #bbb;
+}
+
+#content table.sticky_table th:not(:first-child) {
+	/* 横スクロール時に固定する */
+	position: -webkit-sticky;
+	position: sticky;
+	left: 106px;
+}
+
+#content table.sticky_table th:first-child {
+	/* 横スクロール時に固定する */
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0;
+	background-color: #eee;
+	border-bottom: solid 1px #bbb;
+}
+
+
+
+#content table.sticky_table th:nth-child(2) {
+	/* 横スクロール時に固定する */
+	position: -webkit-sticky;
+	position: sticky;
+	left: 106px;
+}
+
+#content table.sticky_table thead th:last-child {
+			border-right: solid 1px #bbb;
+		}
+
+#content table.sticky_table tbody tr td.month {
+	background: #b5e8fc;
+	font-size: 1em;
+	text-align: left;
+	font-weight: bold;
+	padding: 7.5px;
+		position: -webkit-sticky;
+	position: sticky;
+	top:39px;
+	left: 60px;
+	z-index: 5;
+}
+#content table.sticky_table tbody tr td.month span {
+	background: #b5e8fc;
+	font-size: 1em;
+	text-align: left;
+	font-weight: bold;
+		position: -webkit-sticky;
+	position: sticky;
+	left: 10px;
+	z-index: 5;
+}
+
+
+
+/* table(calendar)
+---------------------------------------------------- */
+table.calendar {
+	text-align: center;
+}
+/* tableの中のテキストの左揃え */
+#content table.tblFull.table-middle th.left, #content table.tblFull.table-middle td.left {
+	text-align: left;
+}
+table *.closed {
+	background-color: #f4f4f4;
+}
+/* 目立たせたい閉店の時 */
+table *.closed2 {
+	background-color: #DDA0DD;
+}
+table *.closed3 {
+	background-color: #FFFC97;
+	padding-left: 5px;
+    padding-right: 5px;
+}
+@media (max-width: 768px) {
+#content table.tblFull.table-middle *.closed3{
+	padding-left :5px;
+	padding-right :5px;
+}
+}
+/* 背景を白くしたい時 */
+table *.non {
+	background-color: #fff;
+}
+table *.sat {
+	color: #0387c4;
+}
+table *.sun {
+	color: #dc143c;
+}
+table *.store {
+	background-color: #f4dda5;
+}
+table *.cafet {
+	background-color: #fbe4f7;
+}
+table *.rst {
+	background-color: #dffcf0;
+}
+table *.ask {
+	background-color: #dbffb7;
+}
+table caption {
+	caption-side: bottom;
+	font-weight: bold;
+}
+table th.month {
+	width: 10%;
+}
+table td.nowrap {
+	white-space: nowrap;
+}
+
+

@@ -1,0 +1,89 @@
+@charset "EUC-JP";
+
+.content_inner{
+	padding:0 20px;
+}
+.content_inner p{
+	line-height:1.8;
+}
+.lineh18 p {
+line-height:1.8;
+}
+@media (max-width: 768px) {
+.content_inner{
+	padding:0 0px;
+}
+}
+
+/* ----------------------------------------
+ * 追加　背景
+ * ---------------------------------------- */
+.module{
+	margin: 20px 0;
+	padding: 30px 30px;
+}
+@media (max-width: 768px) {
+.module{
+	margin: 20px 0;
+	padding: 20px 20px;
+}
+}
+.module-yellow {
+	background-color:#FDF8D3;
+}
+
+
+
+/* ----------------------------------------
+ * 囲み文字の基本形　インデント有
+ * --------------------------------------- */
+
+/* 四角の大きさ */
+.module .square {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	flex-flow: column; 
+	margin-right: 0.2em;
+}
+/* 文字の大きさ */
+.letter1 {
+	font-size: 1.1em;
+	line-height: 1.3em;
+	text-indent: 0.1em;
+}
+/* 囲みと文字の色 */
+.yellow1 {
+	font-weight: 700;
+	color: #555454;
+	border: 2px solid #FAE300;
+	background: #FAE300;
+}
+.module .frame_number p {
+	padding-left: 1.2em;
+	text-indent: -1.4em;
+}
+
+
+
+/* ----------------------------------------
+ * 上部スペースの追加
+ * ---------------------------------------- */
+
+.top_space10 {
+	margin-top: 10px;
+}
+.top_space20 {
+	margin-top: 20px;
+}
+.top_space30 {
+	margin-top: 30px;
+}
+.top_space40 {
+	margin-top: 40px;
+}
+.top_space50 {
+	margin-top: 50px;
+}

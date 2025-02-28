@@ -1,0 +1,42 @@
+@charset "EUC-JP";
+
+/* STEPS
+---------------------------------------------------- */
+.steps {
+	font-size: 90%;
+	margin: 0 auto 0 auto;
+	min-width: 570px;
+	color: #888888;
+/* 	border-top: 1px #aaa solid; */
+	border-left: 1px #aaa solid;
+	list-style: none;
+}
+.steps td {
+	min-width: 100px;
+	min-height: 28px;
+	padding: 6px 8px;
+/* 	border-bottom: 1px #aaa solid; */
+	border-right: 1px #aaa solid;
+	text-align: center;
+	line-height: 1em;
+}
+.steps td.now {
+	color: #dc143c;
+	background-color: #ffcccc;
+	font-weight: bold;
+}
+.steps td.menu {
+	min-width:70px;
+	color: #666;
+	background-color: #fefefe;
+	font-weight: bold;
+}
+.steps td.cleared {
+	color: #555555;
+	background-color: #dddddd;
+}
+.stepsplus {
+	font-size: 10px;
+	color: #888888;
+	text-align: center;
+}

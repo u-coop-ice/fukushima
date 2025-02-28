@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------
+for /home/news/
+author: HPG_ogiwara
+version: Aug 25 2020
+---------------------------------------------------- */
+
+/** ************************************* **
+
+	TABLE CONTENTS
+	---------------------------
+		01. Globals
+		02. Add indent
+		03. Arrow
+		04. Bootstrap Function expansion
+	---------------------------
+
+ ** ************************************* **/
+
+/** 01. Globals
+ **************************************************************** **/
+#content .box ul {
+	margin: 0;
+	margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+	h4 {
+		font-size: 120%;
+	}
+}
+
+/** 02. Add indent
+ **************************************************************** **/
+span.rev_ind {					/* spanブロック化 */
+	display: block;
+	padding: 0 0 0 0.5em;
+	text-indent: -0.5em;
+}
+
+span.rev_ind i {
+	text-indent: 0;
+}
+
+span[class*="ind"] i { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+span[class*="ind"] a.btn { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+span.ind_005 {					/* spanブロック化 */
+	display: block;
+	padding-left: 0.5em;
+	text-indent: -0.5em;
+}
+
+span.ind_01 {					/* spanブロック化 */
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+span.ind_012 {					/* spanブロック化 */
+	display: block;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+span.ind_015 {					/* spanブロック化 */
+	display: block;
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+span.ind_02 {					/* spanブロック化 */
+	display: block;
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+span.ind_025 {					/* spanブロック化 */
+	display: block;
+	padding-left: 2.5em;
+	text-indent: -2.5em;
+}
+
+span.ind_03 {					/* spanブロック化 */
+	display: block;
+	padding-left: 3em;
+	text-indent: -3em;
+}
+
+span.ind_04 {					/* spanブロック化 */
+	display: block;
+	padding-left: 4em;
+	text-indent: -4em;
+}
+
+span.ind_05 {					/* spanブロック化 */
+	display: block;
+	padding-left: 5em;
+	text-indent: -5em;
+}
+
+span.ind_06 {					/* spanブロック化 */
+	display: block;
+	padding-left: 6em;
+	text-indent: -6em;
+}
+
+.rev_ind {
+	display: block;
+	padding: 0 0 0 0.5em;
+	text-indent: -0.5em;
+}
+
+[class*="ind"] i { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+[class*="ind"] a.btn { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+.ind_005 {
+	display: block;
+	padding-left: 0.5em;
+	text-indent: -0.5em;
+}
+
+.ind_01 {
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+.ind_012 {
+	display: block;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+.ind_015 {
+	display: block;
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+.ind_02 {
+	display: block;
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+.ind_025 {
+	display: block;
+	padding-left: 2.5em;
+	text-indent: -2.5em;
+}
+
+.ind_03 {
+	display: block;
+	padding-left: 3em;
+	text-indent: -3em;
+}
+
+.ind_04 {
+	display: block;
+	padding-left: 4em;
+	text-indent: -4em;
+}
+
+.ind_05 {
+	display: block;
+	padding-left: 5em;
+	text-indent: -5em;
+}
+
+.ind_06 {
+	display: block;
+	padding-left: 6em;
+	text-indent: -6em;
+}
+
+
+
+/** 03. Arrow
+ **************************************************************** **/
+.down_Arrow {
+	margin: 20px auto -20px;
+	position: relative;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #0097cf;
+}
+
+.down_Arrow::after {
+	position: absolute;
+	content: '';
+	top: -39px;
+	left: -10px;
+	width: 20px;
+	height: 20px;
+	background: #0097cf;
+}
+
+.right_Arrow {
+	height: 20px;
+	width: 20px;
+	background-color: #3498db;
+	position:  relative;
+	margin-top: 20px;
+}
+
+.right_Arrow::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 0 20px 25px;
+	border-color: transparent transparent transparent #3498db;
+	position:  absolute;
+	top: -50%;
+	left: 100%;
+}
+
+
+
+/** 04. Bootstrap Function expansion
+ **************************************************************** **/
+.row-center {
+	letter-spacing: -0.4em;
+}
+
+.row-center > [class*='col-'] {
+	display: inline-block;
+	letter-spacing: 0;
+	vertical-align: top;
+	float: none !important;
+}
+
+/*Vertical center alignment*/
+.row-center.va-middle > [class*='col-'] {
+	vertical-align: middle;
+}
+
+/*Bottom alignment*/
+.row-center.va-bottom > [class*='col-'] {
+	vertical-align: bottom;
+}
+
+

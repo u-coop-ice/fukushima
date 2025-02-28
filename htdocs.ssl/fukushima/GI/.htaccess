@@ -1,0 +1,5 @@
+#AuthType Basic
+#AuthName "Input your ID and Password."
+#AuthUserFile /var/www/etc/fukushima/.htpasswd
+#require valid-user
+

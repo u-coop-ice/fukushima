@@ -1,0 +1,103 @@
+@charset "UTF-8"; 
+
+/** ************************************* **
+
+	TABLE CONTENTS
+	---------------------------
+		01. Globals
+		02. 背景付きボックス
+	---------------------------
+
+ ** ************************************* **/
+
+/** 01. Globals
+ **************************************************************** **/
+ 
+ #content a {
+ text-decoration: none;
+ }
+ 
+ 
+/** 02. Globals
+ **************************************************************** **/
+.contact.orange {
+	border:solid #E67E22 2px;
+	background-color: #F6C89F;
+}
+
+.contact.orange:hover {
+	border:solid #E67E22 2px;
+	background-color: #F6AE6E;
+}
+
+.contact.blue {
+	border:solid #4995F0 2px;
+	background-color: #C6E1F8;
+}
+
+.contact.blue:hover {
+	border:solid #4995F0 2px;
+	background-color: #78ACEA;
+}
+
+.contact.green {
+	border:solid #27AE60 2px;
+	background-color: #CDF1DD;
+}
+
+.contact.green:hover {
+	border:solid #27AE60 2px;
+	background-color: #82CCA2;
+}
+
+.contact.yellow {
+	border:solid #FED627 2px;
+	background-color: #fce7bb;
+}
+
+.contact.yellow:hover {
+	border:solid #FED627 2px;
+	background-color: #FFD378;
+}
+
+.contact.r10 {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.contact.r20 {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.under.yellow_underline {/* イエロー */
+	border-bottom: solid 2px #FED627;
+}
+
+
+/*under Line*/
+.under {
+}
+.under.black_underline {
+	border-bottom: solid 2px #333;
+}
+.under.red_underline {/* レッド系 */
+	border-bottom: solid 2px #e74c3c;
+}
+.under.pink_underline {/* ピンク系 */
+	border-bottom: solid 2px #FF457B;
+}
+.under.blue_underline {/* ブルー系 */
+	border-bottom: solid 2px #3498db;
+}
+.under.green_underline {/* グリーン系 */
+	border-bottom: solid 2px #27AE60;
+}
+.under.orange_underline {/* オレンジ系 */
+	border-bottom: solid 2px #E67E22;
+}
+
+
+

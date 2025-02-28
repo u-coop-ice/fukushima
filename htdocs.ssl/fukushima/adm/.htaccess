@@ -1,0 +1,8 @@
+#AuthType Basic
+#AuthName "Input your ID and Password."
+#AuthUserFile /www/etc/tohtech/.htpasswd
+#require valid-user
+
+php_flag display_errors On
+#php_flag opcache.enable Off
+

@@ -1,0 +1,1 @@
+/var/www/htdocs.ssl/iwate/adm/lib/Classes/setBanners.class.php

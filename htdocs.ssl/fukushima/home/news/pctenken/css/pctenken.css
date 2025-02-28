@@ -1,0 +1,41 @@
+@charset "UTF-8"; 
+
+/** ************************************* **
+
+	TABLE CONTENTS
+	---------------------------
+		01. Bootstrap Function expansion
+	---------------------------
+
+ ** ************************************* **/
+ 
+ 
+ 
+/** 01. Bootstrap Function expansion
+ **************************************************************** **/
+.row-center {
+	letter-spacing: -0.4em;
+}
+
+.row-center > [class*='col-'] {
+	display: inline-block;
+	letter-spacing: 0;
+	vertical-align: top;
+	float: none !important;
+}
+
+/*Vertical center alignment*/
+.row-center.va-middle > [class*='col-'] {
+	vertical-align: middle;
+}
+
+/*Bottom alignment*/
+.row-center.va-bottom > [class*='col-'] {
+	vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+.row-center > [class*='col-sm'] {
+	display: block;
+}
+}

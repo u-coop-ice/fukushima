@@ -1,0 +1,113 @@
+@charset "EUC-JP";
+
+/* STEPS
+---------------------------------------------------- */
+.steps {
+	font-size: 90%;
+	margin: 0 auto 0 auto;
+	min-width: 570px;
+	color: #888888;
+/* 	border-top: 1px #aaa solid; */
+	border-left: 1px #aaa solid;
+	list-style: none;
+}
+.steps td {
+	min-width: 100px;
+	min-height: 28px;
+	padding: 6px 8px;
+/* 	border-bottom: 1px #aaa solid; */
+	border-right: 1px #aaa solid;
+	text-align: center;
+	line-height: 1em;
+}
+.steps td.now {
+	color: #dc143c;
+	background-color: #ffcccc;
+	font-weight: bold;
+}
+.steps td.menu {
+	min-width:70px;
+	color: #666;
+	background-color: #fefefe;
+	font-weight: bold;
+}
+.steps td.cleared {
+	color: #555555;
+	background-color: #dddddd;
+}
+.stepsplus {
+	font-size: 10px;
+	color: #888888;
+	text-align: center;
+}
+
+
+
+/* ノート背景
+---------------------------------------------------- */
+.note{
+    position: relative;
+    background-color: #ffffe7;
+    background-image:
+    linear-gradient(rgba(241,207,164,0.5) .1em, transparent .1em);
+    background-size: 100% 1.5em;
+    line-height:1.5em;
+    padding: 20px;
+    margin: 10px 0;
+    }
+
+.note_right{
+    text-align: right;
+    line-height:0em;
+}
+
+.note_inbox {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.note_inbox.white {
+    background-color: #FFFFFF;
+    border-color: #ffbda8;
+    padding: 10px;
+}
+
+.note_inbox.white p{
+    color: #000000;
+    background-color: #FFFFFF;
+    border-color: #ffbda8;
+    margin: 5px 0px;
+}
+
+
+
+/* スライド画像の横幅可変
+---------------------------------------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 480px){
+    .content_full{
+    margin: 0 -15px;
+    }
+}
+
+
+
+
+/* 見出し追加
+---------------------------------------------------- */
+h2.mp {			/* コンテンツタイトル用 */
+	border-bottom: 3.5px solid #339933
+}
+
+/* table 追加
+---------------------------------------------------- */
+.table-responsive {
+	border: 0px solid #ddd;
+}
+

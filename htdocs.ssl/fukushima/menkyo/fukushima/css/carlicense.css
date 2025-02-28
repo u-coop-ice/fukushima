@@ -1,0 +1,105 @@
+@charset "EUC-JP";
+
+
+/* 基本
+---------------------------------------------------- */
+p.ind {
+	margin: 1em 0 0 0;
+}
+p.rev_ind {
+	padding: 0 0 0 1em;
+	text-indent: -1em;
+}
+
+/* まるとしかく
+---------------------------------------------------- */
+.boxContainer {
+	overflow: hidden;
+	text-align: center;
+}
+
+/* clearfix */
+.boxContainer:before,
+.boxContainer:after {
+	content: "";
+	display: table;
+}
+ 
+.boxContainer:after {
+	clear: both;
+}
+ 
+/* For IE 6/7 (trigger hasLayout) */
+.boxContainer {
+	zoom: 1;
+}
+
+.box_title{
+	float: left;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	margin:3px;
+}
+
+.box_title p{
+	font-weight:bold;
+	padding-top:20px;
+}
+.box_title p{
+	font-weight:bold;
+	padding-top:20px;
+}
+
+.box_maru {
+	width: 100px;
+	height: 100px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.box_shikaku{
+	width: 500px;
+	height: 105px;
+	-webkit-border-radius: 1%;
+	-moz-border-radius: 1%;
+	border-radius: 1%;
+	border: 5px double orange;
+}
+
+
+
+
+
+.maru {
+	width: 200px;
+	height: 200px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	margin:15px;
+}
+
+.maru p{
+padding-top:30px;
+}
+.maru1 {
+	background-color: #ffc0cb;
+}
+.maru2 {
+	background-color: #ffa07a;
+}
+.maru3 {
+	background-color: #66cdaa;
+}
+
+.tate{
+writing-mode: tb-rl;
+}
+
+

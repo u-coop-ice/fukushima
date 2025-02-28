@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/** ************************************* **
+
+	TABLE CONTENTS
+	---------------------------
+		01. Globals
+	---------------------------
+
+** ************************************* **/
+
+/* Google Font/M PLUS 1p /Medium 700 */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap');
+
+
+/** 01. Globals
+**************************************************************** **/
+
+.mplus1p {
+	font-family: 'M PLUS 1p', "Lucida Grande", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+.btn {
+	white-space: normal;
+}
+
+
+#content a {
+    text-decoration: none;
+}

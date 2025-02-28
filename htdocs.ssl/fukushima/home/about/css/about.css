@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* box系
+---------------------------------------------------- */
+.box_yellow{
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #fcfce1;
+}
+
+.box_green{
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #e1fce6;
+}
+
+.box_yellow_line{
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #fff;
+  border: solid 3px #ff9800;
+}
+
+
+/* タイトル右線
+---------------------------------------------------- */
+h3.right_line {
+  position: relative;
+  display: block;
+  padding: 0 65px 0 0;
+	border-bottom: 0px solid #b11216;
+	color: #FF9999;
+}
+
+.double_line {
+  top: calc(50% - 3px);
+  width: 100%;;
+  height: 6px;
+  content: '';
+  border-top: solid 1px #FF9999;
+  border-bottom: solid 1px #FF9999;
+}
+
+h3.right_line::before {
+  position: absolute;
+  top: calc(50% - 3px);
+  width: 100%;;
+  height: 6px;
+  content: '';
+  border-top: solid 1px #FF9999;
+  border-bottom: solid 1px #FF9999;
+}
+
+h3.right_line:before {
+  right: 0;
+}
+
+h3.right_line span {
+  position: relative;
+  padding: 0 1em 0 0;
+  background: #fff;
+}
+

@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+#free {
+	width: 740px;
+	margin: 20px auto;
+}
+
+h3 {
+	margin: 1.5em 0 0.5em 0;
+}
+
+h4 {
+	margin: 1.5em 0 3px 0;
+}
+
+h5 {
+	margin: 1em 0 5px 0;
+}
+
+ol {
+	padding-inline-start: 25px;
+}
+
+/* ----------------------------------------
+ * 括弧つきの数字リスト
+ * ---------------------------------------- */
+
+ol.list_parentheses {
+	padding: 0;
+	margin :0;
+}
+
+ol.list_parentheses > li {
+	list-style-type: none;
+	list-style-position: inside;
+	counter-increment: cnt;
+}
+
+ol.list_parentheses > li::before {
+	display: marker;
+	content: "(" counter(cnt) ") ";
+}
+
+ol.list_parentheses > li {
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+ol.list_parentheses li .btn {
+	text-indent: 0;
+}
+
+/* ----------------------------------------
+ * 括弧つきの数字リスト2
+ * ---------------------------------------- */
+
+ol.list_parentheses ol.closing_bracket {
+list-style-type: none;
+padding-inline-start: 0;
+}
+
+ol.list_parentheses li > ol.closing_bracket > li {
+	counter-increment: cnt2;
+	
+}
+
+ol.list_parentheses li > ol.closing_bracket > li:before {
+	display: marker;
+	content: counter(cnt2,lower-roman) ") ";
+}
+
+ol.list_parentheses li > ol.closing_bracket > li {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+/* ----------------------------------------
+ * 括弧つきの数字リスト3(漢数字)
+ * ---------------------------------------- */
+
+ol.list_parentheses ol.cjk {
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+ol.list_parentheses li > ol.cjk > li {
+	counter-increment: cnt3;
+	
+}
+
+ol.list_parentheses li > ol.cjk > li:before {
+	display: marker;
+	content: counter(cnt3,cjk-ideographic)". ";
+}
+
+ol.list_parentheses li > ol.cjk > li {
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+/* ----------------------------------------
+ * 数字つきのリスト 2から始める
+ * ---------------------------------------- */
+
+ol.start2 {
+	counter-reset: item 1;
+	padding-inline-start: 0;
+}
+
+ol.start2 > li {
+	display: block;
+}
+
+ol.start2 > li:before {
+	content: counter(item) ". ";
+	counter-increment: item;
+}
+
+ol.start2 > li {
+	padding-left: 1.3em;
+	text-indent: -1.3em;
+}
+
+/** 00. Add indent
+ **************************************************************** **/
+span.rev_ind {					/* spanブロック化 */
+	display: block;
+	padding: 0 0 0 0.5em;
+	text-indent: -0.5em;
+}
+
+span.rev_ind i {
+	text-indent: 0;
+}
+
+span[class*="ind"] i { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+span[class*="ind"] a.btn { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+span.ind_005 {					/* spanブロック化 */
+	display: block;
+	padding-left: 0.5em;
+	text-indent: -0.5em;
+}
+
+span.ind_01 {					/* spanブロック化 */
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+span.ind_012 {					/* spanブロック化 */
+	display: block;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+span.ind_015 {					/* spanブロック化 */
+	display: block;
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+span.ind_02 {					/* spanブロック化 */
+	display: block;
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+span.ind_025 {					/* spanブロック化 */
+	display: block;
+	padding-left: 2.5em;
+	text-indent: -2.5em;
+}
+
+span.ind_03 {					/* spanブロック化 */
+	display: block;
+	padding-left: 3em;
+	text-indent: -3em;
+}
+
+span.ind_04 {					/* spanブロック化 */
+	display: block;
+	padding-left: 4em;
+	text-indent: -4em;
+}
+
+span.ind_05 {					/* spanブロック化 */
+	display: block;
+	padding-left: 5em;
+	text-indent: -5em;
+}
+
+span.ind_06 {					/* spanブロック化 */
+	display: block;
+	padding-left: 6em;
+	text-indent: -6em;
+}
+
+.rev_ind {					/* spanブロック化 */
+	display: block;
+	padding: 0 0 0 0.5em;
+	text-indent: -0.5em;
+}
+
+[class*="ind"] i { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+[class*="ind"] a.btn { /* セレクタ名の部分一致 */
+	text-indent: 0;
+}
+
+.ind_005 {
+	display: block;
+	padding-left: 0.5em;
+	text-indent: -0.5em;
+}
+
+.ind_01 {
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+.ind_012 {
+	display: block;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+.ind_015 {
+	display: block;
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+.ind_02 {
+	display: block;
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+.ind_025 {
+	display: block;
+	padding-left: 2.5em;
+	text-indent: -2.5em;
+}
+
+.ind_03 {
+	display: block;
+	padding-left: 3em;
+	text-indent: -3em;
+}
+
+.ind_04 {
+	display: block;
+	padding-left: 4em;
+	text-indent: -4em;
+}
+
+.ind_05 {
+	display: block;
+	padding-left: 5em;
+	text-indent: -5em;
+}
+
+.ind_06 {
+	display: block;
+	padding-left: 6em;
+	text-indent: -6em;
+}
+
+

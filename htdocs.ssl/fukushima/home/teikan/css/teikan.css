@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+#content table td:first-child {
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+/* ----------------------------------------
+ * 括弧つきの数字リスト
+ * ---------------------------------------- */
+#content ol.list_parentheses {
+	padding: 0 0 0 0em;
+	margin: 0;
+}
+
+ol {
+	padding: 0.1em 0px 0.3em 1.5em;
+}
+#content table ol {
+	margin-left: -1.8em;
+}
+
+#content ol.list_parentheses > li {
+	list-style-type: none;
+	list-style-position: inside;
+	counter-increment: cnt;
+}
+
+#content ol.list_parentheses > li:before {
+	display: marker;
+	content: "(" counter(cnt) ") ";
+}
+#content ol.list_parentheses li {
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}

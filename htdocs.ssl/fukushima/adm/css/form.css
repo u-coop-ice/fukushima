@@ -1,0 +1,607 @@
+@charset "UTF-8";
+
+/* radio-checkbox
+---------------------------------------------------- */
+div.radio-group,div.check-group {
+	margin-bottom: 0px;
+}
+div.radio-group input,div.check-group input {
+	opacity: 0;
+     filter: alpha(opacity=0);
+}
+div.radio-group div,div.check-group div {
+	position: relative;
+}
+div.radio-group input,div.check-group input {
+	position: absolute;
+	left: 0px;
+	outline:none;
+	font-size: 12px;
+	padding: 5px 10px;
+}
+div.radio-group div label,div.check-group div label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 10px;
+	float: left;
+	margin-left: -1px;
+	background: #bdc3c7;
+}
+
+div.radio-group div:first-child label,div.check-group div:first-child label {
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+div.radio-group div:last-child label,div.check-group div:last-child label {
+	-webkit-border-top-right-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+div.radio-group label.checked,div.check-group label.checked  {
+	color: #fff;
+	background: #3498db;
+	font-weight: normal;
+}
+
+
+/* table : inputform
+---------------------------------------------------- */
+table.inputForm {
+	margin: 0 0 4px;
+	width: 100%;
+}
+table.inputForm th {
+	width: 30%;
+	margin: 0px;
+	padding: 0.5em 0.6em 0.3em 0px;
+	font-size: 100%;
+	font-weight: normal;
+	border-bottom: 1px #dddddd solid;
+	text-align: right;
+	color: #804050;
+}
+table.inputForm td {
+	width: 70%;
+	margin: 0px;
+	padding: 0.5em 0px 0.3em 0.6em;
+	font-size: 90%;
+	border-bottom: 1px #dddddd solid;
+}
+table.inputForm .mh {
+	width: 100%;
+	padding: 0.5em 0.6em 0.3em 0.6em;
+	font-weight: bold;
+	text-align: left;
+	color: #a06070;
+	background-color: #eeeeee;
+}
+table.inputForm .void {
+	border: none;
+}
+table.inputForm td h3,
+table.inputForm td h4,
+table.inputForm td h5,
+table.inputForm td h6 {
+	margin: 2px 0;
+	padding: 0;
+}
+
+
+table.inputForm tr.cancelled > td ,table.inputForm tr.cancelled > th {
+	background-color: #999999;
+	opacity:0.9;
+}
+
+/* table : inputform_free
+---------------------------------------------------- */
+table.inputForm_free,table.inputForm.free {
+	margin: 0 0 4px;
+	width: 100%;
+	border-collapse:collapse;
+}
+table.inputForm_free th,table.inputForm.free th {
+	margin: 0px;
+	padding: 0.5em 0.3em 0.3em 0.6em;
+	font-size: 100%;
+	font-weight: normal;
+	border-bottom: 1px #dddddd solid;
+	text-align: left;
+	color: #804050;
+	width: auto;
+}
+table.inputForm_free td,table.inputForm.free td {
+	margin: 0px;
+	padding: 0.5em 0px 0.3em 0.6em;
+	font-size: 90%;
+	border-bottom: 1px #dddddd solid;
+	width: auto;
+}
+
+table.inputForm_free .mh,table.inputForm.free .mh {
+	padding: 0.5em 0.6em 0.3em 0.6em;
+	font-weight: bold;
+	text-align: left;
+	color: #a06070;
+	background-color: #eeeeee;
+}
+table.inputForm_free .void,table.inputForm.free .void {
+	border: none;
+}
+
+table.inputForm_free tr.cancelled > th
+,table.inputForm_free tr.cancelled > td
+,table.inputForm.free tr.cancelled > th
+table.inputForm.free tr.cancelled > td {
+	background-color: #AEAEAE;
+}
+
+
+table.inputForm_free .cascade,table.inputForm.free .cascade {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+table.inputForm_free *.nowrap,table.inputForm.free *.nowrap {
+	white-space: nowrap;
+}
+
+table.inputForm_free td h3,
+table.inputForm_free td h4,
+table.inputForm_free td h5,
+table.inputForm_free td h6,
+table.inputForm.free td h3,
+table.inputForm.free td h4,
+table.inputForm.free td h5,
+table.inputForm.free td h6 {
+	margin: 2px 0;
+	padding: 0;
+}
+
+table.inputForm_free tr.send td,
+table.inputForm.free tr.send td {
+	background-color: #FFEAEF;
+}
+
+#content table.inputForm_free td.vmid,
+#content table.inputForm_free th.vmid,
+#content table.inputForm.free th.vmid,
+#content table.inputForm.free td.vmid {
+	vertical-align: middle;
+}
+
+/* must
+---------------------------------------------------- */
+span.must {
+	display: none;
+	width: 12px;
+	height: 12px;
+	color: #aaaaaa;
+	text-indent: -9999px;
+	background: none;
+	line-height: 0;
+}
+span.must_view {
+	display: inline;
+	padding: 0 0 0 12px;
+	width: 0;
+	height: 12px;
+	color: #ee0000;
+	text-indent: -9999px;
+	background: url(/c/images/btn_form/must.gif) no-repeat left bottom;
+	line-height: 0;
+	overflow: hidden;
+}
+
+/* misc
+---------------------------------------------------- */
+.HIDDEN {
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+	line-height: 0em;
+}
+
+.ERROR {
+	font-size: 110%;
+	color: #ff2200;
+	font-weight: bold;
+}
+
+input.DIS,textarea.DIS,select.DIS {
+/* input,textarea,select */
+	background-color: #fafafa;
+	color: #555555;
+}
+
+table.inputForm tr.no_use {
+	background: #CCCCCC;
+}
+
+div.box.agree {
+	max-height:20em;
+	overflow:auto;
+}
+
+input[readonly].datetime {
+	background: #FFFFFF;
+	width: 180px;
+}
+
+/* DECO : price
+---------------------------------------------------- */
+.prc {
+	font-size: 115%;
+	font-weight: bold;
+	color: #ff6084;
+}
+.prc_total {
+	font-size: 125%;
+	font-weight: bold;
+	color: #dc143c;
+}
+
+
+/* STEP1: div.itembox
+---------------------------------------------------- */
+/* STEP1: div.itembox
+---------------------------------------------------- */
+.item-image {
+	width: 25%;
+}
+
+.item-text {
+	width: 75%;
+	padding-left:15px;
+}
+
+.item-description {
+	font-size: 90%;
+}
+
+.item-content {
+	padding: 5px 0;
+}
+.item-content .itemimg {
+	width:320px;
+	float: left;
+}
+
+.item-content .item-table {
+	width:320px;
+	float: right;
+}
+
+.item-content .item-description {
+	font-size: 100%;
+	padding:10px 0;
+}
+
+@media all and (max-width: 768px) {
+
+.item-content .itemimg {
+	max-width:100%;
+	float: none;
+	margin: 0 auto;
+}
+
+.item-content .item-table {
+	width:100%;
+	float: left;
+	margin: 10px 0;
+}
+
+
+}
+
+
+/* システムメール系
+---------------------------------------------------- */
+#thread {
+	position: relative;
+}
+
+#thread #nts {
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+#mail_body {
+	height: 20em;
+	font-family: monospace;
+}
+
+#mail_subject {
+	width: 60%;
+}
+
+
+/* setting : by ID
+---------------------------------------------------- */
+
+#ship_from_addresss,#ship_from_addresst,
+#store_ordermail {
+	width: 280px;
+ }
+#addressf,#new_addressf,#ship_addressf,#ship_from_addressf,
+#addresss,#new_addresss,
+#ship_addresss,
+#addresst,#ship_addresst {
+}
+
+
+#phonenumber, #faxnumber {
+	width: 160px;
+}
+
+#membership1,#membership2,#membership3 {
+	width: 8em;
+}
+
+#number1 {
+	width: 8em;
+}
+
+#number {
+	width: 300px;
+}
+
+#num {
+	width: 5em;
+}
+
+#cvc {
+	width: 5em;
+}
+
+input[id^="cardnumber"] {
+	width: 5em;
+}
+
+input[id^="phonenumber"],input[id^="mobilephone"],input[id^="ship_phonenumber"],
+input[id^="ship_from_phonenumber"],input[id^="student_phone"] {
+	width: 5.5em;
+}
+
+
+#sort_order,#stock {
+	width: 6em;
+}
+
+
+#namef, #nameg, #kanaf, #kanag,
+#ship_nameg, #ship_namef, #ship_kanag, #ship_kanaf {
+
+}
+
+#ship_from_name,#ship_from_kana {
+	width: 300px;
+}
+
+#bankname,#branch,#holder,#holderk {
+	width: 100%;
+	max-width: 300px;
+}
+#code_branch {
+	width:5em;
+}
+#account {
+	width:10em;
+}
+
+
+
+#zipcodes,
+#new_zipcodes,
+#ship_zipcodes,
+#ship_from_zipcodes
+ {
+	width: 90px;
+}
+#zipcodef,#new_zipcodef,#ship_zipcodef, #age,#ship_from_zipcodef {
+	width: 70px;
+}
+#substitute, #memo {
+	margin-bottom: 0.3em;
+	width: 320px;
+	height: 80px;
+}
+
+#denomination,#title {
+	width: 100%;
+}
+
+#title {
+	width: 100%;
+}
+#store_name {
+	width: 100%;
+}
+
+
+#memo {
+	width: 100%;
+	height: 10em;
+}
+
+#description,#contents {
+	width: 100%;
+	height: 10em;
+}
+
+#cat_code {
+	width: 100px;
+}
+
+#set_year {
+	width: 80px;
+}
+
+
+[id="memo[title]"] {
+	width: 360px;
+}
+
+[id="agree[title]"],[id="agree[select]"] {
+	width: 100%;
+}
+
+[id="agree[note]"] {
+	width: 100%;
+	height: 12em;
+}
+
+
+
+[id^="extra[note]"] {
+	width: 320px;
+}
+
+
+/* absolute cart
+---------------------------------------------------- */
+#fixed_cart {
+	position:fixed;
+	top:100px;
+	right: 15px;
+	text-align: center;
+	z-index:98;
+}
+
+#fixed_cart a p.icon {
+	font-size:45px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top:5px;
+}
+
+#fixed_cart a {
+	background: #222;
+	width:100px;
+	height:100px;
+	text-decoration: none;
+	color: #fff;
+	width: 100px;
+	padding: 8px 0;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 0.4;
+	display: block;
+	font-weight: normal !important;
+	border-radius: 200px;
+	filter:alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+#fixed_cart a:hover {
+	text-decoration: none;
+	background: #999;
+}
+
+/* accordion
+---------------------------------------------------- */
+#accordion {
+
+}
+
+#accordion h4 {
+	background-color: #eDEDED;
+	margin:0;
+	font-size: 110%;
+}
+
+
+#accordion h4.send {
+	background-color: #BC2025;
+}
+
+#accordion h4 a:hover {
+	font-weight: normal;
+}
+
+
+#accordion h4.send.ui-state-focus {
+	background-color: #BC2025;
+}
+
+#accordion h4.send a,#accordion h4.send.ui-state-focus a {
+	color: #FFFFFF;
+}
+#accordion h4.send.ui-state-focus a:hover {
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+/* reserve
+---------------------------------------------------- */
+#comedate {
+	width: 100%;
+}
+
+#comedate_div .ui-datepicker-inline {
+width:100%;
+margin-bottom:.5em;
+}
+
+#comedate_div .ui-datepicker-inline.ui-widget-content {
+border-color:#CCC;
+}
+
+#comedate_div .ui-datepicker-inline table th {
+text-align:center;
+width:5em;
+height:2em;
+font-weight:700;
+color:gray;
+font-size:100%;
+padding:0;
+}
+
+#comedate_div .ui-datepicker-inline table td {
+text-align:center;
+width:3.5em;
+height:3.8em;
+font-size:110%;
+padding:0;
+}
+
+#comedate_div .ui-datepicker-inline td.undefined .ui-state-default {
+background-color:#C0D8E8;
+color:#666;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+padding:1.1em .4em;
+}
+
+#comedate_div .ui-datepicker-inline td.ui-datepicker-unselectable.ui-state-disabled.undefined .ui-state-default {
+background-color:#FFF;
+color:#333;
+}
+
+#comedate_div .ui-datepicker-inline td .ui-state-default.ui-state-hover,#comedate_div .ui-datepicker-inline td .ui-state-default.ui-state-highlight,#comedate_div .ui-datepicker-inline td .ui-state-default.ui-state-active {
+background-color:#2980B9;
+color:#FFF;
+padding:1.1em .4em;
+}
+
+#comedate_div .ui-datepicker-inline td .ui-state-default.ui-state-hover {
+background-color:#428bca;
+color:#FFF;
+padding:1.1em .4em;
+}
+
+#comedate_div .ui-datepicker-inline td.overstock .ui-state-default {
+background-color:#54636D;
+color:#333;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+padding:1.1em .4em;
+}
+

@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+#wrapper {
+	min-height:100vh ;
+	position: relative;
+	box-sizing:border-box;
+}
+
+#wrapper #global_footer {
+  position: absolute;
+  bottom: 0;
+}
+
+#content h4 a {
+	background-image:none;
+	text-transform: none;
+}
+
+
+/* CONTENT STRUCTIRE
+---------------------------------------------------- */
+
+#main.left {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#main.left #main-inner {
+	padding: 0;
+	padding-right: 5px;
+}
+
+#pagebody #sidemenu {
+	float: right;
+}
+
+#content h3.top,
+#content h4.top,
+#content h5.top {
+	margin-top:0;
+}
+
+/* ログイン
+---------------------------------------------------- */
+
+
+.login {
+}
+
+.login .login-inner{
+	padding:20px;
+	background-color:#ecf0f1;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-ms-border-radius:15px;
+	-o-border-radius:15px;
+	border-radius:15px;
+	-webkit-box-shadow:0 0 0 2px rgba(0,0,0,0.04);
+	box-shadow:0 0 0 2px rgba(0,0,0,0.04);
+	border:1px solid rgba(0,0,0,0.3);
+	margin:10% auto;
+	width:300px;
+}
+
+.login .login-inner h5 {
+	font-size: 14px;
+	margin:0;
+	line-height: 1.6;
+	padding:0;
+}
+
+.login .login-inner h5{
+	display:block;
+	margin-bottom:20px
+}
+
+.login .login-inner h5 .logo-icon {
+	font-size:240%;
+	width:2em;
+	height:2em;
+	margin:auto;
+	padding:16px;
+	border-radius:40px;
+	background:#2c3e50
+}
+.login .login-inner h5 .logo-icon i[class*='fa-']{
+	margin-left:0px;
+	color:#1abc9c;
+}
+
+.login .login-inner .text-center .checkbox{
+	text-align:center
+}
+
+.login .login-inner .text-center legend{
+	text-align:center
+}
+
+.login .login-inner .text-center legend input{
+	float:none
+}
+
+.login .login-inner #username,.login .login-inner #password {
+	width: 100%;
+}
+
+.login .login-inner .error {
+	background: transparent;
+}
+
+
+/* STEPS
+---------------------------------------------------- */
+#content table.steps {
+	font-size: 11px;
+	color: #444444;
+	width: 100%;
+	margin: 5px 0;
+}
+
+#content table.steps td {
+	padding: 5px;
+	background: transparent;
+	max-width: 33%;
+}
+
+#content table.steps td.first {
+}
+
+#content table.steps td.now {
+	border: 2px solid #21ade5;
+}
+
+
+#content table.steps span.number {
+	color: #FFFFFF;
+	background: #888888;
+	padding: 0px 5px;
+	border-radius: 16px;
+}
+
+#content table.steps .now span.number {
+	color: #FFFFFF;
+	background: #21ade5;
+}
+#content table.steps .cleared span.number {
+	color: #FFFFFF;
+	background: #1A75B2;
+}
+
+#content table.steps span.description {
+}
+
+#content table.steps span.description:before {
+	content: " ";
+}
+@media all and (max-width: 768px) {
+	#content table.steps {
+	font-size: 16px;
+	color: #444444;
+	width: auto;
+	margin: 5px 0;
+	}
+
+#content table.steps td {
+	padding: 2px;
+	background: transparent;
+}
+
+
+#content table.steps td.now {
+	border: none;
+}
+
+#content table.steps span.number {
+	color: #FFFFFF;
+	padding: 2px 9px;
+	border-radius: 36px;
+}
+
+}
+/* SUB
+---------------------------------------------------- */
+#sub {
+	width: 246px;
+	float: left;
+	padding-left: 15px;
+	font-size: 11px;
+}
+
+#sub.left {
+	float: left;
+	padding-left:0;
+	padding-right: 15px;
+	font-size: 11px;
+}
+
+#sub h5 {
+	font-size:14px;
+}
+
+#sub .sidecolumn {
+	width: 234px;
+	padding: 5px 12px;
+	background-color:#EDEFF1;
+	border-radius: 4px;
+	margin-bottom:10px;
+}
+
+#sub .side_contents {
+	background:transparent;
+	border-left: none;
+}
+
+
+#sub .sidecolumn h3 {
+	border: none;
+	margin: 0;
+	padding: 0 0 0 2px;
+	font-size: 14px;
+
+}
+#sub .sidecolumn dl {
+	margin: 10px 0;
+}
+#sub .sidecolumn dl a {
+	text-decoration: none;
+}
+#sub .sidecolumn dl dl {
+	margin: 4px 0;
+}
+
+#sub .sidecolumn dl dt {
+	color: #34485D;
+	line-height:1.8;
+}
+#content #sub .sidecolumn dd {
+	padding-left: 0;
+	color: #34485D;
+	line-height:1.6;
+}
+
+@media (max-width: 768px) {
+#sub {
+	padding: 15px 0;
+	width: 100%;
+	float: left;
+
+}
+#sub .sidecolumn {
+	width: 100%;
+	padding: 5px 12px;
+}
