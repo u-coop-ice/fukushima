@@ -56,11 +56,11 @@ trait checkEntryCategories {
 		$this->_tbl = 'entry_category';
 
 		$sql = <<< HERE
-SELECT c.*,COUNT(a.id) AS entry_count
+SELECT c.*,a.entry_count AS entry_count
 FROM entry_category AS c
-LEFT JOIN (SELECT id,category_id FROM app
+LEFT JOIN (SELECT COUNT(id) AS entry_count,category_id FROM app
  WHERE IFNULL(app.cancelled,0) < 1
-AND app.component = :component AND IFNULL(app.archived,0) = 0 FOR UPDATE) AS a ON c.id = a.category_id
+AND app.component = :component AND IFNULL(app.archived,0) = 0 GROUP BY category_id FOR UPDATE) AS a ON c.id = a.category_id
 
 HERE;
 
@@ -110,7 +110,7 @@ if (!$this->_archived) {
 			$sql .= " WHERE " . implode("\nAND ", $where) . "\n";
 		}
 
-		$sql .= " GROUP BY c.id FOR UPDATE \n";
+		$sql .= " FOR UPDATE \n";
 
 		$this->_sql = $sql;
 		$category = $this->selectTable();
