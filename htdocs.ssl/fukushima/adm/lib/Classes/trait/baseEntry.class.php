@@ -299,7 +299,6 @@ HERE;
 		try {
 			$sql = <<< HERE
 SELECT e.*,
- count(r.id) AS ct,
 IFNULL(s.status_payment,0) AS status_payment,
 s.status AS status,
 s.mailed AS mailed,

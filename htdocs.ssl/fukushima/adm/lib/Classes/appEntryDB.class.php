@@ -108,7 +108,7 @@ class appEntryDB extends commonDB {
 				$infocode = $_SESSION['config']['component'][COMPONENT]['infocode'];
 				$init_pagetitle = $_SESSION['config']['component'][COMPONENT]['title'];
 
-				$cat_code = $category['cat_code']; //カテゴリ毎のCODE取得
+				$cat_code = $category['cat_code'];             //カテゴリ毎のCODE取得
 				$cat_denomination = $category['denomination']; //カテゴリ名
 
 				$ordermail = $category['ordermail']; //追加メールアド
@@ -170,7 +170,7 @@ class appEntryDB extends commonDB {
 							$select = trim($category['method']['extra'][$k]['select']);
 							$select = preg_replace('/\n|\r\n/', "\n", $select);
 							$extraList = explode("\n", $select);
-							$tmps = array();
+							$tmps = [];
 
 							if ($k == 0) {
 								foreach ($extraList as $v) {
@@ -179,7 +179,7 @@ class appEntryDB extends commonDB {
 								}
 								$extraList = array_keys($tmps);
 								$post_extra = $postdata['extra'];
-								$extramail = array();
+								$extramail = [];
 								if (is_array($post_extra[0])) {
 									foreach ($post_extra[0] as $pe) {
 										if ($tmps[$pe]) {
@@ -305,7 +305,7 @@ class appEntryDB extends commonDB {
 			$this->set_category_id($_appinfo['category_id']);
 			$categoryinfo = $this->getEntryCategory();
 			if ($categoryinfo['ordermail']) {
-				array_push($ccs, $ct['ordermail']);
+				array_push($ccs, $categoryinfo['ordermail']);
 			}
 			break;
 
