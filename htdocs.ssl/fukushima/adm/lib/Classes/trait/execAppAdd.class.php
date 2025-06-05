@@ -36,7 +36,7 @@ trait execAppAdd {
 
 		if (!isset($this->_postdata['date'])) {
 			$this->_postdata['date'] = date("Y-m-d H:i:s");
-		} else if ($this->_postdata['date'] = "") {
+		} else if ($this->_postdata['date'] == "") {
 			$this->_postdata['date'] = date("Y-m-d H:i:s");
 		}
 
