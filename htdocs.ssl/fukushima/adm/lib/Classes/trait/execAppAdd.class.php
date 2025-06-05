@@ -34,6 +34,12 @@ trait execAppAdd {
 			$this->_fields_add['category_id'] = 'integer';
 		}
 
+		if (!isset($this->_postdata['date'])) {
+			$this->_postdata['date'] = date("Y-m-d H:i:s");
+		} else if ($this->_postdata['date'] = "") {
+			$this->_postdata['date'] = date("Y-m-d H:i:s");
+		}
+
 		$this->_postdata['regist_date'] = date('Y-m-d H:i:s');
 
 		$this->set_fields($this->_fields_add);
