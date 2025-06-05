@@ -350,9 +350,13 @@ function getJpoName(j) {
 <div class="pull-left"><p class="form-control-static">&nbsp;</p></div>
 <div class="pull-left"><input type="tel" id="cardnumber4" name="cardnumber4" maxlength="4" size="4" value="{$post['cardnumber4']}" class="cardnumber form-control input-lg validate[required,custom[onlyNumberSp]]" placeholder="････" autocomplete="off" /></div>
 
+<div class="clearfix" style="margin-bottom:0.5em;"></div>
 
 <div class="pull-left">&nbsp;<img class="img" src="/c/images/card/card_visa.png" srcset="/c/images/card/card_visa.png 1x,/c/images/card/card_visa@2x.png 2x" />
 <img class="img" src="/c/images/card/card_master.png" srcset="/c/images/card/card_master.png 1x,/c/images/card/card_master@2x.png 2x" />
+<img class="img" src="/c/images/card/card_jcb.png" srcset="/c/images/card/card_jcb.png 1x,/c/images/card/card_jcb@2x.png 2x" />
+<img class="img" src="/c/images/card/card_amex.png" srcset="/c/images/card/card_amex.png 1x,/c/images/card/card_amex@2x.png 2x" />
+
 </div>
 <div class="clear"></div>
 {if $incorrect_number_err}<span class="red"><i class="fa fa-exclamation-triangle"></i>カード番号が不正です</span>{/if}
