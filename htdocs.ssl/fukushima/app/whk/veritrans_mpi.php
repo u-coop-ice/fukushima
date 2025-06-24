@@ -30,11 +30,15 @@ $messagebody = "numberOfNotify=1&pushTime=20240208105438&pushId=16548499&orderId
 
 /*
 ------------------------------------------*/
-sleep(10); //push通知が即時なので、10秒待つ
-
 try {
 
 	adminWebhookDB::checkHmac($pair, (string) $headers['content-hmac'], (string) $messagebody);
+
+	if (!headers_sent()) {
+		header("HTTP/1.1 200 OK\r\n");
+		header("Content-type: text/html\r\n\r\n");
+		print "Push data Accepted.\n";
+	}
 
 } catch (Exception $e) {
 	# 読み込めないので 500 を応答
@@ -43,6 +47,9 @@ try {
 	print $e->getMessage();
 	exit();
 }
+
+sleep(12); //push通知が即時なので、12秒待つ
+
 /*
 ------------------------------------------*/
 /*
@@ -71,10 +78,6 @@ try {
 	echo $e->getMessage();
 	exit();
 }
-
-# ダミーの HTML 文を出力
-print "Content-type: text/html\r\n\r\n";
-print "Push data Accepted.\n";
 
 exit();
 ?>
