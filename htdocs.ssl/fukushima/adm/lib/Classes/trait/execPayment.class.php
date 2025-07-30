@@ -4,7 +4,7 @@ trait execPayment {
 
 	private $_request;
 	private $_skip_return = 0;
-	private $_payment_3d = 0;
+	private $_payment_3d  = 0;
 
 	public function savePayment() {
 
@@ -14,14 +14,14 @@ trait execPayment {
 
 		$this->getAppPayment();
 
-		$fields = array(
+		$fields = [
 			'app_id' => 'integer',
 			'value' => 'integer',
 			'auth_username' => 'text',
 			'memo' => 'text',
 			'process' => 'text',
 			'payment' => 'integer',
-		);
+		];
 
 		$updata['app_id'] = $this->_app_id;
 		if (is_object($this->_adminAuth)) {
@@ -289,7 +289,7 @@ HERE;
 		} else {
 			if ($ll['value'] > 0) {$all_plus = 1;}
 		}
-		$plus = array($all_plus, $last_minus);
+		$plus = [$all_plus, $last_minus];
 		return $plus;
 	}
 
@@ -388,6 +388,7 @@ HERE;
 		if (!$appinfo['regist_id']) {
 			throw new Exception("不正なアクセスです。お申込み情報を取得できませんでした。", 1);
 		}
+		$appinfo['pre_status'] = $appinfo['status'];
 		if ($appinfo['status'] != -1) {
 //			throw new Exception("不正なアクセスです(st)。", 1);
 		}
@@ -410,9 +411,10 @@ HERE;
 
 		$appinfo['regist_code'] = preg_replace("/0000$/", sprintf("%04d", intval($appinfo['app_count'])), $appinfo['regist_code']);
 
-		sleep(2);
 		$this->_payment_3d = 1;
-		$this->sendMailShopping($appinfo);
+		if ($appinfo['pre_status'] == -1) {
+			$this->sendMailShopping($appinfo);
+		}
 
 	}
 
@@ -561,48 +563,51 @@ HERE;
 
 		if ($has_charged) {
 
-			$this->_component = $_appinfo['component'];
-			if (isset($_appinfo['part']) && $_appinfo['part']) {
-				$this->_part = $_appinfo['part'];
-			}
+			if ($_appinfo['status'] == -1) {
 
-			$app_count = $this->getMaxAppCount() + 1;
+				$this->_component = $_appinfo['component'];
+				if (isset($_appinfo['part']) && $_appinfo['part']) {
+					$this->_part = $_appinfo['part'];
+				}
 
-			$this->_app_id = $_appinfo['id'];
-			$this->_regist_id = $_appinfo['regist_id'];
+				$app_count = $this->getMaxAppCount() + 1;
 
-			$postdata = [
-				'app_id' => $_appinfo['id'],
-				'admin_flag' => 0,
-				'status' => 0,
-				'app_count' => $app_count,
-				'payment_limit' => $payment_limit,
-			];
+				$this->_app_id = $_appinfo['id'];
+				$this->_regist_id = $_appinfo['regist_id'];
 
-			$this->set_postdata($postdata);
-			$this->updateApp([
-				'admin_flag' => 'integer',
-				'status' => 'integer',
-				'app_count' => 'integer',
-				'payment_limit' => 'text',
-			]);
+				$postdata = [
+					'app_id' => $_appinfo['id'],
+					'admin_flag' => 0,
+					'status' => 0,
+					'app_count' => $app_count,
+					'payment_limit' => $payment_limit,
+				];
+
+				$this->set_postdata($postdata);
+				$this->updateApp([
+					'admin_flag' => 'integer',
+					'status' => 'integer',
+					'app_count' => 'integer',
+					'payment_limit' => 'text',
+				]);
 
 //payment_logに追加はまだ
-			if ($has_captured) {
+				if ($has_captured) {
 
-				$updata['memo'] = $result[0]['txnDatetime'];
-				$updata['payment_confirmed'] = $result[0]['amount'];
-				$updata['status'] = 1;
-				$updata['visible'] = 1;
-				$this->set_postdata($updata);
-				$this->savePayment();
-			}
+					$updata['memo'] = $result[0]['txnDatetime'];
+					$updata['payment_confirmed'] = $result[0]['amount'];
+					$updata['status'] = 1;
+					$updata['visible'] = 1;
+					$this->set_postdata($updata);
+					$this->savePayment();
+				}
 
-			if ($_appinfo['payment'] == 4) {
+				if ($_appinfo['payment'] == 4) {
 
-				$_appinfo['regist_code'] = preg_replace("/0000$/", sprintf("%04d", intval($app_count)), $_appinfo['regist_code']);
+					$_appinfo['regist_code'] = preg_replace("/0000$/", sprintf("%04d", intval($app_count)), $_appinfo['regist_code']);
 
-				$_charge->updateChargedInfo($_appinfo['regist_code']);
+					$_charge->updateChargedInfo($_appinfo['regist_code']);
+				}
 			}
 
 			switch ($_appinfo['component']) {
@@ -610,12 +615,11 @@ HERE;
 				$send = $this->getAppPayment();
 				break;
 			}
+			$send['app_count'] = $app_count;
 
 		} else {
 			$this->returnStock($_appinfo);
 		}
-
-		$send['app_count'] = $app_count;
 
 		return $send;
 	}
