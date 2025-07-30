@@ -119,6 +119,7 @@ app.part AS app_part,
 app.category_id AS category_id,
 app.code AS app_code,
 app.status as status,
+app.app_count AS app_count,
 app.total_price as total_price,
 app.postage as postage,
 app.reduction as reduction,
@@ -516,7 +517,7 @@ HERE;
 
 		$send = [];
 
-		if ($_appinfo['status'] != -1) {
+		if ($_appinfo['status'] < -1 || $_appinfo['status'] > 1) {
 			throw new Exception('受注データのstatus不正', 1);
 		}
 		if ($_appinfo['api_key'] == "") {
@@ -615,7 +616,6 @@ HERE;
 				$send = $this->getAppPayment();
 				break;
 			}
-			$send['app_count'] = $app_count;
 
 		} else {
 			$this->returnStock($_appinfo);
