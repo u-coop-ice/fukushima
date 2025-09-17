@@ -342,7 +342,7 @@ trait execAdminCreditCard {
 
 // recievedの生データをDBに保存しておく。
 
-		$fields = array(
+		$fields = [
 			'pushId' => 'text',
 			'pushTime' => 'text',
 			'numberOfNotify' => 'integer',
@@ -358,11 +358,14 @@ trait execAdminCreditCard {
 			'cardMstatus' => 'text',
 			'vResultCode' => 'text',
 
-		);
+		];
 
 		$this->set_fields($fields);
 
 		foreach ($arrRecords as $key => $record) {
+
+			$ct = $this->checkDuplicateReport($record['orderId']);
+			$arrRecords[$key]['duplicate'] = $ct;
 
 			$this->set_tbl('webhook_veritrans');
 			$data = [];
@@ -382,10 +385,31 @@ trait execAdminCreditCard {
 		return $arrRecords;
 	}
 
+	private function checkDuplicateReport($_charged_id) {
+
+		$sql = <<< HERE
+SELECT COUNT(id) AS ct FROM webhook_veritrans
+WHERE charged_id = :charged_id
+
+HERE;
+
+		try {
+			$res = $this->_pdo_repl->prepare($sql);
+			$res->bindValue(":charged_id", $_charged_id, PDO::PARAM_STR);
+			$res->execute();
+		} catch (PDOException $e) {
+			throw new Exception($e->getMessage(), 1);
+		}
+
+		$ct = $res->fetchColumn();
+		return $ct;
+	}
+
 	public function saveRecievedReportVeritrans() {
 
 		if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-			throw new Exception("invalid Access!!", 1);}
+			throw new Exception("invalid Access!!", 1);
+		}
 
 		$records = $this->recieveReportVeritrans();
 
@@ -433,7 +457,7 @@ HERE;
 
 			try {
 				$res = $this->_pdo_repl->prepare($sql);
-				$res->execute(array($data['orderId']));
+				$res->execute([$data['orderId']]);
 			} catch (PDOException $e) {
 				die('Database treatment error.');
 				exit();
@@ -1126,6 +1150,7 @@ HERE;
 		foreach ($records as $key => $record) {
 
 			if (!isset($record['orderId']) || !$record['orderId']) {continue;}
+			if (isset($record['duplicate']) && $record['duplicate'] > 0) {continue;}
 
 			try {
 
