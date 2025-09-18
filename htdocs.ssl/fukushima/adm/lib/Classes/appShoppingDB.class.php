@@ -265,7 +265,7 @@ class appShoppingDB extends commonDB {
 			$shipdata = $this->get_postdata();
 			$shipdata['app_id'] = $this->get_last_insertId();
 
-			if ($shipdata['app_id'] == 0) {
+			if (!$shipdata['app_id']) {
 				throw new Exception("受注内容の保存に失敗しました。", 1);
 			}
 
@@ -313,6 +313,27 @@ class appShoppingDB extends commonDB {
 
 		} catch (Exception $e) {
 			$this->_pdo->rollBack();
+
+			$shipdata['token_id'] = null;
+			$shipdata['payjp-token'] = null;
+			$shipdata['req_card_number'] = null;
+			$shipdata['charged_id'] = null;
+			$shipdata['api_key'] = null;
+			$shipdata['api_secret_key'] = null;
+			$shipdata['test_mode'] = null;
+			$shipdata['receipt_number'] = null;
+			$shipdata['payment_limit'] = null;
+			$shipdata['jpo'] = null;
+			$shipdata['org_number'] = null;
+			$shipdata['customer_number'] = null;
+			$shipdata['confirm_number'] = null;
+			$shipdata['netbanking_url'] = null;
+			$shipdata['response_contents'] = null;
+			$shipdata['app_id'] = null;
+			HTTP_Session2::set('shipdata', $shipdata);
+
+			$this->_smarty->assign('post', $shipdata);
+
 			throw new Exception($e->getMessage(), $e->getCode());
 		}
 
@@ -422,7 +443,7 @@ HERE;
 		if ($this->_auth->checkAuth()) {
 			if ($shipdata['ship_flag'] == 1) {
 
-				$fields_ship = array(
+				$fields_ship = [
 					'regist_id' => 'integer',
 					'ship_namef' => "text",
 					'ship_nameg' => "text",
@@ -436,7 +457,7 @@ HERE;
 					'ship_addresst' => "text",
 					'ship_phonenumber' => "text",
 					'ship_age' => "integer",
-				);
+				];
 
 				if ($shipdata['ship_address']) {
 					$shipdata['id'] = $shipdata['ship_address'];
