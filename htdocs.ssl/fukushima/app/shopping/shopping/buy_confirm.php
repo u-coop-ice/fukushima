@@ -56,6 +56,11 @@ try {
 			break;
 		}
 
+	default:
+		$smarty->assign('page_title', 'エラー');
+		$smarty->assign('errmsg', '不明なエラーです。');
+		$smarty->display('error.tpl');
+
 	}
 }
 
