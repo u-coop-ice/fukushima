@@ -71,7 +71,8 @@ $('.tooltips').powerTip({
 <img class="itemImg" src="{$image_src}" {$image_attr} alt="{$item_name}" title="{$item_name}" /><br />
 {/if}
 </td>
-<td>{$item['name']}</td>
+<td>{$item['name']}
+<div>{$item['price']|number_format}円</div></td>
 <td>{$item['category_denomination']}{if $item['subcategory_denomination']} <i class="fa fa-angle-right"></i> {$item['subcategory_denomination']}{/if}{if $item['sub2category_denomination']} <i class="fa fa-angle-right"></i> {$item['sub2category_denomination']}{/if}</td>
 <td><span class="tag {$visibleColorList[$item['visible']]}">{$visibleList[$item['visible']]}</span>
 {if $item['limit_date']}<br />〜{$item['limit_date']}{/if}

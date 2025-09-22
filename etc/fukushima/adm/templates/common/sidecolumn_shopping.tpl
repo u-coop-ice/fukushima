@@ -76,7 +76,7 @@
 <dd><a href="{$self}?mode=list_item"><i class="fa fa-list"></i> 商品の一覧</a></dd>
 <dl class="pad_l">
 {sp_categories all=1}
-<dt><i class="fa fa-folder-open"></i> {$category['denomination']}</dt>
+<dt><i class="fa fa-folder-open"></i> <a href="{$self}?mode=list_item&cid={$category['id']}">{$category['denomination']}</a></dt>
 {sp_subcategories category=$category['id'] all=1}
 {if subcategory_header}
 <dd>
