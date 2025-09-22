@@ -121,11 +121,17 @@ $(document).ready(function(){
         return false;
     } else {
         $.fancybox.showLoading();
+        setTimeout(() => {
+        $.fancybox.hideLoading();
+        }, 1000);
         return;
     }
 
     } else {
         $.fancybox.showLoading();
+        setTimeout(() => {
+        $.fancybox.hideLoading();
+        }, 1000);
         return;
     }
   });
