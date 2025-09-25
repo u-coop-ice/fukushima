@@ -28,6 +28,18 @@ $(function(){
 
 //]]>
 </script>
+
+<link rel="stylesheet" type="text/css" href="/js/jquery/jquery.powertip-1.3.2/css/jquery.powertip.min.css" />
+<script type="text/javascript" src="/js/jquery/jquery.powertip-1.3.2/jquery.powertip.min.js"></script>
+<script type="text/javascript">
+//<[!CDATA[
+$(function(){
+$('.tooltips').powerTip({placement: 'n'});
+});
+//]]>
+</script>
+
+
 {/literal}
 {/capture}
 
@@ -60,7 +72,7 @@ $(function(){
 
 {orders per_page=10}
 {if $order_header}
-<p>{$order_count}件中の{$first_order_no}〜{$last_order_no}件目</p>
+<p>{$order_count|number_format}件中の{$first_order_no}〜{$last_order_no}件目</p>
 
 <form method="post" id="exportForm" action="{$self}?mode=export_word">
 
@@ -69,7 +81,8 @@ $(function(){
 <col style="width:4%;"/>
 <col width="10%"/>
 <col width="20%"/>
-<col style="width:10%;"/>
+<col style="width:5%;"/>
+<col width="10%"/>
 <col width="10%"/>
 <col width="10%"/>
 <col width="10%"/>
@@ -78,6 +91,7 @@ $(function(){
 <th class="mh">カテゴリ</th>
 <th class="mh">顧客名</th>
 <th class="mh right">点数</th>
+<th class="mh right">備考</th>
 <th class="mh right">合計金額</th>
 <th class="mh">支払</th>
 <th class="mh">状況</th>
@@ -95,6 +109,7 @@ $(function(){
 {if $order['ship_namef']}<br /><i class="fa fa-arrow-right fa-fw"></i>{$order['ship_namef']} {$order['ship_nameg']}{/if}
 </td>
 <td class="right">{$order['num']|number_format}</td>
+<td><span class="tooltips" title="{$order['memo']|nl2br}">{$order['memo']|mb_truncate:"30":"…"}</span></td>
 <td class="right">{$order['total_price_all']|number_format}</td>
 <td><p>{$paymentAdminList[$order['payment']]}
 {if $order['test_mode']}<span class="label label-default">test</span></p>{/if}
