@@ -44,14 +44,12 @@ function deleteCheck() {
 {if $category_header}
 <p>{$category_count}件中の{$first_category_no}〜{$last_category_no}件目</p>
 <table class="inputForm_free" cellspacing="0">
-<col style="width: 20%;" />
-<col style="width: 20%;" />
 <tr>
 <th class="mh">名称</th>
 <th class="mh" style="text-align: left;">登録メール送信先</th>
-<th class="mh" style="">運用状態</th>
-<th class="mh" style="">登録数</th>
-<th class="mh" style="">並び順</th>
+<th class="mh" style="width:7em">運用状態</th>
+<th class="mh" style="width:5em">登録数</th>
+<th class="mh" style="width:5em">並び順</th>
 <th class="mh"></th>
 {if $authority['reserve']['delete']}
 <th class="mh">削除</th>
@@ -61,7 +59,8 @@ function deleteCheck() {
 {get_app_count category_id=$category['id']}
 <tr{if $is_odd} class="odd"{/if}>
 <td><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a><br />
-<a href="{$init_url}app/reserve/?cd={$category['code']}" target="_blank">{$init_url}app/reserve/?cd={$category['code']}<i class="fa fa-fw fa-external-link"></i></a></td>
+<code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/reserve/?cd={$category['code']}</code>
+</td>
 <td style="text-align:left;word-break: break-all;">{if $category['ordermail']}{$category['ordermail']}{else}{$init_ordermail}{/if}</td>
 <td class="nowrap">
 <span title="{$category['date_start']}〜{$category['date_limit']}" class="tag 

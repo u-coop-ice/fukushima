@@ -312,8 +312,8 @@ promptPosition : "inline"
 
 <tr>
 <th>フォームURL</th>
-<td>{if $category['denomination']}<a href="{$init_url}app/reserve/?cd={$category['code']}" rel="external">{$init_url}app/reserve/?cd={$category['code']}<i class="fa fa-fw fa-external-link"></i></a><br />
-<span class="red em09">変更を行った場合は表示は必ず確認しましょう。{/if}</span>
+<td>{if $copy}<p class="alert alert-info">保存するとURLが発行されます。</p>{else}{if $category['denomination']}<code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/reserve/?cd={$category['code']}</code><br />
+<span class="red em09">変更を行った場合は表示は必ず確認しましょう。{/if}</span>{/if}
 </td>
 </tr>
 

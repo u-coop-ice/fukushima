@@ -54,7 +54,7 @@ function deleteCheck() {
 <th class="mh" style="width: 35%;text-align: left;">名称</th>
 <th class="mh" style="width: 30%;text-align: left;">投稿メール送信先</th>
 <th class="mh" style="width: 5%;">運用状態</th>
-<th class="mh" style="width: 20%;">登録数</th>
+<th class="mh" style="width: 10%;">登録数</th>
 <th class="mh" style="width: 10%;">並び順</th>
 <th class="mh"></th>
 {if $authority['entry']['delete']}
@@ -64,8 +64,10 @@ function deleteCheck() {
 {/if}
 {get_app_count category_id=$category['id']}
 <tr{if $is_odd} class="odd"{/if}>
-<td style="word-break:break-all;"><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a><br />
-<a href="{$init_url}app/entry/?cd={$category['code']}" target="_blank">{$init_url}app/entry/?cd={$category['code']}<i class="fa fa-fw fa-external-link"></i></a></td>
+
+<td style="word-break:break-all;"><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a><br /><code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/entry/?cd={$category['code']}</code></td>
+
+
 <td style="word-break:break-all;">{if $category['ordermail']}{$category['ordermail']}{else}{$init_ordermail}{/if}</td>
 <td class="nowrap">
 <span title="{$category['date_start']}〜{$category['date_limit']}" class="tag 

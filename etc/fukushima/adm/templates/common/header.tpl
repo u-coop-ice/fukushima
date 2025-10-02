@@ -36,6 +36,16 @@ $(function() {
 		}
 	});
 });
+
+
+$(function(){
+	$('.btn-copy-clipboard').on('click',function(){
+		let copy = $(this).text();
+		navigator.clipboard.writeText(copy);
+		alert('クリップボードに保存しました。')
+	})
+});
+
 </script>
 
 <style type="text/css">
