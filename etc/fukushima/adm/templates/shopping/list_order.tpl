@@ -111,8 +111,12 @@ $('.tooltips').powerTip({placement: 'n'});
 <td class="right">{$order['num']|number_format}</td>
 <td><span class="tooltips" title="{$order['memo']|nl2br}">{$order['memo']|mb_truncate:"30":"…"}</span></td>
 <td class="right">{$order['total_price_all']|number_format}</td>
-<td><p>{$paymentAdminList[$order['payment']]}
-{if $order['test_mode']}<span class="label label-default">test</span></p>{/if}
+<td>{$paymentAdminList[$order['payment']]}
+{if $order['payment']==5}
+{get_charged_info_veritrans api_key=$order['api_key'] api_secret_key=$order['api_secret_key'] charged_id=$order['charged_id'] last=1 test_mode=$order['test_mode']}
+{if $last_transaction}<br /><div class="tag min {$detailOrderColorList[$last_transaction]}">{$detailOrderTypeList[$last_transaction]}</div>{/if}
+{/if}
+{if $order['test_mode']}<span class="label label-default">test</span>{/if}
 </td>
 <td><span class="tag min {$statusColorList[$order['status']|default:0]}">{$statusOrderList[$order['status']|default:0]}</span></td>
 </tr>

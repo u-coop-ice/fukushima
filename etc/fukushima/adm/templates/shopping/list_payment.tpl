@@ -207,7 +207,7 @@ if (status == true){
 {get_charged_info_veritrans charged_id=$order['charged_id'] api_key=$order['api_key'] api_secret_key=$order['api_secret_key'] test_mode=$order['test_mode']}
 {if $card_err}<p class="error alert alert-danger">{$card_err}</p>{/if}
 {if $order_test_mode}<div class="tag gray min">テスト</div><br />{/if}
-<div class="tag">{$detailOrderTypeList[$last_transaction]}</div>
+<div class="tag min {$detailOrderColorList[$last_transaction]}">{$detailOrderTypeList[$last_transaction]}</div>
 
 </td>
 {else}
