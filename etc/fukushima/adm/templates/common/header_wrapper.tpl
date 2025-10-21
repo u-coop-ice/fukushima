@@ -26,6 +26,11 @@
 <li id="global[reserve]" {if $smarty.const.COMPONENT=="reserve"}class="focus"{/if}><a href="{$init_url}adm/reserve/">日付エントリ</a></li>
 {/if}
 
+{if $authority['member']['show']}
+<li id="global[member]" {if $smarty.const.COMPONENT=="member"}class="focus"{/if}><a href="{$init_url}adm/member/">組合員</a></li>
+{/if}
+
+
 {if $authority['living']['show']}
 <li id="global[living]" {if $smarty.const.COMPONENT=="living"}class="focus"{/if}><a href="{$init_url}adm/living/">不動産</a></li>
 {/if}

@@ -109,7 +109,7 @@ function initialize() {
 	$parentRelationList = ['', '父', '母', 'その他'];
 	$smarty->assign('parentRelationList', $parentRelationList);
 
-	$smarty->assign('schoolyear', ['', '1年', '2年', '3年', '4年', '5年', '6年', '院生', 'その他']);
+	$smarty->assign('schoolyear', ['', '1年', '2年', '3年', '4年', '院生', 'その他']);
 
 	$smarty->assign('bankSortList', [1 => '普通', 2 => '当座']);
 

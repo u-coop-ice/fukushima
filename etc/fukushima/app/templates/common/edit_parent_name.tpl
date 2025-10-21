@@ -1,5 +1,5 @@
 <div id="form-group_parent_name" class="form-group">
-<label class="control-label col-sm-3">保護者氏名{if $methods['parent_name']['use']==2}<span class="label label-danger">必須</span>{else}<span class="label label-default">任意</span>{/if}</label>
+<label class="control-label col-sm-3">{$methods['parent_name']['title']|default:"保護者氏名"}{if $methods['parent_name']['use']==2}<span class="label label-danger">必須</span>{else}<span class="label label-default">任意</span>{/if}</label>
 <div class="col-sm-9">
 <div class="row">
 <div class="col-xs-6 col-sm-4">
@@ -13,7 +13,7 @@
 </div>
 
 <div id="form-group_parent_kana" class="form-group">
-<label class="control-label col-sm-3">保護者フリガナ{if $methods['parent_name']['use']==2}<span class="label label-danger">必須</span>{else}<span class="label label-default">任意</span>{/if}</label>
+<label class="control-label col-sm-3">{$methods['parent_name']['title']|default:"保護者氏名"}フリガナ{if $methods['parent_name']['use']==2}<span class="label label-danger">必須</span>{else}<span class="label label-default">任意</span>{/if}</label>
 
 <div class="col-sm-9">
 <div class="row">

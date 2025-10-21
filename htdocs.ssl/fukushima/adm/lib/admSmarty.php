@@ -4,12 +4,21 @@ class AdmSmarty extends Smarty {
 	function __construct() {
 		parent::__construct();
 
-		if (defined('PART')) {
+		if (defined('ADM_PART')) {
+
+			if (file_exists(ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/' . PART)) {
+				$this->setTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/' . PART, ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/' . ADM_PART]);
+			} else {
+				$this->setTemplateDir(ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/' . ADM_PART);
+			}
+			$this->addTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union']);
+
+		} else if (defined('PART')) {
 			$this->setTemplateDir(ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/' . PART);
-			$this->addTemplateDir(array(ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union'));
+			$this->addTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union']);
 		} else {
 
-			$this->setTemplateDir(array(ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union'));
+			$this->setTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union']);
 		}
 
 		$this->setCompileDir('/var/cache/smarty/' . DOMAIN . '/' . ADM_DIR . 'templates_c/' . COMPONENT);
@@ -58,7 +67,7 @@ if ($dbsocket) {
 	$dsn = 'mysql:host=' . $dbhost . ';dbname=' . $database . ';';
 }
 
-$options = array(
+$options = [
 	'dsn' => $dsn,
 	'db_user' => $dbuser,
 	'db_password' => $dbpass,
@@ -68,7 +77,7 @@ $options = array(
 	'db_fields' => '*',
 	'cryptType' => 'password_hash',
 	'auto_quote' => false,
-);
+];
 
 $auth = new Auth('PDO', $options, 'loginFunction');
 

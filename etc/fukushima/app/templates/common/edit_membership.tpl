@@ -13,6 +13,7 @@
 <div class="pull-left"><input type="tel" id="membership3" name="membership3" maxlength="4" placeholder="半角4桁
 " class="num form-control input-lg validate[{if $methods['membership']['use']==2}required,{/if}minSize[4],custom[onlyNumberSp]]" value="{$regist['membership3']}" /></div>
 <div class="clear"></div>
+<div class="help-block">（ご家族のアプリに表示される組合員番号とは異なります）</div>
 {if $error['membership']=="1"}<span class="must_view">*必須項目です</span>{/if}
 
 </div>

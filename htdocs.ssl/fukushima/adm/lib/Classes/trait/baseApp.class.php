@@ -3,6 +3,16 @@ trait baseApp {
 
 	protected $_app_id;
 	protected $_app_code;
+	protected $_component;
+	protected $_part;
+
+	public function set_component(string $_component) {
+		$this->_component = $_component;
+	}
+
+	public function set_part(string $_part) {
+		$this->_part = $_part;
+	}
 
 	public function get_app_id() {
 		return $this->_app_id;

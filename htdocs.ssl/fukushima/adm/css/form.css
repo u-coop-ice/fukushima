@@ -368,6 +368,11 @@ input[id^="ship_from_phonenumber"],input[id^="student_phone"] {
 	width: 5.5em;
 }
 
+input[id^="phonenumber[title]"],input[id^="mobilephone[title]"],input[id^="ship_phonenumber[title]"],
+input[id^="ship_from_phonenumber[title]"],input[id^="student_phone[title]"] {
+	width: auto;
+}
+
 
 #sort_order,#stock {
 	width: 6em;

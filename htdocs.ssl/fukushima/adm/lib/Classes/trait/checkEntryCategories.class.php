@@ -17,10 +17,6 @@ trait checkEntryCategories {
 		$this->_category_code = $_category_code;
 	}
 
-	public function set_component(string $_component) {
-		$this->_component = $_component;
-	}
-
 	public function set_archived(int $_archived) {
 		$this->_archived = $_archived;
 	}
@@ -56,11 +52,10 @@ trait checkEntryCategories {
 		$this->_tbl = 'entry_category';
 
 		$sql = <<< HERE
-SELECT c.*,a.entry_count AS entry_count
+SELECT c.*,COUNT(a.id) AS entry_count
 FROM entry_category AS c
-LEFT JOIN (SELECT COUNT(id) AS entry_count,category_id FROM app
+LEFT JOIN (SELECT id,category_id FROM app
  WHERE IFNULL(app.cancelled,0) < 1
-AND app.component = :component AND IFNULL(app.archived,0) = 0 GROUP BY category_id FOR UPDATE) AS a ON c.id = a.category_id
 
 HERE;
 
@@ -77,17 +72,40 @@ HERE;
 			$this->_postdata[':component'] = $this->_component;
 			array_push($where, "c.component = :component");
 
+			$sql .= <<< HERE
+AND app.component = :component
+
+HERE;
+
 			if ($this->_part) {
 				$this->_postdata[':part'] = $this->_part;
 				array_push($where, "c.part = :part");
+
+				$sql .= <<< HERE
+AND app.part = :part
+
+HERE;
+
 			}
 
 		} else if (defined('COMPONENT')) {
 			$this->_postdata[':component'] = COMPONENT;
 			array_push($where, "c.component = :component");
+
+			$sql .= <<< HERE
+AND app.component = :component
+
+HERE;
+
 			if (defined('PART')) {
 				$this->_postdata[':part'] = PART;
 				array_push($where, "c.part = :part");
+
+				$sql .= <<< HERE
+AND app.part = :part
+
+HERE;
+
 			}
 		}
 
@@ -101,18 +119,20 @@ HERE;
 			}
 		}
 
-/*
-if (!$this->_archived) {
-}
- */
+		$sql .= <<< HERE
+
+ AND IFNULL(app.archived,0) = 0 FOR UPDATE) AS a ON c.id = a.category_id
+
+HERE;
 
 		if (count($where)) {
 			$sql .= " WHERE " . implode("\nAND ", $where) . "\n";
 		}
 
-		$sql .= " FOR UPDATE \n";
+		$sql .= " GROUP BY c.id FOR UPDATE \n";
 
 		$this->_sql = $sql;
+
 		$category = $this->selectTable();
 
 		if (!count($category)) {
@@ -129,68 +149,7 @@ if (!$this->_archived) {
 
 	}
 
-	public function getEntryCategory() {
-
-		$category = $this->getEntryCategorySimple();
-//		var_dump($category['method']['extra']);
-
-		$category = $this->calcCategoryMethod($category);
-/*
-if (count($category['method'])) {
-
-foreach ($category['method'] as $key => $value) {
-
-if ($key != 'extra') {
-if (CURRENT === "app" || $this->_skip_auth_check) {
-if (!$value['use']) {continue;}
-}
-$_method[$key] = $value['sort'];
-switch ($value['use']) {
-case '1':
-$_fields['all'][$key] = 1;
-break;
-case '2':
-$_fields['all'][$key] = 1;
-$_fields['must'][$key] = 1;
-break;
-}
-} else {
-foreach ($value as $k => $v) {
-if (CURRENT === "app" || $this->_skip_auth_check) {
-if (!$v['use']) {continue;}
-}
-$_method[$key . $k] = $v['sort'];
-switch ($v['use']) {
-case '1':
-$_fields['all'][$key][$k] = 1;
-break;
-case '2':
-$_fields['all'][$key][$k] = 1;
-$_fields['must'][$key][$k] = 1;
-break;
-}
-}
-}
-}
-asort($_method);
-
-while (list($key, $value) = each($_method)) {
-$_result .= "sort_" . $key . ",";
-if (preg_match('/^extra/', $key)) {
-$k = intval(substr($key, 5));
-$_extras[$key]['k'] = $k;
-
-if ($category['method']['extra'][$k]['select']) {
-
-$select = trim($category['method']['extra'][$k]['select']);
-$select = preg_replace('/\n|\r\n/', "\n", $select);
-
-$_extras[$key]['list'] = explode("\n", $select);
-}
-}
-
-}
- */
+	private function transformEntryCategory($category) {
 
 		if ($category['method']['agree']['use']) {
 			$category['method']['agree']['note_href'] = preg_replace('/(https?|http)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)/', '<a href="\\1\\2" target="_blank">\\1\\2</a>', $category['method']['agree']['note']);
@@ -233,6 +192,21 @@ $_extras[$key]['list'] = explode("\n", $select);
 			$category['description_closed'] = stripslashes($category['description_closed']);
 			$category['description_closed'] = htmlspecialchars_decode($category['description_closed']);
 		}
+
+		if ($category['method']['ship_flag']['select']) {
+			$category['method']['ship_flag_list'] = preg_replace("#\r\n|\r#", "\n", $category['method']['ship_flag']['select']);
+			$category['method']['ship_flag_list'] = explode("\n", $category['method']['ship_flag_list']);
+		}
+
+		return $category;
+
+	}
+
+	public function getEntryCategory() {
+
+		$category = $this->getEntryCategorySimple();
+		$category = $this->calcCategoryMethod($category);
+		$category = $this->transformEntryCategory($category);
 
 		return $category;
 	}
@@ -333,9 +307,9 @@ $_extras[$key]['list'] = explode("\n", $select);
 
 			$_category['fields'] = $_fields;
 
-			return $_category;
-
 		}
+
+		return $_category;
 
 	}
 

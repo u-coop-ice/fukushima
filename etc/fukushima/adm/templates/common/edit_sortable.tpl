@@ -57,6 +57,8 @@
 
 <tr id="sort_parent_name"><th>保護者氏名</th><td>
 <div class="radio">{html_radios name="parent_name[use]" options=$extraList selected=$category['method']['parent_name']['use'] separator="&nbsp;"}</div>
+<input type="text" name="parent_name[title]" id="parent_name[title]" class="form-control" value="{$category['method']['parent_name']['title']|default:"保護者氏名"}" />
+
 </td></tr>
 
 <tr id="sort_bank"><th>銀行口座情報</th><td>

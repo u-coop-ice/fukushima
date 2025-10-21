@@ -90,6 +90,7 @@ $(function(){
 {include file="sidecolumn_ask.tpl"}
 {include file="sidecolumn_entry.tpl"}
 {include file="sidecolumn_reserve.tpl"}
+{include file="sidecolumn_member.tpl"}
 {include file="sidecolumn_living.tpl"}
 {include file="sidecolumn_regist.tpl"}
 {include file="sidecolumn_shopping.tpl"}
