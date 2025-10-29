@@ -30,7 +30,7 @@
 <br />注意書き等：<textarea name="graduateyear[note]" class="form-control" id="graduateyear[note]">{$category['method']['graduateyear']['note']}</textarea>
 </td></tr>
 
-<tr id="sort_dept"><th>学部・学科</th><td><div class="radio">{html_radios name="dept[use]" options=$extraList selected=$category['method']['dept']['use'] separator="&nbsp;"}</div></td></tr>
+<tr id="sort_dept"><th>学類・学科</th><td><div class="radio">{html_radios name="dept[use]" options=$extraList selected=$category['method']['dept']['use'] separator="&nbsp;"}</div></td></tr>
 <tr id="sort_major"><th>専攻等</th><td><div class="radio">{html_radios name="major[use]" options=$extraList selected=$category['method']['major']['use'] separator="&nbsp;"}</div></td></tr>
 <tr id="sort_new_add"><th>現住所<br />
 <span class="em08">実家（帰省先）住所とセットで使用して下さい。</span></th><td><div class="radio">{html_radios name="new_add[use]" options=$extraList selected=$category['method']['new_add']['use'] separator="&nbsp;"}</div>
