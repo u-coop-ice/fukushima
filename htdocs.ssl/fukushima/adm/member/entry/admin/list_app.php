@@ -6,7 +6,7 @@ if (intval($_GET['deleted'])) {
 
 // ページ選択用のクエリの設定
 
-$url_querys = array('mode=list_app');
+$url_querys = ['mode=list_app'];
 
 // URLにcat_idが指定されている
 $category_id = intval($_GET['category_id']);

@@ -70,6 +70,7 @@ $(function(){
 <!-- breadcrumb -->
 <div id="breadcrumb">
 <a href="{$init_url}adm/">HOME</a>&nbsp;&gt;&nbsp;<a href="{$init_url}adm/{$smarty.const.COMPONENT}/">{$init_pagetitle}</a>
+{if $part_pagetitle}&nbsp;&gt;&nbsp;{$part_pagetitle}{/if}
 </div><!-- /breadcrumb -->
 
 </div><!-- contentheader -->

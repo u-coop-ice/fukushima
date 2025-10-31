@@ -1,6 +1,6 @@
 <?php
 function smarty_block_categories($params, $content, &$smarty, &$repeat) {
-	$categories = array();
+	$categories = [];
 	// データベース関連の情報を得る
 	$pdo = $smarty->getTemplateVars('pdo');
 	$pdo_repl = $smarty->getTemplateVars('pdo_repl');
@@ -24,34 +24,34 @@ function smarty_block_categories($params, $content, &$smarty, &$repeat) {
 			}
 			// カテゴリーのデータを初期化する
 			$data = $res->fetch();
-			$category = array('id' => 0,
+			$category = ['id' => 0,
 				'denomination' => '',
 				'ordermail' => '',
 				'pressmail' => '',
 				'description' => '',
-				'sort_order' => $data['ct'] + 1);
+				'sort_order' => $data['ct'] + 1];
 
-			$category['method'] = array(
-				'sex' => array('use' => 0)
-				, 'number' => array('use' => 0)
-				, 'membership' => array('use' => 0)
-				, 'univ' => array('use' => 0)
-				, 'schoolyear' => array('use' => 0)
-				, 'graduateyear' => array('use' => 0)
-				, 'dept' => array('use' => 0)
-				, 'age' => array('use' => 0)
-				, 'major' => array('use' => 0)
-				, 'new_add' => array('use' => 0)
-				, 'address' => array('use' => 0)
-				, 'student_phone' => array('use' => 0)
-				, 'mobilephone' => array('use' => 0)
-				, 'phonenumber' => array('use' => 0)
-				, 'parent_name' => array('use' => 0)
-				, 'bank' => array('use' => 0)
-				, 'creditcard' => array('use' => 0)
-				, 'memo' => array('use' => 0)
-				, 'agree' => array('use' => 0),
-			);
+			$category['method'] = [
+				'sex' => ['use' => 0]
+				, 'number' => ['use' => 0]
+				, 'membership' => ['use' => 0]
+				, 'univ' => ['use' => 0]
+				, 'schoolyear' => ['use' => 0]
+				, 'graduateyear' => ['use' => 0]
+				, 'dept' => ['use' => 0]
+				, 'age' => ['use' => 0]
+				, 'major' => ['use' => 0]
+				, 'new_add' => ['use' => 0]
+				, 'address' => ['use' => 0]
+				, 'student_phone' => ['use' => 0]
+				, 'mobilephone' => ['use' => 0]
+				, 'phonenumber' => ['use' => 0]
+				, 'parent_name' => ['use' => 0]
+				, 'bank' => ['use' => 0]
+				, 'creditcard' => ['use' => 0]
+				, 'memo' => ['use' => 0]
+				, 'agree' => ['use' => 0],
+			];
 
 			array_push($categories, $category);
 		}
@@ -71,9 +71,9 @@ function smarty_block_categories($params, $content, &$smarty, &$repeat) {
 			}
 
 			// カテゴリーをデータベースから読み込む
-			$type = array();
-			$data = array();
-			$where = array();
+			$type = [];
+			$data = [];
+			$where = [];
 			$sql = <<< HERE
 SELECT c.*, count(a.id) as entry_count
  FROM entry_category AS c LEFT JOIN app AS a
@@ -117,7 +117,7 @@ HERE;
 					case 'entry':
 					case 'reserve':
 						if (is_array($authority[$params['component']]["category_id"])) {
-							$ors = array();
+							$ors = [];
 							foreach ($authority[$params['component']]["category_id"] as $ac) {
 								array_push($data, $ac);
 								array_push($ors, "c.id = ?\n");
@@ -172,6 +172,10 @@ HERE;
 				if ($params['component']) {
 					array_push($data, $params['component']);
 					array_push($where, "c.component = ?");
+				}
+				if ($params['part']) {
+					array_push($data, $params['part']);
+					array_push($where, "c.part = ?");
 				}
 			}
 
