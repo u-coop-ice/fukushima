@@ -1,5 +1,5 @@
 {$init_coopname}
-{$category_denomination}
+{$category['denomination']}
 フォームからの送信です。
 
 入力内容をご確認ください。

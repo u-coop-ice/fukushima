@@ -1,7 +1,7 @@
 {if $post['namef']}{$post['namef']} {$post['nameg']}様{/if}
 
 ご利用ありがとうございます。{$init_coopname}です。
-{$category_denomination}
+{$category['denomination']}
 を承りました。
 
 本メールはお客様のご登録情報がサーバーに到達した時点で送信される自動配信メールです。
@@ -11,10 +11,10 @@
 ---------------
 《受付番号》{$regist_code}
 ---------------
-{$category_denomination}
+{$category['denomination']}
 ---------------
-{if $category_description}
-{$category_description}
+{if $category['description']}
+{$category['description']}
 ---------------
 {/if}
 
