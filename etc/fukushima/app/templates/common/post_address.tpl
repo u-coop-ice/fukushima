@@ -1,7 +1,7 @@
 <div id="form-group_address" class="form-group">
 
 <label class="col-sm-3 control-label">{$methods['address']['title']|default:"実家（帰省先）住所"}{if $methods['address']['use']==2}<span class="label label-danger">必須</span>{else}<span class="label label-default">任意</span>{/if}<br />
-<span class="em08">マンション・建物の名前も省略しないでご記入ください</span></label>
+<span class="em08">マンション・建物の名前も省略しないで入力ください</span></label>
 <div class="col-sm-9">
 <div id="add">
 

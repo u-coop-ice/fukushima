@@ -1,7 +1,7 @@
 <div id="form-group_new_add">
 <div class="form-group">
 <label class="col-sm-3 control-label">{$methods['new_add']['title']|default:"現住所"}{if $methods['new_add']['use']==2}<span class="label label-danger">必須</span>{else}<span class="label label-default">任意</span>{/if}<br />
-<span class="em08">マンション・建物の名前も省略しないでご記入ください</span></label>
+<span class="em08">マンション・建物の名前も省略しないで入力ください</span></label>
 
 <div class="col-sm-9 radio">
 <label for="newaddYES"><input type="radio" id="newaddYES" name="new_add" class="{if $methods['new_add']['use']==2}validate[required]{/if}" value="1" {if $regist['new_add']=="1"}checked="checked"{/if} /> {$newaddList[1]}</label>
