@@ -1,6 +1,10 @@
 {assign var='page_title' value='サインイン'}
 {include file='header.tpl'}
 
+
+<p class="alert alert-danger">セキュリティ強化のための認証システムアプリ（Google Authenticatorなど）を利用した、管理画面の2段階認証の対応が可能です。大学生協内でご検討ください。導入についてのスケジュール感、不明点などについても、東北地区HPG城田までお問い合わせください。（2025.11.06）</p>
+
+
 <div class="login">
 <div class="login-inner">
 <div class="center">
