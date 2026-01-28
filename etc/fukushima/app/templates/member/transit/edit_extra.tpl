@@ -1,5 +1,5 @@
 {if $k==1}
-<h4 class="page-header">変更される項目について</h4>
+<h4 class="page-header">変更する項目について：4月からの情報を入力してください</h4>
 {else if $k==4}
 <h4 class="page-header">入力者情報</h4>
 {/if}

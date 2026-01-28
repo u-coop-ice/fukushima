@@ -1,4 +1,4 @@
-<h4 class="page-header">組合員（学生本人）情報</h4>
+<h4 class="page-header">組合員（学生本人）情報：3月までの情報を入力してください</h4>
 
 
 <div id="form-group_name" class="form-group">

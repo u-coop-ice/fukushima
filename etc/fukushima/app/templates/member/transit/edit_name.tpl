@@ -1,4 +1,4 @@
-<h4 class="page-header">組合員（学生本人）情報</h4>
+<h4 class="page-header">組合員（学生本人）情報：3月までの情報を入力してください</h4>
 
 <div id="form-group_name" class="form-group">
 <label class="col-sm-3 control-label">{$methods['name']['title']|default:"氏名"}（漢字）<span class="label label-danger">必須</span></label>
