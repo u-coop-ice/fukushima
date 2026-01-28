@@ -116,7 +116,7 @@ pre {
 {/capture}
 
 {capture assign="page_title"}
-{$category['denomination']} 開設日カレンダーの設定
+{$category['denomination']} 開設日の設定
 {/capture}
 
 {include file='header.tpl'}

@@ -28,11 +28,13 @@ $next_month = date('m', $next_time);
 $prev_year = date('Y', $prev_time);
 $prev_month = date('m', $prev_time);
 
-$sds = array();
+$sds = [];
 
 $it->set_year($set_year);
 $it->set_month($set_year);
 $it->set_category_id($category_id);
+
+$category = $it->getEntryCategory();
 
 $sds = $it->get_calendar();
 
@@ -98,6 +100,8 @@ $smarty->assign('prev_year', $prev_year);
 $smarty->assign('prev_month', $prev_month);
 
 $smarty->assign('calendar_list', $calendar_list);
+
+$smarty->assign('category', $category);
 
 $smarty->display('edit_calendar.tpl');
 ?>

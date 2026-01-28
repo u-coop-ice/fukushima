@@ -56,10 +56,12 @@ function deleteCheck() {
 {/if}
 </tr>
 {/if}
-{get_app_count category_id=$category['id']}
 <tr{if $is_odd} class="odd"{/if}>
 <td><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a><br />
 <code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/reserve/?cd={$category['code']}</code>
+
+<div><a href="{$init_url}adm/reserve/?mode=edit_calendar&category_id={$category['id']}" ><i class="fa fa-calendar"></i> 開設日</a></div>
+
 </td>
 <td style="text-align:left;word-break: break-all;">{if $category['ordermail']}{$category['ordermail']}{else}{$init_ordermail}{/if}</td>
 <td class="nowrap">
@@ -69,7 +71,7 @@ function deleteCheck() {
 {else}green">稼働中{/if}{/if}</span>
 </td>
 <td>
-<a href="{$self}?mode=show_calendar&category_id={$category['id']}">{$app_count}</a>
+<a href="{$self}?mode=show_calendar&category_id={$category['id']}">{$category['entry_count']}</a>
 </td>
 <td>{$category['sort_order']}</td>
 <td><a class="btn btn-primary btn-sm" title="設定をコピーしてカテゴリを作成します。ただし開設日は新しく設定ください。" href="{$self}?mode=edit_category&category_id={$category['id']}&copy=1"><i class="fa fa-copy"></i></a></td>
