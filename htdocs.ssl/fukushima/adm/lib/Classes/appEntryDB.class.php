@@ -97,6 +97,11 @@ class appEntryDB extends commonDB {
 				$this->saveApp($fields_sql_app);
 				$postdata = $this->get_postdata();
 				$postdata['app_id'] = $this->get_last_insertId();
+
+// stock_multiテーブルの更新
+				$_category = $this->getEntryCategorySimple();
+				$this->updateEntryStockMulti($_category);
+
 //メール送信
 
 //生協管理用メールアドレスを取得する。

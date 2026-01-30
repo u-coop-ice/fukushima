@@ -1,50 +1,50 @@
 <?php
 trait execApp {
 
-	protected $_fields_vars = array(
+	protected $_fields_vars = [
 
 		//step2系
 
-		'exam' => array('exam' => 'integer')
-		, 'dept' => array('dept' => 'integer')
+		'exam' => ['exam' => 'integer']
+		, 'dept' => ['dept' => 'integer']
 
-		, 'email' => array('email' => 'text', 'emailcfrm' => 'text')
+		, 'email' => ['email' => 'text', 'emailcfrm' => 'text']
 
 		//step3系
-		, 'name' => array('namef' => 'text', 'nameg' => 'text', 'kanaf' => 'text', 'kanag' => 'text')
-		, 'new_add' => array('new_zipcodef' => 'integer', 'new_zipcodes' => 'integer', 'new_pref' => 'text', 'new_addressf' => 'text')
-		, 'address' => array('zipcodef' => 'integer', 'zipcodes' => 'integer', 'pref' => 'text', 'addressf' => 'text')
-		, 'age' => array('birth_year' => 'integer', 'birth_month' => 'integer', 'birth_day' => 'integer', 'age' => 'integer')
-		, 'phonenumber' => array('phonenumber1' => 'text', 'phonenumber2' => 'text', 'phonenumber3' => 'text')
-		, 'mobilephone' => array('mobilephone1' => 'text', 'mobilephone2' => 'text', 'mobilephone3' => 'text')
-		, 'student_phone' => array('student_phone1' => 'text', 'student_phone2' => 'text', 'student_phone3' => 'text')
-		, 'student_email' => array('student_email' => 'text', 'student_emailcfrm' => 'text')
-		, 'student_email_mobile' => array('student_email_mobile' => 'text', 'student_emailcfrm_mobile' => 'text')
-		, 'parent_name' => array('parent_namef' => 'text', 'parent_nameg' => 'text', 'parent_kanaf' => 'text', 'parent_kanag' => 'text')
-		, 'parent_email' => array('parent_email' => 'text', 'parent_emailcfrm' => 'text')
-		, 'parent_email_mobile' => array('parent_email_mobile' => 'text', 'parent_emailcfrm_mobile' => 'text')
-		, 'parent_sex' => array('parent_sex' => 'integer', 'parent_relation' => 'text')
-		, 'parent_mobile' => array('parent_mobile1' => 'text', 'parent_mobile2' => 'text', 'parent_mobile3' => 'text')
-		, 'parent_com_phone' => array('parent_com_phone1' => 'text', 'parent_com_phone2' => 'text', 'parent_com_phone3' => 'text')
-		, 'student_phone' => array('student_phone1' => 'text', 'student_phone2' => 'text', 'student_phone3' => 'text')
-		, 'major' => array('major' => 'text')
+		, 'name' => ['namef' => 'text', 'nameg' => 'text', 'kanaf' => 'text', 'kanag' => 'text']
+		, 'new_add' => ['new_zipcodef' => 'integer', 'new_zipcodes' => 'integer', 'new_pref' => 'text', 'new_addressf' => 'text']
+		, 'address' => ['zipcodef' => 'integer', 'zipcodes' => 'integer', 'pref' => 'text', 'addressf' => 'text']
+		, 'age' => ['birth_year' => 'integer', 'birth_month' => 'integer', 'birth_day' => 'integer', 'age' => 'integer']
+		, 'phonenumber' => ['phonenumber1' => 'text', 'phonenumber2' => 'text', 'phonenumber3' => 'text']
+		, 'mobilephone' => ['mobilephone1' => 'text', 'mobilephone2' => 'text', 'mobilephone3' => 'text']
+		, 'student_phone' => ['student_phone1' => 'text', 'student_phone2' => 'text', 'student_phone3' => 'text']
+		, 'student_email' => ['student_email' => 'text', 'student_emailcfrm' => 'text']
+		, 'student_email_mobile' => ['student_email_mobile' => 'text', 'student_emailcfrm_mobile' => 'text']
+		, 'parent_name' => ['parent_namef' => 'text', 'parent_nameg' => 'text', 'parent_kanaf' => 'text', 'parent_kanag' => 'text']
+		, 'parent_email' => ['parent_email' => 'text', 'parent_emailcfrm' => 'text']
+		, 'parent_email_mobile' => ['parent_email_mobile' => 'text', 'parent_emailcfrm_mobile' => 'text']
+		, 'parent_sex' => ['parent_sex' => 'integer', 'parent_relation' => 'text']
+		, 'parent_mobile' => ['parent_mobile1' => 'text', 'parent_mobile2' => 'text', 'parent_mobile3' => 'text']
+		, 'parent_com_phone' => ['parent_com_phone1' => 'text', 'parent_com_phone2' => 'text', 'parent_com_phone3' => 'text']
+		, 'student_phone' => ['student_phone1' => 'text', 'student_phone2' => 'text', 'student_phone3' => 'text']
+		, 'major' => ['major' => 'text']
 
-		, 'number' => array('number' => 'text')
-		, 'membership' => array('membership' => 'text')
-		, 'sex' => array('sex' => 'integer')
+		, 'number' => ['number' => 'text']
+		, 'membership' => ['membership' => 'text']
+		, 'sex' => ['sex' => 'integer']
 
 		//app系
-		, 'schoolyear' => array('schoolyear' => 'text')
-		, 'graduateyear' => array('graduateyear' => 'text')
-		, 'bank' => array('bankname' => 'text', 'branch' => 'text', 'code_branch' => 'integer', 'account' => 'integer', 'holder' => 'text', 'holderk' => 'text')
-		, 'memo' => array('memo' => 'text')
-		, 'agree' => array('agree' => 'text')
-		, 'stock_multi' => array('stock_multi' => 'text')
+		, 'schoolyear' => ['schoolyear' => 'text']
+		, 'graduateyear' => ['graduateyear' => 'text']
+		, 'bank' => ['bankname' => 'text', 'branch' => 'text', 'code_branch' => 'integer', 'account' => 'integer', 'holder' => 'text', 'holderk' => 'text']
+		, 'memo' => ['memo' => 'text']
+		, 'agree' => ['agree' => 'text']
+		, 'stock_multi' => ['stock_multi' => 'text']
 
-		, 'creditcard' => array('cardnumber1' => "text", 'cardnumber2' => "text", 'cardnumber3' => "text", 'cardnumber4' => "text"
-			, 'exp_month' => "integer", 'exp_year' => "integer", 'cvc' => "text", 'holdername' => "text"),
+		, 'creditcard' => ['cardnumber1' => "text", 'cardnumber2' => "text", 'cardnumber3' => "text", 'cardnumber4' => "text"
+			, 'exp_month' => "integer", 'exp_year' => "integer", 'cvc' => "text", 'holdername' => "text"],
 
-	);
+	];
 
 	public function get_fields_sql() {return $this->_fields_sql;}
 	public function get_fields_sql_app() {return $this->_fields_sql_app;}
@@ -373,6 +373,15 @@ HERE;
 			throw new Exception("Database Error", 1);
 		}
 
+		if ($this->_condition['category_id']) {
+
+			$this->set_category_id($this->_condition['category_id']);
+// stock_multiテーブルの更新
+			$_category = $this->getEntryCategorySimple();
+			$this->updateEntryStockMulti($_category);
+
+		}
+
 		$logdata['process'] = 'archived_app_' . COMPONENT;
 		$logdata['value'] = json_encode($this->_condition);
 
@@ -399,16 +408,28 @@ HERE;
 
 //component check
 
-		if ($appinfo['component'] == "reserve") {
+		switch ($appinfo['component']) {
+		case "reserve":
+
 			$this->set_category_id($appinfo['category_id']);
 			$this->set_component($appinfo['component']);
 			$this->set_comedate($appinfo['comedate']);
 			$this->set_cometime($appinfo['cometime']);
 
 			$this->updateSelectTime();
+
+			break;
+
+		case "entry":
+			$this->set_category_id($appinfo['category_id']);
+// stock_multiテーブルの更新
+			$_category = $this->getEntryCategorySimple();
+			$this->updateEntryStockMulti($_category);
+			break;
+
 		}
 
-		$logdata['process'] = 'delete_app_' . COMPONENT;
+		$logdata['process'] = 'delete_app_' . $appinfo['component'];
 		$logdata['value'] = json_encode($postdata);
 
 		$this->set_postdata($logdata);

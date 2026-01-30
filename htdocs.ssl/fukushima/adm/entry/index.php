@@ -11,7 +11,7 @@ if ($auth->getAuth()) {
 
 	$smarty->assign('mode', $_GET['mode']);
 
-	$modes = array('welcome' => 1,
+	$modes = ['welcome' => 1,
 		'list_app' => 1,
 		'edit_app' => 1,
 		'show_app' => 1,
@@ -29,7 +29,9 @@ if ($auth->getAuth()) {
 		'edit_archived' => 1,
 		'save_archived' => 1,
 
-	);
+		'create_entry_stock_multi_table' => 1,
+
+	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
 	if (!isset($_GET['mode'])) {
 		$_GET['mode'] = 'list_category';

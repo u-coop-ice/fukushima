@@ -460,6 +460,149 @@ HERE;
 
 	}
 
+	public function getAppEntryCountOnly() {
+
+		$sql = <<< HERE
+SELECT s.*,c.onstock FROM entry_stock_multi as s
+JOIN entry_category AS c ON c.id = s.category_id
+WHERE `category_id` = :category_id
+
+HERE;
+
+		try {
+			$res = $this->_pdo_repl->prepare($sql);
+			$res->bindValue(':category_id', $this->_category_id, PDO::PARAM_INT);
+			$res->execute();
+		} catch (PDOException $e) {
+			throw new Exception("Error Database Processing", 1);
+		}
+
+		$stock = $res->fetch();
+		if ($stock['stock_multi']) {
+			$stock['stock_multi'] = json_decode($stock['stock_multi'], true);
+		} else {
+			$stock['stock_multi'] = [];
+		}
+
+		return $stock;
+
+	}
+
+	private function updateEntryStockMulti($_category) {
+
+		if (!$this->_category_id) {
+			$this->_category_id = $_category['id'];
+			if (!$this->_category_id) {
+				throw new Exception("category_idが設定されていません", 1);
+			}
+		}
+
+		$_stock_multi = [];
+		$_status = 0;
+
+		switch ($_category['onstock']) {
+		case 1:
+			$_stock_multi = [
+				'ct' => $_category['entry_count'],
+				'stock' => $_category['stock'],
+				'diff' => $_category['stock'] - $_category['entry_count'],
+			];
+
+			if ($_stock_multi['diff'] > 0) {
+				$_status = 1;
+			} else if ($_stock_multi['diff'] == 0) {
+				$_status = 0;
+			} else {
+				$_status = -1;
+			}
+
+			break;
+		case 2:
+			$this->get_multi_stock_count();
+			$_stock_multi = $this->_stock_multi;
+			$_status = $this->app_count_state_multi();
+
+			break;
+		default:
+			$_stock_multi = [
+				'ct' => intval($_category['entry_count']),
+			];
+			$_status = 1;
+			break;
+		}
+
+		$this->rewrite_entry_stock_multi($_stock_multi, $_status);
+
+	}
+
+	private function rewrite_entry_stock_multi($_stock, $_status) {
+
+// stockの仮保存先をupdate
+
+		if (!$this->_category_id) {
+			throw new Exception("category_id error", 1);
+		}
+
+		$sql = <<< HERE
+SELECT COUNT(category_id) AS ct FROM entry_stock_multi
+
+HERE;
+
+		$sql .= " WHERE `category_id` = :category_id";
+
+		try {
+			$res = $this->_pdo->prepare($sql);
+			$res->bindValue(':category_id', $this->_category_id, PDO::PARAM_INT);
+			$res->execute();
+		} catch (PDOException $e) {
+			throw new Exception("Error Database Processing" . $e->getMessage(), 1);
+		}
+
+		$ct = $res->fetchColumn();
+
+		$stock_multi = json_encode($_stock);
+
+		switch ($ct) {
+		case 0:
+			$sql = <<< HERE
+INSERT INTO entry_stock_multi (`category_id`,`stock_multi`,`status`) VALUES (:category_id,:stock_multi,:status)
+
+HERE;
+
+			try {
+				$res = $this->_pdo->prepare($sql);
+				$res->bindValue(':category_id', $this->_category_id, PDO::PARAM_INT);
+				$res->bindValue(':stock_multi', $stock_multi, PDO::PARAM_STR);
+				$res->bindValue(':status', $_status, PDO::PARAM_INT);
+				$res->execute();
+			} catch (PDOException $e) {
+				throw new Exception("Error Database Processing" . $e->getMessage(), 1);
+			}
+			break;
+		case 1:
+			$sql = <<< HERE
+UPDATE entry_stock_multi SET `stock_multi`=:stock_multi,`status`=:status
+
+HERE;
+
+			$sql .= " WHERE `category_id` = :category_id";
+
+			try {
+				$res = $this->_pdo->prepare($sql);
+				$res->bindValue(':category_id', $this->_category_id, PDO::PARAM_INT);
+				$res->bindValue(':stock_multi', $stock_multi, PDO::PARAM_STR);
+				$res->bindValue(':status', $_status, PDO::PARAM_INT);
+				$res->execute();
+			} catch (PDOException $e) {
+				throw new Exception("Error Database Processing", 1);
+			}
+			break;
+		default:
+			throw new Exception("汎用エントリの設定が不整合を起こしています。HPGへ問い合わせください。", 1);
+			break;
+		}
+	}
+
 	public function app_count_state_multi() {
 		$stock_multi = $this->_stock_multi;
 
@@ -478,7 +621,7 @@ HERE;
 			}
 
 			if ($n == 1) {
-				if ($this->_post_stock_multi) {
+				if (isset($this->_post_stock_multi) && $this->_post_stock_multi) {
 					if ($stock_multi[$this->_post_stock_multi]['diff'] < 1) {
 						$n = 9;
 					}

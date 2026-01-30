@@ -51,21 +51,21 @@ trait execEntryCategories {
 				$value = preg_replace('/sort_/', '', $value);
 				if (preg_match('/^extra/', $value)) {
 					$v = preg_replace('/^extra/', '', $value);
-					$methoddata['extra'][$v] = array('sort' => $key);
+					$methoddata['extra'][$v] = ['sort' => $key];
 
 				} else {
-					$methoddata[$value] = array('sort' => $key);
+					$methoddata[$value] = ['sort' => $key];
 				}
 			}
 		}
 
-		$fields_method = array(
+		$fields_method = [
 			'title' => 'text'
 			, 'note' => 'text'
 			, 'select' => 'text'
 			, 'use' => 'integer'
 			, 'tag' => 'text',
-		);
+		];
 
 		if (count($methoddata)) {
 
@@ -75,7 +75,8 @@ trait execEntryCategories {
 					foreach (array_keys($extradata) as $n) {
 						if (!$_POST[$method]['use'][$n]) {
 							unset($methoddata['extra'][$n]);
-							continue;}
+							continue;
+						}
 						foreach ($fields_method as $k => $v) {
 							if (isset($_POST[$method][$k][$n])) {
 								if ($v == 'integer') {
@@ -157,12 +158,12 @@ trait execEntryCategories {
 				if (is_array($this->_authority[COMPONENT]['category_id'])) {
 					array_push($this->_authority[COMPONENT]['category_id'], intval($postdata['id']));
 				} else {
-					$this->_authority[COMPONENT]['category_id'] = array(intval($postdata['id']));
+					$this->_authority[COMPONENT]['category_id'] = [intval($postdata['id'])];
 				}
 				$sadata['auth'] = json_encode($this->_authority);
 				$sadata['id'] = $this->_adminAuth->getAuthData('id');
 
-				$fields_sa = array("auth" => "text");
+				$fields_sa = ["auth" => "text"];
 
 				$this->set_tbl('init_user');
 				$this->set_postdata($sadata);
@@ -181,6 +182,10 @@ trait execEntryCategories {
 			$this->updateTable();
 		}
 		$this->_category_id = $postdata['id'];
+
+// stock_multiテーブルの更新
+		$category = $this->getEntryCategorySimple();
+		$this->updateEntryStockMulti($category);
 
 		$logdata['process'] = 'save_category';
 		$logdata['value'] = json_encode($postdata);

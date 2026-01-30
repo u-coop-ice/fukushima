@@ -117,6 +117,57 @@ function deleteCheck() {
 {* ページ選択 *}
 {include file='page_select.tpl'}
 
+{*if $error_get_app_count*}
+<p><button tyle="button" class="btn btn-warning" id="btn_create_entry_stock_multi_table">在庫テーブルを設定する</button></p>
+
+
+{literal}
+<script type="text/javascript">
+$(function(){
+
+  $('#btn_create_entry_stock_multi_table').on('click',function(){
+    if (!confirm("汎用エントリの在庫テーブルを生成します。\n処理を進めますか？")){
+      return false;
+    }
+
+//  showLoading();
+
+  $.ajax({
+  url: "./?mode=create_entry_stock_multi_table",
+  type: "POST",
+  cache: false,
+  async: true,
+  dataType: "json"
+  }).done(function(e){
+//    hideLoading();
+    if(e==""){
+
+    alert('在庫テーブルの生成に成功しました。');
+    location.reload();
+    } else if (e.error==1){
+    alert('DB処理に失敗しました。'+e.errmsg);
+    }
+    return false;
+
+  }).fail(function(e){
+//    hideLoading();
+    console.log(e);
+    alert('処理に失敗しましたよ。');
+    return false;
+  });
+
+    return false;
+  });
+
+
+});
+</script>
+{/literal}
+
+
+{*/if*}
+
+
 
 {if $no_category}
 <p class="alert alert-info">カテゴリーが見つかりませんでした。</p>
