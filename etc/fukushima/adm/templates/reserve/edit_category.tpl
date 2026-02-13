@@ -97,80 +97,10 @@ $(function(){
 	});
 });
 
-$(function(){
-	$(document).on('click','#sortable input[type="radio"]',function(){noUse()});
-	noUse();
-});
-
-function noUse() {
-	$('input[name*="use"]','#sortable').each(function(){
-		var tmp = $(this).attr("name");
-		if (tmp!="stock_multi[use]"){
-		var parent = $(this).parents('tr');
-		if($('input[name="'+tmp+'"]:checked').val()==0){
-
-		parent.addClass("no_use")
-			.find('input[type="text"],textarea').prop('disabled',true);
-		parent.find('label').addClass('DIS');
-		} else {
-		parent.removeClass("no_use")
-		.find('*').removeAttr('disabled').removeClass('DIS');
-		}
-	}
-	});
-	noSelect();
-}
-
-function noSelect() {
-	$('input[name*="tag"]','#sortable').each(function(){
-		var tmp = $(this).attr("name");
-		if($('input[name="'+tmp+'"]:checked').val()=='text' || $('input[name="'+tmp+'"]:checked').val()=='textarea'){
-		$(this).parent().parent().parent().siblings("[id^='extra\[select\]']").prop('disabled',true);
-		} else {
-		$(this).siblings("textarea").prop('disabled',false);
-		}
-	});
-}
-
-
 //]]>
 </script>
 
-<script type="text/javascript">
-//<![CDATA[
-$(function(){
-		var options = {
-		placeholder: "placeholder",
-		connectWith: "#sortable tbody",
-		update: function(ev, ui) {
-			var result =  $("#sortable tbody").sortable("toArray");
-        $("#result").val(result);
-		}
-	}
-	$("#sortable tbody").sortable(options);
-
-	preResult = $('#result').val().split(",").reverse();
-
-$.each(
-			preResult,
-			function(index, value) {
-				if (value!="sort_email"){
-			$('#'+value).prependTo("#sortable tbody");
-				}
-			}
-		);
-
-$('#submit').click(function() {
-		var rs = $("#sortable tbody").sortable("toArray");
-		$("#result").val(rs);
-		$("form").submit();
-	});
-
-});
-
-
-//]]>
-</script>
+<script type="text/javascript" src="/adm/js/sortable.js"></script>
 
 <link rel="stylesheet" href="/js/jquery/validationEngine/validationEngine.jquery-2.6.2.css" type="text/css"/>
 

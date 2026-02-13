@@ -77,11 +77,8 @@
 <tr id="sort_extra0"><th>項目設定(mail連動)<br /><span class="em08">選択別に設定したアドレスにメールが送信されれます</span></th>
 <td>
 
-<div class="radio radio-group clearfix">
-{html_radios name="extra[use][0]" options=$extraList selected=$category['method']['extra'][0]['use']|default:0 assign=radioTags}
-{section name=radioButtons loop=$radioTags}
-<div>{$radioTags[radioButtons]}</div>
-{/section}
+<div class="radio">
+{html_radios name="extra[use][0]" options=$extraList selected=$category['method']['extra'][0]['use']|default:0 separator="&nbsp;"}
 </div>
 <i class="powertip fa fa-fw fa-lg fa-info-circle" title="【設定書式】選択項目名,メールアドレス（改行）<br />
 選択した項目に紐づけられたメールアドレスに<br />
@@ -90,11 +87,12 @@
 "></i>
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
-<div class="radio radio-group clearfix">
-{html_radios name="extra[tag][0]" options=$tagList selected=$category['method']['extra'][0]['tag'] assign=radioTags}
-{section name=radioButtons loop=$radioTags}
-<div>{$radioTags[radioButtons]}</div>
-{/section}
+<div class="radio">
+{foreach from=$tagList item=i key=k}
+{if $k!="text" && $k!="textarea" && $k!="datepicker"}
+<label><input type="radio" name="extra[tag][0]" {if $category['method']['extra'][0]['tag']==$k}checked="checked"{/if} value="{$k}" />{$k}</label>&nbsp;
+{/if}
+{/foreach}
 </div>
 
 <div class="clear" style="margin-bottom:0.4em;"></div>
@@ -105,19 +103,15 @@
 <br />注意書き等：<textarea name="extra[note][0]" class="form-control" id="extra[note][0]">{$category['method']['extra'][0]['note']}</textarea>
 </td>
 </tr>
-{/if}
 
-{if count($category['method']['extra'])}
+{else if count($category['method']['extra'])}
 
 
 {foreach from=$category['method']['extra'] key=k item=v}
 <tr id="sort_extra{$k}"><th>項目設定({if $k==0}mail連動{else}{$k}{/if})<br /><span class="em08">1項目毎に改行して入力してください。</span></th>
 <td>
-<div class="radio-group clearfix">
-{html_radios name="extra[use][$k]" options=$extraList selected=$v['use']|default:0 assign=radioTags}
-{section name=radioButtons loop=$radioTags}
-<div>{$radioTags[radioButtons]}</div>
-{/section}
+<div class="radio">
+{html_radios name="extra[use][$k]" options=$extraList selected=$v['use']|default:0 separator="&nbsp;"}
 </div>
 {if $k==0}<i class="powertip fa fa-fw fa-lg fa-info-circle" title="【設定書式】選択項目名,メールアドレス（改行）<br />
 選択した項目に紐づけられたメールアドレスに<br />
@@ -127,11 +121,16 @@
 {/if}
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
-<div class="radio-group clearfix">
-{html_radios name="extra[tag][$k]" options=$tagList selected=$v['tag'] assign=radioTags}
-{section name=radioButtons loop=$radioTags}
-<div>{$radioTags[radioButtons]}</div>
-{/section}
+<div class="radio">
+{foreach from=$tagList item=i}
+{if $k==0}
+{if $i!="text" && $i!="textarea" && $i!="datepicker"}
+<label><input type="radio" name="extra[tag][{$k}]" {if $category['method']['extra'][{$k}]['tag']==$i}checked="checked"{/if} value="{$i}" />{$i}</label>&nbsp;
+{/if}
+{else}
+<label><input type="radio" name="extra[tag][{$k}]" {if $category['method']['extra'][{$k}]['tag']==$i}checked="checked"{/if} value="{$i}" />{$i}</label>&nbsp;
+{/if}
+{/foreach}
 </div>
 
 <div class="clear" style="margin-bottom:0.4em;"></div>
@@ -201,28 +200,22 @@ placeholder="選択項目1,在庫数(改行)">{$category['stock_multi']['select'
 
 <div id="extra_method" class="none">
 
-<div class="radio radio-group clearfix">
-{html_radios name="extra[use][]" options=$extraList assign=radioTags}
-{section name=radioButtons loop=$radioTags}
-<div>{$radioTags[radioButtons]}</div>
-{/section}
+<div class="radio">
+{html_radios name="extra[use][]" options=$extraList separator="&nbsp;"}
 </div>
 
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
-<div class="radio radio-group clearfix">
-{html_radios name="extra[tag][]" options=$tagList assign=radioTags}
-{section name=radioButtons loop=$radioTags}
-<div>{$radioTags[radioButtons]}</div>
-{/section}
+<div class="radio">
+{html_radios name="extra[tag][]" options=$tagList separator="&nbsp;"}
 </div>
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
 
-項目名：<input type="text" name="extra[title][]" class="form-control" value="" />
+項目名：<input type="text" name="extra[title][]" class="form-control" value="" disabled="disabled" />
 
-<textarea name="extra[select][]" class="form-control" cols="40" rows="5" placeholder="選択項目1(改行)･･･" ></textarea>
-注意書き等：<input type="text" class="form-control" name="extra[note][]" />
+<textarea name="extra[select][]" class="form-control" cols="40" rows="5" placeholder="選択項目1(改行)･･･" disabled="disabled" ></textarea>
+注意書き等：<input type="text" class="form-control" name="extra[note][]" disabled="disabled" />
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -241,7 +234,6 @@ $(document).on('click',"#create_method",function(){
 	var td = $("#extra_method").html()
 	td = (td.replace(/\[\]/g,'['+n+']'));
 	$("#sortable tbody").append('<tr id="sort_extra'+n+'"><th>追加項目設定('+n+')<br ><span class="em08">選択項目ごとに改行してください。1行ごとに選択項目として設定されます。</span></th><td>'+td+'</td></tr>');
-	noUse();
 	n++;
 });
 });
