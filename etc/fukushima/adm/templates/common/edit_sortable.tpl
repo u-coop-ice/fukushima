@@ -104,7 +104,9 @@
 </td>
 </tr>
 
-{else if count($category['method']['extra'])}
+{/if}
+
+{if count($category['method']['extra'])}
 
 
 {foreach from=$category['method']['extra'] key=k item=v}
