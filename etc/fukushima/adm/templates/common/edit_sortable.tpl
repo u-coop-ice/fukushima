@@ -78,7 +78,7 @@
 <td>
 
 <div class="radio">
-{html_radios name="extra[use][0]" options=$extraList selected=$category['method']['extra'][0]['use']|default:0 separator="&nbsp;"}
+{html_radios name="extra[use][0]" options=$extraList selected=$category['method']['extra'][0]['use']|default:0 separator="&nbsp;" class="validate[required]"}
 </div>
 <i class="powertip fa fa-fw fa-lg fa-info-circle" title="【設定書式】選択項目名,メールアドレス（改行）<br />
 選択した項目に紐づけられたメールアドレスに<br />
@@ -90,7 +90,7 @@
 <div class="radio">
 {foreach from=$tagList item=i key=k}
 {if $k!="text" && $k!="textarea" && $k!="datepicker"}
-<label><input type="radio" name="extra[tag][0]" {if $category['method']['extra'][0]['tag']==$k}checked="checked"{/if} value="{$k}" />{$k}</label>&nbsp;
+<label><input type="radio" name="extra[tag][0]" {if $category['method']['extra'][0]['tag']==$k}checked="checked"{/if} value="{$k}" class="validate[required]" />{$k}</label>&nbsp;
 {/if}
 {/foreach}
 </div>
@@ -113,7 +113,7 @@
 <tr id="sort_extra{$k}"><th>項目設定({if $k==0}mail連動{else}{$k}{/if})<br /><span class="em08">1項目毎に改行して入力してください。</span></th>
 <td>
 <div class="radio">
-{html_radios name="extra[use][$k]" options=$extraList selected=$v['use']|default:0 separator="&nbsp;"}
+{html_radios name="extra[use][$k]" options=$extraList selected=$v['use']|default:0 separator="&nbsp;" class="validate[required]"}
 </div>
 {if $k==0}<i class="powertip fa fa-fw fa-lg fa-info-circle" title="【設定書式】選択項目名,メールアドレス（改行）<br />
 選択した項目に紐づけられたメールアドレスに<br />
@@ -127,10 +127,10 @@
 {foreach from=$tagList item=i}
 {if $k==0}
 {if $i!="text" && $i!="textarea" && $i!="datepicker"}
-<label><input type="radio" name="extra[tag][{$k}]" {if $category['method']['extra'][{$k}]['tag']==$i}checked="checked"{/if} value="{$i}" />{$i}</label>&nbsp;
+<label><input type="radio" name="extra[tag][{$k}]" {if $category['method']['extra'][{$k}]['tag']==$i}checked="checked"{/if} value="{$i}" class="validate[required]" />{$i}</label>&nbsp;
 {/if}
 {else}
-<label><input type="radio" name="extra[tag][{$k}]" {if $category['method']['extra'][{$k}]['tag']==$i}checked="checked"{/if} value="{$i}" />{$i}</label>&nbsp;
+<label><input type="radio" name="extra[tag][{$k}]" {if $category['method']['extra'][{$k}]['tag']==$i}checked="checked"{/if} value="{$i}" class="validate[required]" />{$i}</label>&nbsp;
 {/if}
 {/foreach}
 </div>
@@ -198,18 +198,18 @@ placeholder="選択項目1,在庫数(改行)">{$category['stock_multi']['select'
 
 </div><!-- #sortable -->
 
-<div class="right" id="create_method"><a class="btn btn-primary"><i class="fa fa-fw fa-plus"></i>任意項目生成</a></div>
+<div class="text-right"><a id="create_method" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i>任意項目生成</a></div>
 
 <div id="extra_method" class="none">
 
 <div class="radio">
-{html_radios name="extra[use][]" options=$extraList separator="&nbsp;"}
+{html_radios name="extra[use][]" options=$extraList separator="&nbsp;" class="validate[required]"}
 </div>
 
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
 <div class="radio">
-{html_radios name="extra[tag][]" options=$tagList separator="&nbsp;"}
+{html_radios name="extra[tag][]" options=$tagList separator="&nbsp;" class="validate[required]"}
 </div>
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
