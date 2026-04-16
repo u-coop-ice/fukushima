@@ -78,6 +78,11 @@ function deleteCheck() {
 <option value="{$category['id']}">{$category['denomination']}</option>
 {/categories}
 </select>
+{else if $smarty.const.COMPONENT=="member"}
+{categories no_archived=1 component=$smarty.const.COMPONENT part=$smarty.const.PART}
+> {$category['denomination']}
+<input type="hidden" name="category_id" value="{$category['id']}" />
+{/categories}
 {/if}
 </td>
 </tr>

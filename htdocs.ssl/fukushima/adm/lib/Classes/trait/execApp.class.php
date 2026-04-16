@@ -345,6 +345,10 @@ HERE;
 
 		array_push($where, 'a.component = :component');
 		$data[':component'] = COMPONENT;
+		if (defined(PART)) {
+			array_push($where, 'a.part = :part');
+			$data[':part'] = PART;
+		}
 
 		if ($this->_condition['term1']) {
 			array_push($where, 'a.regist_date >= :term1');
