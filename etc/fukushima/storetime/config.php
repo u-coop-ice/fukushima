@@ -8,4 +8,4 @@ $API_URL = "https://script.google.com/macros/s/AKfycbz4TpJluF0vl5KEJcWgHWAYDfPa4
 $API_KEY = "hbFkim4W";
 
 $CACHE_TIME = 5;
-$CACHE_FILE = "/var/www/etc/" . DOMAIN . "/storetime/hours.json";
+$CACHE_FILE = "/var/www/" . DOMAIN . "/etc/"  . DOMAIN . "/storetime/hours.json";
