@@ -1,6 +1,6 @@
 <?php
 
-require_once("/var/www/etc/fukushima/storetime/config.php"); 
+require_once("/var/www/fukushima/etc/fukushima/storetime/config.php"); 
 // ↑ここだけ環境に合わせて1回設定
 
 $api = $API_URL . "?key=" . $API_KEY;
