@@ -63,7 +63,7 @@ if (time() < strtotime("2020-11-11 12:45:00")){
 
 <ol>
 <li><span class="orange">安心の受験環境です。</span><br />受験会場は福島大学内の教室です。身近な環境で安心して受験できます。</li>
-<li><span class="orange">受験料が安いです。</span><br />TOEIC<sup>&reg;</sup>公開テスト：7,810円に対し、<span class="marker yellow thin">TOEIC<sup>&reg;</sup> Listening &amp; Reading IP Test：4,225円</span>と、約4割安いです。</li>
+<li><span class="orange">受験料が安いです。</span><br />TOEIC<sup>&reg;</sup>公開テスト：7,810円に対し、<span class="marker yellow thin">TOEIC<sup>&reg;</sup> Listening &amp; Reading IP Test：4,300円</span>と、約4割安いです。</li>
 <li><span class="orange">試験結果が早くわかります。</span><br />TOEIC<sup>&reg;</sup>公開テスト：約4週間に対し、<span class="marker yellow thin">TOEIC<sup>&reg;</sup> Listening &amp; Reading IP Test：約2週間</span>と、早くわかります。</li>
 </ol>
 
@@ -73,61 +73,61 @@ if (time() < strtotime("2020-11-11 12:45:00")){
 <p><span class="marker yellow thin">履歴書にも書けます！</span>TOEIC<sup>&reg;</sup> Listening &amp; Reading IP Testのスコアの有効性はTOEIC<sup>&reg;</sup>公開テストと同等です。ただし、教員採用試験における1次試験免除などでは、TOEIC<sup>&reg;</sup>公開テストの公式認定証が必要なケースもあります。出願の際は各自で必ず確認してください。</p>
 
 
-<h3 id="schedule">2024年度 年間スケジュール等</h3>
+<h3 id="schedule">2026年度 年間スケジュール等</h3>
 <table class="tblFull" cellspacing="0">
 <tr><th>実施日</th><th>試験時間</th><th>受付時間</th><th>実施教室</th></tr>
 <tr><td>
-<?php if (time() < strtotime("2024-05-15 15:00:00")) {
+<?php if (time() < strtotime("2026-05-20 15:00:00")) {
 	?>
-<strong>5/15(水)</strong>
+<strong>5/20(水)</strong>
 <?php } else {?>
-<del>5/15(水)</del><br /><span class="em09 red">終了しました</span>
+<del>5/20(水)</del><br /><span class="em09 red">終了しました</span>
 <?php }?>
-</td><td>13時〜15時</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td></tr>
+</td><td>13:00〜15:01</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td></tr>
 
 <tr><td>
-<?php if (time() < strtotime("2024-07-17 15:00:00")) {
+<?php if (time() < strtotime("2026-07-15 15:00:00")) {
 	?>
-<strong>7/17(水)</strong>
+<strong>7/15(水)</strong>
 <?php } else {?>
-<del>7/17(水)</del><br /><span class="em09 red">終了しました</span>
+<del>7/15(水)</del><br /><span class="em09 red">終了しました</span>
 <?php }?>
-</td><td>13時〜15時</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td></tr>
+</td><td>13:00〜15:01</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td></tr>
 
 <tr><td>
-<?php if (time() < strtotime("2024-09-18 15:00:00")) {
+<?php if (time() < strtotime("2026-09-16 15:00:00")) {
 	?>
-<strong>9/18(水)</strong>
+<strong>9/16(水)</strong>
 <?php } else {?>
-<del>9/18(水)</del><br /><span class="em09 red">終了しました</span>
+<del>9/16(水)</del><br /><span class="em09 red">終了しました</span>
 <?php }?>
-</td><td>13時〜15時</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td></tr>
+</td><td>13:00〜15:01</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td></tr>
 
 <tr><td>
-<?php if (time() < strtotime("2024-11-13 15:00:00")) {
+<?php if (time() < strtotime("2026-11-18 15:00:00")) {
 	?>
-<strong>11/13(水)</strong>
+<strong>11/18(水)</strong>
 <?php } else {?>
-<del>11/13(水)</del><br /><span class="em09 red">終了しました</span>
+<del>11/18(水)</del><br /><span class="em09 red">終了しました</span>
 <?php }?>
 </td>
-<td>13時〜15時</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td>
+<td>13:00〜15:01</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td>
 </tr>
 
 <tr><td>
-<?php if (time() < strtotime("2025-01-22 15:00:00")) {
+<?php if (time() < strtotime("2027-01-20 15:00:00")) {
 	?>
-<strong>1/22(水)</strong>
+<strong>2027/01/20(水)</strong>
 <?php } else {?>
-<del>1/22(水)</del><br /><span class="em09 red">終了しました</span>
+<del>2027/01/20(水)</del><br /><span class="em09 red">終了しました</span>
 <?php }?>
 </td>
-<td>13時〜15時</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td>
+<td>13:00〜15:01</td><td>12時15分〜12時45分</td><td><strong>L-2教室</strong></td>
 </tr>
 </table>
 
 <ul class="tri">
-<li>受講料：4&#44;225円（1回あたり）</li>
+<li>受講料：4&#44;300円（1回あたり）</li>
 <li>お申込先：福島大学生協　購買カウンター店</li>
 </ul>
 <span class="rev_ind">※申込は、定員になり次第締め切りです（各回：50名）。</span>

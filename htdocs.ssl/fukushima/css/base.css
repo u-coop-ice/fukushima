@@ -506,7 +506,7 @@ body > #wrapper {
 
 #content {
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 10px;
 	height: 100%;
 	min-height: 100%;
 	line-height: 1.5em;
@@ -566,6 +566,7 @@ body > #wrapper {
 	float: none;
 	width: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 #main.left #main-inner {
@@ -1040,3 +1041,126 @@ iframe.htkt {
 }
 
 
+/* -------------------------------------------------- *
+ * slick-slide
+ * -------------------------------------------------- */
+.carousel-caption {
+		position: relative;
+		left: 0px;
+		bottom: 0px;
+		background: #000;
+		padding-left: 5px;
+		padding-right: 5px;
+		color: #fff;
+		opacity: 0.8; /* Overridden by captionOpacity setting */
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 0.9em;
+		height: 100%;
+}
+
+#content .slick-slide a {
+		text-decoration: none;
+		outline: none;
+}
+
+@media (max-width: 768px) {
+		.carousel-caption {
+				font-size: 0.9em;
+		}
+}
+
+#content ul.slick-dots {
+		margin: 0;
+		padding-left: 0;
+}
+
+.slick-list {
+		height: auto !important;
+}
+
+#mainheader .slick-slide, #mainbb .slick-slide {
+		display: flex !important;
+		flex-direction: row;
+		height: auto !important;
+		align-items: center;
+}
+
+
+
+/* 中央のスライド */
+#mainheader .slider .slick-center img, #mainbb .slider .slick-center img {
+		opacity: 1;
+		transform: scale(1);
+}
+
+/* 中央のキャプション */
+.slider .slick-center .carousel-caption {
+		display: block;
+}
+
+
+.slick-slide img {
+	 width: 1000px;
+}
+
+
+/*------------ dots ------------*/
+.slick-dots {
+		display: flex;
+		justify-content: center;
+}
+#content .slick-dots li {
+		width: 8px;
+		height: 8px;
+		margin: 0 5px;
+		background: #333;
+		cursor: pointer;
+		opacity: .25;
+}
+.slick-dots li button {
+		display: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+}
+#content .slick-dots li:hover, #content .slick-dots li.slick-active {
+		background: #333;
+		opacity: 1;
+}
+
+.slick-dots li button:before {
+	display: none;
+}
+
+
+/*------------ arrows ------------*/
+.slider .slick-prev
+{
+    /* デフォルトでは-25px(= スライダーの外側) */
+    left: 10px;
+}
+.slider .slick-next
+{
+    /* デフォルトでは-25px(= スライダーの外側) */
+    right: 10px;
+}
+
+.slider .slick-prev,
+.slider .slick-next
+{
+    /* スライド画像の後ろに隠れないようにする */
+    z-index: 99;
+}
+
+.slider .slick-prev::before,
+.slider .slick-next::before {
+    /* フォントと色の設定はbefore内で行う */
+    /* font-size: 28px; */
+    /* color: black; */
+}

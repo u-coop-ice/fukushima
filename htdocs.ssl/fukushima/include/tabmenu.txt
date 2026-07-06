@@ -129,6 +129,10 @@
 <a href="/foodservice/#anc_fs">食の安全の取り組み</a>
 </li>
 
+<li class="ic_important">
+<a href="/foodservice/eco/">環境への取り組み</a>
+</li>
+
 </ul>
 </li>
 
@@ -167,7 +171,7 @@
 </li>
 
 <li class="ic_book">
-<a href="https://yosho.univcoop.jp/" target="_blank">大学生協洋書オンライン <i class="fa fa-external-link"></i></a>
+<a href="https://yosho.univcoop.or.jp/online/" target="_blank">大学生協洋書オンライン <i class="fa fa-external-link"></i></a>
 </li>
 
 <li class="ic_book">
@@ -199,12 +203,10 @@
 <li class="ic_book">
 <a href="/graduate/album/">卒業記念アルバム</a>
 </li>
-
-<?php /*
-<li class="ic_store">
-<a href="http://move.u-coop.or.jp/" target="_blank">引越しプラン<i class="fa fa-external-link"></i></a>
+<li class="ic_hakama">
+<a href="/graduate/hakama/">卒業袴</a>
 </li>
-*/ ?>
+
 
 </ul>
 </li>
@@ -216,9 +218,12 @@
 <li id="global_travel" class="<?php echo $focus['travel'];?>"><a href="/travel/">旅行</a>
 <ul>
 
-<li><a href="/travel/#anc_domestic">国内旅行</a></li>
+<li><a href="https://manabi.univcoop.or.jp/trip/" target="_blank">大学生協の旅行Webサイト</a></li>
 
+<?php /*
+<li><a href="/travel/#anc_domestic">国内旅行</a></li>
 <li><a href="/travel/#anc_overseas">海外旅行</a></li>
+*/ ?>
 
 </ul>
 </li>

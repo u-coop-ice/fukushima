@@ -10,6 +10,8 @@ include $rootpath . '/include/js_index.txt';
 <link type="text/css" href="./css/store.css?231023" rel="stylesheet" media="screen,print" />
 
 
+
+
 <?php
 include $rootpath . 'include/header2.txt';
 ?>
@@ -127,7 +129,7 @@ if ($whatsnew->getList()) {
 <div class="panel panel-default">
 <div class="panel-body">
 <h5 class="top">食堂店</h5>
-<p>TEL: 024-548-5142<br />FAX: 024-548-7300</p>
+<p>TEL: 024-548-5142<br />FAX: 024-548-7200</p>
 </div>
 </div>
 </div>

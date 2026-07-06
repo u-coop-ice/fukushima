@@ -14,7 +14,7 @@ include $rootpath . '/GI/include/header.php';
   <!-- ====================================
   ---	BREADCRUMB
   ===================================== -->
-<section class="breadcrumb-bg" style="background-image: url(assets/img/background/page-title-bg-img_06.jpg?2); ">
+<section class="breadcrumb-bg" style="background-image: url(assets/img/background/page-title-bg-img_06.jpg?26); ">
 	<div class="container">
 		<div class="breadcrumb-holder">
 			<div>
@@ -43,17 +43,15 @@ include $rootpath . '/GI/include/header.php';
 	<div class="container">
 	
 		<div class="section-title mb-4">
-			<h2 id="orientation" class="text-danger ps-0">福島大学生協学生委員会とは？</h2>
+			<h2 id="orientation" class="text-danger ps-0">福島大学生協学生委員会とは</h2>
 		</div>
 		
 		
 		<div class="row">
 			<div class="col-sm-8 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">こんにちは！福島大学生協学生委員会です。
-福島大学生協学生委員会は、福島大学生協の学生組合員によって組織される団体です。
-福島大学生協の活動方針のもと、福島大学生協の組合員である学生がよりよい大学生活を送ることができるように、「組合員のため」を考えた活動を行っています！
-</p>
+          <p class="text-dark font-size-15 mb-4">こんにちは！福島大学生協学生委員会です。私たちは、学生委員会は、生協の学生組合員によって運営される団体です。活動方針に基づき、組合員である学生がよりよい大学生活を送れるよう、“組合員のため”を大切にした活動を行っています。
+年間を通して、「通常期班」という5つの班に分かれて、組合員の食や健康、様々な学びなどの視点から活動を行っています。</p>
         </div>
 			</div>
 
@@ -70,8 +68,7 @@ include $rootpath . '/GI/include/header.php';
 		<div class="row">
 			<div class="col-sm-8 col-xs-12  order-md-1">
 				<div class="">
-										<p class="text-dark font-size-15 mb-4">学生委員会では、「組合員のため」にさまざまな活動を行っています！<br />
-										年間を通して、「通常期班」という部局に分かれて、共済や店舗、環境や平和平等などの視点から組合員にアプローチしています。また10月から6月にかけて、「新歓期班」という部局にも分かれて活動を行っています。この部局は、新入生を対象としたオリエンテーションなどの運営を中心に組合員の大学生活をより良くするために活動しています。<br />
+										<p class="text-dark font-size-15 mb-4">また10月から5月にかけて、「新歓期班」という部局にも分かれて活動を行っています。この部局は、新入生を対象としたオリエンテーションなどの運営を中心に組合員の大学生活をより良くするために活動しています。<br />
 また、福島大学内の活動に留まらず、他大学生協との関わりや、大学外の施設への視察研修など、学生委員会の活動の幅は無限大。よりよい大学生活をサポートするために、日々の努力を惜しまない組織です！</p>
         </div>
 			</div>

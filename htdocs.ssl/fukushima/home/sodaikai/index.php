@@ -16,9 +16,19 @@ include $rootpath . 'include/header2.txt';
 
 <div id="content">
 
-<h3 id="sodaikai">総代会</h3>
+<?php /* <h3 id="sodaikai">総代会</h3>*/ ?>
+
+<h3>決算状況報告</h3>
+
+<p><a class="btn btn-info" href="./pdf/25_kessan.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2025年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p><a class="btn btn-info" href="./pdf/24_kessan.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2024年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p><a class="btn btn-info" href="./pdf/23_kessan.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2023年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
 
 
+
+
+
+<?php /* 
 <p><a class="btn btn-info" data-toggle="collapse" href="#2020">
 	2020年度通常総代会
 </a></p>
@@ -49,11 +59,6 @@ include $rootpath . 'include/header2.txt';
 </div>
 
 
-
-
-
-
-
 <hr />
 
 
@@ -77,7 +82,7 @@ PDF <i class="fa fa-file-pdf-o"></i>（1.8MB）：「総代会って」
 </p>
 </div>
 </div>
-
+*/ ?>
 
 </div><!--content終了 -->
 

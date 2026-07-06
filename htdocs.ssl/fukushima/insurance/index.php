@@ -122,7 +122,7 @@ TEL：024-548-8660／FAX：024-548-3477</p>
 
 <h3>引越</h3>
 <div class="list-group ic_list">
-<a class="list-group-item ic_store" href="http://move.u-coop.or.jp/" target="_blank"><h5 class="list-group-item-heading">大学生協の引越しプラン <i class="fa fa-external-link"></i></h5>
+<a class="list-group-item ic_store" href="https://career.u-coop.or.jp/move/" target="_blank"><h5 class="list-group-item-heading">大学生協の引越しプラン <i class="fa fa-external-link"></i></h5>
 <p>面倒な引越しは、大学生協にすべておまかせ！</p>
 </a>
 </div>

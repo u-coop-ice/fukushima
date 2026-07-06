@@ -66,17 +66,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 		<tbody>
 			<tr>
 				<th>オートマ限定</th>
-				<td>313,050円</td>
-				<td>281,500円</td>
+				<td>310,130円</td>
+				<td>281,630円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
-				<td>329,550円</td>
-				<td>295,700円</td>
+				<td>326,700円</td>
+				<td>295,830円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -128,16 +128,16 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 			<tr>
 				<th>オートマ限定</th>
 				<td>313,490円</td>
-				<td>282,128円</td>
+				<td>282,100円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
 				<td>329,990円</td>
-				<td>296,978円</td>
+				<td>296,900円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -185,17 +185,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 		<tbody>
 			<tr>
 				<th>オートマ限定</th>
-				<td>312,620円</td>
-				<td>270,600円</td>
+				<td>321,640円</td>
+				<td>285,000円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
-				<td>329,780円</td>
-				<td>281,600円</td>
+				<td>364,980円</td>
+				<td>340,000円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -241,17 +241,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 		<tbody>
 			<tr>
 				<th>オートマ限定</th>
-				<td>308,120円</td>
+				<td>308,250円</td>
 				<td>272,250円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
-				<td>324,620円</td>
+				<td>324,750円</td>
 				<td>287,100円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -297,17 +297,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 		<tbody>
 			<tr>
 				<th>オートマ限定</th>
-				<td>300,460円</td>
-				<td>281,500円</td>
+				<td>311,000円</td>
+				<td>281,630円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
-				<td>316,150円</td>
-				<td>295,700円</td>
+				<td>327,500円</td>
+				<td>295,830円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -362,17 +362,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 		<tbody>
 			<tr>
 				<th>オートマ限定</th>
-				<td>312,830円</td>
+				<td>312,880円</td>
 				<td>280,137円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
-				<td>329,330円</td>
+				<td>329,380円</td>
 				<td>294,987円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -433,7 +433,7 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>
@@ -449,10 +449,10 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 <!-- /本宮自動車学校 -->
 
 
-<!-- 冨久山自動車学校 -->
+<!-- 富久山自動車学校 -->
 <div class="panel panel-primary">
 	<div class="panel-heading">
-		<span class="lead">冨久山自動車学校 <span class="label label-warning">フリー送迎あり</span></span>　<br class="visible-xs-block">［住所］福島県郡山市富久山町福原字水穴1<br class="visible-xs-block">［電話］024-922-8070
+		<span class="lead">富久山自動車学校 <span class="label label-warning">フリー送迎あり</span></span>　<br class="visible-xs-block">［住所］福島県郡山市富久山町福原字水穴1<br class="visible-xs-block">［電話］024-922-8070
 	</div>
 	<div class="panel-body">
 
@@ -477,17 +477,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 		<tbody>
 			<tr>
 				<th>オートマ限定</th>
-				<td>296,560円</td>
-				<td>258,940円</td>
+				<td>313,610円</td>
+				<td>280,610円</td>
 			</tr>
 			<tr>
 				<th>マニュアル</th>
-				<td>331,760円</td>
-				<td>299,860円</td>
+				<td>350,460円</td>
+				<td>317,460円</td>
 			</tr>
 			<tr>
 				<th>別途料金</th>
-				<td colspan="2">2,850円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
+				<td colspan="2">2,900円<br />※仮免試験受講手数料など<br />※追加技能料金あり</td>
 			</tr>
 		</tbody>
 	</table>

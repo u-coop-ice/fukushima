@@ -65,13 +65,11 @@ include $rootpath . 'include/header2.txt';
 <div class="row">
 <div class="col-sm-10 col-sm-offset-1">
 <div class="movie-content-wrap">
-	<iframe width="800" height="450" src="https://www.youtube.com/embed/x59kx092YrA?loop=1&playlist=x59kx092YrA&autoplay=0&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	<img src="http://img.youtube.com/vi/x59kx092YrA/maxresdefault.jpg" alt="" class="movie-thumb img-responsive">
+	<iframe width="800" height="450" src="https://www.youtube.com/embed/3s1WTE3Bvdo?si=4-piV6KOl4iT6t9t" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<?php /* <img src="http://img.youtube.com/vi/3s1WTE3Bvdo/maxresdefault.jpg" alt="" class="movie-thumb img-responsive"> */ ?>
 </div>
 </div>
 </div>
-
-
 
 
 
@@ -87,19 +85,20 @@ include $rootpath . 'include/header2.txt';
 
 <h5>＜行政職対象＞</h5>
 <table>
-<tr><th class="nowrap">日時：</th><td>2023年4月10日(月) 16:30〜18:00<span class="red">［参加申込締切］4月7日(金)</span></td></tr>
-<tr><th>内容：</th><td>行政政策学類、経済経営学類の方は是非お越し下さい。</td></tr>
+<tr><th class="nowrap">1回目：</th><td>4月14日（火）15：00〜16：00</td></tr>
+<tr><th class="nowrap">2回目：</th><td>4月14日（火）16：30〜17：30</td></tr>
+<tr><th class="nowrap">&nbsp;</th><td>※行政職コースのガイダンスは1回目・2回目の内容は同じです。使用教室の都合上、分けて実施しています。</td></tr>
 </table>
 
 <h5>＜技術職対象＞</h5>
 <table>
-<tr><th class="nowrap">日時：</th><td>2023年4月17日(月) 16:30〜18:00<span class="red">［参加申込締切］4/14(金)</span></td></tr>
-<tr><th>内容：</th><td>技術職公務員の仕事内容や魅力等についてご紹介します。</td></tr>
+<tr><th class="nowrap">理工学類対象：</th><td>4月22日（水）13：00〜14：00</td></tr>
+<tr><th class="nowrap">食農学類対象：</th><td>4月22日（水）14：30〜15：30</td></tr>
 </table>
 
 </div>
 
-<p><a class="btn btn-success" href="https://docs.google.com/forms/d/e/1FAIpQLScOVysaPCGvLN2OmJQ_BjUlKByp34SgwHyP9MPBeTDcU15HbQ/viewform" target="_blank">ガイダンスの予約申込はこちら <i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p><a class="btn btn-success" href="https://forms.gle/vB7PqmhCZC1HcuCP8" target="_blank">ガイダンスの予約申込はこちら <i class="fa fa-fw fa-chevron-right"></i></a></p>
 
 
 
@@ -183,14 +182,12 @@ include $rootpath . 'include/header2.txt';
 </div>
 
 
+<br />
 
 
-
-
-
-<br>
+<?php /* 
 <div class="box olive">
-<h3 id="pass">2021年 合格実績（一部抜粋）</h3>
+<h3 id="pass">2025年 合格実績（一部抜粋）</h3>
 </div>
 <p>国家総合職…１名</p>
 <p>国家一般職…３２名</p>
@@ -202,10 +199,11 @@ include $rootpath . 'include/header2.txt';
 <p>他市町村計：４５名</p>
 <br>
 <p>福島県警察…３名</p>
+*/?>
 
 
-
-<!-- <p class="olive bold wf-roundedmplus1c em12">国家公務員</p>
+<?php /* 
+<p class="olive bold wf-roundedmplus1c em12">国家公務員</p>
 <p>文部科学省/福岡出入国管理局/長崎労働局/門司税関/九州農政局/仙台国税局/福岡国税局/自衛隊幹部候補生(陸上)海上自衛隊一般曹候補</p>
 
 <p class="olive bold wf-roundedmplus1c em12">地方公務員</p>
@@ -215,7 +213,8 @@ include $rootpath . 'include/header2.txt';
 <p>長崎県警/福岡県警/佐賀県警/宮崎県警/長野県警/横浜市消防局</p>
 
 <p class="olive bold wf-roundedmplus1c em12">独立行政法人・地方公共団体</p>
-<p>九州地区国立大学法人/長崎県商工会連合会/独立行政法人労働者健康安全機構/独立行政法人高齢障害求職者雇用支援機構  </p> -->
+<p>九州地区国立大学法人/長崎県商工会連合会/独立行政法人労働者健康安全機構/独立行政法人高齢障害求職者雇用支援機構  </p>
+*/?>
 
 
 
@@ -266,15 +265,9 @@ include $rootpath . 'include/header2.txt';
 公務員試験の受験や講座受講に関するご相談を随時受けつけています。<br>
 お気軽にご相談ください。</p>
 
-福島大学生協　公務員講座事務局（担当：片平）<br>
+福島大学生協購買店カウンター 公務員講座事務局<br>
 受付時間　10:00-17:00<br>
 TEL　024-548-0091<br>
-
-<p><a class="btn btn-success" href="https://docs.google.com/forms/d/e/1FAIpQLSdZW8ThK4D7-dcsmLBdZQaGM8ITCdUErODqxDywn9slS0hiRg/viewform?usp=sf_link" target="_blank">公務員講座について質問する <i class="fa fa-fw fa-chevron-right"></i></a></p>
-
-
-
-
 
 
 

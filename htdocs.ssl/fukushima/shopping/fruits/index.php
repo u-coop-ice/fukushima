@@ -38,24 +38,28 @@ if (time() < strtotime("2022-07-25 00:00:00")) {
 
 
 <div class="center">
-<img class="img-responsive" src="./images/2022_head_fruits_momo.jpg" alt="福島のもも・なし" />
+<img class="img-responsive" src="./images/2026_head_fruits_momo.jpg" alt="福島のもも・なし" /><br />
+<img class="img-responsive" src="./images/2026_mn_photo.jpg" alt="福島のもも・なし 品名" /><br />
 </div>
-<br />
 
+
+
+<?php /*
 <div class="row">
 <div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2021_m_akatsuki.jpg" width="260" alt="あかつき" /></div>
+<div class="center"><img class="img-responsive" src="./images/2026_m_akatsuki.jpg"  alt="あかつき" /></div>
 </div>
 <div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2021_m_kawanakajima.jpg" width="260" alt="川中島" /></div>
+<div class="center"><img class="img-responsive" src="./images/2026_m_kawanakajima.jpg"  alt="川中島" /></div>
 </div>
 <div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2021_m_gold.jpg" width="260" alt="黄金桃" /></div>
+<div class="center"><img class="img-responsive" src="./images/2026_m_gold.jpg"  alt="黄金桃" /></div>
 </div>
 <div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2021_n_housui.jpg" width="260" alt="豊水" /></div>
+<div class="center"><img class="img-responsive" src="./images/2026_n_housui.jpg"  alt="豊水" /></div>
 </div>
 </div>
+*/?>
 
 <?php /*?>
 <div class="row">
@@ -82,19 +86,20 @@ if (time() < strtotime("2022-07-25 00:00:00")) {
 <div class="center"><img class="img-responsive" src="./images/m_gold.jpg" width="300" alt="イメージ：黄金桃" /></div>
 </div>
 </div><!-- /row -->
-<?php */?>
 <br />
+<?php */?>
+
 
 <div class="center">
 <?php
-mobile_image('./images/2024_momo_list.png', '商品一覧表', 'img-responsive');
+mobile_image('./images/2026_momo_list.png', '商品一覧表', 'img-responsive');
 ?>
 </div>
 
 
-
+<div class="pad_l">
 <ul>
-<li>天候・収穫状況や商品番号により発送が前後する場合があります。収穫でき次第申込受付順に順次発送となりますので、お届け日の指定はできません。<br />
+<li>天候・収穫状況や商品番号により発送が前後する場合があります。収穫でき次第申込受付順に順次発送となりますので、<strong class="red">お届け日の指定はできません。</strong><br />
 沖縄・離島への配送はお受けできません。</li>
 <li>内容量が同一の場合、玉数が少ないほうが大玉になります。</li>
 </ul>
@@ -102,13 +107,14 @@ mobile_image('./images/2024_momo_list.png', '商品一覧表', 'img-responsive')
 産地：福島県（JAふくしま未来）　<br class="visible-xs">出荷元：JA農産物直売所　愛情館（JA全農福島　福島園芸センターPS）<br>
 <br class="visible-xs">※写真はイメージです
 </p>
-<br>
+</div>
+
 
 
 
 <?php
-// 6/5 10:00〜8/17 00:00まで販売
-if (time() > strtotime('2024-06-05 00:00:00') && time() < strtotime('2024-08-17 00:00:00')) {
+// 6/？ 10:00〜8/18 00:00まで販売
+if (time() > strtotime('2026-06-15 00:00:00') && time() < strtotime('2026-08-17 00:00:00')) {
 ?>
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
@@ -118,8 +124,8 @@ if (time() > strtotime('2024-06-05 00:00:00') && time() < strtotime('2024-08-17 
 
 
 <?php
-// 8/17 00:00で販売終了
-} else if (strtotime('2024-08-17 00:00:00') < time()) {
+// 8/18 00:00で販売終了
+} else if (strtotime('2026-08-18 00:00:00') < time()) {
 ?>
 
 <div class="row">
@@ -144,13 +150,6 @@ if (time() > strtotime('2024-06-05 00:00:00') && time() < strtotime('2024-08-17 
 <?php
 } 
 ?>
-
-
-
-
-
-
-
 
 
 

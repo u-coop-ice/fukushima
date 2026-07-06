@@ -60,11 +60,8 @@ mobile_image('./images/ucapp_01.png', '', 'img-responsive img');
 </div>
 
 
-<div class="col-sm-10 col-sm-pull-2 col-xs-12"
-
->
+<div class="col-sm-10 col-sm-pull-2 col-xs-12">
 <div class="row">
-
 <div class="col-sm-6">
 
 <a href="https://krm-system.powerappsportals.com/" target="_blank">
@@ -79,14 +76,28 @@ mobile_image('./images/ucapp_01.png', '', 'img-responsive img');
 
 <div class="col-sm-6">
 
-<a href="https://www.tohoku-ba.u-coop.or.jp/press/ucapp/" target="_blank">
+<a href="https://apps.univ.coop/mobileapp/_assets/pdf/daigakuseikyo-apps-registration.pdf" target="_blank">
 <div class="contact blue r20">
-												<p class="em12 bold center"><span class="under blue_underline">大学生協アプリ登録方法はこちら <i class="fa fa-fw fa-external-link"></i></span></p>
+												<p class="em12 bold center"><span class="under blue_underline"><i class="fa fa-file-pdf-o"></i> 大学生協アプリ登録方法はこちら <i class="fa fa-external-link"></i></span></p>
 												<p>早めにご登録ください！</p>
 										</div>
 </a>
 </div>
 
+
+<div class="col-sm-6">
+
+<a href="./pdf/ucapp_cadd.pdf" target="_blank">
+<div class="contact green r20">
+												<p class="em12 bold center"><span class="under green_underline"><i class="fa fa-file-pdf-o"></i> 住所確認、登録・変更はこちら <i class="fa fa-fw fa-chevron-right"></i></span></p>
+												<p>大切なご案内をお送りする際、必要な情報となります<br />プロファイルをご確認のうえ、登録・変更のお手続きをお願いします</p>
+										</div>
+</a>
+</div>
+
+
+
+<?php /*
 <div class="col-sm-6">
 <a href="https://www.tohoku-ba.u-coop.or.jp/press/ucapp/pdf/22ucapp_hogosha_01.pdf" target="_blank">
 <div class="contact orange r20">
@@ -94,20 +105,21 @@ mobile_image('./images/ucapp_01.png', '', 'img-responsive img');
 												<p>お子様の利用履歴が確認できます！</p>
 										</div>
 </a>
+</div> */ ?>
 </div>
+
 </div>
 
 </div>
 
 
-
-</div>
 
 <br>
 
+<?php /*
 <p>登録中にエラーが発生する場合こちらの対処フローでご対応ください。</p>
 <p><a class="btn btn-info btn-sm em09" href="https://www.tohoku-ba.u-coop.or.jp/press/ucapp/pdf/flow.pdf" target="_blank">対処方法（保護者以外）フロー<i class="fa fa-file-pdf-o"></i></a></p>
-<br>
+<br> */ ?>
 
 <p>その他エラーが発生する場合は福島大学生協公式LINEまでご連絡ください</p>
 <p><a class="btn btn-success btn-sm em09" href="https://page.line.me/249saoqq?openQrModal=true" target="_blank">福島大学生協公式LINE<i class="fa fa-fw fa-external-link"></i></a>

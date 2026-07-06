@@ -139,10 +139,10 @@ if (time() > strtotime('2024-03-26 00:00:00') && time() < strtotime('2024-05-27 
 
 <a class="list-group-item ic_book" href="http://coop-ebook.jp/" target="_blank">
 <h5 class="list-group-item-heading">電子書籍サイト VarsityWave eBooks <i class="fa fa-external-link"></i></h5>
-<p><img class="img" src="/banners/250/bnr_vwe_250.png" width="250" height="68" alt="電子書籍サイト VarsityWave eBooks" /></p>
+<p><img class="img" src="/banners/250/bnr_vwe_250.png" alt="電子書籍サイト VarsityWave eBooks" /></p>
 </a>
 
-<a class="list-group-item ic_book" href="https://yosho.univcoop.jp/" target="_blank">
+<a class="list-group-item ic_book" href="https://yosho.univcoop.or.jp/online/" target="_blank">
 <h5 class="list-group-item-heading">洋書【<span class="ver">大学生協洋書オンライン</span>】<i class="fa fa-external-link"></i></h5>
 <p>24時間いつでもインターネットで洋書を注文できます。<br />
 <img class="img" src="/banners/250/bnr_ystore_250.png" alt="大学生協洋書オンライン" /></p>

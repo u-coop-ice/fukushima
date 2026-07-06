@@ -46,6 +46,46 @@ $(window).load(function() {
 
 </script>
 
+
+<!-- slick-->
+<link rel="stylesheet" type="text/css" href="/js/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/js/slick/slick-theme.css"/>
+<script type="text/javascript" src="/js/slick/slick.js"></script>
+
+<script>
+$(function () {
+  $(".slider").slick({
+    speed: 800,
+    autoplay: true,
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: "0",
+    dots: true,
+		fade: true,
+		arrows: true, 
+    
+    responsive:[{
+      breakpoint: 800,
+      settings: {
+        centerPadding: "0",
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        centerPadding: "0",
+      }
+    }]
+    
+  });
+  
+ 
+
+});
+
+
+
+</script>
+
 <?php
 include $rootpath . 'include/header2.txt';
 ?>
@@ -56,7 +96,7 @@ include $rootpath . 'include/header2.txt';
 <div id="mainbb">
 <!-- billboard -->
 <?php
-include $rootpath . '../../php/billboard.php';
+include $rootpath . '../../php/billboard_02.php';
 ?>
 <!-- /billboard -->
 
@@ -263,9 +303,9 @@ $whatsnew->setHeader(0);
 $whatsnew->setLog(
 	array('../data/whatsnewdata.xml'));
 
-$whatsnew->setCoop('fukushima');
+$whatsnew->setCoop(DOMAIN);
 $whatsnew->setKey('ALL,!private');
-$whatsnew->setBefore(30);
+$whatsnew->setBefore(60);
 //$whatsnew->setNum(16);
 echo $whatsnew->getList();
 ?>

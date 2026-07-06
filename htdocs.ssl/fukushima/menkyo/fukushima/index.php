@@ -87,26 +87,29 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 
 
 
-<h3><a href="https://newlife.u-coop.or.jp/fukushima/standby/carlicense/" target="_blank"><strong>新入生ふくふくプラン <i class="fa fa-external-link"></i></strong></a></h3>
+<h3><strong>新入生ふくふくプラン</strong></h3>
 <p class="">福島大学に入学する新入生のためのプランです。<br />
 提携8校よりお申込みいただくとユニコチャージの特典がもらえるお得なプランです。</p>
 
-<h4 class="green">～ふくふくプランの流れ～</h4>
+<h4 class="green">～ふくふくプランの流れ～(2026年度新入生スケジュール)</h4>
 <div class="row center">
 <div class="col-sm-4">
 <div class="panel panel-success">
 	<div class="panel-heading">
-		<strong class="em12">STEP1<br class="hidden-xs">（11～4月入学式前日）</strong>
+		<strong class="em12">STEP1<br class="hidden-xs"><?php /*?>（11～4月入学式前日）<?php */?>
+		2025年11月〜2026年6月30日まで</strong>
 	</div>
 	<div class="panel-body">
-		<strong>新入生サポートセンター</strong>で<br class="hidden-xs"><span class="marker yellow thin">エントリー</span>
+		<?php /*<strong>新入生サポートセンター</strong>で<br class="hidden-xs"><span class="marker yellow thin">エントリー</span></strong> */?>
+		<strong>購買店</strong>で<br class="hidden-xs"><span class="marker yellow thin">お申込み</span>
 	</div>
 </div>
 </div>
 <div class="col-sm-4">
 <div class="panel panel-success">
 	<div class="panel-heading">
-		<strong class="em12">STEP2<br class="hidden-xs">（7月末まで）</strong>
+		<strong class="em12">STEP2<br class="hidden-xs"><?php /*?>（7月末まで）<?php */?>
+		2026年7月10日まで</strong>
 	</div>
 	<div class="panel-body">
 		<strong>購買店</strong>で<br class="hidden-xs"><span class="marker yellow thin">入校する自動車学校を決めてお支払い</span>
@@ -116,7 +119,8 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 <div class="col-sm-4">
 <div class="panel panel-success">
 	<div class="panel-heading">
-		<strong class="em12">STEP3<br class="hidden-xs">（8月末まで）</strong>
+		<strong class="em12">STEP3<br class="hidden-xs"><?php /*?>（8月末まで）<?php */?>
+		2026年7月31日まで</strong>
 	</div>
 	<div class="panel-body">
 		<strong>入校する自動車学校</strong>で<br class="hidden-xs"><span class="marker yellow thin">入校手続き</span>

@@ -140,14 +140,14 @@
               </a>
             </li>
 
-            <li class="nav-item dropdown bg-info">
+            <li class="nav-item dropdown bg-purple">
               <a class="nav-link dropdown-toggle " href="gi.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 																<i class="fas fa-laugh nav-icon" aria-hidden="true"></i>
                 <span>学生委員とは</span>
               </a>
             </li>
 
-            <li class="nav-item dropdown bg-danger">
+            <li class="nav-item dropdown bg-pink">
               <a class="nav-link dropdown-toggle " href="spring.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<img class="nav-icon"  src="assets/img/icon/icon_1_w.svg" alt="">
                 <span>春の活動</span>
@@ -157,7 +157,10 @@
                   <a class="dropdown-item " href="spring.php#orientation">生協オリエンテーション</a>
                 </li>
                 <li>
-                  <a class="dropdown-item " href="spring.php#soudan">新入生相談会</a>
+                  <a class="dropdown-item " href="spring.php#soudan">おはなし会・相談会</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="spring.php#otameshi">おためし部会</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="spring.php#soudai">総代会</a>
@@ -175,55 +178,52 @@
                   <a class="dropdown-item" href="summer.php#op">オープンキャンパス</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="summer.php#riripack">リリパック工場見学</a>
+                  <a class="dropdown-item" href="summer.php#meguri">夏休みにふくしまを巡ろうヨ！</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="summer.php#comell">Come&apos;llワークショップ</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="summer.php#sus">Summer Up Seminar</a>
                 </li>
-                <li>
-                  <a class="dropdown-item" href="summer.php#heiwa">平和学習</a>
-                </li>
               </ul>
             </li>
 
-            <li class="nav-item dropdown bg-info">
+            <li class="nav-item dropdown bg-danger">
               <a class="nav-link dropdown-toggle " href="autumn.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <img class="nav-icon"  src="assets/img/icon/icon_3_w.svg" alt="">
                 <span>秋の活動</span>
               </a>
 							<ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item " href="autumn.php#spofes">秋の健康フェスタ</a>
+                  <a class="dropdown-item " href="autumn.php#kyosai">福大版秋の共済セミナー</a>
                 </li>
                 <li>
-                  <a class="dropdown-item " href="autumn.php#kyosai">秋の共済セミナー</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="autumn.php#shinsai">震災学習</a>
+                  <a class="dropdown-item " href="autumn.php#comellg">Come&apos;ll学習会</a>
                 </li>
               </ul>
             </li>
 
-            <li class="nav-item dropdown bg-purple">
+            <li class="nav-item dropdown bg-info">
               <a class="nav-link dropdown-toggle " href="other.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <img class="nav-icon"  src="assets/img/icon/icon_5_w.svg" alt="">
                 <span class="em09">その他の活動</span>
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item " href="other.php#gasshuku">学委集中会議</a>
+                  <a class="dropdown-item " href="other.php#investment">投資学習会</a>
                 </li>
                 <li>
-                  <a class="dropdown-item " href="other.php#love">LOVE Is COMMUNICATION</a>
+                  <a class="dropdown-item " href="other.php#mbti">MBTIの学習会</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="other.php#kyosaig">共済学習会</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="other.php#oosouji">大掃除学習会</a>
                 </li>
                 <li>
                   <a class="dropdown-item " href="other.php#tuujyou_shinkan">通常期・新歓期の活動風景</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="other.php#kachikan">価値観の学習会</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="other.php#bousai">防災学習会</a>
                 </li>
               </ul>
             </li>
