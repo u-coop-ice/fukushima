@@ -36,20 +36,20 @@ include $rootpath . 'include/header2.txt';
 </style>
 
 <ul class="nav nav-pills nav-justified">
-	<li role="presentation"><a href="#mealplan">ミール定期マネー（ミールプラン）利用細則</a></li>
+	<li role="presentation"><a href="#mealplan">ミール定期マネー（ミールパス）利用細則</a></li>
 	<li role="presentation"><a href="#course">講座申込規定</a></li>
 	<li role="presentation"><a href="/home/aid/sd/">ＣＯ･ＯＰ学生総合共済勧誘方針</a></li>
 </ul>
 
 
 
-<h3 id="mealplan">ミール定期マネー（ミールプラン）利用細則</h3>
+<h3 id="mealplan">ミール定期マネー（ミールパス）利用細則</h3>
 
 <h5>（ミール定期マネー利用方法）</h5>
 
-<p>01）福島（以下、「大学生協」という）の組合員は、大学生協が指定した金額を、現金もしくは大学生協が指定する金融機関口座への払込をもって申し込みすることにより、ミール定期マネーを利用できるものとします。</p>
+<p>01）福島大学生活協同組合（以下、「大学生協」という）の組合員は、大学生協が指定した金額を、現金もしくは大学生協が指定する金融機関口座への払込をもって申し込みすることにより、ミール定期マネーを利用できるものとします。</p>
 
-<p>02）前項のミール定期マネーを利用できる組合員（以下、「ミールユーザー」という）は、大学生協が指定した利用期間・曜日指定１日利用金額（以下、「１日利用金額」という）の範囲内で、大学生協の指定する食堂等の店舗（以下「指定食堂等」という）及び大学生協電子マネー対応機器で、ミ一ル定期マネーにより食事等を利用することができます。</p>
+<p>02）前項のミール定期マネーを利用できる組合員（以下、「ミールユーザー」という）は、大学生協が指定した利用期間・曜日指定1日利用金額（以下、「1日利用金額」という）の範囲内で、大学生協の指定する食堂等の店舗（以下「指定食堂等」という）及び大学生協電子マネー対応機器で、ミ一ル定期マネーにより食事等を利用することができます。</p>
 
 <p>03）ミールユーザーは自身が所有するスマホに、大学生協アプリ（公式）をインストールすることで、ミール定期マネーを利用することができます。</p>
 
@@ -299,6 +299,11 @@ include $rootpath . 'include/header2.txt';
 <h5>大学生の基礎力講座「Fu･root」</h5>
 
 <p class="pad_l"><a class="" href="https://docs.google.com/document/d/1hlSkl4kaj0KC-YZCYNtVi-yfRi6CmgSx/edit?usp=sharing&ouid=113061290625526807041&rtpof=true&sd=true" target="_blank">大学生の基礎力講座「Fu･root」申込規約 <i class="fa fa-external-link"></i></a></p>
+
+
+<h5 id="shukatsu">就活体験講座</h5>
+<p class="pad_l"><a class="" href="https://docs.google.com/document/d/1ONwChUZ6wWh1ES4WEfRmEOaKy6wdjJpV/edit?usp=sharing&ouid=113061290625526807041&rtpof=true&sd=true" target="_blank">就活体験講座申込規約 <i class="fa fa-external-link"></i></a></p>
+
 
 <h5 id="koumuin">公務員講座</h5>
 <p class="pad_l"><a href="./koumuin.php">公務員講座 規定 <i class="fa fa-fw fa-chevron-right"></i></a></p>

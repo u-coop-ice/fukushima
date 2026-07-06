@@ -98,8 +98,8 @@
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
 
-項目名：<input type="text" name="extra[title][0]" id="extra[title][0]" class="form-control" value="{$category['method']['extra'][0]['title']}" />
-<textarea name="extra[select][0]" id="extra[select][0]" rows="5"  class="form-control" />{$category['method']['extra'][0]['select']}</textarea>
+項目名：<input type="text" name="extra[title][0]" id="extra[title][0]" class="form-control validate[required]" value="{$category['method']['extra'][0]['title']}" />
+<textarea name="extra[select][0]" id="extra[select][0]" rows="5"  class="form-control validate[required]" />{$category['method']['extra'][0]['select']}</textarea>
 <br />注意書き等：<textarea name="extra[note][0]" class="form-control" id="extra[note][0]">{$category['method']['extra'][0]['note']}</textarea>
 </td>
 </tr>
@@ -138,8 +138,8 @@
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
 
-項目名：<input type="text" name="extra[title][{$k}]" id="extra[title][{$k}]" class="form-control" value="{$v['title']}" />
-<textarea name="extra[select][{$k}]" id="extra[select][{$k}]" cols="40" rows="5" class="form-control"
+項目名：<input type="text" name="extra[title][{$k}]" id="extra[title][{$k}]" class="form-control validate[required]" value="{$v['title']}" />
+<textarea name="extra[select][{$k}]" id="extra[select][{$k}]" cols="40" rows="5" class="form-control validate[required]"
 placeholder="{if $k==0}選択項目1,example@example.example.com(改行){else}選択項目1(改行)･･･{/if}">{$v['select']}</textarea>
 <br />注意書き等：<textarea name="extra[note][{$k}]" class="form-control" id="extra[note][{$k}]">{$v['note']}</textarea>
 </td>
@@ -214,9 +214,9 @@ placeholder="選択項目1,在庫数(改行)">{$category['stock_multi']['select'
 <div class="clear" style="margin-bottom:0.4em;"></div>
 
 
-項目名：<input type="text" name="extra[title][]" class="form-control" value="" disabled="disabled" />
+項目名：<input type="text" name="extra[title][]" class="form-control validate[required]" value="" disabled="disabled" />
 
-<textarea name="extra[select][]" class="form-control" cols="40" rows="5" placeholder="選択項目1(改行)･･･" disabled="disabled" ></textarea>
+<textarea name="extra[select][]" class="form-control validate[required]" cols="40" rows="5" placeholder="選択項目1(改行)･･･" disabled="disabled" ></textarea>
 注意書き等：<input type="text" class="form-control" name="extra[note][]" disabled="disabled" />
 </div>
 <script type="text/javascript">

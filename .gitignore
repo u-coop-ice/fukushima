@@ -12,11 +12,11 @@ htdocs.ssl/fukushima/.htaccess
 
 etc/fukushima/adm/config
 
-htdocs.ssl/fukushima/c
-htdocs.ssl/data
-htdocs.ssl/fukushima/images
-htdocs.ssl/js
-htdocs.ssl/fukushima/app/*/images
+#htdocs.ssl/fukushima/c
+#htdocs.ssl/data
+#htdocs.ssl/fukushima/images
+#htdocs.ssl/js
+#htdocs.ssl/fukushima/app/*/images
 htdocs.ssl/fukushima/adm/lib/*/vendor
 htdocs.ssl/fukushima/adm/lib/tgMdk
 
@@ -28,5 +28,5 @@ htdocs.ssl/fukushima/adm/lib/tgMdk
 **.2*
 
 htdocs.ssl/fukushima/images_m
-php
+#php
 

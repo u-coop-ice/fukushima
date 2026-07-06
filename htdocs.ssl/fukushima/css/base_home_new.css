@@ -582,6 +582,7 @@ max-width: 210px;
 
 #banners img {
 max-width: 210px;
+width:100%
 }
 
 
@@ -590,6 +591,10 @@ max-width: 210px;
 
 #banners {
 	padding: 0;
+}
+
+#banners img {
+	max-width:100%;
 }
 
 

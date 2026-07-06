@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* businesshours 追加
+---------------------------------------------------- */
+div.vlr {
+width:5px;
+padding-left:35px;
+}
+
+#content table.tblFull.table-middle th, #content table.tblFull.table-middle td {
+	vertical-align: middle;
+	text-align: center;
+}
+
+#content table.tblFull.table-middle th {
+	font-weight: normal;
+}
+
+@media (max-width: 768px) {
+#content table.tblFull.table-middle {
+	font-family: 'JapanSans80';
+}
+#content table.tblFull.table-middle th,#content table.tblFull.table-middle td{
+	padding-left :1px;
+	padding-right :1px;
+}
+}
+
+table.calendar {
+	margin-top: 10px;
+	padding: 0;
+	width: 99%;
+	border-bottom: 3px double #dcdcdc;
+}
+table.calendar th, table.calendar td {
+	margin: 0;
+	padding: 4px;
+	border-top: 1px solid #dcdcdc;
+	vertical-align: top;
+}
+
+/* table(calendar)
+---------------------------------------------------- */
+table.calendar {
+	text-align: center;
+}
+table.calendar *.closed {
+	background-color: #f4f4f4;
+}
+table.calendar td.sat {
+	color: #0387c4;
+}
+table.calendar td.sun {
+	color: #dc143c;
+}
+table.calendar *.store {
+	background-color: #f4dda5;
+}
+table.calendar *.cafet {
+	background-color: #fbe4f7;
+}
+table.calendar *.rst {
+	background-color: #dffcf0;
+}
+table.calendar *.ask {
+	background-color: #dbffb7;
+}
+table.calendar caption {
+	caption-side: bottom;
+	font-weight: bold;
+}
+table.calendar th.month {
+	width: 10%;
+}
+table.calendar td.nowrap {
+	white-space: nowrap;
+}

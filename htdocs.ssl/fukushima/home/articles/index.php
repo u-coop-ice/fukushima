@@ -38,7 +38,7 @@ include_file($rootpath . '/include/header2.txt');
 <h3>規則・規約等</h3>
 <div class="list-group ic_list">
 <a class="list-group-item ic_document" title="大学生協アプリ（公式）利用規約" target="_blank" href="https://www.univ.coop/etc/etc_248.html"><h5 class="list-group-item-heading">大学生協アプリ（公式）利用規約</h5></a>
-<a class="list-group-item ic_document" href="/home/regulation/#mealplan"><h5 class="list-group-item-heading">ミール定期マネー(ミールプラン)利用細則</h5></a>
+<a class="list-group-item ic_document" href="/home/regulation/#mealplan"><h5 class="list-group-item-heading">ミール定期マネー(ミールパス)利用細則</h5></a>
 <a class="list-group-item ic_document" href="/home/regulation/#course"><h5 class="list-group-item-heading">講座申込み規定</h5></a>
 <a class="list-group-item ic_document" href="/home/aid/sd/"><h5 class="list-group-item-heading">ＣＯ･ＯＰ学生総合共済勧誘方針</h5></a>
 </div>

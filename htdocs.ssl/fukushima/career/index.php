@@ -1,7 +1,7 @@
 <?php
-require_once '../adm/lib/set_path.php';
-include 'config.php';
-include $rootpath . '/include/js_index.txt';
+	require_once '../adm/lib/set_path.php';
+	include 'config.php';
+	include $rootpath . '/include/js_index.txt';
 ?>
 
 <!-- XML Parser + Banners -->
@@ -26,7 +26,7 @@ $(function() {
 </style>
 
 <?php
-include $rootpath . 'include/header2.txt';
+	include $rootpath . 'include/header2.txt';
 ?>
 
 
@@ -35,31 +35,82 @@ include $rootpath . 'include/header2.txt';
 
 <h2 id="title_career">学内講座・資格</h2>
 
+<h3>1年生のキャリア講座</h3>
+<p>次の目標にむけてここからスタートしよう！</p>
+
+<div class="center">
+
+<div class="panel panel-danger">
+<div class="panel-heading">『きっかけ』を見つける<div class="em12">大学生の基礎力講座<ruby>Fu・root<rp>(</rp><rt>フルート</rt><rp>)</rp></ruby></div>
+
+
+</div>
+
+<div class="panel-body">
+<a href="https://newlife.u-coop.or.jp/fukushima/standby/course/" target="_blank">
+～就職活動を見据えて、1年生の今から準備しよう～<br />
+1年生 4月開催 <i class="fa fa-external-link"></i>
+</a>
+</div>
+
+</div>
+
+<div class="panel panel-danger">
+<div class="panel-heading">きっかけを『行動にする』<div class="em12">プロジェクト<ruby>”x”C<rp>(</rp><rt>クロスシー</rt><rp>)</rp></ruby></div>
+</div>
+
+<div class="panel-body">
+<a href="https://newlife.u-coop.or.jp/fukushima/standby/course/" target="_blank">
+～異文化交流＋真のコミュニケーション力を身につける～<br />
+1年生 4月開講 <i class="fa fa-external-link"></i>
+</a>
+</div>
+
+</div>
+
+<div class="panel panel-danger">
+<div class="panel-heading">きっかけを『体験』する<div class="em12">大学生の基礎力講座Fu・root#フォルテ</div>
+</div>
+
+<div class="panel-body">
+～採用試験で重視される二次試験を今から体験して本番に備えよう～<br />
+1年生 10月開講
+</div>
+
+</div>
+
+<div class="panel panel-danger">
+<div class="panel-heading">大学生のパソコンの使い方<br /><div class="em12">Surface使いこなし講座<ruby>Ne”x”t<rp>(</rp><rt>ネクスト</rt><rp>)</rp></ruby></div>
+</div>
+
+<div class="panel-body">
+<a href="https://newlife.u-coop.or.jp/fukushima/standby/course/" target="_blank">
+～パソコンを使いこなして、使える幅を広げよう～<br />
+1年生 4月開講 <i class="fa fa-external-link"></i>
+</a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
 <h3>公務員を目指す</h3>
 
 <div class="row center">
-<div class="col-sm-4 col-xs-12">
-<div class="panel panel-danger">
-	<div class="panel-heading">	<a href="https://newlife.u-coop.or.jp/fukushima/standby/course/" target="_blank">新入生講座	<i class="fa fa-external-link"></i></a></div>
-
-	<div class="panel-body left">
-	<a href="https://newlife.u-coop.or.jp/fukushima/standby/course/" target="_blank">
-	<div class="em08">●大学生の基礎力講座Fu・root</div>
-	<div class="em08">●プロジェクト”ｘ”C</div>
-	<div class="em08">●Surface使い方講座Ne"x"t</div>
-	</a>
-</div>
-
-</div>
-</div><!-- /col-sm-4 -->
 
 
 <div class="col-sm-4 col-xs-12">
 <div class="panel panel-success">
 <div class="panel-heading">公務員【準備】講座<br class="hidden-xs">	～2年生対象～</div>
 <div class="panel-body">
-	<!-- <a href="/career/public_startin/"></a> -->
-～準備中～<br />2024年12月開講
+<a href="/career/koumuin_setup/">準備講座2つのコース <i class="fa fa-fw fa-chevron-right"></i></a>
 </div>
 </div>
 </div><!-- /col-sm-4 -->
@@ -67,10 +118,9 @@ include $rootpath . 'include/header2.txt';
 
 <div class="col-sm-4 col-xs-12">
 <div class="panel panel-warning">
-<div class="panel-heading">公務員【本】講座<br class="hidden-xs">	～3年生・院1年生対象～</div>
+<div class="panel-heading">公務員【本】講座<br class="hidden-xs">	～3年生対象～</div>
 <div class="panel-body">
-	<!-- <a href="/career/koumuin/"></a> -->
-～準備中～<br />2025年4月開講
+<a href="/career/koumuin/">2026年6月開講予定 <i class="fa fa-fw fa-chevron-right"></i></a>
 </div>
 </div>
 </div><!-- /col-sm-4 -->
@@ -126,7 +176,7 @@ include $rootpath . 'include/header2.txt';
 <div class="panel panel-primary">
 	<div class="panel-heading">日建学院</div>
 	<div class="panel-body">
-	<span class="em09"><a href="https://ksknet.co.jp/school/tuition/coop_member.aspx" target="_blank">大学生協組合員様限定！<br class="hidden-xs">特別学費で受講できます <i class="fa fa-external-link"></i></a></span></div>
+	<span class="em09"><a href="https://www.ksknet.co.jp/nikken/index.aspx" target="_blank">大学生協組合員様限定！<br class="hidden-xs">特別学費で受講できます <i class="fa fa-external-link"></i></a></span></div>
 </div>
 </div><!-- /col-sm-4 -->
 
@@ -136,41 +186,41 @@ include $rootpath . 'include/header2.txt';
 
 
 <?php
-$whatsnew = new whatsnew_bootstrap();
-$whatsnew->setHeader(0);
-$whatsnew->setBefore(180);
-$whatsnew->setLog('../../data/whatsnewdata.xml');
-$whatsnew->setCoop('fukushima');
+	$whatsnew = new whatsnew_bootstrap();
+	$whatsnew->setHeader(0);
+	$whatsnew->setBefore(180);
+	$whatsnew->setLog('../../data/whatsnewdata.xml');
+	$whatsnew->setCoop('fukushima');
 ?>
 
 <?php
-$whatsnew->setKey('career,!menkyo,!job,!course');
-if ($whatsnew->getList()) {
+	$whatsnew->setKey('career,!menkyo,!job,!course');
+	if ($whatsnew->getList()) {
 	?>
 <h3 id="anc_shikaku" class="topicshead">資格取得・キャリアアップ</h3>
 <?php
-echo $whatsnew->getList();
-}
+	echo $whatsnew->getList();
+	}
 ?>
 
 <?php
-$whatsnew->setKey('course');
-if ($whatsnew->getList()) {
+	$whatsnew->setKey('course');
+	if ($whatsnew->getList()) {
 	?>
 <h3 id="anc_koza" class="topicshead">各種講座</h3>
 <?php
-echo $whatsnew->getList();
-}
+	echo $whatsnew->getList();
+	}
 ?>
 
 <?php
-$whatsnew->setKey('job');
-if ($whatsnew->getList()) {
+	$whatsnew->setKey('job');
+	if ($whatsnew->getList()) {
 	?>
 <h3 id="anc_job" class="topicshead">就職支援</h3>
 <?php
-echo $whatsnew->getList();
-}
+	echo $whatsnew->getList();
+	}
 ?>
 
 <?php /*?><?php
@@ -211,5 +261,5 @@ echo $whatsnew->getList();
 
 
 <?php
-include $rootpath . '/include/footer.txt';
+	include $rootpath . '/include/footer.txt';
 ?>

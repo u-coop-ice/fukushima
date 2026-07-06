@@ -117,7 +117,7 @@ function deleteCheck() {
 {* ページ選択 *}
 {include file='page_select.tpl'}
 
-{*if $error_get_app_count*}
+{*if $error_get_app_count}
 <p><button tyle="button" class="btn btn-warning" id="btn_create_entry_stock_multi_table">在庫テーブルを設定する</button></p>
 
 
@@ -165,7 +165,7 @@ $(function(){
 {/literal}
 
 
-{*/if*}
+{/if*}
 
 
 

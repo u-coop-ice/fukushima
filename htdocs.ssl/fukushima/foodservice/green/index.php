@@ -59,19 +59,15 @@ mobile_image('./images/photo_002.jpg', '', 'img img-responsive');
 </div><!-- /point -->
 
 
-<h3>Quick Lunch グリーンの使い方</h3>
+<h3>Quick Lunch グリーン店内の様子</h3>
 
+<?php /*
 <div class="embed-responsive embed-responsive-16by9 center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/g_wE7njkYNQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br />
-
-
-
-
-
-
+*/ ?>
 
 
 

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* news green open
+---------------------------------------------------- */
+
+.point {
+    text-align: center;
+}
+
+p.point {}
+
+p.arrow_box {
+    font-size:1.1em;   
+    color: #0D210A;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 25px;
+    margin: 20px;
+}
+
+.arrow_box {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    color: #0D210A;
+    text-align: center;
+    background: #F6F6F6;
+    border: 3px solid #0D210A;
+    z-index: 0;
+}
+
+.arrow_box:before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -9px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 9px 0 9px;
+    border-color: #F6F6F6 transparent transparent transparent;
+    z-index: 0;
+}
+
+.arrow_box:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #0D210A transparent transparent transparent;
+    z-index: -1;
+}
+
+.ttl {
+    color: #fff;
+    font-size: 90%;
+    background: #406346;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    line-height: 2.5em;
+}
+
+span.kenten {
+    padding: 0.3em 0;
+    background-repeat: repeat-x;
+    background-size: 1em 0.2em;
+    background-position: top left;
+    background-image: -webkit-gradient(radial, center center, 0, center center, 1.5, from(#000000), color-stop(0.5, #000000), color-stop(0.9, transparent), to(transparent));
+    background-image: -webkit-radial-gradient(center center, 0.1em 0.1em, #000000, #000000 95%, transparent 95%, transparent);
+    background-image: radial-gradient(0.1em 0.1em at center center, #000000, #000000 95%, transparent);
+}
+
+span.highlighter {
+    background-size: 100% 1em;
+    background-repeat: repeat-x;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(253, 205, 160, 0)), color-stop(0.5, rgba(253, 205, 160, 0)), color-stop(0.6, rgba(253, 205, 160, 1)), color-stop(0.98, rgba(253, 205, 160, 1)), to(rgba(253, 205, 160, 0)));
+    background-image: -webkit-linear-gradient(top, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 63%, rgba(255, 255, 255, 0.6) 64%, rgba(255, 255, 255, 0.6) 67%, rgba(253, 205, 160, 0) 68%), -webkit-linear-gradient(top, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 55%, rgba(255, 255, 255, 0.5) 56%, rgba(255, 255, 255, 0.5) 60%, rgba(253, 205, 160, 0) 61%), -webkit-linear-gradient(271deg, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 50%, rgba(253, 205, 160, 1) 60%, rgba(253, 205, 160, 1) 99%, rgba(253, 205, 160, 0)), -webkit-linear-gradient(top, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 50%, rgba(253, 205, 160, 1) 60%, rgba(253, 205, 160, 1) 99%, rgba(253, 205, 160, 0));
+    background-image: linear-gradient(to bottom, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 63%, rgba(255, 255, 255, 0.6) 64%, rgba(255, 255, 255, 0.6) 67%, rgba(253, 205, 160, 0) 68%), linear-gradient(to bottom, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 55%, rgba(255, 255, 255, 0.5) 56%, rgba(255, 255, 255, 0.5) 60%, rgba(253, 205, 160, 0) 61%), linear-gradient(179deg, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 50%, rgba(253, 205, 160, 1) 60%, rgba(253, 205, 160, 1) 99%, rgba(253, 205, 160, 0)), linear-gradient(to bottom, rgba(253, 205, 160, 0), rgba(253, 205, 160, 0) 50%, rgba(253, 205, 160, 1) 60%, rgba(253, 205, 160, 1) 99%, rgba(253, 205, 160, 0));
+}
+
+p.ttlgreen {
+    color: #0D210A;
+    font-weight:bold;
+    font-size:1.2em;
+}
+
+
+h4.ttlgreen {
+    color: #EA5513;
+    text-align:center;
+    padding:30px 0 10px 0;    
+}
+
+
+
+#content ul#pic_list {
+  font-size: 0;
+  text-align:center;
+}
+
+#content li {
+  display: inline-block;
+    margin:0 20px 40px 20px;
+}
+
+hr.hr_green {
+  margin:50px 0;
+  
+}
+
+img.icongreen {
+  margin-bottom:20px;
+}

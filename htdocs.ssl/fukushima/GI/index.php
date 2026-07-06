@@ -165,9 +165,9 @@ include $rootpath . '/GI/include/header.php';
     <div class="row wow fadeInUp">
       <div class="col-sm-3">
 				<a href="#spring">
-					<div class="card bg-primary card-hover">
+					<div class="card bg-pink card-hover">
 						<div class="card-body text-center p-0">
-							<div class="card-icon-border-large border-primary">
+							<div class="card-icon-border-large border-pink">
 							<?php
 							mobile_image( 'assets/img/icon/icon_1.svg', '春アイコン', '');
 							?>
@@ -239,6 +239,11 @@ include $rootpath . '/GI/include/header.php';
 </section>
 
 
+
+
+
+
+<?php /*
 <section class="pt-9 pb-6 py-md-7 d-none d-sm-block">
 	<div class="container">
 		<div id="twitter">
@@ -246,8 +251,15 @@ include $rootpath . '/GI/include/header.php';
 				<h2 class="text-danger">お知らせ</h2>
 				<p class="">News</p>
 			</div>
-			<a class="twitter-timeline" data-height="600" href="https://twitter.com/fukudai01?ref_src=twsrc%5Etfw">Tweets by fukudai01</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div><!-- twitter -->
+			
+			
+
+
+			<a class="twitter-timeline" data-height="600" href="https://twitter.com/fukudai01?ref_src=twsrc%5Etfw"><u>Tweets by fukudai01</u></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			<div class="rev_ind lh11">※Xタイムラインを表示するには、Xにログインする必要があります。</div>
+			<p><a href="https://twitter.com/i/flow/signup" class="btn btn-primary btn-sm em09">Xサインアップまたはログインはこちら</a></p>
+		</div><!-- X -->
 	</div>
 </section>
 
@@ -258,10 +270,28 @@ include $rootpath . '/GI/include/header.php';
 				<h2 class="text-danger">お知らせ</h2>
 				<p class="">News</p>
 			</div>
-			<a class="twitter-timeline" data-height="400" href="https://twitter.com/fukudai01?ref_src=twsrc%5Etfw">Tweets by fukudai01</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div><!-- twitter -->
+			<a class="twitter-timeline" data-height="400" href="https://twitter.com/fukudai01?ref_src=twsrc%5Etfw"><u>Tweets by fukudai01</u></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			<br>
+			<div class="X">
+<a class="btn btn-primary btn-block" onclick="ga('send', 'event', 'text', 'click', '福島大学生協学生委員会twitter - /index.php');" href="https://twitter.com/fukudai01?ref_src=twsrc%5Etfw" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+
+<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+</svg>
+福島大学生協学生委員会 ポストを見る</a>
+</div>
+
+		</div><!-- X -->
 	</div>
 </section>
+ */ ?>
+
+
+
+
+
+
 
 
 <!-- ====================================
@@ -279,7 +309,7 @@ include $rootpath . '/GI/include/header.php';
 			<!-- Media -->
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
-					<div class="media-icon-large bg-primary me-xl-4">
+					<div class="media-icon-large bg-pink me-xl-4">
 					<a href="./spring.php#orientation">
 						<?php
 						mobile_image( 'assets/img/icon/icon_1_w.svg', '春アイコン', 'nav-icon');
@@ -287,8 +317,8 @@ include $rootpath . '/GI/include/header.php';
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-primary"><a href="./spring.php#orientation">生協オリエンテーション</a></h3>
-            <p>生協オリエンテーションは3月の末に行われる新入生のための企画です。</p>
+            <h3 class="text-pink"><a href="./spring.php#orientation">生協オリエンテーション</a></h3>
+            <p>入学式直前に行われる新入生のための企画です。</p>
           </div>
         </div>
       </div>
@@ -296,7 +326,7 @@ include $rootpath . '/GI/include/header.php';
 			<!-- Media -->
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
-					<div class="media-icon-large bg-primary me-xl-4">
+					<div class="media-icon-large bg-pink me-xl-4">
 					<a href="./spring.php#soudan">
 						<?php
 						mobile_image( 'assets/img/icon/icon_1_w.svg', '春アイコン', 'nav-icon');
@@ -304,8 +334,8 @@ include $rootpath . '/GI/include/header.php';
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-primary"><a href="./spring.php#soudan">新入生相談会</a></h3>
-            <p>新入生相談会は4月初めに行われ、入学してきた新入生の不安や悩みを一緒に解決する企画です。</p>
+            <h3 class="text-pink"><a href="./spring.php#soudan">おはなし会・相談会</a></h3>
+												<p>おはなし会は、新入生同士が楽しく交流し新たな繋がりを作る場にしてもらうことを目的とした企画です。<br />相談会は、不安や相談したいことを先輩たちに気軽に聞くことで今後の学校生活を楽しみにしてもらうことを目的とした企画です。</p>
           </div>
         </div>
       </div>
@@ -313,7 +343,24 @@ include $rootpath . '/GI/include/header.php';
 			<!-- Media -->
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
-					<div class="media-icon-large bg-primary me-xl-4">
+					<div class="media-icon-large bg-pink me-xl-4">
+					<a href="./spring.php#otameshi">
+						<?php
+						mobile_image( 'assets/img/icon/icon_1_w.svg', '春アイコン', 'nav-icon');
+						?>
+					</a>
+					</div>
+          <div class="media-body">
+            <h3 class="text-pink"><a href="./spring.php#otameshi">おためし部会</a></h3>
+            <p>学生委員会の活動のひとつである「部会」に参加してもらうことで、その魅力や活動内容を実感してもらうことを目的とした企画です。</p>
+          </div>
+        </div>
+      </div>
+
+			<!-- Media -->
+      <div class="col-sm-6 col-xl-4 col-xs-12">
+        <div class="media mb-6">
+					<div class="media-icon-large bg-pink me-xl-4">
 					<a href="./spring.php#soudai">
 						<?php
 						mobile_image( 'assets/img/icon/icon_1_w.svg', '春アイコン', 'nav-icon');
@@ -321,8 +368,8 @@ include $rootpath . '/GI/include/header.php';
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-primary"><a href="./spring.php#soudai">総代会</a></h3>
-            <p>総代会は1年間の生協運営を決めるとても重要な会議です。</p>
+            <h3 class="text-pink"><a href="./spring.php#soudai">総代会</a></h3>
+            <p>1年間の生協運営を決めるとても重要な会議で、私たち組合員が入学時に支払った出資金を、今後どのように使用していくか意見交流する場です。</p>
           </div>
         </div>
       </div>
@@ -357,7 +404,7 @@ include $rootpath . '/GI/include/header.php';
 					</div>
           <div class="media-body">
             <h3 class="text-success"><a href="./summer.php#op">オープンキャンパス</a></h3>
-            <p>福島大学のオープンキャンパスにおいて、来場した高校生と保護者に福大生の生活を紹介しています。</p>
+            <p>来場者の皆さんに簡潔に情報を伝えること、そしてオープンキャンパスそのものを楽しんでもらうことに重点を置いて活動してきました。</p>
           </div>
         </div>
       </div>
@@ -366,15 +413,32 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-success me-xl-4">
-					<a href="./summer.php">
+					<a href="./summer.php#meguri">
 						<?php
 						mobile_image( 'assets/img/icon/icon_2_w.svg', '夏アイコン', 'nav-icon');
 						?>
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-success"><a href="./summer.php#riripack">リリパック工場見学</a></h3>
-            <p>学食のお持ち帰りに使われている容器リ・リパックをリサイクル、生産している工場の見学に行きました。</p>
+            <h3 class="text-success"><a href="./summer.php#meguri">夏休みにふくしまを巡ろうヨ！</a></h3>
+            <p>学生委員に福島県の魅力を再認識してもらい、夏休みに自ら福島県を巡るきっかけ作りを目的とした学習会です。</p>
+          </div>
+        </div>
+      </div>
+
+			<!-- Media -->
+      <div class="col-sm-6 col-xl-4 col-xs-12">
+        <div class="media mb-6">
+					<div class="media-icon-large bg-success me-xl-4">
+					<a href="./summer.php#comell">
+						<?php
+						mobile_image( 'assets/img/icon/icon_2_w.svg', '夏アイコン', 'nav-icon');
+						?>
+					</a>
+					</div>
+          <div class="media-body">
+            <h3 class="text-success"><a href="./summer.php#comell">Come&apos;llワークショップ</a></h3>
+            <p>Come&apos;llに込められた想いや秘密を知り、魅力を伝えていくために、ワークショップを実施しました。</p>
           </div>
         </div>
       </div>
@@ -391,24 +455,7 @@ include $rootpath . '/GI/include/header.php';
 					</div>
           <div class="media-body">
             <h3 class="text-success"><a href="./summer.php#sus">Summer Up Seminar</a></h3>
-            <p>Summer Up Seminarは毎年夏に開催される東北各地の学生委員と生協職員が集まるセミナーです。</p>
-          </div>
-        </div>
-      </div>
-
-			<!-- Media -->
-      <div class="col-sm-6 col-xl-4 col-xs-12">
-        <div class="media mb-6">
-					<div class="media-icon-large bg-success me-xl-4">
-					<a href="./summer.php#heiwa">
-						<?php
-						mobile_image( 'assets/img/icon/icon_2_w.svg', '夏アイコン', 'nav-icon');
-						?>
-					</a>
-					</div>
-          <div class="media-body">
-            <h3 class="text-success"><a href="./summer.php#heiwa">平和学習</a></h3>
-            <p>学生委員会では平和に関する学習も行っています。</p>
+            <p>毎年夏に開催される東北各地の学生委員と生協職員が集まるセミナーです。</p>
           </div>
         </div>
       </div>
@@ -434,26 +481,6 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-danger me-xl-4">
-					<a href="./autumn.php">
-						<?php
-						mobile_image( 'assets/img/icon/icon_3_w.svg', '秋アイコン', 'nav-icon');
-						?>
-					</a>
-					</div>
-
-          <div class="media-body">
-            <h3 class="text-danger"><a href="./autumn.php">秋の健康フェスタ</a></h3>
-            <p>秋の健康フェスタは福大祭スポーツフェスティバル期間中に開催される学生委員会と新入生アドバイザーの共同企画です。</p>
-          </div>
-        </div>
-      </div>
-
-
-
-			<!-- Media -->
-      <div class="col-sm-6 col-xl-4 col-xs-12">
-        <div class="media mb-6">
-					<div class="media-icon-large bg-danger me-xl-4">
 					<a href="./autumn.php#kyosai">
 						<?php
 						mobile_image( 'assets/img/icon/icon_3_w.svg', '秋アイコン', 'nav-icon');
@@ -462,8 +489,8 @@ include $rootpath . '/GI/include/header.php';
 					</div>
 
           <div class="media-body">
-            <h3 class="text-danger"><a href="./autumn.php#kyosai">秋の共済セミナー</a></h3>
-            <p>東北版秋の共済セミナーは、東北各地の大学の学生委員とアドバイザーと生協職員が集まり、共済について考えるセミナーです。</p>
+            <h3 class="text-danger"><a href="./autumn.php#kyosai">福大版秋の共済セミナー</a></h3>
+            <p>福島大学生協の学生スタッフが集まり共済について考えるセミナーです。</p>
           </div>
         </div>
       </div>
@@ -472,7 +499,7 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-danger me-xl-4">
-					<a href="./autumn.php#shinsai">
+					<a href="./autumn.php#comellg">
 						<?php
 						mobile_image( 'assets/img/icon/icon_3_w.svg', '秋アイコン', 'nav-icon');
 						?>
@@ -480,8 +507,8 @@ include $rootpath . '/GI/include/header.php';
 					</div>
 
           <div class="media-body">
-            <h3 class="text-danger"><a href="./autumn.php#shinsai">震災学習</a></h3>
-            <p>福島大学生協学生委員会では震災関連施設を訪問しました。</p>
+            <h3 class="text-danger"><a href="./autumn.php#comellg">Come&apos;ll学習会</a></h3>
+            <p>事前に実施したCome&apos;llワークショップで学んだ内容をより多くの人に伝えていくため、Come&apos;ll学習会を実施しました。</p>
           </div>
         </div>
       </div>
@@ -515,8 +542,8 @@ include $rootpath . '/GI/include/header.php';
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-info"><a href="./other.php#gasshuku">学委集中会議</a></h3>
-            <p>年度方針や今後の活動計画について、丸一日を使って検討する会議です。立場や学年関係なく、もっとよくするために真剣な議論を行います。学生委員会の活動を考える重要な場面です！</p>
+            <h3 class="text-info"><a href="./other.php#investment">投資学習会</a></h3>
+            <p>投資や資産運用を身近に感じてもらうことを目的とした学習会です。</p>
           </div>
         </div>
       </div>
@@ -532,8 +559,42 @@ include $rootpath . '/GI/include/header.php';
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-info"><a href="./other.php#love">LOVE is COMMUNICATION</a></h3>
-            <p>恋愛と就職活動なんて結びつきあるの？と思うかもしれません。ですが、「相手を知ることは企業分析」、「告白することは面接で自分の思いを伝えること」など意外なところで共通点がたくさんあります！</p>
+            <h3 class="text-info"><a href="./other.php#mbti">MBTIの学習会</a></h3>
+            <p>MBTIを通してお互いの価値観の理解を深め、認め合うことの大切さを伝えていくために実施しました。</p>
+          </div>
+        </div>
+      </div>
+
+			<!-- Media -->
+      <div class="col-sm-6 col-xl-4 col-xs-12">
+        <div class="media mb-6">
+					<div class="media-icon-large bg-info me-xl-4">
+					<a href="./other.php#tuujyou_shinkan">
+						<?php
+						mobile_image( 'assets/img/icon/icon_4_w.svg', '冬アイコン', 'nav-icon');
+						?>
+					</a>
+					</div>
+          <div class="media-body">
+            <h3 class="text-info"><a href="./other.php#kachikan"><span class="em09">共済学習会</span></a></h3>
+            <p>共済推進委員資格の取得を目指す学習会です。</p>
+          </div>
+        </div>
+      </div>
+
+			<!-- Media -->
+      <div class="col-sm-6 col-xl-4 col-xs-12">
+        <div class="media mb-6">
+					<div class="media-icon-large bg-info me-xl-4">
+					<a href="./other.php#oosouji">
+						<?php
+						mobile_image( 'assets/img/icon/icon_4_w.svg', '冬アイコン', 'nav-icon');
+						?>
+					</a>
+					</div>
+          <div class="media-body">
+            <h3 class="text-info"><a href="./other.php#oosouji"><span class="em09">大掃除学習会</span></a></h3>
+            <p>組合員に自立した生活を送れるようになってほしいという思いから企画されました。</p>
           </div>
         </div>
       </div>
@@ -549,47 +610,11 @@ include $rootpath . '/GI/include/header.php';
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-info"><a href="./other.php#tuujyou_shinkan"><span class="em09">通常期･新歓期の活動風景</span></a></h3>
-            <p>通常期では、4つの班に分かれ調査、アンケートの実施や学習会を行っています。新歓期の活動は主に新入生を対象とした活動を行っています。</p>
+            <h3 class="text-info"><a href="./other.php#tuujyou_shinkan"><span class="em09">通常期・新歓期の活動風景</span></a></h3>
+												<p>充実した日々を送れるようサポートする活動を行っています。</p>
           </div>
         </div>
       </div>
-
-			<!-- Media -->
-      <div class="col-sm-6 col-xl-4 col-xs-12">
-        <div class="media mb-6">
-					<div class="media-icon-large bg-info me-xl-4">
-					<a href="./other.php#tuujyou_shinkan">
-						<?php
-						mobile_image( 'assets/img/icon/icon_5_w.svg', 'その他アイコン', 'nav-icon');
-						?>
-					</a>
-					</div>
-          <div class="media-body">
-            <h3 class="text-info"><a href="./other.php#kachikan"><span class="em09">価値観の学習会</span></a></h3>
-            <p>お題をグループで話し合うことで、お互いが持つ多様な価値観について知り、認め合う大切さを学びました。</p>
-          </div>
-        </div>
-      </div>
-
-			<!-- Media -->
-      <div class="col-sm-6 col-xl-4 col-xs-12">
-        <div class="media mb-6">
-					<div class="media-icon-large bg-info me-xl-4">
-					<a href="./other.php#bousai">
-						<?php
-						mobile_image( 'assets/img/icon/icon_5_w.svg', 'その他アイコン', 'nav-icon');
-						?>
-					</a>
-					</div>
-          <div class="media-body">
-            <h3 class="text-info"><a href="./other.php#bousai"><span class="em09">防災学習会</span></a></h3>
-            <p>1人ひとりが災害への備えを具体的に考える機会となりました。</p>
-          </div>
-        </div>
-      </div>
-
-
 
     </div>
   </div>

@@ -41,12 +41,12 @@ include $rootpath . '/GI/include/header.php';
 
 
 <!-- ====================================
-ーーー	学委集中会議
+ーーー	投資学習会
 ===================================== -->
 <section class="py-7 py-md-10">
 	<div class="container">
 		<div class="section-title mb-4">
-			<h2 id="gasshuku" class="text-danger ps-0">学委集中会議</h2>
+			<h2 id="investment" class="text-danger ps-0">投資学習会</h2>
 		</div>
 		
 		
@@ -54,14 +54,14 @@ include $rootpath . '/GI/include/header.php';
 			<div class="col-sm-12 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img1.jpg', '学委合宿', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img1-title.jpg', '投資学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
 
 			<div class="col-sm-12 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">コラッセ福島で2日間にわたり、今年度の活動の振り返りや来年度の活動計画などについて議論しました。普段使い慣れない会議室を借りての活動でした。しかし、2日目の朝に全員でラジオ体操を行うなど、終始和やかな雰囲気で話し合いができました！</p>
+          <p class="text-dark font-size-15 mb-4">本企画は、投資や資産運用を身近に感じてもらうことを目的とした学習会です。物価高騰や老後2000万円問題など、将来のお金に対する不安が高まる一方で、投資は「難しそう」「怖い」と感じられがちです。</p>
         </div>
 			</div>
 	</div>
@@ -70,17 +70,14 @@ include $rootpath . '/GI/include/header.php';
 		<div class="row">
 			<div class="col-sm-8 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">年間計画を立てるために、グループごとに企画について話し合っている様子です。<br>
-学生委員会全体、そして各通常期班でたくさんのやりたいことが出てきました。<br>
-今まで思いつかなかった面白くユニークなものもあり、改めて意見を出して共有することの大切さが理解できました！
-</p>
+          <p class="text-dark font-size-15 mb-4">本企画では、スライドを用いて投資の仕組みや種類、考え方を分かりやすく解説した後、班ごとに行う投資ゲームを実施しました。</p>
         </div>
 			</div>
 			
 			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img2.jpg', '学委合宿', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img2.jpg', '投資学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
@@ -91,9 +88,7 @@ include $rootpath . '/GI/include/header.php';
 		<div class="row">
 			<div class="col-sm-8 col-xs-12 order-md-1">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">普段なかなか集中的に話し合うことができないので、とても有意義な2日間を過ごすことができました。全員が来年度の活動についての共通の見通しを持つことができ、来年度の活動がより一層楽しみです！<br>
-そして何よりも2日間でメンバーの絆が大きく深まりました！
-</p>
+          <p class="text-dark font-size-15 mb-4">過去の日経平均株価の変動をもとに議論し、実際に投資判断を体験することで投資を自分ごととして捉え、自分に合った資産運用の第一歩を踏み出せるようになることを目的として実施しました。</p>
         </div>
 			</div>
 			
@@ -114,12 +109,12 @@ include $rootpath . '/GI/include/header.php';
 
 
 <!-- ====================================
-ーーー	LOVE is COMMUNICATION
+ーーー	MBTIの学習会
 ===================================== -->
 <section class="py-7 py-md-10">
 	<div class="container">
 		<div class="section-title mb-4">
-			<h2 id="love" class="text-danger ps-0">LOVE is COMMUNICATION</h2>
+			<h2 id="mbti" class="text-danger ps-0">MBTIの学習会</h2>
 		</div>
 		
 		
@@ -127,7 +122,7 @@ include $rootpath . '/GI/include/header.php';
 			<div class="col-sm-12 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img4-title.jpg', 'LOVE is COMMUNICATION', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img4-title.jpg', 'MBTIの学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
@@ -137,14 +132,14 @@ include $rootpath . '/GI/include/header.php';
 		<div class="row">
 			<div class="col-sm-8 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">『LOVE is COMMUNICATION』、通称ラブコミュは就職活動で大切なこと、必要なことを恋愛に置き換えて学ぶ企画です！「恋愛と就職活動って関連あるのかな？」と思う方もいるかもしれません。実は『企業分析＝相手のことを理解する』『告白＝面接で自分の思いを伝える』というように、実は意外と恋愛と就職活動には関連性があるのです！</p>
+          <p class="text-dark font-size-15 mb-4">MBTIの学習会はMBTIを通してお互いの価値観の理解を深め、認め合うことの大切さを伝えていくために実施しました。MBTI診断は自己分析ツールの1つとして知られており、韓国では就職活動でMBTIを聞かれることもあるそうです。学習会では、MBTIの4つのアルファベットは何を意味しているのかを勉強したり、MBTIだけでは語れない自分の一面を学生委員どうしで共有しあったりしました！</p>
         </div>
 			</div>
 			
 			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img4.jpg', 'LOVE is COMMUNICATION', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img5.jpg', 'MBTIの学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
@@ -155,14 +150,14 @@ include $rootpath . '/GI/include/header.php';
 		<div class="row">
 			<div class="col-sm-8 col-xs-12 order-md-1">
 				<div class="">
-										<p class="text-dark font-size-15 mb-4">ラブコミュではこれまでに『ご飯に誘う』と『告白をする』の2つの事柄を通して学びを深めてきました！自分の思っていることや相手の分析などは就職活動でとても必要なことであり、学習会で実践したことで就職活動について考えるきっかけにもなり意識を高めることが出来ました！</p>
+										<p class="text-dark font-size-15 mb-4">例としてENFP（運動家）について説明すると、Eは外交型、Nは直感型、Fは感情型、Pは知覚型というタイプに分類されます！周りの人との話のネタにもなるので、ぜひMBTI診断を受けてみてください！</p>
         </div>
 			</div>
 			
 			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img5.jpg', 'LOVE is COMMUNICATION', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img6.jpg', 'MBTIの学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
@@ -176,61 +171,76 @@ include $rootpath . '/GI/include/header.php';
 
 
 
-					<?php /* 
 <!-- ====================================
-ーーー	通常期・新歓期
+ーーー	共済学習会
 ===================================== -->
 <section class="py-7 py-md-10">
 	<div class="container">
 		<div class="section-title mb-4">
-			<h2 id="tuujyou_shinkan" class="text-danger ps-0">通常期・新歓期</h2>
+			<h2 id="kyosaig" class="text-danger ps-0">共済学習会</h2>
 		</div>
+		
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="">
+          <p class="text-dark font-size-15 mb-4">共済学習会は、共済が生まれた背景や歴史、そして民間保険とは異なる共済ならではの魅力について学生委員全体で学習し、助け合いの仕組みがどのように形づくられてきたのかを理解したうえで、共済推進委員資格の取得を目指す学習会です。後半のグループワークでは、日常生活や学生生活の中に潜むさまざまなリスクを取り上げて、それぞれに対してどのように共済が役立つのかを話し合いました。知識を得るだけでなく、自分ごととして考えることで、共済をより身近に感じてもらうことができました。</p>
+        </div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+
+<!-- ====================================
+ーーー	大掃除学習会
+===================================== -->
+<section class="py-7 py-md-10">
+	<div class="container">
+		<div class="section-title mb-4">
+			<h2 id="oosouji" class="text-danger ps-0">大掃除学習会</h2>
+		</div>
+		
 		
 		<div class="row">
 			<div class="col-sm-8 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">通常期では、共済班、店舗食堂班、SDGs班、学び班の4つの班に分かれています。それぞれ班の中で、学生がより良い生活を送れるように調査、アンケートの実施や学習会を行っています。学び班では、今後社会人になってからも必須となる「傾聴力」についての学習会を実施しました！新歓期では、生協オリエンテーション班、新入生相談会班、学委募集班、情報発信班の4つの班に分かれて活動を行っています。新歓期の活動は主に新入生を対象としたものになっており、新入生が楽しく充実した大学生活を送れるように活動しています！</p>
+          <p class="text-dark font-size-15 mb-4">大学進学や就職を機に実家を離れ一人暮らしを始めた人、あるいはこれから始める人が組合員の中にはたくさんいると思います。大掃除学習会は、組合員に自立した生活を送れるようになってほしいという思いから企画されました。また大掃除をすることで新年を気持ちよく迎えてほしいという思いも込められています。</p>
         </div>
 			</div>
 			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img4.jpg', '通常期・新歓期', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img7.jpg', '大掃除学習会', 'img-fluid rounded');
 					?>
 				</div>
-				<br>
 			</div>
 		</div>
 		
 		
 		<div class="row">
-			<div class="col-sm-6 col-xs-12 order-md-1">
+
+			<div class="col-sm-8 col-xs-12 order-md-1">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">通常期・新歓期の班はそれぞれ週に１回以上集まって活動し、さらに、毎週火曜日には全学生委員会が集まる「部会」を行っています。部会の時間では班活動を行うこともあれば、学習会を行うこともあります。<br>
-					皆さんの学生生活がより良いものとなるように、私たちは日々活動しています。</p>
+          <p class="text-dark font-size-15 mb-4">学習会では、大掃除の由来や場所ごとの掃除方法を学びました。また紹介した掃除方法をある学生委員の自宅で実践した動画を視聴し、その効果を実感しました。今回の学習会を通して、こまめに掃除することの大切さや掃除に対する意欲を高めることができました。</p>
         </div>
 			</div>
 			
-			<div class="col-sm-3 col-6">
+			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img5.jpg', '通常期・新歓期', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img8.jpg', '大掃除学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
-							
-			<div class="col-sm-3 col-6 order-md-1">
-				<div class="image mb-4 mb-md-03">
-					<?php
-					mobile_image( 'assets/img/winter/winter-img6.jpg', '通常期・新歓期', 'img-fluid rounded');
-					?>
-				</div>
+			
 			</div>
-		</div>
-		
 	</div>
 </section>
-*/ ?>
+
+
+
 
 
 
@@ -247,7 +257,7 @@ include $rootpath . '/GI/include/header.php';
 		<div class="row">
 			<div class="col-sm-8 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">通常期班では、共済班、店舗	食堂班、平和・平等班、学び班、ライフサポート班、環境・防災班、未来の福大生班、ふくしま班の8つの班に分かれています。それぞれ班の中で、学生がより良い生活を送れるように調査、アンケートの実施や学習会を行っています。活動風景をもっと知りたい方はInstagramをご覧ください！</p>
+          <p class="text-dark font-size-15 mb-4">通常期班は、共済班・店舗食堂班・学び班・ふくしま班・未来の福大生班の5つに分かれて活動しています。各班では、学生がより良い大学生活を送れるよう、広報物の作成・発信、アンケートの実施、学習会の開催など、さまざまな取り組みを行っています。活動の様子をもっと知りたい方は、福島大学生協のInstagramもぜひご覧ください！</p>
         </div>
 			</div>
 			<div class="col-sm-4 col-xs-12">
@@ -264,7 +274,7 @@ include $rootpath . '/GI/include/header.php';
 
 			<div class="col-sm-8 col-xs-12 order-md-1">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">新歓期班は、生協オリエンテーション班、新入生相談会班、学委募集班、リモート安心班の4つに分かれて活動しています。それぞれの班が新入生が安心して入学できるように活動しています。新入生が入学した後も充実した大学生活を送れることを目標に頑張っていきます。</p>
+          <p class="text-dark font-size-15 mb-4">また、新歓期班は、生協オリエンテーション班・学委募集班・おはなし相談会班の3つに分かれており、新入生が安心して大学生活をスタートし、充実した日々を送れるようサポートする活動を行っています。</p>
         </div>
 			</div>
 			
@@ -283,7 +293,7 @@ include $rootpath . '/GI/include/header.php';
 
 
 
-
+<?php /*
 <!-- ====================================
 ーーー	価値観の学習会
 ===================================== -->
@@ -341,11 +351,11 @@ include $rootpath . '/GI/include/header.php';
 			</div>
 	</div>
 </section>
+*/ ?>
 
 
 
-
-
+<?php /*
 <!-- ====================================
 ーーー	防災学習会
 ===================================== -->
@@ -403,7 +413,7 @@ include $rootpath . '/GI/include/header.php';
 			</div>
 	</div>
 </section>
-
+*/ ?>
 
 
 

@@ -31,9 +31,9 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 <table class="tblFull">
 <tbody>
 <tr><th data-title="　■ " data-label="対象">対象</th>
-<td colspan="2">令和6年度卒業予定の方</td></tr>
+<td colspan="2">令和8年度卒業予定の方</td></tr>
 <tr><th data-title="　■ " data-label="日時" rowspan="">日時</th>
-<td>10/25(金)　<br class="visible-xs-block">11:30〜16:30</td></tr>
+<td>7月6日(月)・7日(火)　<br class="visible-xs-block">11:30〜16:00</td></tr>
 <tr><th data-title="　■ " data-label="場所">場所</th><td colspan="2">大学会館（生協）2階 大集会室</td>
 </tr>
 </tbody>
@@ -58,12 +58,11 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 
 
 
+
+<?php /*
 <span id="group" class="link-t-a"></span>
 <h2 id="" class="top_space40">集合写真撮影について</h2>
 
-
-
-<?php /*
 <div class="res_table">
 <table class="tblFull">
 <tbody>
@@ -75,10 +74,6 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 </tbody>
 </table>
 </div>
-*/ ?>
-
-
-
 
 <h3>ゼミ・研究室・サークル・その他団体集合写真撮影</h3>
 <p class="">※4年生が在籍している団体でまだ撮影していない場合は、下記フォームより予約してください。</p>
@@ -87,7 +82,7 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 <table class="tblFull">
 <tbody>
 <tr><th data-title="　■ " data-label="期間（最終）">期間</th>
-<td>10/21(月)〜10/25(金)<br />11/5(火)、11/8(金)</td></tr>
+<td>5月25日(月)〜29日(金)<br />6月1日(月)〜5日(金)<br />6月15日〜19日(金)</td></tr>
 <tr><th data-title="　■ " data-label="撮影時間">撮影時間</th><td>10:00※10:30※11:00※11:30※12:00※12:20※12:40<br>
 13:00※13:30※14:00※14:30※15:00※15:30<br>
 16:00※16:30※17:00
@@ -99,17 +94,23 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 <p class="">※撮影予約は先着順となります。希望撮影日の前々日の16時までご予約ください。<br />
 ※フォームからの予約が難しい場合は、下記アルバム係へお電話での申込みも可能です。</p>
 
-<p class=""><a class="btn btn-info" href="https://docs.google.com/forms/d/e/1FAIpQLSdW0hf_Br1P46EgprRTdGU6KBSV3Eti5ElvsUzuLiNMyV5Ubg/viewform" target="_blank">集合写真予約フォーム <i class="fa fa-external-link"></i></a></p>
+<p class=""><a class="btn btn-info" href="https://docs.google.com/forms/d/e/1FAIpQLScpFITTVSMrLNvgi0nfGGnB0zZiGv8jVU4ti6j2B_hXK2cyVA/viewform?usp=header" target="_blank">集合写真予約フォーム <i class="fa fa-external-link"></i></a></p>
+*/ ?>
 
+
+
+
+
+<?php /* 
 <p class="">※上記最終日程で都合がつかない団体、自分で撮影した集合写真を掲載したい団体の方は、下記記投稿フォームより集合写真を投稿してください。</p>
 
 <p class=""><a class="btn btn-warning" href="https://accounts.google.com/v3/signin/identifier?dsh=S1862694648%3A1684485922549854&continue=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdtHnPZqW0blnnes5ByE4Uk1CillTOoaPdR5gi0tv_EEhl_dg%2Fviewform%3Fusp%3Dsf_link&followup=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdtHnPZqW0blnnes5ByE4Uk1CillTOoaPdR5gi0tv_EEhl_dg%2Fviewform%3Fusp%3Dsf_link&ifkv=Af_xneG2NB_PisGArEyOc1BEVWPJwYha-PB0JLtqAxzWsXQNAgBum3MH5Eb6djRazCPAr2-Svfun1A&ltmpl=forms&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">集合写真投稿フォーム <i class="fa fa-external-link"></i></a></p>
 
-<?php /* <p class="red">【集合写真投稿期限：12月1日(金)】</p> */ ?>
+<p class="red">【集合写真投稿期限：12月1日(金)】</p>
 
 <p>※上記日程は新型コロナウイルスの感染状況によって変更・中止になる場合がございます。<br />
 ※撮影におきましては、感染拡大防止を留意したうえで行います。</p>
-
+ */ ?>
 
 
 <div class="box">
