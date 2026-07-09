@@ -18,7 +18,7 @@ include $rootpath . 'include/header2.txt';
 
 <h2 id="title_graduate">卒業</h2>
 
-<p class="em12">2027年度卒業予定の方は【Information】から案内をご確認ください。</p>
+<p class="em12">2026年度卒業予定の方は【Information】から案内をご確認ください。</p>
 
 
 <h3 class="bold">Information</h3>
@@ -35,8 +35,8 @@ echo $whatsnew->getList();
 
 
 <div class="alert alert-danger" role="alert">
-以下に掲載されている情報は2026年度のものです。2027年度に向けてただいま準備中です。<br />
-2026年度卒業生の方は以下の案内からお手続きをお願いします。</div>
+以下に掲載されている情報は2025年度のものです。2026年度に向けてただいま準備中です。<br />
+2025年度卒業生の方は以下の案内からお手続きをお願いします。</div>
 
 <h2 id="title_store">2026年3月にご卒業予定のみなさまへ</h2>
 

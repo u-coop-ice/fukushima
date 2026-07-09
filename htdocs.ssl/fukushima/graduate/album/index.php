@@ -29,13 +29,9 @@ include $rootpath . 'include/header2.txt';
 <h2><span class="em08">完全予約制・限定出版</span><br />
 福島大学卒業記念アルバム　予約購入のご案内</h2>
 
-<div class="row">
-<div class="col-sm-10 col-sm-offset-1 col-xs-12">
-<p class="topmenu"><a href="./photo.php" title="" class="btn btn-aqua btn-block btn-square row_center bold">個人写真撮影会について<span class="label label-default label-outline em07">click!</span></a></p>
-</div>
-</div>
+<div class="alert alert-danger center" role="alert"><strong>2026年度の撮影会は終了しました</strong></div>
 
-<!-- 
+
 <div class="row">
 <div class="col-sm-6 col-xs-12">
 <p class="topmenu"><a href="./photo.php" title="" class="btn btn-aqua btn-block btn-square row_center bold">個人写真撮影会について<span class="label label-default label-outline em07">click!</span></a></p>
@@ -44,7 +40,10 @@ include $rootpath . 'include/header2.txt';
 <p class="topmenu"><a href="./photo.php#group" title="" class="btn btn-aqua btn-block btn-square row_center bold">集合写真撮影会について<span class="label label-default label-outline em07">click!</span></a></p>
 </div>
 </div>
- -->
+
+
+
+
 
 <h3>2027年3月に卒業予定の方へ</h3>
 
