@@ -31,24 +31,30 @@ include $rootpath . 'include/header2.txt';
 
 <h3>卒業レンタル袴　学内展示予約会のご案内</h3>
 
-<p class="">卒業式当日のお仕度は「福島大学キャンパス内」で完結！</p>
+<p class="pad_l">卒業式当日のお仕度は「福島大学キャンパス内」で完結！</p>
 
-<p class="">新作や人気の柄は早い者勝ちとなっています。<br />
+<p class="pad_l">新作や人気の柄は早い者勝ちとなっています。<br />
 ご相談だけでも構いませんので、学内展示予約会にご参加ください！</p>
 
+<div class="pad_l">
 <h4>日時</h4>
 <ul class="bold">
-<li>6月8日(月)　11:00〜17:00</li>
-<li>6月9日(火)・10日(水)　10:00〜16:00</li>
-<li>7月6日(月)　11:00〜17:00</li>
-<li>7月7日(火)　10:00〜16:00</li>
+<li>10月20日(火)・21日(水)</li>
 </ul>
+</div>
 
-<p>予約不要となっていますので、お気軽にご参加ください！</p>
+
+<p class="pad_l">上記日程より早くお申込みをしたい方は、鈴乃屋レンタル仙台店様へお問い合わせください。</p>
+<p class="pad_l"><a class="btn btn-info" href="https://www.suzunoya.com/shop/cpt_shop/rental_sendai/?srsltid=AfmBOoqCOat9J7hDuY9Uf2Pvl_EWN4t4nXWdMthU7G_mHf1OKq7HrRrv" target="_blank">鈴乃屋レンタル仙台店様のHPはこちら <i class="fa fa-external-link"></i></a></p>
+
+<br />
+
+<?php /*
+<p>予約不要となっていますので、お気軽にご参加ください！</p>*/ ?>
 
 <p>
 <?php
-mobile_image('./images/hkm01.jpg', '', 'img-responsive img center');
+mobile_image('./images/hkm02.jpg', '', 'img-responsive img center');
 ?>
 </p>
 
