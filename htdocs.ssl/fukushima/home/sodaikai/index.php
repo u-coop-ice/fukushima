@@ -20,9 +20,9 @@ include $rootpath . 'include/header2.txt';
 
 <h3>決算状況報告</h3>
 
-<p><a class="btn btn-info" href="./pdf/25_kessan.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2025年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
-<p><a class="btn btn-info" href="./pdf/24_kessan.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2024年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
-<p><a class="btn btn-info" href="./pdf/23_kessan.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2023年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p><a class="btn btn-info" href="./pdf/25_kessan.pdf?2607" target="_blank"><i class="fa fa-file-pdf-o"></i> 2025年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p><a class="btn btn-info" href="./pdf/24_kessan.pdf?2607" target="_blank"><i class="fa fa-file-pdf-o"></i> 2024年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p><a class="btn btn-info" href="./pdf/23_kessan.pdf?2607" target="_blank"><i class="fa fa-file-pdf-o"></i> 2023年度決算<i class="fa fa-fw fa-chevron-right"></i></a></p>
 
 
 
