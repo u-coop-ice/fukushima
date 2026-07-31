@@ -78,7 +78,7 @@ function setMethod(e,f) {
 
 var methods ={
 			2:{0:{0:'bank'},1:''},
-			3:{0:{0:'graduateyear'},1:{0:'extra4'}}
+			3:{0:{0:'graduateyear'},1:{0:'extra6'},2:{0:'extra4'}}
 			};
 
 	for (var i in methods[f]){
