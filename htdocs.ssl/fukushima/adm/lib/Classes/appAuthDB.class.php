@@ -51,8 +51,8 @@ class appAuthDB extends commonDB {
 			}
 
 			if ($logdata['result']) {
-				setcookie('_signin', '', 0, '/' . COOP_DOMAIN . '/');
-				setcookie('_signin', 1, time() + 10, '/' . COOP_DOMAIN . '/');
+				setcookie('_signin', '', 0, '/');
+				setcookie('_signin', 1, time() + 10, '/');
 			}
 
 			$this->setLogdata($logdata);
@@ -91,7 +91,7 @@ HERE;
 			$errmsg = "メールアドレスを入力してください。";
 		}
 
-		$json = array('msg' => $errmsg, 'ct' => $rd['ct']);
+		$json = ['msg' => $errmsg, 'ct' => $rd['ct']];
 
 		$logdata['kind'] = 'check_user';
 		$logdata['username'] = $this->_username;

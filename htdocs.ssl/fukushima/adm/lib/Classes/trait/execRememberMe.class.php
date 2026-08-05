@@ -23,7 +23,7 @@ Trait execRememberMe {
 			$ct = $res->rowCount();
 
 			$rememberme = $this->updateRememberme($ct);
-			setcookie('_rmbm', $rememberme, time() + 60 * 60 * 24 * 30, '/');
+			setcookie('_rmbm', $rememberme, time() + 60 * 60 * 24 * 30, '/', '', true, true);
 		}
 
 	}
@@ -70,12 +70,14 @@ Trait execRememberMe {
 
 			$rmbm = htmlspecialchars($_COOKIE["_rmbm"], ENT_QUOTES, 'UTF-8');
 
-			$signin = array();
+			$signin = [];
 
 			$sql = <<< HERE
-SELECT COUNT(r.username) AS ct,e.* FROM {$this->_pfx}regist_rememberme AS r
- JOIN {$this->_pfx}regist AS e ON r.username = e.username WHERE r.rememberme = :rememberme
- AND e.`status` = 1 AND r.date > (NOW() - INTERVAL 30 DAY)
+SELECT e.* FROM {$this->_pfx}regist_rememberme AS r
+ JOIN {$this->_pfx}regist AS e ON r.username = e.username
+ WHERE r.rememberme = :rememberme
+ AND e.`status` = 1
+ AND r.date > (NOW() - INTERVAL 30 DAY)
 
 HERE;
 
@@ -90,25 +92,25 @@ HERE;
 			}
 			$signin = $res->fetch();
 
-			if ($signin['ct'] == 1 && $signin['username']) {
+			if (isset($signin['username']) && $signin['username']) {
 
 				$this->_userAuth->setAuth($signin['username']);
 
 				$_SESSION[$this->_pfx . 'mode'] = 1;
 
 				foreach ($signin as $k => $v) {
-					if ($k == 'username' || $k == 'password' || $k == 'ct') {continue;}
+					if ($k == 'username' || $k == 'password') {continue;}
 					$this->_userAuth->setAuthData($k, $v);
 				}
 
 				$this->setUserAuthData();
 
 //remebermeの更新
-				$rememberme = $this->updateRememberme($signin['ct']);
+				$rememberme = $this->updateRememberme(1);
 
 //cookieの更新
 				setcookie('_rmbm', $rememberme, 0, '/');
-				setcookie('_rmbm', $rememberme, time() + 60 * 60 * 24 * 30, '/');
+				setcookie('_rmbm', $rememberme, time() + 60 * 60 * 24 * 30, '/', '', true, true);
 
 // remembermeからの復帰をログに保存
 				$logdata['kind'] = 'rememberme';
