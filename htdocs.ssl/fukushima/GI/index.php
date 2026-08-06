@@ -396,7 +396,7 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-success me-xl-4">
-					<a href="./summer.php">
+					<a href="./summer.php#op">
 						<?php
 						mobile_image( 'assets/img/icon/icon_2_w.svg', '夏アイコン', 'nav-icon');
 						?>
@@ -535,7 +535,7 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-info me-xl-4">
-					<a href="./other.php#gasshuku">
+					<a href="./other.php#investment">
 						<?php
 						mobile_image( 'assets/img/icon/icon_4_w.svg', '冬アイコン', 'nav-icon');
 						?>
@@ -552,7 +552,7 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-info me-xl-4">
-					<a href="./other.php#love">
+					<a href="./other.php#mbti">
 						<?php
 						mobile_image( 'assets/img/icon/icon_4_w.svg', '冬アイコン', 'nav-icon');
 						?>
@@ -569,14 +569,31 @@ include $rootpath . '/GI/include/header.php';
       <div class="col-sm-6 col-xl-4 col-xs-12">
         <div class="media mb-6">
 					<div class="media-icon-large bg-info me-xl-4">
-					<a href="./other.php#tuujyou_shinkan">
+					<a href="./other.php#mh">
 						<?php
 						mobile_image( 'assets/img/icon/icon_4_w.svg', '冬アイコン', 'nav-icon');
 						?>
 					</a>
 					</div>
           <div class="media-body">
-            <h3 class="text-info"><a href="./other.php#kachikan"><span class="em09">共済学習会</span></a></h3>
+            <h3 class="text-info"><a href="./other.php#mh"><span class="em09">メンタルヘルス学習会</span></a></h3>
+            <p>不安や悩みを持つ人との会話などを通じて実践形式で練習しました。</p>
+          </div>
+        </div>
+      </div>
+
+			<!-- Media -->
+      <div class="col-sm-6 col-xl-4 col-xs-12">
+        <div class="media mb-6">
+					<div class="media-icon-large bg-info me-xl-4">
+					<a href="./other.php#kyosaig">
+						<?php
+						mobile_image( 'assets/img/icon/icon_4_w.svg', '冬アイコン', 'nav-icon');
+						?>
+					</a>
+					</div>
+          <div class="media-body">
+            <h3 class="text-info"><a href="./other.php#kyosaig"><span class="em09">共済学習会</span></a></h3>
             <p>共済推進委員資格の取得を目指す学習会です。</p>
           </div>
         </div>

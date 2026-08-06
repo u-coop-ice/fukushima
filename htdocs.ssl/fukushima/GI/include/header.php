@@ -217,6 +217,9 @@
                   <a class="dropdown-item " href="other.php#mbti">MBTIの学習会</a>
                 </li>
                 <li>
+                  <a class="dropdown-item " href="other.php#mh">メンタルヘルス学習会</a>
+                </li>
+                <li>
                   <a class="dropdown-item " href="other.php#kyosaig">共済学習会</a>
                 </li>
                 <li>
@@ -241,7 +244,7 @@
             <li class="nav-item dropdown bg-success">
               <a class="nav-link dropdown-toggle " href="fmap.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 																<i class="fas fa-map-marked-alt nav-icon" aria-hidden="true"></i>
-                <span>ふくしまっぷ</span>
+                <span>マップ</span>
               </a>
             </li>
 
