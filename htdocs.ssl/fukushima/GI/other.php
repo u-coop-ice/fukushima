@@ -170,6 +170,68 @@ include $rootpath . '/GI/include/header.php';
 
 
 
+<!-- ====================================
+ーーー	メンタルヘルス学習会
+===================================== -->
+<section class="py-7 py-md-10">
+	<div class="container">
+		<div class="section-title mb-4">
+			<h2 id="mh" class="text-danger ps-0">メンタルヘルス学習会</h2>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div class="image mb-4 mb-md-3">
+					<?php
+					mobile_image( 'assets/img/winter/winter-img7-title.jpg', 'メンタルヘルス学習会', 'img-fluid rounded');
+					?>
+				</div>
+			</div>
+	</div>
+
+
+		<div class="row">
+			<div class="col-sm-8 col-xs-12">
+				<div class="">
+          <p class="text-dark font-size-15 mb-4">メンタルヘルス学習会では、新しい環境や一人暮らしなどで不安やストレスを感じやすい大学生に向けて、健康なメンタルを保つための生活習慣などについて学び、不安や悩みを持つ人との会話などを通じて実践形式で練習しました。</p>
+        </div>
+			</div>
+			
+			<div class="col-sm-4 col-xs-12">
+				<div class="image mb-4 mb-md-3">
+					<?php
+					mobile_image( 'assets/img/winter/winter-img8.jpg', 'メンタルヘルス学習会', 'img-fluid rounded');
+					?>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-sm-8 col-xs-12 order-md-1">
+				<div class="">
+										<p class="text-dark font-size-15 mb-4">学習会に参加した学生委員からの振り返りで「友達との相談について参考にできることがあった」「睡眠や食生活の乱れがあったのでこの学習会を機会に改善したい」などの声をもらうことができました。</p>
+        </div>
+			</div>
+			
+			<div class="col-sm-4 col-xs-12">
+				<div class="image mb-4 mb-md-3">
+					<?php
+					mobile_image( 'assets/img/winter/winter-img9.jpg', 'メンタルヘルス学習会', 'img-fluid rounded');
+					?>
+				</div>
+			</div>
+			
+			</div>
+	</div>
+</section>
+
+
+
+
+
 
 <!-- ====================================
 ーーー	共済学習会
@@ -180,16 +242,57 @@ include $rootpath . '/GI/include/header.php';
 			<h2 id="kyosaig" class="text-danger ps-0">共済学習会</h2>
 		</div>
 		
+		
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-sm-12 col-xs-12">
+				<div class="image mb-4 mb-md-3">
+					<?php
+					mobile_image( 'assets/img/winter/winter-img10-title.jpg', '共済学習会', 'img-fluid rounded');
+					?>
+				</div>
+			</div>
+	</div>
+
+
+		<div class="row">
+			<div class="col-sm-8 col-xs-12">
 				<div class="">
-          <p class="text-dark font-size-15 mb-4">共済学習会は、共済が生まれた背景や歴史、そして民間保険とは異なる共済ならではの魅力について学生委員全体で学習し、助け合いの仕組みがどのように形づくられてきたのかを理解したうえで、共済推進委員資格の取得を目指す学習会です。後半のグループワークでは、日常生活や学生生活の中に潜むさまざまなリスクを取り上げて、それぞれに対してどのように共済が役立つのかを話し合いました。知識を得るだけでなく、自分ごととして考えることで、共済をより身近に感じてもらうことができました。</p>
+          <p class="text-dark font-size-15 mb-4">共済学習会は、学生委員会全体に民間保険とは異なる共済ならではの魅力があることを学習し、助け合いの仕組みがどのように形づくられてきたのかを理解するために実施しました。</p>
         </div>
 			</div>
-		</div>
+			
+			<div class="col-sm-4 col-xs-12">
+				<div class="image mb-4 mb-md-3">
+					<?php
+					mobile_image( 'assets/img/winter/winter-img11.jpg', '共済学習会', 'img-fluid rounded');
+					?>
+				</div>
+			</div>
 
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-sm-8 col-xs-12 order-md-1">
+				<div class="">
+										<p class="text-dark font-size-15 mb-4">新学期ということもあり、前半のアイスブレイクや後半のグループワークで上級生と新入部員が交流をできる形態をとることで、上級生が今まで得た共済の知識を新入部員に伝えられるようにしながら、新入部員の共済知識の定着を図りました。</p>
+        </div>
+			</div>
+			
+			<div class="col-sm-4 col-xs-12">
+				<div class="image mb-4 mb-md-3">
+					<?php
+					mobile_image( 'assets/img/winter/winter-img12.jpg', '共済学習会', 'img-fluid rounded');
+					?>
+				</div>
+			</div>
+			
+			</div>
 	</div>
 </section>
+
+
+
 
 
 
@@ -212,7 +315,7 @@ include $rootpath . '/GI/include/header.php';
 			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img7.jpg', '大掃除学習会', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img13.jpg', '大掃除学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
@@ -230,7 +333,7 @@ include $rootpath . '/GI/include/header.php';
 			<div class="col-sm-4 col-xs-12">
 				<div class="image mb-4 mb-md-3">
 					<?php
-					mobile_image( 'assets/img/winter/winter-img8.jpg', '大掃除学習会', 'img-fluid rounded');
+					mobile_image( 'assets/img/winter/winter-img14.jpg', '大掃除学習会', 'img-fluid rounded');
 					?>
 				</div>
 			</div>
