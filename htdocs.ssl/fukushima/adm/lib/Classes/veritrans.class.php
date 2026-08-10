@@ -50,21 +50,22 @@ class webCharge {
 	const TXN_FAILURE_CODE = 'failure';
 	const TXN_PENDING_CODE = 'pending';
 	const TXN_SUCCESS_CODE = 'success';
-	const TRUE_FLAG_CODE = true;
-	const FALSE_FLAG_CODE = false;
+	const TRUE_FLAG_CODE   = true;
+	const FALSE_FLAG_CODE  = false;
 
 // コンビニ区分定義
 
 	const SEVEN_ELEVEN_CODE = 'sej';
-	const E_CONTEXT_CODE = 'econ';
-	const WELL_NET_CODE = 'other';
+	const E_CONTEXT_CODE    = 'econ';
+	const WELL_NET_CODE     = 'other';
 
 // 3Dセキュア
 //	const SERVICE_OPTION_TYPE = 'mpi-complete'; // 本人認証未対応／未契約カードの場合決済エラー（カード会社負担のみ）
 //	const SERVICE_OPTION_TYPE = 'mpi-company'; // 本人認証未対応／未契約カードの場合決済エラー
 	const SERVICE_OPTION_TYPE = 'mpi-merchant'; // 本人認証未対応／未契約カードの場合通常決済
-	const DEVICE_CHANNEL = '02';
-	const VERIFY_TIMEOUT = 10; //本人認証有効期限（分）
+	const DEVICE_CHANNEL      = '02';
+	const VERIFY_TIMEOUT      = 10; //本人認証有効期限（分）
+	const CREDIT_LIMIT_DAY    = 25; //与信期限（日）
 
 	private $_card_id;
 	private $_err;
@@ -81,7 +82,7 @@ class webCharge {
 
 	private $_service_option_type = self::E_CONTEXT_CODE;
 //	private $_service_option_type = self::WELL_NET_CODE;
-	private $_payment_limit_day = 14;
+	private $_payment_limit_day  = 14;
 	private $_payment_limit_hhmm = null;
 	private $_payment_limit;
 //	private $_push_url = "https://us-central1-uc-kimachi.cloudfunctions.net/sample-slack-bot";
@@ -488,10 +489,10 @@ class webCharge {
 			$serviceTypeCdList = ['cvs', 'card', 'mpi'];
 			$request_data = new SearchRequestDto();
 //			$request_data->setRequestId($requestId); // リクエストID
-			$request_data->setNewerFlag($isNewerTxn); // 商品に紐付く最後の取引のみ対象にするかを示す
-			$request_data->setContainDummyFlag(true); // 検索対象にダミー決済のレコードを含めるかを示す
+			$request_data->setNewerFlag($isNewerTxn);            // 商品に紐付く最後の取引のみ対象にするかを示す
+			$request_data->setContainDummyFlag(true);            // 検索対象にダミー決済のレコードを含めるかを示す
 			$request_data->setServiceTypeCd($serviceTypeCdList); // 検索対象のサービスタイプを示す
-			$request_data->setSearchParameters($search_param); // 各機能の固有条件
+			$request_data->setSearchParameters($search_param);   // 各機能の固有条件
 
 // --------------------------------------------------------------
 			// コマンドを実行し、応答DTOを取得します。
@@ -535,9 +536,9 @@ class webCharge {
 //cvs
 				$order_info['cvs_type'] = $properOrderInfo->getcvsType(); // 受付番号
 
-				$order_info['receipt_number'] = $properOrderInfo->getreceiptNo(); // 受付番号
-				$order_info['amount'] = $properOrderInfo->getamount(); // 決済金額
-				$order_info['payLimit'] = $properOrderInfo->getpayLimit(); // 支払期限
+				$order_info['receipt_number'] = $properOrderInfo->getreceiptNo();  // 受付番号
+				$order_info['amount'] = $properOrderInfo->getamount();             // 決済金額
+				$order_info['payLimit'] = $properOrderInfo->getpayLimit();         // 支払期限
 				$order_info['paidDatetime'] = $properOrderInfo->getpaidDatetime(); //入金受付日時
 
 				$transactionInfos = $ch->getTransactionInfos();
@@ -553,7 +554,7 @@ class webCharge {
 						$result[$i]['reqJpoInformation'] = $properTransactionInfo->getReqJpoInformation(); // 決済状態
 
 						$result[$i]['txnDatetime'] = $tr->getTxnDatetime();
-						$result[$i]['amount'] = $tr->getAmount(); // 金額
+						$result[$i]['amount'] = $tr->getAmount();   // 金額
 						$result[$i]['command'] = $tr->getCommand(); // コマンド
 						$result[$i]['mstatus'] = $tr->getMstatus(); // ステータスコード
 
@@ -584,7 +585,7 @@ class webCharge {
 							}
 							if ($result[$i]['cardTransactionType'] == "a") {
 								$result[$i]['cardExpire'] = $ch->getProperOrderInfo()->getCardExpire();
-								$result[$i]['expire_time'] = date('Y-m-d H:i:s', strtotime($result[$i]['txnDatetime']) + (60 * 60 * 24 * 60));
+								$result[$i]['expire_time'] = date('Y-m-d H:i:s', strtotime($result[$i]['txnDatetime']) + (60 * 60 * 24 * self::CREDIT_LIMIT_DAY));
 							}
 						}
 						$last_transaction = $result[$i]['cardTransactionType'];
@@ -709,7 +710,7 @@ class webCharge {
 				 * カード情報取得
 				 */
 				$cardInfos = $account->getCardInfo();
-				$cardList = array();
+				$cardList = [];
 				foreach ((array) $cardInfos as $cardInfo) {
 					$key = $cardInfo->getCardId();
 					$value = $cardInfo->getCardNumber() . " " . $cardInfo->getCardExpire();
