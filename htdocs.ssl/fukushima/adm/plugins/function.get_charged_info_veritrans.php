@@ -28,9 +28,9 @@ define('CREDIT_TEST_MODE', 1);
 //cvs
 			$order_info['cvs_type'] = $properOrderInfo->getcvsType(); // 受付番号
 
-			$order_info['receipt_number'] = $properOrderInfo->getreceiptNo(); // 受付番号
-			$order_info['amount'] = $properOrderInfo->getamount(); // 決済金額
-			$order_info['payLimit'] = $properOrderInfo->getpayLimit(); // 支払期限
+			$order_info['receipt_number'] = $properOrderInfo->getreceiptNo();  // 受付番号
+			$order_info['amount'] = $properOrderInfo->getamount();             // 決済金額
+			$order_info['payLimit'] = $properOrderInfo->getpayLimit();         // 支払期限
 			$order_info['paidDatetime'] = $properOrderInfo->getpaidDatetime(); //入金受付日時
 
 			$transactionInfos = $ch->getTransactionInfos();
@@ -46,12 +46,12 @@ define('CREDIT_TEST_MODE', 1);
 					$result[$i]['reqJpoInformation'] = $properTransactionInfo->getReqJpoInformation(); // 決済状態
 
 					$result[$i]['txnDatetime'] = $tr->getTxnDatetime();
-					$result[$i]['amount'] = $tr->getAmount(); // 金額
+					$result[$i]['amount'] = $tr->getAmount();   // 金額
 					$result[$i]['command'] = $tr->getCommand(); // コマンド
 					$result[$i]['mstatus'] = $tr->getMstatus(); // ステータスコード
 
 //csv
-					$result[$i]['cvsTxnType'] = $properTransactionInfo->getcvsTxnType(); //取引対象タイプ
+					$result[$i]['cvsTxnType'] = $properTransactionInfo->getcvsTxnType();       //取引対象タイプ
 					$result[$i]['startDatetime'] = $properTransactionInfo->getstartDatetime(); //取引日時
 
 					if ($result[$i]['mstatus'] == 'success') {
@@ -70,7 +70,7 @@ define('CREDIT_TEST_MODE', 1);
 						}
 						if ($result[$i]['cardTransactionType'] == "a") {
 							$result[$i]['cardExpire'] = $ch->getProperOrderInfo()->getCardExpire();
-							$result[$i]['expire_time'] = date('Y-m-d H:i:s', strtotime($result[$i]['txnDatetime']) + (60 * 60 * 24 * 60));
+							$result[$i]['expire_time'] = date('Y-m-d H:i:s', strtotime($result[$i]['txnDatetime']) + (60 * 60 * 24 * $charge::CREDIT_LIMIT_DAY));
 						}
 					}
 					$last_transaction = $result[$i]['cardTransactionType'];
