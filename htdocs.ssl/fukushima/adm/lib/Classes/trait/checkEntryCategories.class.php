@@ -144,9 +144,6 @@ HERE;
 		}
 
 		$category['method'] = json_decode($category['method'], true);
-		if ($category['pressmail']) {
-			$category['pressmail'] = htmlspecialchars_decode($category['pressmail']);
-		}
 		return $category;
 
 	}
@@ -188,6 +185,7 @@ HERE;
 
 		if ($category['description']) {
 			$category['description'] = stripslashes($category['description']);
+			$category['description'] = htmlspecialchars_decode($category['description']);
 		}
 
 		if ($category['description_closed']) {
@@ -198,6 +196,10 @@ HERE;
 		if ($category['method']['ship_flag']['select']) {
 			$category['method']['ship_flag_list'] = preg_replace("#\r\n|\r#", "\n", $category['method']['ship_flag']['select']);
 			$category['method']['ship_flag_list'] = explode("\n", $category['method']['ship_flag_list']);
+		}
+
+		if ($category['pressmail']) {
+			$category['pressmail'] = htmlspecialchars_decode($category['pressmail']);
 		}
 
 		return $category;
