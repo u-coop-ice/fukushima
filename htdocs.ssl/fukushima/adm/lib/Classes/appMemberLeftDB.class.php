@@ -42,15 +42,15 @@ class appMemberLeftDB extends commonDB {
 				if (preg_match('/卒業/', $_POST['extra'][3])) {
 					$category['method']['graduateyear']['use'] = 2;
 					$category['method']['extra'][4]['use'] = 0;
-					$category['method']['extra'][5]['use'] = 0;
+					$category['method']['extra'][6]['use'] = 0;
 				} else if (preg_match('/退学/', $_POST['extra'][3])) {
 					$category['method']['graduateyear']['use'] = 0;
 					$category['method']['extra'][4]['use'] = 0;
-					$category['method']['extra'][5]['use'] = 2;
+					$category['method']['extra'][6]['use'] = 2;
 				} else {
 					$category['method']['graduateyear']['use'] = 0;
 					$category['method']['extra'][4]['use'] = 2;
-					$category['method']['extra'][5]['use'] = 0;
+					$category['method']['extra'][6]['use'] = 0;
 				}
 
 			}
