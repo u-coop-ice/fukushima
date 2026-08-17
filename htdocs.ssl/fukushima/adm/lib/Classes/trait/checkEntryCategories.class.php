@@ -144,7 +144,9 @@ HERE;
 		}
 
 		$category['method'] = json_decode($category['method'], true);
-
+		if ($category['pressmail']) {
+			$category['pressmail'] = htmlspecialchars_decode($category['pressmail']);
+		}
 		return $category;
 
 	}
