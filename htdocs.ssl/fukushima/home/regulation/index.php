@@ -307,6 +307,7 @@ include $rootpath . 'include/header2.txt';
 
 <h5 id="koumuin">公務員講座</h5>
 <p class="pad_l"><a href="./koumuin.php">公務員講座 規定 <i class="fa fa-fw fa-chevron-right"></i></a></p>
+<p class="pad_l"><a href="https://drive.google.com/file/d/1ZmZhUKDy9CC6g4R8utU6mhUgk2akUc9r/view?usp=sharing" target="_blank">公務員ステップ講座 規約 <i class="fa fa-external-link"></i></a></p>
 
 <h5>返還方法</h5>
 	<p>当生協はクーリング・オフ並びに中途解約の申し出を申込み者から受け付けた場合、保護者様が同意されていることを確認するために、保護者様名義で指定された銀行等口座への振込で返金します。本人への現金・振込での返金はできません。</p>
