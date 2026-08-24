@@ -34,7 +34,7 @@
 
 {if $app['component']=="shopping"}
 <p class="list-group-item-text">{$app['category_name']}
-{if $app["ship_flag"] <2}<i class="fa fa-fw fa-arrow-right"></i>{$app["ship_namef"]} {$app["ship_nameg"]}様{/if}</p>
+{if $app["ship_flag"] < 2 && $app["ship_flag"] > -9}<i class="fa fa-fw fa-arrow-right"></i>{$app["ship_namef"]} {$app["ship_nameg"]}様{/if}</p>
 
 {else if $app['component']=="htkt"}
 <p class="list-group-item-text">{$component[$app['component']]['title']}

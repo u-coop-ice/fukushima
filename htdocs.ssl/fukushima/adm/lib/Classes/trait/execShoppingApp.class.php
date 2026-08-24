@@ -68,6 +68,13 @@ trait execShoppingApp {
 			}
 		}
 
+		for ($i = 0; $i < $is_item_exist; $i++) {
+			if ($cart['items'][$i]['agreement']) {
+				$cart['agreement'] = 1;
+				continue;
+			}
+		}
+
 		$this->_cart = $cart;
 		return $this->_cart;
 
@@ -198,7 +205,7 @@ HERE;
 			throw new Exception("注文データが不正です", 1);
 		}
 
-		$fields_os = array(
+		$fields_os = [
 			'app_id' => 'integer',
 			'item_id' => 'integer',
 			'num' => 'integer',
@@ -217,7 +224,7 @@ HERE;
 			'name' => 'text',
 			'no' => 'text',
 			'methods' => 'text',
-		);
+		];
 
 		$this->set_tbl('app_sub');
 		$this->set_fields($fields_os);
@@ -299,6 +306,7 @@ i.`extra3_use`,
 i.`extra3_title`,
 i.`extra3_select`,
 i.`extra3_note`,
+i.`agreement`,
 
 sc.`flag_drink` AS flag_drink
 
@@ -344,24 +352,28 @@ HERE;
 		$method['nominate'] = $result['nominate'];
 		$method['send_date'] = $result['send_date'];
 
-		foreach (array('extra', 'cart') as $key) {
+		if ($result['agreement']) {
+			$item['agreement'] = 1;
+		}
+
+		foreach (['extra', 'cart'] as $key) {
 
 			for ($i = 1; $i <= 3; $i++) {
 				if ($result[$key . $i . '_use'] > 0) {
 
-					$result[$key . $i . '_select'] = str_replace(array("\r\n", "\r", "\n"), ',', trim($result[$key . $i . '_select']));
+					$result[$key . $i . '_select'] = str_replace(["\r\n", "\r", "\n"], ',', trim($result[$key . $i . '_select']));
 					$tmp = null;
 					if ($result[$key . $i . '_select']) {
 						$tmp = explode(",", $result[$key . $i . '_select']);
 						array_unshift($tmp, '');
 					}
 
-					$method[$key][$i] = array(
+					$method[$key][$i] = [
 						'use' => $result[$key . $i . '_use'],
 						'title' => $result[$key . $i . '_title'],
 						'select' => $tmp,
 						'note' => $result[$key . $i . '_note'],
-					);
+					];
 				}
 			}
 		}
@@ -369,7 +381,7 @@ HERE;
 // 商品の情報をカートに入れる
 
 		if (!isset($this->_cart['items'])) {
-			$this->_cart = array('items' => array($item), 'methods' => array($method));
+			$this->_cart = ['items' => [$item], 'methods' => [$method]];
 		} else {
 			array_push($this->_cart['items'], $item);
 			array_push($this->_cart['methods'], $method);

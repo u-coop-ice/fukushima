@@ -150,17 +150,30 @@ function setFrom(e) {
 <!-- STEPS -->
 <table class="steps">
 <tr>
-{if $now_mode =='buy_confirm'}
-<td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
-<td class="now"><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
+{if $init_shipList[0] == -9}
+{if $now_mode=="view_cart"}
+<td class="first now"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+<td class=""><span class="number">2</span><span class="hidden-xs description">注文者情報入力</span></td>
 {else}
+<td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+<td class="now"><span class="number">2</span><span class="hidden-xs description">注文者情報入力</span></td>
+{/if}
+<td><span class="number">3</span><span class="hidden-xs description">お支払方法入力</span></td>
+<td><span class="number">4</span><span class="hidden-xs description">入力内容確認</span></td>
+<td><span class="number">5</span><span class="hidden-xs description">ご注文完了</span></td>
+{else}
+{if $now_mode=="view_cart"}
 <td class="first now"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
 <td><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
+{else}
+<td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+<td class="now"><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
 {/if}
 <td><span class="number">3</span><span class="hidden-xs description">発送オプション入力</span></td>
 <td><span class="number">4</span><span class="hidden-xs description">お支払方法入力</span></td>
 <td><span class="number">5</span><span class="hidden-xs description">入力内容確認</span></td>
 <td><span class="number">6</span><span class="hidden-xs description">ご注文完了</span></td>
+{/if}
 </tr>
 </table>
 
@@ -173,7 +186,9 @@ function setFrom(e) {
 
 <p><a class="btn btn-primary btn-sm" href="{$self}?mode=view_cart"><i class="fa fa-fw fa-chevron-left"></i>カートに戻る</a></p>
 
+{if $init_shipList[0] > -9}
 <p class="alert alert-info">一配送ごとのご注文になります。配送先が複数の場合は、配送先ごとに注文を完了してください。</p>
+{/if}
 
 {* 顧客情報 開始 *}
 
@@ -288,6 +303,10 @@ function setFrom(e) {
 
 {/if}
 
+
+{if $init_shipList[0] > -9}
+
+
 <div class="center contact gray">
 <label><input type="checkbox" name="ship_from" value="1" {if $post["ship_from"]}checked="checked"{/if} />
 &nbsp;<span class="prc">発送元（送り主）をご注文者様とは別にする</span></label>
@@ -394,6 +413,19 @@ function setFrom(e) {
 
 </div>
 </div><!-- ship -->
+
+{else}
+
+<div class="box center">
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+<button class="btn btn-primary btn-block" name="step2" type="submit" value="お支払い方法の入力へ進む">お支払い方法の入力へ進む<i class="fa fa-fw fa-chevron-right"></i></button>
+</div>
+</div>
+</div>
+
+{/if}
+
 
 </form>
 

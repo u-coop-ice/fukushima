@@ -73,7 +73,7 @@ $(function(){
 {if $stock_error}<p class="alert alert-danger">在庫なし</p>{/if}
 
 
-{if count($cart_item_id) && $item['id']|in_array:$cart_item_id}
+{if count($cart_item_id) && in_array($item['id'],$cart_item_id)}
 
 <p><span class="label label-success">選択済</span></p>
 {else}
@@ -113,7 +113,8 @@ $(function(){
 </form>
 {/if}
 
-<p><span>価格：</span><span class="price">{$item['price']|number_format}円（{$postageList[$item['postage']]}）</span></p>
+<p><span>税込価格：</span><span class="price">{$item['price']|number_format}円</span>{if $item['postage']} <span class="label label-info">{$postageList[$item['postage']]}</span>{/if}{if $item['price_base']}<br /><span class="em09">本体価格: {$item['price_base']|number_format}円（税: {$item['tax']|number_format}円）</span>{/if}
+</p>
 <div class="clear"></div>
 </div><!-- itemtxtbox -->
 <div class="clear"></div>

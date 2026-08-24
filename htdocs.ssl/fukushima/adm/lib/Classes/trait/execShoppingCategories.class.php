@@ -50,6 +50,7 @@ trait execShoppingCategories {
 
 		$fields = [
 			'denomination' => 'text',
+			'part' => 'text',
 			'description' => 'text',
 			'flag_send' => 'integer',
 			'sort_order' => 'integer',
@@ -117,12 +118,12 @@ trait execShoppingCategories {
 				if (is_array($this->_authority[COMPONENT]['category_id'])) {
 					array_push($this->_authority[COMPONENT]['category_id'], intval($postdata['id']));
 				} else {
-					$this->_authority[COMPONENT]['category_id'] = array(intval($postdata['id']));
+					$this->_authority[COMPONENT]['category_id'] = [intval($postdata['id'])];
 				}
 				$sadata['auth'] = json_encode($this->_authority);
 				$sadata['id'] = $this->_adminAuth->getAuthData('id');
 
-				$fields_sa = array("auth" => "text");
+				$fields_sa = ["auth" => "text"];
 
 				$this->set_tbl('init_user');
 				$this->set_postdata($sadata);
@@ -177,7 +178,7 @@ trait execShoppingCategories {
 			$sadata['auth'] = json_encode($this->_authority);
 			$sadata['id'] = $this->_adminAuth->getAuthData('id');
 
-			$fields_sa = array("auth" => "text");
+			$fields_sa = ["auth" => "text"];
 
 			$this->set_tbl('init_user');
 			$this->set_postdata($sadata);
@@ -241,7 +242,7 @@ HERE;
 
 	public function saveShoppingSubcategory() {
 
-		$fields = array(
+		$fields = [
 			'denomination' => 'text',
 			'description' => 'text',
 			'flag_drink' => 'integer',
@@ -254,7 +255,7 @@ HERE;
 			'intervals' => 'integer',
 			'category_id' => 'integer',
 			'return_message' => 'text',
-		);
+		];
 
 		$postdata = $this->baseSanitize($fields, $fields_must);
 
@@ -315,14 +316,14 @@ HERE;
 
 	public function saveShoppingSub2category() {
 
-		$fields = array(
+		$fields = [
 			'denomination' => 'text',
 			'description' => 'text',
 			'limit_date' => 'text',
 			'visible' => 'integer',
 			'sort_order' => 'integer',
 			'subcategory_id' => 'integer',
-		);
+		];
 
 		$postdata = $this->baseSanitize($fields, $fields_must);
 
@@ -378,6 +379,46 @@ HERE;
 
 		$this->set_postdata($logdata);
 		$this->saveAdminLog();
+
+	}
+
+	public function duplicateCategoryName() {
+
+		$arrayToJs = [];
+
+		/* RECEIVE VALUE */
+		if (!isset($_GET['fieldValue'])) {return $arrayToJs;}
+		if (!isset($_GET['fieldId'])) {return $arrayToJs;}
+
+		$validateId = strip_tags($_GET['fieldId']);
+		$arrayToJs[0] = $validateId;
+
+		$validateValue = strip_tags($_GET['fieldValue']);
+		$validateValue = trim($validateValue);
+
+		$validateValue = strtolower($validateValue);
+
+		switch ($validateValue) {
+		case "css":
+		case "lib":
+		case "js":
+			$arrayToJs[1] = false; // RETURN FALSE
+			return $arrayToJs;
+			break;
+		}
+
+		$this->_tbl = "sp_category";
+		$this->_where = ['part' => 'text'];
+		$this->_postdata = ['part' => $validateValue];
+
+		$category = $this->selectTable();
+		if (isset($category['part']) && $category['part']) {
+			$arrayToJs[1] = false; // RETURN FALSE
+		} else {
+			$arrayToJs[1] = true; // RETURN TRUE
+		}
+
+		return $arrayToJs;
 
 	}
 

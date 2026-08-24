@@ -366,7 +366,7 @@ HERE;
 			throw new Exception("ユーザー属性が不正です", 1);
 		}
 
-		$fields = array(
+		$fields = [
 			'kanaf' => "text",
 			'kanag' => "text",
 			'namef' => "text",
@@ -378,7 +378,7 @@ HERE;
 			'addresss' => "text",
 			'addresst' => "text",
 			'phonenumber' => "text",
-		);
+		];
 
 		$postdata = $this->execSanitize($fields, []);
 

@@ -244,6 +244,8 @@ $(function(){
 
 <div class="contact {if $order['status']==9}dark{/if}">
 
+{if $order['ship_flag']>-9}
+
 <table class="inputForm">
 
 <tr class="table-header"><th class="mh" colspan="2">配送元情報</th></tr>
@@ -290,6 +292,12 @@ $(function(){
 <p class="center"><a class="btn btn-primary" href="{$self}?mode=edit_order&app_id={$order['id']}"><i class="fa fa-fw fa-edit"></i>発送元・発送先を編集する</a></p>
 </div>{/if}
 <div class="clearfix"></div>
+
+{/if}{* ship_flag>-9 *}
+
+
+
+
 {assign var='view_order_id' value=$order['id']}
 {suborders}
 {if $suborder_header}
@@ -336,7 +344,7 @@ $(function(){
 </tr>
 </table>
 
-{if $order['ship_flag']<2}
+{if $order['ship_flag']<2 && $order['ship_flag']>-9}
 {assign var='view_order_id' value=$order['id']}
 {suborders}
 {if $suborder_header}

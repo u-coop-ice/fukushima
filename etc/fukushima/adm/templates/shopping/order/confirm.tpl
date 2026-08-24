@@ -26,15 +26,22 @@ $(function () {
 <table class="steps">
 <tr>
 <td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+{if $init_shipList[0] == -9}
+<td class="cleared"><span class="number">2</span><span class="hidden-xs description">注文者情報入力</span></td>
+<td class="cleared"><span class="number">3</span><span class="hidden-xs description">お支払方法入力</span></td>
+<td class="now"><span class="number">4</span><span class="hidden-xs description">入力内容確認</span></td>
+<td><span class="number">5</span><span class="hidden-xs description">ご注文完了</span></td>
+{else}
 <td class="cleared"><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
 <td class="cleared"><span class="number">3</span><span class="hidden-xs description">発送オプション入力</span></td>
 <td class="cleared"><span class="number">4</span><span class="hidden-xs description">お支払方法入力</span></td>
 <td class="now"><span class="number">5</span><span class="hidden-xs description">入力内容確認</span></td>
 <td><span class="number">6</span><span class="hidden-xs description">登録完了</span></td>
+{/if}
 </tr>
 </table>
 
-<div class="center em08">＊完了画面まで進みませんとが注文が完了しません。ご注意ください。</div>
+<div class="center em08">＊完了画面まで進みませんと注文が完了しません。ご注意ください。</div>
 <!-- /STEPS -->
 
 
@@ -105,6 +112,7 @@ $(function () {
 </table>
 {/if}
 
+{if $init_shipList[0] > -9}
 
 {if $post['ship_from']}
 
@@ -195,10 +203,16 @@ $(function () {
 <td>{$post["store"]}</td></tr>
 {/if}
 </table>
+
+{/if}
+
+
 <form id="theForm" method="post" action="{$self}?mode=confirm">
 <button class="btn btn-primary" name="reinput1" type="submit" value="1"><i class="fa fa-fw fa-chevron-left"></i>戻って修正</button>
 
 </form>
+
+{if $init_shipList[0] > -9}
 
 {if $post["ship_flag"]<2}
 <h3>{if !$init_category['flag_send']}配送について{else}配送オプション{/if}</h3>
@@ -287,6 +301,9 @@ $(function () {
 </form>
 {/if}
 
+
+{/if}
+
 <h3>お支払い方法・その他</h3>
 <table class="inputForm">
 <col style="width:20%" />
@@ -364,7 +381,11 @@ $(function () {
 
 <div class="box center">
 <p><strong class="red">以上の内容でよろしければ、下のボタンをクリックしてください</strong></p>
-<button class="btn btn-success" name="regist" type="submit" value="1" data-loading-text="送信中" autocomplete="off"><i class="fa fa-fw fa-check"></i>注文内容をデータベースに登録する</button>
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+<button class="btn btn-success btn-block" name="regist" type="submit" value="1" data-loading-text="送信中" autocomplete="off"><i class="fa fa-fw fa-check"></i>注文内容をデータベースに登録する</button>
+</div>
+</div>
 </div>
 </form>
 {* 顧客情報 終了 *}

@@ -110,8 +110,48 @@ $("#formCart").validationEngine({
 </div>
 
 
-<p><button class="btn btn-success btn-block" type="submit" name="add_cart" id="add_cart" value="カートに入れる"><i class="fa fa-fw fa-shopping-cart"></i>カートに入れる</button></p>
+<p><button class="btn btn-success btn-block{if $item['agreement']['title']} via_agreement{/if}" type="button" name="add_cart" id="add_cart" value="カートに入れる"><i class="fa fa-fw fa-shopping-cart"></i>カートに入れる</button></p>
 <input type="hidden" name="item_id" value="{$item['id']}" />
+
+
+
+{if $item['agreement']['title']}
+<div class="modal fade" id="modal_agreement" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>{$item['agreement']['note']|nl2br}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        <button id="btn_submit" type="button" class="btn btn-success">{$item['agreement']['title']}</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+{/if}
+
+{literal}
+<script type="text/javascript">
+$(function(){
+	$('#add_cart').on('click',function(){
+		if ($(this).hasClass('via_agreement')){
+			$('#modal_agreement').modal('show');
+		} else {
+			$(this).parents('form').submit();
+		}
+	});
+
+		$('#btn_submit').on('click',function(){
+			$(this).parents('form').submit();
+		})
+});
+
+</script>
+{/literal}
+
+
 </form>
 
 {/if}

@@ -61,7 +61,7 @@
 {/if}
 {/suborders}
 
-{if $app['ship_flag']<2}
+{if $app['ship_flag'] < 2 && $app['ship_flag'] > -9}
 {assign var='view_order_id' value=$app['id']}
 {suborders}
 {if $suborder_header}
@@ -133,6 +133,7 @@
 
 {/if}
 
+{if $app['ship_flag'] > -9}
 
 <table class="inputForm">
 <tr class="table-header"><th class="mh" colspan="2">配送元情報</th></tr>
@@ -171,6 +172,7 @@
 <tr><th>受け取り店舗</th><td>{$app['store']}</td></tr>
 {/if}
 </table>
+{/if}{* ship_flag > -9 *}
 
 <table class="inputForm">
 <col width="150">

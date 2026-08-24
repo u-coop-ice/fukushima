@@ -48,6 +48,9 @@ if ($init_category['part']) {
 	$shipdata['total_price_all'] = $total_price + $postage - $reduction;
 	HTTP_Session2::set('shipdata', $shipdata);
 }
+
+$smarty->assign('post', $shipdata);
+
 // カート表示モードをセット
 $smarty->assign('now_mode', 'view_cart');
 // カートの内容を表示する

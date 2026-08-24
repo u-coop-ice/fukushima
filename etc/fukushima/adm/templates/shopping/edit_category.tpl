@@ -69,6 +69,22 @@ $("input:checked").parent().addClass("checked");
 </script>
 
 
+<!-- validationEngine.js -->
+
+<link rel="stylesheet" href="/js/jquery/validationEngine/validationEngine.jquery-3.1.0.css" type="text/css"/>
+
+<script type="text/javascript" src="/js/jquery/validationEngine/jquery.validationEngine-3.1.0.js"></script>
+<script type="text/javascript" src="./js/jquery.validationEngine-ja.js"></script>
+
+<script type="text/javascript">
+$(function(){
+$("#cat").validationEngine({
+	promptPosition : "inline",
+	scrollOffset: 200
+});
+});
+</script>
+
 {/literal}
 {/capture}
 
@@ -90,18 +106,22 @@ $("input:checked").parent().addClass("checked");
 <table class="inputForm">
 <tr>
 <th>カテゴリ名称<span class="label label-danger">必須</span></th>
-<td><input class="form-control" type="text" name="denomination" id="denomination" value="{$category['denomination']}" /></td>
+<td><input class="form-control validate[required]" type="text" name="denomination" id="denomination" value="{$category['denomination']}" /></td>
 </tr>
 
 <tr>
-<th>URL</th>
+<th>サブディレクトリ<span class="label label-danger">必須</span></th>
 <td>
+<input class="form-control validate[required,custom[onlyLetterNumber]{if !$category['id'] || $copy},ajax[ajaxCheckCategoryCall]]{/if}" type="text" name="part" value="{$category['part']}" />
+
 {if $category['part']}
-{$init_url}app/{$smarty.const.COMPONENT}/{$category['part']}/
-{else}
-公開用ディレクトリが設定されていません。
+<span class="help-block"><code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/{$smarty.const.COMPONENT}/{$category['part']}/</code></span>
+
+
 {/if}
-<span class="help-block">※この設定は管理画面からは行えません。</span>
+
+<span class="form-control-plaintext text-muted">lib・css・jsは指定不可です。</span>
+<span class="help-block">新規でカテゴリを設定した場合、送料計算はこの管理画面から設定はできませんので、必ずHPGまでご連絡ください。</span>
 </td>
 </tr>
 
@@ -113,32 +133,32 @@ $("input:checked").parent().addClass("checked");
 </tr>
 
 <tr>
-<th>INFOCODE</th>
-<td><input class="form-control" type="text" name="infocode" id="infocode" value="{$category['infocode']|default:$component[$smarty.const.COMPONENT]['infocode']}" />
+<th>INFOCODE<span class="label label-danger">必須</span></th>
+<td><input class="form-control validate[required,custom[onlyLetterNumber]]" type="text" name="infocode" id="infocode" value="{$category['infocode']|default:$component[$smarty.const.COMPONENT]['infocode']}" />
 </td>
 </tr>
 
 <tr>
-<th>担当店舗名</th>
-<td><input class="form-control" type="text" name="store_name" id="store_name" value="{$category['store_name']|default:$component[$smarty.const.COMPONENT]['store_name']}" />
+<th>担当店舗名<span class="label label-danger">必須</span></th>
+<td><input class="form-control validate[required]" type="text" name="store_name" id="store_name" value="{$category['store_name']|default:$component[$smarty.const.COMPONENT]['store_name']}" />
 </td>
 </tr>
 
 <tr>
-<th>連絡先住所</th>
-<td><textarea class="form-control" name="store_address" id="store_address">{$category['store_address']|default:$component[$smarty.const.COMPONENT]['store_address']}</textarea>
+<th>連絡先住所<span class="label label-danger">必須</span></th>
+<td><textarea class="form-control validate[required]" name="store_address" id="store_address">{$category['store_address']|default:$component[$smarty.const.COMPONENT]['store_address']}</textarea>
 </td>
 </tr>
 
 <tr>
-<th>店舗営業時間</th>
-<td><textarea class="form-control" name="store_time" id="store_time">{$category['store_time']|default:$component[$smarty.const.COMPONENT]['store_time']}</textarea>
+<th>店舗営業時間<span class="label label-danger">必須</span></th>
+<td><textarea class="form-control validate[required]" name="store_time" id="store_time">{$category['store_time']|default:$component[$smarty.const.COMPONENT]['store_time']}</textarea>
 </td>
 </tr>
 
 <tr>
-<th>連絡先（TEL）</th>
-<td><textarea class="form-control" name="store_phonenumber" id="store_phonenumber">{$category['store_phonenumber']|default:$component[$smarty.const.COMPONENT]['store_phonenumber']}</textarea>
+<th>連絡先（TEL）<span class="label label-danger">必須</span></th>
+<td><textarea class="form-control validate[required]" name="store_phonenumber" id="store_phonenumber">{$category['store_phonenumber']|default:$component[$smarty.const.COMPONENT]['store_phonenumber']}</textarea>
 </td>
 </tr>
 
@@ -224,7 +244,7 @@ $("input:checked").parent().addClass("checked");
 <th>発送方法<span class="label label-danger">必須</span></th>
 <td>
 <div class="checkbox">
-{html_checkboxes name="opt_ship" options=$shipAdminList checked=$category["opt_ship"] separator="<br />"}
+{html_checkboxes name="opt_ship" class="validate[minCheckbox[1]]" options=$shipAdminList checked=$category["opt_ship"] separator="<br />"}
 </div>
 
 
@@ -307,8 +327,7 @@ $(function(){
 {foreach from=$paymentAdminList key=i item=payment}
 {if $i!=4}{* PAY.JP除外*}
 <div class="checkbox">
-<label><input type="checkbox" name="payment[]" value="{$i}" {if is_array($category['payment']) && in_array($i,$category['payment'])}checked="checked"{/if}>{$payment}</label>
-</div>
+<label><input type="checkbox" name="payment[]"  class="validate[minCheckbox[1]]" value="{$i}" {if is_array($category['payment']) && in_array($i,$category['payment'])}checked="checked"{/if}>{$payment}</label></div>
 {/if}
 {/foreach}
 

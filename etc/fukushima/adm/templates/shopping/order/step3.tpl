@@ -214,7 +214,7 @@ $("#theForm").validationEngine({
 </tr>
 </table>
 
-<div class="center em08">＊完了画面まで進みませんとが注文が完了しません。ご注意ください。</div>
+<div class="center em08">＊完了画面まで進みませんと注文が完了しません。ご注意ください。</div>
 <!-- /STEPS -->
 
 

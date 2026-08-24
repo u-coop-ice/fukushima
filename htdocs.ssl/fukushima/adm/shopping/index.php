@@ -19,7 +19,7 @@ if ($auth->getAuth()) {
 
 	$smarty->assign('mode', $_GET['mode']);
 
-	$modes = array('welcome' => 1,
+	$modes = ['welcome' => 1,
 		'list_item' => 1,
 		'edit_item' => 1,
 		'save_item' => 1,
@@ -71,7 +71,10 @@ if ($auth->getAuth()) {
 
 		'dialog_compose_item' => 1,
 		'list_stock_log' => 1,
-	);
+
+		'check_category_name' => 1,
+
+	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
 	if (!isset($_GET['mode'])) {
 		$_GET['mode'] = 'welcome';

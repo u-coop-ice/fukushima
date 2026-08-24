@@ -229,7 +229,7 @@ function initialize() {
 	$shipList = [0 => 'ご注文者さまに発送', 1 => 'ご注文者さまとは別のお届け先に発送', 2 => '店頭にて受け取り'];
 	$smarty->assign('shipList', $shipList);
 
-	$shipAdminList = [0 => '注文者宛', 1 => '注文者とは別の宛先', 2 => '店頭受取', -9 => 'お申込みのみ（配送・お渡しのない商品、講座など）＊未完成'];
+	$shipAdminList = [0 => '注文者宛', 1 => '注文者とは別の宛先', 2 => '店頭受取', -9 => 'お申込みのみ（配送・お渡しのない商品、講座など）'];
 	$smarty->assign('shipAdminList', $shipAdminList);
 
 	$shipTypeList = [0 => 1, 1 => 1, 2 => 0];

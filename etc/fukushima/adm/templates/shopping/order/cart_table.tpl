@@ -145,7 +145,7 @@
 
 <form method="post" action="{$self}?mode=confirm">
 
-<button class="btn btn-success btn-block" type="submit" name="step1" value="1">配送先の入力に進む<i class="fa fa-fw fa-chevron-right"></i></button>
+<button class="btn btn-success btn-block" type="submit" name="step1" value="1">{if $init_shipList[0] > -9}配送先{else if $post['regist_id']>0}お支払方法{else}ご注文者情報{/if}の入力に進む<i class="fa fa-fw fa-chevron-right"></i></button>
 </form>
 
 

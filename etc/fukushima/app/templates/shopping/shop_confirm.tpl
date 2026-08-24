@@ -29,11 +29,18 @@ $(function () {
 <table class="steps">
 <tr>
 <td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+{if $init_shipList[0] == -9}
+<td class="cleared"><span class="number">2</span><span class="hidden-xs description">注文者情報入力</span></td>
+<td class="cleared"><span class="number">3</span><span class="hidden-xs description">お支払方法入力</span></td>
+<td class="now"><span class="number">4</span><span class="hidden-xs description">入力内容確認</span></td>
+<td><span class="number">5</span><span class="hidden-xs description">ご注文完了</span></td>
+{else}
 <td class="cleared"><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
 <td class="cleared"><span class="number">3</span><span class="hidden-xs description">発送オプション入力</span></td>
 <td class="cleared"><span class="number">4</span><span class="hidden-xs description">お支払方法入力</span></td>
 <td class="now"><span class="number">5</span><span class="hidden-xs description">入力内容確認</span></td>
 <td><span class="number">6</span><span class="hidden-xs description">ご注文完了</span></td>
+{/if}
 </tr>
 </table>
 
@@ -117,6 +124,7 @@ $(function () {
 </table>
 {/if}
 
+{if $init_shipList[0] > -9}
 
 {if $post['ship_from']}
 
@@ -140,9 +148,7 @@ $(function () {
 </tr>
 </table>
 
-
-{/if} 
-
+{/if}
 
 
 <h3 class="header">お届け先情報</h3>
@@ -208,10 +214,14 @@ $(function () {
 {/if}
 </table>
 
+{/if}
+
 <form id="" method="post" action="{$self}?mode=buy_confirm">
 <button class="btn btn-primary" name="reinput1" type="submit" value="戻って修正"><i class="fa fa-fw fa-chevron-left"></i>戻って修正</button>
 </form>
 
+
+{if $init_shipList[0] > -9}
 
 
 {if $post['ship_flag']<2}
@@ -296,6 +306,9 @@ $(function () {
 <button class="btn btn-primary" name="reinput2" type="submit" value="戻って修正"><i class="fa fa-fw fa-chevron-left"></i>戻って修正</button>
 </form>
 {/if}
+
+{/if}
+
 
 <h3>お支払い方法・その他</h3>
 <table class="inputForm">
@@ -385,6 +398,25 @@ $(function () {
 <form id="" method="post" action="{$self}?mode=buy_confirm">
 <button class="btn btn-primary" name="reinput3" type="submit" value="戻って修正"><i class="fa fa-fw fa-chevron-left"></i>戻って修正</button>
 </form>
+
+
+{if $agreement==1}
+<h3>ご注文確定する前に、必ずご確認ください（最終確認）</h3>
+{items cart=1}
+{get_item_info id=$item["id"]}
+{if isset($itm['agreement']['note']) && $itm['agreement']['note']}
+<div class="box agree">
+<h5 class="top">{$itm['name']}</h5>
+<div class="">
+{$itm['agreement']['note']|nl2br}
+</div>
+</div>
+{/if}
+{/items}
+{/if}
+
+
+
 
 {if ($post['payment']==4 && !$wc_errmsg) || $post['payment']!=4}
 <form id="theForm" method="post" action="{$self}?mode=buy_end">
