@@ -28,7 +28,7 @@ HERE;
 
 	try {
 		$res = $pdo->prepare($sql);
-		$res->execute(array($item_id));
+		$res->execute([$item_id]);
 	} catch (Exception $e) {
 // データベースアクセスに失敗したらエラーとする
 		$smarty->assign('db_error', 1);
@@ -47,25 +47,31 @@ HERE;
 
 		$itm['name'] = htmlspecialchars_decode($itm['name']);
 
-		foreach (array('extra', 'cart') as $key) {
+		foreach (['extra', 'cart'] as $key) {
 			for ($i = 1; $i <= 3; $i++) {
 				if ($itm[$key . $i . '_use'] > 0) {
 
-					$itm[$key . $i . '_select'] = str_replace(array("\r\n", "\r", "\n"), ',', trim($itm[$key . $i . '_select']));
+					$itm[$key . $i . '_select'] = str_replace(["\r\n", "\r", "\n"], ',', trim($itm[$key . $i . '_select']));
 					$tmp = null;
 					if ($itm[$key . $i . '_select']) {
 						$tmp = explode(",", $itm[$key . $i . '_select']);
 						array_unshift($tmp, '');
 					}
 
-					$itm[$key][$i] = array(
+					$itm[$key][$i] = [
 						'use' => $itm[$key . $i . '_use'],
 						'title' => $itm[$key . $i . '_title'],
 						'select' => $tmp,
 						'note' => $itm[$key . $i . '_note'],
-					);
+					];
 				}
 			}
+		}
+
+		if ($itm['agreement']) {
+			$itm['agreement'] = json_decode($itm['agreement'], true);
+		} else {
+			$itm['agreement'] = [];
 		}
 
 /*
@@ -84,7 +90,7 @@ $smarty->assign('extra' . $ii . 'List', $tmp);
 		$itm['js_term_start'] = $js_term_start;
 
 		if (!$itm['subcategory_term_end']) {$temp = '';} else {
-			$tmp = array();
+			$tmp = [];
 			if (!$itm['subcategory_term_start']) {$itm['subcategory_term_start'] = date('Y-m-d');}
 
 			$days = intval((strtotime($itm['subcategory_term_end']) - strtotime($itm['subcategory_term_start'])) / 24 / 60 / 60) + 1;

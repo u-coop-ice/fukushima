@@ -190,9 +190,11 @@ class appShoppingDB extends commonDB {
 			}
 
 //配送元配送先情報のチェック
-			if (!$shipdata['ship_pref']) {
-				$this->_smarty->assign('now_mode', 'view_cart');
-				throw new Exception("Shipping Address Error", 8);
+			if ($shipdata['ship_flag'] > -9) {
+				if (!$shipdata['ship_pref']) {
+					$this->_smarty->assign('now_mode', 'view_cart');
+					throw new Exception("Shipping Address Error", 8);
+				}
 			}
 
 //カード課金
@@ -527,6 +529,10 @@ $methods['member_name']['use'] = 2;
 			}
 		}
 
+		if ($this->_cart['agreement']) {
+			$this->_smarty->assign('agreement', 1);
+		}
+
 		$tmpl = "view_cart.tpl";
 
 		if (isset($_POST['step1'])) {
@@ -586,6 +592,12 @@ $methods['member_name']['use'] = 2;
 			$this->set_postdata($shipdata);
 			$shipdata = $this->execSanitize($fields['all'], $fields['must']);
 
+			$init_shipList = json_decode($init_category['opt_ship'], true);
+			if (isset($init_shipList[0]) && $init_shipList[0] == -9) {
+				$tmpl = "shop_step3.tpl";
+				$shipdata['ship_flag'] = -9;
+			}
+
 			HTTP_Session2::set('fields_sql', $this->_fields_sql);
 			HTTP_Session2::set('fields_sql_app', $this->_fields_sql_app);
 
@@ -598,7 +610,7 @@ $methods['member_name']['use'] = 2;
 			$tmpl = "shop_step3.tpl";
 			$this->_step = 3;
 
-			if ($shipdata['ship_flag'] < 2) {
+			if ($shipdata['ship_flag'] < 2 && $shipdata['ship_flag'] >= 0) {
 
 				if ($init_category['flag_send']) {
 

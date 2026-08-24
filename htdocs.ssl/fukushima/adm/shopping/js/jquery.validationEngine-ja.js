@@ -121,35 +121,13 @@
                 },
 
                 // --- CUSTOM RULES -- Those are specific to the demos, they can be removed or changed to your likings
-                "ajaxUserCall": {
+                "ajaxCheckCategoryCall": {
                     // remote json service location
-                    "url": "/adm/master/?mode=validate_user",
+                    "url": "/adm/shopping/?mode=check_category_name",
                     // error
-                    "alertText": "* このアカウント名はすでに登録されています",
+                    "alertText": "* このディレクトリはすでに登録されています",
                     // if you provide an "alertTextOk", it will show as a green prompt when the field validates
-                    "alertTextOk": "* このアカウント名は登録可能です",
-                    // speaks by itself
-                    "alertTextLoad": "* 登録可能かどうか確認中..."
-                },
-                "ajaxCracklibCall": {
-                    // remote json service location
-                    "url": "/adm/master/?mode=validate_password",
-                    // error
-                    "alertText": "* このパスワードは不適です",
-                    // if you provide an "alertTextOk", it will show as a green prompt when the field validates
-                    "alertTextOk": "* このパスワードは登録可能です",
-                    // speaks by itself
-                    "alertTextLoad": "* 登録可能かどうか確認中..."
-                },
-                "ajaxNameCall": {
-                    // remote json service location
-                    "url": "regist/validateAccount.php",
-                    // error
-                    "alertText": "* このE-mailはすでに登録されています",
-                    // if you provide an "alertTextOk", it will show as a green prompt when the field validates
-                    "alertTextOk": "* このE-mailは登録可能です",
-                    // speaks by itself
-                    "alertTextLoad": "* 登録可能かどうか確認中..."
+                    "alertTextOk": "* このディレクトリは登録可能です",
                 },
                 "validate2fields": {
                     "alertText": "* 『HELLO』と入力してください"

@@ -32,6 +32,7 @@
 {/if}
 {/items}
 
+{if $post['ship_flag']>-9}
 
 {if $post['ship_from']}
 ※ご注文者様とは異なる発送元を指定
@@ -107,6 +108,7 @@
 {/if}
 
 ----------------------------------------------------------------------------
+{/if}
 
 【お支払方法・その他】
 お支払方法　　：{$paymentList[$post['payment']]}{if $post['jpo']}（{$paymentJpoList[$post['jpo']]}）

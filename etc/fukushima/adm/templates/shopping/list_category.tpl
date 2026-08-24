@@ -36,7 +36,12 @@ return confirm('カテゴリを削除してもよろしいですか');
 </tr>
 {/if}
 <tr{if $is_odd} class="odd"{/if}>
-<td><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a></td>
+<td><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a>
+
+{if $category['part']}
+<span class="help-block"><code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/{$smarty.const.COMPONENT}/{$category['part']}/</code></span>
+{/if}
+</td>
 <td>{$category['part']}</td>
 <td style="text-align : center;">{$category['child_count']}</td>
 <td style="text-align : center;"><span class="tag {$visibleColorList[$category["visible"]]}">{$visibleList[$category["visible"]]}</span></td>

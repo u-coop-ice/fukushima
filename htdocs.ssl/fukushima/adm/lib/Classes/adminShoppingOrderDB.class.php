@@ -115,6 +115,15 @@ class adminShoppingOrderDB extends commonDB {
 
 			$this->_step = 2;
 
+			$init_shipList = json_decode($init_category['opt_ship'], true);
+
+			if (isset($init_shipList[0]) && $init_shipList[0] == -9) {
+				if ($this->_shipdata['regist_id']) {
+					$this->_step = 4;
+				}
+				$shipdata['ship_flag'] = -9;
+			}
+
 		} else if (isset($_POST['step2']) || isset($_POST['ship_address'])) {
 
 			$this->_step = 3;
@@ -169,11 +178,19 @@ class adminShoppingOrderDB extends commonDB {
 			HTTP_Session2::set('fields_sql', $this->_fields_sql);
 			HTTP_Session2::set('fields_sql_app', $this->_fields_sql_app);
 
+			$init_shipList = json_decode($init_category['opt_ship'], true);
+
+			if (isset($init_shipList[0]) && $init_shipList[0] == -9) {
+				$this->_step = 4;
+				$shipdata['ship_flag'] = -9;
+
+			}
+
 		} else if (isset($_POST['step3'])) {
 
 			$this->_step = 4;
 
-			if ($shipdata['ship_flag'] < 2) {
+			if ($shipdata['ship_flag'] < 2 && $shipdata['ship_flag'] >= 0) {
 
 				if ($init_category['flag_send']) {
 

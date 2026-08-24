@@ -40,6 +40,7 @@ trait execShoppingItems {
 			'limit_date' => 'text',
 			'limit_note' => 'text',
 			'send_date' => 'text',
+			'agreement' => 'text',
 			'nominate' => 'integer',
 			'intervals' => 'integer',
 			'nosend' => 'integer',
@@ -95,6 +96,13 @@ trait execShoppingItems {
 			$postdata['composition_item_ids'] = json_encode($postdata['composition_item_ids']);
 		}
 
+		if (isset($_POST['agreement']) && is_array($_POST['agreement'])) {
+			if (isset($_POST['agreement']['title']) && $_POST['agreement']['title'] != "") {
+				$postdata['agreement'] = array_map('strip_tags', $_POST['agreement']);
+			}
+			$postdata['agreement'] = json_encode($postdata['agreement']);
+		}
+
 		if (count($_FILES)) {
 
 			$tbl = 'sp_item';
@@ -118,7 +126,7 @@ trait execShoppingItems {
 
 					if ($tmp_name) {
 
-						$fields_image += array('image' => "text");
+						$fields_image += ['image' => "text"];
 
 						if ($postdata['id']) {
 							$up->set_item_id($postdata['id']);

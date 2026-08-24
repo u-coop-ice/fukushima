@@ -4,6 +4,8 @@
 <p>左のメニューから操作を選んでください。
 </p>
 
+<p class="">講座などの無形商品にも対応させてみました。<a class="btn btn-primary" href="https://www.icloud.com/keynote/0a0CEHlT2RhU3UDWc6acDPc3g" target="_blank">機能の概要と設定方法はこちらから</a></p>
+
 <p class=""><a class="btn btn-primary" href="https://www.icloud.com/keynote/04fZvuVJhxXP2vGDNRRNDuLJA" target="_blank">在庫引当機能を追加しました</a></p>
 
 <a class="btn btn-primary" href="https://www.icloud.com/keynote/0Si__1FaskS0uJ53sozgyINtw" target="_blank">マニュアルはこちらから</a>

@@ -192,10 +192,11 @@ $("#formID").validationEngine({
 <th>値段<span class="label label-danger">必須</span></th>
 <td><input type="text" name="price" id="price" class="form-control" value="{$item["price"]}" class="validate[required]" />円</td>
 </tr>
+
 <tr>
-<th>送料<span class="label label-danger">必須</span></th>
+<th>送料</th>
 <td>
-<select name="postage" id="postage" class="form-control validate[required]">
+<select name="postage" id="postage" class="form-control">
 {html_options options=$postageList selected=$item["postage"]}
 </select>
 </td>
@@ -302,6 +303,17 @@ retinaディスプレイやスマホに対応するために、横幅640px以上
 <th>お届け期間</th>
 <td>
 <input class="form-control" type="text" name="send_date" id="send_date" value="{$item["send_date"]}" />
+</td>
+</tr>
+
+<tr>
+<th>カートに載せる時に規約等に同意のポップアップ表示</th>
+<td>
+<input class="form-control" type="text" name="agreement[title]" placeholder="ポップアップの「次に進む」ボタンに記載する文字列" value="{if isset($item["agreement"]["title"])}{$item["agreement"]["title"]}{/if}" />
+<div class="form-control-static">
+「規約に同意して進む」など自由に設定できます。
+</div>
+<textarea class="form-control" style="height:8em;" type="text" name="agreement[note]" id="agreement[note]" placeholder="ポップアップに表示する規約など">{if isset($item["agreement"]["note"])}{$item["agreement"]["note"]}{/if}</textarea>
 </td>
 </tr>
 

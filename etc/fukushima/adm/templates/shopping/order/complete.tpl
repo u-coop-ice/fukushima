@@ -9,11 +9,18 @@
 <table class="steps">
 <tr>
 <td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+{if $init_shipList[0] == -9}
+<td class="cleared"><span class="number">2</span><span class="hidden-xs description">注文者情報入力</span></td>
+<td class="cleared"><span class="number">3</span><span class="hidden-xs description">お支払方法入力</span></td>
+<td class="cleared"><span class="number">4</span><span class="hidden-xs description">入力内容確認</span></td>
+<td><span class="number">5</span><span class="hidden-xs description">ご注文完了</span></td>
+{else}
 <td class="cleared"><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
 <td class="cleared"><span class="number">3</span><span class="hidden-xs description">発送オプション入力</span></td>
 <td class="cleared"><span class="number">4</span><span class="hidden-xs description">お支払方法入力</span></td>
 <td class="cleared"><span class="number">5</span><span class="hidden-xs description">入力内容確認</span></td>
 <td class="now"><span class="number">6</span><span class="hidden-xs description">登録完了</span></td>
+{/if}
 </tr>
 </table>
 

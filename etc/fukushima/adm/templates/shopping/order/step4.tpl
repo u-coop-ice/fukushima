@@ -147,21 +147,29 @@ $("input:checked").parent().addClass("checked");
 <table class="steps">
 <tr>
 <td class="first cleared"><span class="number">1</span><span class="hidden-xs description">ご注文内容編集</span></td>
+{if $init_shipList[0] == -9}
+<td class="cleared"><span class="number">2</span><span class="hidden-xs description">注文者情報入力</span></td>
+<td class="now"><span class="number">3</span><span class="hidden-xs description">お支払方法入力</span></td>
+<td><span class="number">4</span><span class="hidden-xs description">入力内容確認</span></td>
+<td><span class="number">5</span><span class="hidden-xs description">ご注文完了</span></td>
+{else}
 <td class="cleared"><span class="number">2</span><span class="hidden-xs description">発送先等入力</span></td>
 <td class="cleared"><span class="number">3</span><span class="hidden-xs description">発送オプション入力</span></td>
 <td class="now"><span class="number">4</span><span class="hidden-xs description">お支払方法入力</span></td>
 <td><span class="number">5</span><span class="hidden-xs description">入力内容確認</span></td>
 <td><span class="number">6</span><span class="hidden-xs description">ご注文完了</span></td>
+{/if}
 </tr>
 </table>
 
-<div class="center em08">＊完了画面まで進みませんとが注文が完了しません。ご注意ください。</div>
+<div class="center em08">＊完了画面まで進みませんと注文が完了しません。ご注意ください。</div>
 <!-- /STEPS -->
 
 
 {* 商品一覧 開始 *}
 {include file='cart_table.tpl'}
 
+{if $init_shipList[0] > -9}
 
 {if $post["ship_flag"]<2}
 <h3>{if !$init_category['flag_send']}配送について{else}配送オプション{/if}</h3>
@@ -248,6 +256,7 @@ $("input:checked").parent().addClass("checked");
 <button class="btn btn-primary" name="reinput2" type="submit" value="戻って修正"><i class="fa fa-fw fa-chevron-left"></i>戻って修正</button>
 </form>
 
+{/if}
 
 <form id="theForm" class="form-horizontal" method="post" action="{$self}?mode=confirm">
 <h3>お支払い方法・その他</h3>
@@ -256,8 +265,9 @@ $("input:checked").parent().addClass("checked");
 <div class="form-group">
 <label class="col-sm-3 control-label">お支払い方法<span class="label label-danger">必須</span></label>
 <div class="col-sm-9">
+
 {foreach from=$paymentList item=p key=k}
-{if $p<4 || $p>6}
+{if $k<4 || $k>6}
 <div class="radio">
 <label><input type="radio" name="payment" value="{$k}" {if $post['payment']==$k}checked="checked"{/if}>{$p}</label>
 </div>

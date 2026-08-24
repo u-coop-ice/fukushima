@@ -31,7 +31,7 @@
  合計 |                                                {$order['total_price_all']|number_format|string_format:"%20s"}
 
 
-
+{if $order['ship_flag']>-9}
 
 【配送元】
 {if $order['ship_from']}
@@ -169,6 +169,7 @@
 {/if}
 配達希望時間　：{$shiptimeKeyList[$order['ship_time']]}
 
+{/if}
 {/if}
 {/if}
 

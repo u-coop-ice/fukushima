@@ -1,7 +1,7 @@
 <?php
 function smarty_block_items($params, $content, &$smarty, &$repeat) {
 
-	$items = array();
+	$items = [];
 	// ブロックに入る前の処理
 	if (is_null($content)) {
 		// 初期化
@@ -13,7 +13,7 @@ function smarty_block_items($params, $content, &$smarty, &$repeat) {
 		// 新規商品の場合（商品登録ページ用）
 
 		if ($smarty->getTemplateVars('new')) {
-			$item = array('id' => 0,
+			$item = ['id' => 0,
 				'name' => '',
 				'furigana' => '',
 				'maker' => '',
@@ -26,7 +26,7 @@ function smarty_block_items($params, $content, &$smarty, &$repeat) {
 				'image' => '',
 				'width' => 0,
 				'height' => 0,
-				'visible' => 0);
+				'visible' => 0];
 			array_push($items, $item);
 		}
 		// カートの商品を表示する場合
@@ -41,9 +41,9 @@ function smarty_block_items($params, $content, &$smarty, &$repeat) {
 			$pdo = $smarty->getTemplateVars('pdo');
 			// テーブルの接頭語を得る
 			// SQLを作成する
-			$type = array();
-			$data = array();
-			$where = array();
+			$type = [];
+			$data = [];
+			$where = [];
 			$view_order_id = $smarty->getTemplateVars('view_order_id');
 			// すべての商品を一覧表示する場合
 			$sql = <<< HERE
@@ -336,6 +336,12 @@ $smarty->assign('postage', $postage);
 			$item['composition_item_ids'] = json_decode($item['composition_item_ids'], true);
 		} else {
 			$item['composition_item_ids'] = [];
+		}
+
+		if ($item['agreement'] && is_string($item['agreement'])) {
+			$item['agreement'] = json_decode($item['agreement'], true);
+		} else {
+			$item['agreement'] = [];
 		}
 
 		$smarty->assign('item', $item);
