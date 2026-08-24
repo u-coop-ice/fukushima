@@ -47,18 +47,9 @@ $title["home"]["regulation"]["index"] = '規約・規則等';
 $title["home"]["regulation"]["koumuin"] = '公務員講座 規定';
 $title["home"]["aid"]["sd"]["index"] = 'CO･OP学生総合共済勧誘方針';
 
-$title["home"]["news"]["2020covid19"]["index"] = '新型コロナウイルス感染症対応';
-$title["home"]["news"]["2020covid19"]["action"] = '新型コロナウイルス影響拡大への対策・対応';
-$title["home"]["news"]["2020covid19"]["hakama"] = '福島大学　学位記授与式中止による卒業袴の対応について';
-$title["home"]["news"]["200529news"] = '図書館店からのおしらせ';
-$title["home"]["news"]["200824news"] = '新型コロナウイルス感染症を「不慮の事故とみなす感染症」として取り扱います';
-$title["home"]["news"]["online_consultation"]["index"] = '福島大学生協オンライン相談会';
+
+
 $title["home"]["news"]["youtube"]["index"] = 'YouTubeはじめました!!';
-$title["home"]["news"]["210119news"] = '食堂メニュー価格改定のお知らせ';
-$title["home"]["news"]["210401"] = '組合員証（コプリカ）のお渡しについて';
-$title["home"]["news"]["220128_time"]["index"] = '遠隔授業に伴い営業時間変更のお知らせ';
-$title["home"]["news"]["211029pctenken"]["index"] = '生協パソコン点検会';
-$title["home"]["news"]["pctenken"]["index"] = '生協Surface点検会';
 
 $title["store"]["index"] = '店舗';
 $title["store"]["time"]["index"] = '営業時間';
@@ -69,7 +60,6 @@ $title["foodservice"]["index"] = '食';
 $title["foodservice"]["green"]["index"] = 'Quick Lunch グリーン';
 $title["foodservice"]["reaf"]["index"] = 'ダイニング リーフ';
 $title["foodservice"]["meal"]["index"] = 'ミールパス';
-$title["foodservice"]["news"]["230512tennotsubu"]["index"] = '3店舗のお米が「天のつぶ」に変わります！';
 $title["foodservice"]["eco"]["index"] = '環境への取り組み';
 
 $title["insurance"]["index"] = '住まい・共済';
