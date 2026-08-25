@@ -47,8 +47,6 @@ $title["home"]["regulation"]["index"] = '規約・規則等';
 $title["home"]["regulation"]["koumuin"] = '公務員講座 規定';
 $title["home"]["aid"]["sd"]["index"] = 'CO･OP学生総合共済勧誘方針';
 
-
-
 $title["home"]["news"]["youtube"]["index"] = 'YouTubeはじめました!!';
 
 $title["store"]["index"] = '店舗';
