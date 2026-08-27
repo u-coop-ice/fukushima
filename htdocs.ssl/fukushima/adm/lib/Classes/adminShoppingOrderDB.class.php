@@ -126,7 +126,7 @@ class adminShoppingOrderDB extends commonDB {
 
 		} else if (isset($_POST['step2']) || isset($_POST['ship_address'])) {
 
-			$this->_step = 3;
+			$this->_step = 2;
 
 			if (!$shipdata['regist_id']) {
 				$methods['email']['use'] = 2;
@@ -173,7 +173,11 @@ class adminShoppingOrderDB extends commonDB {
 			$fields = $this->calcMethod2Field($methods);
 
 			$this->set_postdata($shipdata);
+
+			$this->_smarty->assign('methods', $methods);
 			$shipdata = $this->execSanitize($fields['all'], $fields['must']);
+
+			$this->_step = 3;
 
 			HTTP_Session2::set('fields_sql', $this->_fields_sql);
 			HTTP_Session2::set('fields_sql_app', $this->_fields_sql_app);
@@ -318,6 +322,15 @@ class adminShoppingOrderDB extends commonDB {
 		} else if ($_POST['reinput1']) {
 			$this->_smarty->assign('reinput', 1);
 			$this->_step = 2;
+
+			if (!$shipdata['regist_id']) {
+				$methods['email']['use'] = 2;
+				$methods['name']['use'] = 2;
+				$methods['address']['use'] = 2;
+				$methods['phonenumber']['use'] = 2;
+				$methods['membership']['use'] = 1;
+			}
+
 		}
 
 		if ($_POST['reinput2']) {
