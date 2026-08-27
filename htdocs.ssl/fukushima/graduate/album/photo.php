@@ -14,19 +14,19 @@ include $rootpath . 'include/header2.txt';
 
 <h2 id="personal">個人写真撮影会のお知らせ<br class="visible-xs-block"><span class="em09">【撮影無料・事前予約不要】</span></h2>
 
-<div class="alert alert-danger center" role="alert"><strong>2026年度の撮影会は終了しました</strong></div>
+<?php
+if (time() > strtotime("2026-10-19 16:30:00")){
+?>
+<div class="alert alert-danger center" role="alert"><strong>2026年度10月の撮影会は終了しました</strong></div>
+<?php
+}
+?>
 
 <?php /* <p>個人写真撮影は来春ご卒業予定の<span class="red">学類生全員が対象</span>となっております。このアルバムは福島大学関係各所に寄贈しております。<span class="red">アルバム購入の有無にかかわらず、撮影会にはご参加いただいております</span>。<br>
 撮影は無料、ご予約も不要です。直接会場へお越し下さい。</p> */ ?>
 <p>撮影は無料、ご予約も不要です。直接会場へお越し下さい。</p>
 
-<?php /*
-if (time() > strtotime("2020-10-17 00:00:00")) {
-?>
-<h4 class="orange"><span class="marker yellow thin">※撮影は終了しました</span></h4>
-<?php
-}
- */?>
+
 
 <div class="res_table">
 <table class="tblFull">
@@ -34,7 +34,7 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 <tr><th data-title="　■ " data-label="対象">対象</th>
 <td colspan="2">令和8年度卒業予定の方</td></tr>
 <tr><th data-title="　■ " data-label="日時" rowspan="">日時</th>
-<td>7月6日(月)・7日(火)　<br class="visible-xs-block">11:30〜16:00</td></tr>
+<td><strong class="em12">10/19(月)　<br class="visible-xs-block">11:30〜16:30</strong></td></tr>
 <tr><th data-title="　■ " data-label="場所">場所</th><td colspan="2">大学会館（生協）2階 大集会室</td>
 </tr>
 </tbody>
@@ -78,14 +78,25 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 </table>
 </div>
 
-<h3>ゼミ・研究室・サークル・その他団体集合写真撮影</h3>
-<p class="">※4年生が在籍している団体でまだ撮影していない場合は、下記フォームより予約してください。</p>
+<span id="other" class="link-t-a"></span>
+<h2 id="" class="top_space40">ゼミ・研究室・サークル・その他団体集合写真について</h2>
+
+<?php
+if (time() > strtotime("2026-11-13 17:30:00")){
+?>
+<div class="alert alert-danger center" role="alert"><strong>2026年度11月の撮影会は終了しました</strong></div>
+<?php
+}
+?>
+
+<?php /* <p>※4年生が在籍している団体でまだ撮影していない場合は、下記フォームより予約してください。</p> */	?>
+<p>※予約フォームは10月上旬ごろ公開予定です。</p>
 
 <div class="res_table">
 <table class="tblFull">
 <tbody>
 <tr><th data-title="　■ " data-label="期間（最終）">期間</th>
-<td>5月25日(月)〜29日(金)<br />6月1日(月)〜5日(金)<br />6月15日〜19日(金)</td></tr>
+<td><strong class="em12">10/23(金)・27(火)<br />11/9(月)～13(金)</strong></td></tr>
 <tr><th data-title="　■ " data-label="撮影時間">撮影時間</th><td>10:00※10:30※11:00※11:30※12:00※12:20※12:40<br>
 13:00※13:30※14:00※14:30※15:00※15:30<br>
 16:00※16:30※17:00
@@ -93,6 +104,7 @@ if (time() > strtotime("2020-10-17 00:00:00")) {
 </tbody>
 </table>
 </div>
+
 
 
 <?php /* 
