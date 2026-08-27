@@ -29,8 +29,14 @@ include $rootpath . 'include/header2.txt';
 <h2><span class="em08">完全予約制・限定出版</span><br />
 福島大学卒業記念アルバム　予約購入のご案内</h2>
 
-<div class="alert alert-danger center" role="alert"><strong>2026年度の撮影会は終了しました</strong></div>
 
+<?php
+if (time() > strtotime("2027-10-19 16:30:00")){
+?>
+<div class="alert alert-danger center" role="alert"><strong>2026年度の撮影会は終了しました</strong></div>
+<?php
+}
+?>
 
 <div class="row">
 <div class="col-sm-6 col-xs-12">
