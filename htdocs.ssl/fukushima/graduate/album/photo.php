@@ -89,8 +89,9 @@ if (time() > strtotime("2026-11-13 17:30:00")){
 }
 ?>
 
-<?php /* <p>※4年生が在籍している団体でまだ撮影していない場合は、下記フォームより予約してください。</p> */	?>
-<p>※予約フォームは10月上旬ごろ公開予定です。</p>
+<?php /* <p>※4年生が在籍している団体でまだ撮影していない場合は、下記フォームより予約してください。</p>
+<p>※予約フォームは10月上旬ごろ公開予定です。</p>*/	?>
+<p>こちらの <a class="btn btn-info" href="https://docs.google.com/forms/d/e/1FAIpQLScpFITTVSMrLNvgi0nfGGnB0zZiGv8jVU4ti6j2B_hXK2cyVA/viewform?pli=1" target="_blank">集合撮影申込フォーム <i class="fa fa-fw fa-chevron-right"></i></a> からご予約をお願いします。</p>
 
 <div class="res_table">
 <table class="tblFull">
