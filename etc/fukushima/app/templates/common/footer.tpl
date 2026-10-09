@@ -107,6 +107,13 @@
 </dl>
 </div>
 
+{if $init_category["id"] == 5}
+<div class="alert alert-danger em11">
+20歳未満の者の飲酒は法律で禁止されています。
+<br />
+20歳未満の者に対しては酒類を販売しません。
+</div>
+{/if}
 
 {else}
 
