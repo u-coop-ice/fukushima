@@ -1,7 +1,7 @@
 <?php
-require_once '../adm/lib/set_path.php';
-include 'config.php';
-include $rootpath . '/include/js_index.txt';
+	require_once '../adm/lib/set_path.php';
+	include 'config.php';
+	include $rootpath . '/include/js_index.txt';
 ?>
 
 <!-- XML Parser + Banners -->
@@ -20,46 +20,56 @@ include $rootpath . '/include/js_index.txt';
 </style>
 
 <?php
-include $rootpath . 'include/header2.txt';
+	include $rootpath . 'include/header2.txt';
 ?>
 
 <div id="main" class="left">
 
 <h2 id="title_shopping">ショッピング・各種サービス</h2>
 
+
+<h3>日本酒（食農学類 弐）</h3>
+<p>オリジナル日本酒　食農学類 弐のご注文はこちらをクリック！</p>
+<div>
+<a class="" href="/app/shopping/sake/">
+<?php
+	mobile_image('./images/bnr_sake.png', 'オリジナル日本酒　食農学類 弐のご注文はこちらをクリック！', 'img-responsive');
+?>
+</a>
+</div>
 <h3 class="ver">Information</h3>
 
 
 <?php
-if (time() < strtotime("2022-08-16 00:00:00")) {
+	if (time() < strtotime("2022-08-16 00:00:00")) {
 	?>
 <div class="list-group ic_list">
-<a onclick="ga('send', 'event', 'link, 'click', 'インターネット ショッピング（福島のフルーツ）');" class="list-group-item ic_shopping" href="/shopping/fruits/"><h5 class="list-group-item-heading">インターネット ショッピング（福島のフルーツ）</h5>
+<a class="list-group-item ic_shopping" href="/shopping/fruits/"><h5 class="list-group-item-heading">インターネット ショッピング（福島のフルーツ）</h5>
 <p>福島の特産品（旬の果物）をお届けします。</p>
 </a>
 </div>
 <?php
-}
+	}
 ?>
 
 
 <?php
-$whatsnew = new whatsnew_bootstrap();
-$whatsnew->setHeader(0);
-$whatsnew->setLog(
-	array('../../data/whatsnewdata.xml'));
-$whatsnew->setCoop('fukushima');
-$whatsnew->setKey('shopping');
-$whatsnew->setBefore(360);
-if ($whatsnew->getList()) {
+	$whatsnew = new whatsnew_bootstrap();
+	$whatsnew->setHeader(0);
+	$whatsnew->setLog(
+	['../../data/whatsnewdata.xml']);
+	$whatsnew->setCoop('fukushima');
+	$whatsnew->setKey('shopping');
+	$whatsnew->setBefore(360);
+	if ($whatsnew->getList()) {
 	echo $whatsnew->getList();
-}
+	}
 ?>
 
 <h3>教科書・書籍・CD</h3>
 
 <?php
-/*
+	/*
 <div class="list-group ic_list">
 <a class="list-group-item ic_book" href="http://www.honyaclub.com/" target="_blank">
 <h5 class="list-group-item-heading">和書・CD・DVD【Honya Club.com】<i class="fa fa-external-link"></i></h5></a>
@@ -117,14 +127,14 @@ Honya Club.comの特徴・ご利用手順を詳しく見る</a>
 </div>
 
 <?php
-if (time() > strtotime('2024-03-26 00:00:00') && time() < strtotime('2024-05-27 00:00:00')) {
+	if (time() > strtotime('2024-03-26 00:00:00') && time() < strtotime('2024-05-27 00:00:00')) {
 	?>
 <p class="">
 <a href="./text/" class="btn btn-success">
 2024年度の前期教科書販売についてはこちら<i class="fa fa-fw fa-chevron-right"></i></a>
 </p>
 <?php
-}
+	}
 ?>
 
 
@@ -194,5 +204,5 @@ if (time() > strtotime('2024-03-26 00:00:00') && time() < strtotime('2024-05-27 
 
 
 <?php
-include $rootpath . '/include/footer.txt';
+	include $rootpath . '/include/footer.txt';
 ?>
