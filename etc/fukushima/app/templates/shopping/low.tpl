@@ -64,6 +64,22 @@
 但し、生鮮食品以外の発送違い破損等による場合はご連絡いただいた後1週間以内（商品の開封後の返品は、ご遠慮願います。）</dd>
 <dt>(16) 返品送料</dt>
 <dd>お客様の都合による返品の場合は、送料お客様負担。</dd>
+
+<dt>(17) 酒類販売管理者標識</dt>
+<dd>
+<table cellspacing="0" cellpadding="0">
+<tr><td>販売場の名称及び所在地</td><td>福島大学生活協同組合<br />福島市金谷川1番地</td></tr>
+</td></tr>
+<tr><td>酒類販売管理者の氏名</td><td>渡辺美樹</td></tr>
+</td></tr>
+<tr><td>酒類販売管理研修受講年月日</td><td>令和6年8月29日</td></tr>
+</td></tr>
+<tr><td>次回研修の受講期限</td><td>令和9年8月28日</td></tr>
+</td></tr>
+<tr><td>研修実施団体名</td><td>安達小売酒販組合</td></tr>
+</table>
+</dd>
+
 </dl>
 
 <p><a class="btn btn-primary" href="javascript:history.back();"><i class="fa fa-fw fa-chevron-left"></i>前に戻る</a></p>
