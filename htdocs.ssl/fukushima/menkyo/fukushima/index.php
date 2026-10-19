@@ -87,17 +87,17 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 
 
 
-<h3><strong>新入生ふくふくプラン</strong></h3>
-<p class="">福島大学に入学する新入生のためのプランです。<br />
-提携8校よりお申込みいただくとユニコチャージの特典がもらえるお得なプランです。</p>
+<h3><strong>取るなら年内！秋の通学制運転免許キャンペーン</strong></h3>
+<p>全組合員対象のお得なキャンペーンです。<br />
+対象の自動車学校へ普通自動車免許・準中型・自動二輪をお申込みいただくとユニコチャージの特典がもらえるお得なプランです。</p>
 
-<h4 class="green">～ふくふくプランの流れ～(2026年度新入生スケジュール)</h4>
+<h4 class="green">〜秋の通学制運転免許キャンペーンの流れ〜</h4>
 <div class="row center">
 <div class="col-sm-4">
 <div class="panel panel-success">
 	<div class="panel-heading">
 		<strong class="em12">STEP1<br class="hidden-xs"><?php /*?>（11～4月入学式前日）<?php */?>
-		2025年11月〜2026年6月30日まで</strong>
+		2026年10月1日(木)〜11月30日(月)まで</strong>
 	</div>
 	<div class="panel-body">
 		<?php /*<strong>新入生サポートセンター</strong>で<br class="hidden-xs"><span class="marker yellow thin">エントリー</span></strong> */?>
@@ -109,7 +109,7 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 <div class="panel panel-success">
 	<div class="panel-heading">
 		<strong class="em12">STEP2<br class="hidden-xs"><?php /*?>（7月末まで）<?php */?>
-		2026年7月10日まで</strong>
+		2026年12月4日(金)まで</strong>
 	</div>
 	<div class="panel-body">
 		<strong>購買店</strong>で<br class="hidden-xs"><span class="marker yellow thin">入校する自動車学校を決めてお支払い</span>
@@ -120,7 +120,7 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 <div class="panel panel-success">
 	<div class="panel-heading">
 		<strong class="em12">STEP3<br class="hidden-xs"><?php /*?>（8月末まで）<?php */?>
-		2026年7月31日まで</strong>
+		2026年12月最終営業日まで</strong>
 	</div>
 	<div class="panel-body">
 		<strong>入校する自動車学校</strong>で<br class="hidden-xs"><span class="marker yellow thin">入校手続き</span>
@@ -131,6 +131,15 @@ if (time() < strtotime("2021-12-01 00:00:00")){
 </div><!-- /row -->
 
 <br />
+
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1">
+<img class="img-responsive" src="./images/img001.jpg?260824" alt="自動車学校混雑状況" title="自動車学校混雑状況" >
+</div>
+</div>
+<br />
+
+<div class="alert alert-warning center lead" role="alert"><strong>2027年度入学者向けのプランについては2026年12月上旬ごろ更新予定です。</strong></div>
 
 
 
