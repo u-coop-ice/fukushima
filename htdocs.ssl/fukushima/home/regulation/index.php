@@ -276,7 +276,7 @@ include $rootpath . 'include/header2.txt';
 	</ol>
 
 <h3>解約について</h3>
-	<p class="pad_l">福島大学生活協同組合(以下、「当生協」という)が実施または販売する新入生対象のデジタルノートテイキング講座「Ne“x“t」、異文化コミュニケーション講座 プロジェクト「“x“C」、大学生の基礎力講座「Fu･root」(以下「本講座」という)の申込みについては【講座申込み規定】により取り扱います。</p>
+	<p class="pad_l">福島大学生活協同組合(以下、「当生協」という)が実施または販売する新入生対象のデジタルノートテイキング講座「Ne“x“t」、異文化コミュニケーション講座 「プロジェクト“x“C」、大学生の基礎力講座「Fu･root」(以下「本講座」という)の申込みについては【講座申込み規定】により取り扱います。</p>
 
 	<p class="pad_l">
 	□ 契約の成立→講座申込み規定第2項による<br />
@@ -292,9 +292,9 @@ include $rootpath . 'include/header2.txt';
 <p class="pad_l"><a target="_blank" href="https://docs.google.com/document/d/1a2zuR0g0AnAIyTtc0LomilCYWeYdjplA/edit?usp=share_link&ouid=113061290625526807041&rtpof=true&sd=true">デジタルノートテイキング講座「Ne“x“t」申込規約 <i class="fa fa-external-link"></i></a></p>
 
 
-<h5>異文化コミュニケーション講座 プロジェクト「“x“C」</h5>
+<h5>異文化コミュニケーション講座 「プロジェクト“x“C」</h5>
 
-<p class="pad_l"><a href="https://docs.google.com/document/d/1Ck5GCx65zmgOFDuxyaFrOLu41xMNwbB8/edit?usp=share_link&ouid=113061290625526807041&rtpof=true&sd=true" target="_blank">異文化コミュニケーション講座 プロジェクト「“x“C」申込規約 <i class="fa fa-external-link"></i></a></p>
+<p class="pad_l"><a href="https://docs.google.com/document/d/1Ck5GCx65zmgOFDuxyaFrOLu41xMNwbB8/edit?usp=share_link&ouid=113061290625526807041&rtpof=true&sd=true" target="_blank">異文化コミュニケーション講座 「プロジェクト“x“C」申込規約 <i class="fa fa-external-link"></i></a></p>
 
 <h5>大学生の基礎力講座「Fu･root」</h5>
 
