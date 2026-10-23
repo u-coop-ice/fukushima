@@ -33,6 +33,10 @@ include $rootpath . 'include/header2.txt';
 
 <p class="pad_l">卒業式当日のお仕度は「福島大学キャンパス内」で完結！</p>
 
+<p class="pad_l lead">2026年度の学内での展示会は終了いたしました。<br />
+お申込みをご希望の方は、鈴乃屋レンタル仙台店様へお問い合わせください。</p>
+
+<?php /* 
 <p class="pad_l">新作や人気の柄は早い者勝ちとなっています。<br />
 ご相談だけでも構いませんので、学内展示予約会にご参加ください！</p>
 
@@ -43,8 +47,9 @@ include $rootpath . 'include/header2.txt';
 </ul>
 </div>
 
+<p class="pad_l">上記日程より早くお申込みをしたい方は、鈴乃屋レンタル仙台店様へお問い合わせください。</p> */ ?>
 
-<p class="pad_l">上記日程より早くお申込みをしたい方は、鈴乃屋レンタル仙台店様へお問い合わせください。</p>
+
 <p class="pad_l"><a class="btn btn-info" href="https://www.suzunoya.com/shop/cpt_shop/rental_sendai/?srsltid=AfmBOoqCOat9J7hDuY9Uf2Pvl_EWN4t4nXWdMthU7G_mHf1OKq7HrRrv" target="_blank">鈴乃屋レンタル仙台店様のHPはこちら <i class="fa fa-external-link"></i></a></p>
 
 <br />
