@@ -5,6 +5,10 @@
 
 <h1><a href="{$init_url}adm/">{$init_coopname} {$init_coopnameE}</a></h1>
 
+
+{if $login}<div id="username"><span style="font-size: 0.75rem;">管理アカウントのパスワード変更・2段階認証のリセットはこちら<br /></span><a href="{$init_url}adm/?mode=edit_myself" title="管理ユーザーのパスワード変更・2段階認証のリセット"><i class="fa fa-user"></i> {$auth_username}</a></div>{/if}
+
+
 </div><!-- /header-inner -->
 </div><!-- /header -->
 

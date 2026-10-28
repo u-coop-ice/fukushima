@@ -13,11 +13,14 @@ class adminMasterDB extends commonDB {
 	protected $_univ_id;
 	protected $_code_id;
 	protected $_name;
+	protected $_myself;
 
 	public function get_univ_id() {return $this->_univ_id;}
 	public function get_code_id() {return $this->_code_id;}
 	public function get_name() {return $this->_name;}
 	public function get_edit_auth_user_id() {return $this->_edit_auth_user_id;}
+
+	public function set_auth_user_myself() {return $this->_myself = 1;}
 
 	public function saveCode() {
 
@@ -95,9 +98,9 @@ class adminMasterDB extends commonDB {
 
 	public function saveAdminUser() {
 
-		$fields_sql_admin_user = array(
+		$fields_sql_admin_user = [
 			'email' => 'text',
-		);
+		];
 
 		$this->_postdata = $this->baseSanitize($fields_sql_admin_user, []);
 
@@ -152,6 +155,12 @@ class adminMasterDB extends commonDB {
 		$this->_postdata['auth'] = json_encode($postdata);
 		$fields_sql_admin_user['auth'] = 'text';
 
+		if ($this->_myself == 1) {
+			$this->_edit_auth_user_id = $this->_postdata['id'];
+			$this->checkAdminAuthMyself();
+			unset($fields_sql_admin_user['auth']);
+		}
+
 		$this->set_fields($fields_sql_admin_user);
 		$this->set_tbl('init_user');
 		$this->set_where(['id' => 'integer']);
@@ -161,6 +170,12 @@ class adminMasterDB extends commonDB {
 		} else {
 			$this->insertTable();
 			$this->_postdata['id'] = $this->get_last_insertId();
+		}
+
+		if ($this->_myself == 1) {
+			foreach ($fields_sql_admin_user as $k => $v) {
+				$this->_adminAuth->setAuthData($k, $this->_postdata[$k]);
+			}
 		}
 
 		$logdata['process'] = 'save_user';
@@ -173,15 +188,15 @@ class adminMasterDB extends commonDB {
 	}
 
 	public function saveAdminPassword() {
-		$fields_admin_password = array(
+		$fields_admin_password = [
 			'password_new' => 'text',
 			'password_cfrm' => 'text',
 			'id' => 'integer',
-		);
+		];
 
-		$fields_sql_admin_password = array(
+		$fields_sql_admin_password = [
 			'password' => 'text',
-		);
+		];
 
 		$this->_postdata = $this->baseSanitize($fields_admin_password, []);
 
@@ -193,6 +208,11 @@ class adminMasterDB extends commonDB {
 
 		$this->_edit_auth_user_id = $this->_postdata['id'];
 		$this->checkAdminUserAuth();
+
+		if ($this->_myself == 1) {
+			$this->checkAdminAuthMyself();
+		}
+
 // パスワードの書き換え
 
 		$this->_postdata['password'] = password_hash($this->_postdata['password_new'], PASSWORD_DEFAULT);
@@ -203,6 +223,11 @@ class adminMasterDB extends commonDB {
 		$this->updateTable();
 
 		$logdata['process'] = 'save_admin_password';
+
+		if ($this->_myself == 1) {
+			$logdata['process'] = 'save_myself_password';
+		}
+
 		$logdata['value'] = $this->_postdata['id'];
 
 		$this->set_postdata($logdata);
@@ -224,6 +249,14 @@ class adminMasterDB extends commonDB {
 
 		$this->set_postdata($logdata);
 		$this->saveAdminLog();
+
+	}
+
+	private function checkAdminAuthMyself() {
+
+		if ($this->_adminAuth->getAuthData('id') != $this->_edit_auth_user_id) {
+			throw new Exception("不正な操作です。", 1);
+		}
 
 	}
 
@@ -285,6 +318,38 @@ class adminMasterDB extends commonDB {
 
 		$this->set_postdata($logdata);
 		$this->saveAdminLog();
+	}
+
+	public function resetAdminUserSecret() {
+		$this->_postdata = [];
+		$this->_postdata['id'] = intval($_POST['user_id']);
+		$this->_postdata['secret'] = "";
+		$this->_edit_auth_user_id = $this->_postdata['id'];
+
+		if ($this->_myself == 1) {
+			$this->checkAdminAuthMyself();
+		} else {
+			$this->checkAdminUserAuth();
+		}
+
+		$this->_where = ['id' => 'integer'];
+		$this->_fields = ['secret' => 'text'];
+		$this->_tbl = 'init_user';
+		$this->updateTable();
+
+		$logdata['process'] = 'reset_admin_user_secret';
+		if ($this->_myself == 1) {
+			$logdata['process'] = 'reset_admin_myself_secret';
+		}
+		$logdata['value'] = $this->_edit_auth_user_id;
+
+		$this->set_postdata($logdata);
+		$this->saveAdminLog();
+
+		if ($this->_myself == 1) {
+			$this->_adminAuth->setAuthData('secret', '');
+		}
+
 	}
 
 }
