@@ -402,6 +402,7 @@ function initialize() {
 		'entry' => ['name' => '汎用エントリ', 'description' => '説明会等フォームの設定、説明会等のお申込み情報閲覧'],
 
 		'reserve' => ['name' => '日付選択型エントリ', 'description' => '来店予約など日付選択型のエントリフォーム'],
+		'member' => ['name' => '組合員', 'description' => '出資金返還など'],
 		'shopping' => ['name' => 'ショッピング', 'description' => 'ショッピングカートのシステム管理',
 			'master' => 'カテゴリの新規作成権限',
 			'delete' => 'さまざまな削除権限',
