@@ -17,8 +17,8 @@ class AdmSmarty extends Smarty {
 			$this->setTemplateDir(ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/' . PART);
 			$this->addTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union']);
 		} else {
-
-			$this->setTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union']);
+			$this->setTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/admin']);
+			$this->addTemplateDir([ETC_DIR . ADM_DIR . 'templates/' . COMPONENT, ETC_DIR . ADM_DIR . 'templates/common', ETC_DIR . ADM_DIR . 'templates/union']);
 		}
 
 		$this->setCompileDir('/var/cache/smarty/' . DOMAIN . '/' . ADM_DIR . 'templates_c/' . COMPONENT);
@@ -85,6 +85,11 @@ $auth->setSessionName(DOMAIN . '_adm');
 
 $auth->setExpire(time() + 60 * 60);
 $auth->setIdle(time() + 60 * 20);
+
+if (!$auth->checkAuth() && isset($_GET['mode']) && $_GET['mode'] == 'auth_1st_step') {
+	$auth->setShowLogin(false);
+}
+
 if ($auth->checkAuth() && $_GET['mode'] == 'logout') {
 	// ログアウト
 	$auth->logout();
@@ -133,6 +138,7 @@ if ($auth->getAuth()) {
 	$auth_usermail = $auth->getAuthData("email");
 	$auth_user_id = $auth->getAuthData("id");
 	$auth_user_id = intval($auth_user_id);
+	$smarty->assign('auth_username', $auth_username);
 	$smarty->assign('auth_usermail', $auth_usermail);
 
 }

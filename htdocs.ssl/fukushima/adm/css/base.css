@@ -11,6 +11,23 @@
   bottom: 0;
 }
 
+#header_inner {
+	position: relative;
+}
+
+#header_inner #username {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+	width: 420px;
+	height: 55px;
+	z-index: 100;
+	text-align: right;
+}
+
+#header_inner #username a {
+}
+
 #content h4 a {
 	background-image:none;
 	text-transform: none;

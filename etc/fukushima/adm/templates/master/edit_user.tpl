@@ -38,6 +38,30 @@ function chgPassword() {
   });
 
 }
+
+
+
+$(function(){
+  $("#reset_user_secret").on('click', function(){
+  let user_id=$(this).data('user_id');
+
+  if (confirm('2段階認証をリセットしてもよろしいですか')){
+    $.post('./?mode=reset_user_secret',{'user_id':user_id})
+    .done(function(e){
+      console.log(e);
+      if (e.error){
+        alert(e.error);
+        return false;
+      }
+      location.reload();
+    })
+    .fail(function(e){
+      alert('2段階認証をリセットに失敗しました');
+    });
+  }
+  });
+});
+
 //]]>
 </script>
 
@@ -108,7 +132,10 @@ function chgPassword() {
 </td>
 </tr>
 
-
+<tr>
+<th>2段階認証</th>
+<td>{if $user['secret']}<i class="fa fa-user-shield"></i>設定済 <button id="reset_user_secret" class="btn btn-primary btn-sm" type="button" data-user_id="{$user['id']}"><i class="fa fa-trash-alt"></i> 2段階認証のリセット</button>{else}未設定{/if}</td>
+</tr>
 
 
 {foreach from=$authList key=k item=au}

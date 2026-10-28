@@ -49,7 +49,7 @@ function deleteCheck() {
 </tr>
 {/if}
 
-<td class="vmid">{if !$user['auth']['master']['master']}<a href="{$self}?mode=edit_user&uid={$user['id']}">{$user['username']}</a>{else}<span class="tag">{$user['username']}</span>{/if}
+<td class="vmid">{if !$user['auth']['master']['master']}<a href="{$self}?mode=edit_user&uid={$user['id']}">{$user['username']}{if $user['secret']}<i class="fa fa-shield"></i>{/if}</a>{else}<span class="tag">{$user['username']}{if $user['secret']}<i class="fa fa-shield"></i>{/if}</span>{/if}
 <p class="em09">{$user['email']}</p>
 </td>
 
