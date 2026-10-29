@@ -139,7 +139,7 @@ $("#reserve").val("").change();
 <th>配信先の設定<span class="label label-danger">必須</span></th>
 <td>
 <div class="radio radio-group clearfix">
-{if $authority['master']['master']}
+{if $authority['mm'][0] == 9}
 <div><label><input type="radio" name="onetime" {if $magazine['onetime']==0}checked="checked"{/if} value="0"> ユーザーグループ</label></div>
 <div><label><input type="radio" name="onetime" {if $magazine['onetime']==1}checked="checked"{/if} value="1"> one time send</label></div>
 {else}

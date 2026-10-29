@@ -51,7 +51,7 @@ function deleteCheck() {
 <th class="mh" style="width:5em">登録数</th>
 <th class="mh" style="width:5em">並び順</th>
 <th class="mh"></th>
-{if $authority['reserve']['delete']}
+{if $authority['reserve'][0] >= 7}
 <th class="mh">削除</th>
 {/if}
 </tr>
@@ -76,7 +76,7 @@ function deleteCheck() {
 <td>{$category['sort_order']}</td>
 <td><a class="btn btn-primary btn-sm" title="設定をコピーしてカテゴリを作成します。ただし開設日は新しく設定ください。" href="{$self}?mode=edit_category&category_id={$category['id']}&copy=1"><i class="fa fa-copy"></i></a></td>
 
-{if $authority['reserve']['delete']}
+{if $authority['reserve'][0] >= 7}
 <td class="delete_category_button">
 {if $app_count}
 &nbsp;

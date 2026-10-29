@@ -38,7 +38,7 @@ function deleteCheck() {
 <th class="mh" style="width: 5%;">運用状態</th>
 <th class="mh" style="width: 20%;">登録数</th>
 <th class="mh" style="width: 10%;">並び順</th>
-{if $authority['entry']['delete']}
+{if $authority['entry'][0] >= 7}
 <th class="mh"><i class="fa fa-wrench"></i>&nbsp;</th>
 {/if}
 </tr>
@@ -67,7 +67,7 @@ function deleteCheck() {
 </td>
 <td>{$category['sort_order']}</td>
 
-{if $authority['entry']['delete']}
+{if $authority['entry'][0] >= 7}
 <td class="delete_category_button">
 <span><a class="btn btn-primary btn-sm" title="設定をコピーして新しいフォームを作成する" href="{$self}?mode=edit_category&category_id={$category['id']}&copy=1"><i class="fa fa-copy"></i></a></span>
 

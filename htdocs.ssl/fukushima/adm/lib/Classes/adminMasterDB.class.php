@@ -125,31 +125,27 @@ class adminMasterDB extends commonDB {
 		$subAuthList = $this->_smarty->getTemplatevars('subAuthList');
 
 		foreach ($authList as $k => $v) {
-			if ($this->_authority[$k]['master'] != 1) {
+			if (!isset($this->_authority[$k][0]) || $this->_authority[$k][0] != 9) {
 				unset($authList[$k]);
 			}
 		}
 
 		foreach ($authList as $k => $v) {
-			foreach ($subAuthList as $s) {
-				$postdata[$k][$s] = intval($_POST[$k][$s]);
-			}
-		}
 
 //shoppingと汎用エントリカテゴリ権限の調整
 
-		$postdata['shopping']['category_id'] = [];
-		$postdata['entry']['category_id'] = [];
-		$postdata['reserve']['category_id'] = [];
+			foreach (['shopping', 'entry', 'reserve'] as $key) {
+				if ($k == $key) {
 
-		if (is_array($_POST['shopping']['category_id'])) {
-			$postdata['shopping']['category_id'] = array_map("intval", $_POST['shopping']['category_id']);
-		}
-		if (is_array($_POST['entry']['category_id'])) {
-			$postdata['entry']['category_id'] = array_map("intval", $_POST['entry']['category_id']);
-		}
-		if (is_array($_POST['reserve']['category_id'])) {
-			$postdata['reserve']['category_id'] = array_map("intval", $_POST['reserve']['category_id']);
+					$postdata[$k]['category_id'] = [];
+					if (isset($_POST[$k]['category_id']) && is_array($_POST[$k]['category_id'])) {
+						$postdata[$k]['category_id'] = array_map("intval", $_POST[$k]['category_id']);
+					}
+				}
+			}
+
+			$postdata[$k][0] = intval($_POST[$k][0]);
+
 		}
 
 		$this->_postdata['auth'] = json_encode($postdata);
