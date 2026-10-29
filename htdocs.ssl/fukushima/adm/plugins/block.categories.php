@@ -112,7 +112,7 @@ HERE;
 			}
 
 			if ($_SESSION['admin_mode']) {
-				if ($authority["master"]["master"] == 0) {
+				if ($authority[$params['component']][0] < 9) {
 					switch ($params['component']) {
 					case 'entry':
 					case 'reserve':
@@ -139,7 +139,7 @@ HERE;
 						break;
 					default:
 
-						if (!$authority[$params['component']]['show']) {
+						if (!$authority[$params['component']][0]) {
 							$smarty->assign('no_category', 1);
 
 							$repeat = false;

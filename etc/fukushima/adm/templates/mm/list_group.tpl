@@ -38,7 +38,7 @@ return confirm('アドレスグループを削除してもよろしいですか'
 {/if}
 
 <tr{if $is_odd} class="odd"{/if}>
-<td>{if $authority['mm']['edit']}<a href="{$self}?mode=edit_group&group_id={$group['id']}">{$group['denomination']}</a>{else}{$group['denomination']}{/if}</td>
+<td>{if $authority['mm'][0] >= 7}<a href="{$self}?mode=edit_group&group_id={$group['id']}">{$group['denomination']}</a>{else}{$group['denomination']}{/if}</td>
 <td>{if $group['condition']}{translate_condition condition=$group['condition']}
 {if $translate_condition['component']}<div><span class="badge badge-secondary">お申込み</span> {$translate_condition['component']} {$translate_condition['category_denomination']}</div>{/if}
 {if $translate_condition['forced']}<div><span class="badge badge-secondary">ユーザーの配信停止設定</span> {$translate_condition['forced']}</div>{/if}
@@ -48,7 +48,7 @@ return confirm('アドレスグループを削除してもよろしいですか'
 <td>{$onoffList[$group['unsubscribe']]}</td>
 <td class="text-center">{get_regist_count group_id=$group['id']}</td>
 <td class="delete_group_button">
-{if $authority['mm']['delete']}
+{if $authority['mm'][0] >= 7}
 <form method="post" action="{$self}?mode=delete_group" class="delete_group" onsubmit="return deleteCheck();">
 <input type="hidden" name="id" value="{$group['id']}" />
 <button class="btn btn-primary btn-sm" type="submit" value="削除"><i class="fa fa-fw fa-times"></i>削除</button>

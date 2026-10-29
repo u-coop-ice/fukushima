@@ -1,5 +1,5 @@
 {if $smarty.const.COMPONENT=="ask"}
-{if $authority['ask']['show']}
+{if $authority['ask'][0]}
 
 <div class="sidecolumn navi">
 <dl>
@@ -31,11 +31,11 @@
 </dl>
 {/if}
 
-{if $authority['ask']['master']}
+{if $authority['ask'][0]==9}
 <div class="hr"></div>
 
 <dl>
-{if $authority['ask']['edit']}
+{if $authority['ask'][0]>=7}
 <dt><i class="fa fa-fw fa-square"></i>宛先</dt>
 <dd><a href="{$init_url}adm/ask/?mode=edit_category" ><i class="fa fa-fw fa-edit"></i>宛先の新規作成</a></dd>
 <dd><a href="{$init_url}adm/ask/?mode=list_category" ><i class="fa fa-fw fa-list"></i>宛先の一覧</a></dd>

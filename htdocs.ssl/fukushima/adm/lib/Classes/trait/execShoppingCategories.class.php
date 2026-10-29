@@ -113,7 +113,7 @@ trait execShoppingCategories {
 			$this->insertTable();
 			$postdata['id'] = $this->get_last_insertId();
 
-			if ($this->_authority['master']['master'] == 0) {
+			if ($this->_authority[COMPONENT][0] < 9) {
 //user権限に新規カテゴリIDを追加
 				if (is_array($this->_authority[COMPONENT]['category_id'])) {
 					array_push($this->_authority[COMPONENT]['category_id'], intval($postdata['id']));
@@ -152,7 +152,7 @@ trait execShoppingCategories {
 
 	public function deleteShoppingCategory() {
 
-		if (!$this->_authority['shopping']['delete']) {
+		if ($this->_authority['shopping'][0] < 7) {
 			throw new Exception("実行する権限がありません", 1);
 		}
 
@@ -166,7 +166,7 @@ trait execShoppingCategories {
 		$this->set_tbl('sp_category');
 		$this->deleteTable();
 
-		if ($this->_authority['master']['master'] == 0) {
+		if ($this->_authority[COMPONENT][0] < 9) {
 //user権限に新規カテゴリIDを追加
 			if (is_array($this->_authority[COMPONENT]['category_id'])) {
 				$key = array_search($id, $authority['shopping']['category_id']);
@@ -292,7 +292,7 @@ HERE;
 
 	public function deleteShoppingSubcategory() {
 
-		if (!$this->_authority['shopping']['delete']) {
+		if ($this->_authority['shopping'][0] < 7) {
 			throw new Exception("実行する権限がありません", 1);
 		}
 
@@ -360,7 +360,7 @@ HERE;
 
 	public function deleteShoppingSub2category() {
 
-		if (!$this->_authority['shopping']['delete']) {
+		if ($this->_authority['shopping'][0] < 7) {
 			throw new Exception("実行する権限がありません", 1);
 		}
 

@@ -19,7 +19,7 @@ return confirm('カテゴリを削除してもよろしいですか');
 <p class="alert alert-info">カテゴリを削除しました。</p>
 {/if}
 
-{if $authority["shopping"]["master"]}
+{if $authority["shopping"][0] == 9}
 <p><a class="btn btn-primary" href="{$self}?mode=edit_category"><i class="fa fa-fw fa-edit"></i>カテゴリの新規作成</a></p>
 {/if}
 

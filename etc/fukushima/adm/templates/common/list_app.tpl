@@ -94,7 +94,7 @@ $('.tooltips').powerTip({placement: 'n'});
 {if $smarty.const.COMPONENT=="transition"}
 <th class="mh">status</th>
 {/if}
-{if $authority['entry']['delete']}<th class="mh">削除</th>{/if}
+{if $authority['entry'][0] >= 7}<th class="mh">削除</th>{/if}
 </tr>
 {/if}
 <tr {if $app['cancelled'] || $app['status']==9}class="cancelled"{/if}>
@@ -107,7 +107,7 @@ $('.tooltips').powerTip({placement: 'n'});
 {if $smarty.const.COMPONENT=="transition"}
 <td class="vmid"><span class="label {$labelList[$app['status']|default:0]}">{$statusList[$app['status']|default:0]}</span></td>
 {/if}
-{if $authority[$smarty.const.COMPONENT]['delete']}
+{if $authority[$smarty.const.COMPONENT][0] >= 7}
 <td class="delete_entry_button">
 {if $app['regist_status']!=1}
 <form method="post" action="{$self}?mode=delete_app" class="delete_entry" onsubmit="return deleteCheck();">

@@ -39,10 +39,10 @@ if ($id) {
 
 	$ath = new shoppingDB();
 
-	$users = array(1);
+	$users = [1];
 	array_push($users, intval($auth->getAuthData('id')));
 	array_unique($users);
-	$fields_auth = array('auth' => 'text');
+	$fields_auth = ['auth' => 'text'];
 	$ath->set_fields($fields_auth);
 
 	foreach ($users as $user_id) {
@@ -55,7 +55,7 @@ if ($id) {
 			$key = array_search($id, $authority['shopping']['category_id']);
 			unset($authority['shopping']['category_id'][$key]);
 		} else {
-			$authority['shopping']['category_id'] = array();
+			$authority['shopping']['category_id'] = [];
 		}
 
 		$authdata["auth"] = json_encode($authority);
