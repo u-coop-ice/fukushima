@@ -38,65 +38,16 @@ if (time() < strtotime("2022-07-25 00:00:00")) {
 
 
 <div class="center">
-<img class="img-responsive" src="./images/2026_head_fruits_momo.jpg" alt="福島のもも・なし" /><br />
-<img class="img-responsive" src="./images/2026_mn_photo.jpg" alt="福島のもも・なし 品名" /><br />
+<img class="img-responsive" src="./images/2026_head_fruits_Apple.jpg" alt="福島のりんご" /><br />
+<img class="img-responsive" src="./images/2026_fruits_apple.png" alt="福島のりんご 品名" /><br />
+<img class="img-responsive" src="./images/2026_fruits_apple_list.png" alt="福島のりんご 品名" /><br />
+<img class="img-responsive" src="./images/2026_fruits_apple_02.png" alt="福島のりんご 品名" /><br />
 </div>
+
 
 
 
 <?php /*
-<div class="row">
-<div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2026_m_akatsuki.jpg"  alt="あかつき" /></div>
-</div>
-<div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2026_m_kawanakajima.jpg"  alt="川中島" /></div>
-</div>
-<div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2026_m_gold.jpg"  alt="黄金桃" /></div>
-</div>
-<div class="col-md-3 col-xs-6">
-<div class="center"><img class="img-responsive" src="./images/2026_n_housui.jpg"  alt="豊水" /></div>
-</div>
-</div>
-*/?>
-
-<?php /*?>
-<div class="row">
-<div class="col-md-4">
-<h3 class="pink bold"><span class="em08">皇室献上桃</span>&nbsp;あかつき</h3>
-<p class="pad_l">白桃と白鳳を合わせてつくられ、福島で命名された福島の桃の代表品種です。<br class="hidden-xs">
-きめの細かい肉質で甘みが強く、果汁が多いことが特徴で、人気があります。<br class="hidden-xs">
-ご贈答の定番として、大変喜ばれています。</p>
-<div class="center"><img class="img-responsive" src="./images/m_akatsuki.jpg" width="300" alt="イメージ：あかつき" /></div>
-</div>
-
-<div class="col-md-4">
-<h3 class="blue bold"><span class="em08">桃の王様</span>&nbsp;川中島</h3>
-<p class="pad_l">大粒で食べ応えのある白桃品種で、盆明けに出荷される日持ちの良い品種です。<br class="hidden-xs">
-柔らかくなると、糖度も高く食べ応えのあるおいしい桃です。<br class="hidden-xs">
-お中元のお返し、残暑見舞いにどうぞ。</p>
-<div class="center"><img class="img-responsive" src="./images/m_kawanakajima.jpg" width="300" alt="イメージ：川中島" /></div>
-</div>
-
-<div class="col-md-4">
-<h3 class="orange bold"><span class="em08">南国の香り</span>&nbsp;黄金桃</h3>
-<p class="pad_l">果肉が綺麗な黄金色をし栽培量が少なく希少な品種です。<br class="hidden-xs">
-独特なトロピカルな味わいから別名「マンゴーピーチ」とも呼ばれ、近年、大変人気があります。</p>
-<div class="center"><img class="img-responsive" src="./images/m_gold.jpg" width="300" alt="イメージ：黄金桃" /></div>
-</div>
-</div><!-- /row -->
-<br />
-<?php */?>
-
-
-<div class="center">
-<?php
-mobile_image('./images/2026_momo_list.png', '商品一覧表', 'img-responsive');
-?>
-</div>
-
-
 <div class="pad_l">
 <ul>
 <li>天候・収穫状況や商品番号により発送が前後する場合があります。収穫でき次第申込受付順に順次発送となりますので、<strong class="red">お届け日の指定はできません。</strong><br />
@@ -108,29 +59,29 @@ mobile_image('./images/2026_momo_list.png', '商品一覧表', 'img-responsive')
 <br class="visible-xs">※写真はイメージです
 </p>
 </div>
-
+*/ ?>
 
 
 
 <?php
 // 6/？ 10:00〜8/18 00:00まで販売
-if (time() > strtotime('2026-06-15 00:00:00') && time() < strtotime('2026-08-17 00:00:00')) {
+if (time() > strtotime('2026-10-20 00:00:00') && time() < strtotime('2026-11-16 00:00:00')) {
 ?>
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
-<a href="https://www.fukushima.u-coop.or.jp/app/shopping/fruits/" target="_blank" class="btn btn-success btn-block btn-lg em15" >福島の桃お申込みはこちら<i class="fa fa-fw fa-chevron-right"></i></a>
+<a href="https://www.fukushima.u-coop.or.jp/app/shopping/fruits/" target="_blank" class="btn btn-success btn-block btn-lg em15" >福島のりんごお申込みはこちら<i class="fa fa-fw fa-chevron-right"></i></a>
 </div>
 </div>	<!-- /row -->
 
 
 <?php
 // 8/18 00:00で販売終了
-} else if (strtotime('2026-08-18 00:00:00') < time()) {
+} else if (strtotime('2026-11-16 00:00:00') < time()) {
 ?>
 
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
-<a target="_blank" class="btn btn-success btn-block btn-lg em15 disabled">【受付終了】<br class="visible-xs-block">福島の桃お申込み<i class="fa fa-fw fa-chevron-right"></i></a>
+<a target="_blank" class="btn btn-success btn-block btn-lg em15 disabled">【受付終了】<br class="visible-xs-block">福島のりんごお申込み<i class="fa fa-fw fa-chevron-right"></i></a>
 </div>
 </div>	<!-- /row -->
 
