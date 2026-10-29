@@ -38,7 +38,7 @@ if (time() < strtotime("2022-07-25 00:00:00")) {
 
 
 <div class="center">
-<img class="img-responsive" src="./images/2026_head_fruits_Apple.jpg" alt="福島のりんご" /><br />
+<img class="img-responsive" src="./images/2026_head_fruits_a.jpg" alt="福島のりんご" /><br />
 <img class="img-responsive" src="./images/2026_fruits_apple.png" alt="福島のりんご 品名" /><br />
 <img class="img-responsive" src="./images/2026_fruits_apple_list.png" alt="福島のりんご 品名" /><br />
 <img class="img-responsive" src="./images/2026_fruits_apple_02.png" alt="福島のりんご 品名" /><br />
