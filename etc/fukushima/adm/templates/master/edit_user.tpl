@@ -114,29 +114,31 @@ function chgPassword() {
 {foreach from=$authList key=k item=au}
 {if $k!="master"}
 <tr>
-<th>{$authList[$k]['name']}<br />
-<span class="em09">{$authList[$k]['description']}</span>
+<th>{$au['name']}<span class="tag min">{$k}</span><br />
+<span class="em09">{$au['description']}</span>
 
 </th>
-<td>{if $authority[$k]['master']!=1}<div><span class="tag min black">変更権限はありません</span></div>{else}
-<span class="tag min">{$k}</span>
-{foreach from=$subAuthList item=s}
-<div class="checkbox"><label for="{$k}[{$s}]"><input type="checkbox" name="{$k}[{$s}]" id="{$k}[{$s}]" {if $user["auth"][$k][$s]}checked="checked"{/if} value="1" />{$s}</label>
-{if $au[$s]}（{$au[$s]}）{/if}
-
+<td>{if $authority[$k][0] < 9}<div><span class="tag min black">変更権限はありません</span></div>{else}
+<div>
+<div class="radio">
+<label><input type="radio" name="{$k}[0]" value="" {if $user["auth"][$k][0]==""}checked="checked"{/if} />権限なし</label>
+</div>
+{foreach from=$subAuthList[$k] key=key item=s}
+<div class="radio">
+<label><input type="radio" name="{$k}[0]" value="{$key}" {if $user["auth"][$k][0] == $key}checked="checked"{/if} />{$s}</label>
 </div>
 {/foreach}
-
+</div>
 
 {if $k=="entry" || $k=="reserve"}
-{categories component=$k no_archived=1}
+{categories component=$k}
 {if $category_header}
 <dl>
 <dd>カテゴリ</dd>
 {/if}
 <dd>
 <div class="checkbox">
-<label><input type="checkbox" name="{$k}[category_id][]" value="{$category['id']}" {if $user["auth"][$k]["category_id"] && $category['id']|in_array:$user["auth"][$k]["category_id"]}checked="checked"{/if}> {$category["denomination"]}</label></dd>
+<label><input type="checkbox" name="{$k}[category_id][]" value="{$category['id']}" {if $user["auth"][$k]["category_id"] && in_array($category['id'],$user["auth"][$k]["category_id"])}checked="checked"{/if}> {$category["denomination"]}</label></dd>
 </div>
 {if $category_footer}
 </dl>
@@ -145,14 +147,14 @@ function chgPassword() {
 
 
 {else if $k=="shopping"}
-{sp_categories}
+{sp_categories pfx="shopping"}
 {if $category_header}
 <dl>
 <dd>カテゴリ</dd>
 {/if}
 <dd>
 <div class="checkbox">
-<label><input type="checkbox" name="{$k}[category_id][]" value="{$category['id']}" {if $user["auth"]["shopping"]["category_id"] && $category['id']|in_array:$user["auth"]["shopping"]["category_id"]}checked="checked"{/if}> {$category["denomination"]}</label></div></dd>
+<label><input type="checkbox" name="{$k}[category_id][]" value="{$category['id']}" {if $user["auth"]["shopping"]["category_id"] && in_array($category['id'],$user["auth"]["shopping"]["category_id"])}checked="checked"{/if}> {$category["denomination"]}</label></div></dd>
 {if $category_footer}
 </dl>
 {/if}
@@ -175,4 +177,40 @@ function chgPassword() {
 {if $db_error}
 <p class="error">ユーザーの読み込みに失敗しました。</p>
 {/if}
+
+<script type="text/javascript">
+//<[!CDATA[
+
+$(function(){
+
+  $('[name$="[0]"]:checked').each(function(){
+        setCategory($(this));
+  })
+
+  $('[name$="[0]"]').on('click',function(){
+    setCategory($(this));
+  });
+
+  function setCategory(_this){
+    let op = _this.val();
+
+    console.log(op);
+
+    if (op == "" || op == 0){
+      _this.parents('div').parent('div').next('dl').find('label').addClass('gray').find('input').prop('disabled',true);
+    } else if (op == 9){
+      _this.parents('div').parent('div').next('dl').find('label').addClass('gray').find('input').prop('disabled',true);
+    } else {
+      _this.parents('div').parent('div').next('dl').find('label').removeClass('gray').find('input').prop('disabled',false);
+    }
+
+  }
+
+
+});
+//]]>
+</script>
+
+
+
 {include file='footer.tpl'}

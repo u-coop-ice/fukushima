@@ -402,6 +402,7 @@ function initialize() {
 		'entry' => ['name' => '汎用エントリ', 'description' => '説明会等フォームの設定、説明会等のお申込み情報閲覧'],
 
 		'reserve' => ['name' => '日付選択型エントリ', 'description' => '来店予約など日付選択型のエントリフォーム'],
+		'member' => ['name' => '組合員', 'description' => '出資金返還など'],
 		'shopping' => ['name' => 'ショッピング', 'description' => 'ショッピングカートのシステム管理',
 			'master' => 'カテゴリの新規作成権限',
 			'delete' => 'さまざまな削除権限',
@@ -413,7 +414,23 @@ function initialize() {
 	];
 	$smarty->assign('authList', $authList);
 
-	$smarty->assign('subAuthList', ['show', 'edit', 'delete', 'master']);
+	$subAuthList = [
+		'regist' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'ask' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'entry' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'reserve' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'member' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'foodservice' => [1 => '閲覧', 3 => '入出金', 7 => '編集', 9 => '管理'],
+		'travel' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+
+		'htkt' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'shopping' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'living' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+		'mm' => [1 => '閲覧', 7 => '編集', 9 => '管理'],
+	];
+
+	$smarty->assign('subAuthList', $subAuthList);
+	$smarty->assign('subAuthColorList', [1 => 'green', 3 => 'yellow', 7 => 'orange', 9 => 'navy']);
 
 	$init_coopurl = $smarty->getConfigVars('init_coopurl');
 	$smarty->assign('init_coopurl', $init_coopurl);

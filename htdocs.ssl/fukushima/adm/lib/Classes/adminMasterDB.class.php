@@ -13,11 +13,14 @@ class adminMasterDB extends commonDB {
 	protected $_univ_id;
 	protected $_code_id;
 	protected $_name;
+	protected $_myself;
 
 	public function get_univ_id() {return $this->_univ_id;}
 	public function get_code_id() {return $this->_code_id;}
 	public function get_name() {return $this->_name;}
 	public function get_edit_auth_user_id() {return $this->_edit_auth_user_id;}
+
+	public function set_auth_user_myself() {return $this->_myself = 1;}
 
 	public function saveCode() {
 
@@ -95,9 +98,9 @@ class adminMasterDB extends commonDB {
 
 	public function saveAdminUser() {
 
-		$fields_sql_admin_user = array(
+		$fields_sql_admin_user = [
 			'email' => 'text',
-		);
+		];
 
 		$this->_postdata = $this->baseSanitize($fields_sql_admin_user, []);
 
@@ -122,35 +125,37 @@ class adminMasterDB extends commonDB {
 		$subAuthList = $this->_smarty->getTemplatevars('subAuthList');
 
 		foreach ($authList as $k => $v) {
-			if ($this->_authority[$k]['master'] != 1) {
+			if (!isset($this->_authority[$k][0]) || $this->_authority[$k][0] != 9) {
 				unset($authList[$k]);
 			}
 		}
 
 		foreach ($authList as $k => $v) {
-			foreach ($subAuthList as $s) {
-				$postdata[$k][$s] = intval($_POST[$k][$s]);
-			}
-		}
 
 //shoppingと汎用エントリカテゴリ権限の調整
 
-		$postdata['shopping']['category_id'] = [];
-		$postdata['entry']['category_id'] = [];
-		$postdata['reserve']['category_id'] = [];
+			foreach (['shopping', 'entry', 'reserve'] as $key) {
+				if ($k == $key) {
 
-		if (is_array($_POST['shopping']['category_id'])) {
-			$postdata['shopping']['category_id'] = array_map("intval", $_POST['shopping']['category_id']);
-		}
-		if (is_array($_POST['entry']['category_id'])) {
-			$postdata['entry']['category_id'] = array_map("intval", $_POST['entry']['category_id']);
-		}
-		if (is_array($_POST['reserve']['category_id'])) {
-			$postdata['reserve']['category_id'] = array_map("intval", $_POST['reserve']['category_id']);
+					$postdata[$k]['category_id'] = [];
+					if (isset($_POST[$k]['category_id']) && is_array($_POST[$k]['category_id'])) {
+						$postdata[$k]['category_id'] = array_map("intval", $_POST[$k]['category_id']);
+					}
+				}
+			}
+
+			$postdata[$k][0] = intval($_POST[$k][0]);
+
 		}
 
 		$this->_postdata['auth'] = json_encode($postdata);
 		$fields_sql_admin_user['auth'] = 'text';
+
+		if ($this->_myself == 1) {
+			$this->_edit_auth_user_id = $this->_postdata['id'];
+			$this->checkAdminAuthMyself();
+			unset($fields_sql_admin_user['auth']);
+		}
 
 		$this->set_fields($fields_sql_admin_user);
 		$this->set_tbl('init_user');
@@ -163,6 +168,12 @@ class adminMasterDB extends commonDB {
 			$this->_postdata['id'] = $this->get_last_insertId();
 		}
 
+		if ($this->_myself == 1) {
+			foreach ($fields_sql_admin_user as $k => $v) {
+				$this->_adminAuth->setAuthData($k, $this->_postdata[$k]);
+			}
+		}
+
 		$logdata['process'] = 'save_user';
 		$logdata['value'] = $this->_postdata['id'];
 
@@ -173,15 +184,15 @@ class adminMasterDB extends commonDB {
 	}
 
 	public function saveAdminPassword() {
-		$fields_admin_password = array(
+		$fields_admin_password = [
 			'password_new' => 'text',
 			'password_cfrm' => 'text',
 			'id' => 'integer',
-		);
+		];
 
-		$fields_sql_admin_password = array(
+		$fields_sql_admin_password = [
 			'password' => 'text',
-		);
+		];
 
 		$this->_postdata = $this->baseSanitize($fields_admin_password, []);
 
@@ -193,6 +204,11 @@ class adminMasterDB extends commonDB {
 
 		$this->_edit_auth_user_id = $this->_postdata['id'];
 		$this->checkAdminUserAuth();
+
+		if ($this->_myself == 1) {
+			$this->checkAdminAuthMyself();
+		}
+
 // パスワードの書き換え
 
 		$this->_postdata['password'] = password_hash($this->_postdata['password_new'], PASSWORD_DEFAULT);
@@ -203,6 +219,11 @@ class adminMasterDB extends commonDB {
 		$this->updateTable();
 
 		$logdata['process'] = 'save_admin_password';
+
+		if ($this->_myself == 1) {
+			$logdata['process'] = 'save_myself_password';
+		}
+
 		$logdata['value'] = $this->_postdata['id'];
 
 		$this->set_postdata($logdata);
@@ -224,6 +245,14 @@ class adminMasterDB extends commonDB {
 
 		$this->set_postdata($logdata);
 		$this->saveAdminLog();
+
+	}
+
+	private function checkAdminAuthMyself() {
+
+		if ($this->_adminAuth->getAuthData('id') != $this->_edit_auth_user_id) {
+			throw new Exception("不正な操作です。", 1);
+		}
 
 	}
 
@@ -285,6 +314,38 @@ class adminMasterDB extends commonDB {
 
 		$this->set_postdata($logdata);
 		$this->saveAdminLog();
+	}
+
+	public function resetAdminUserSecret() {
+		$this->_postdata = [];
+		$this->_postdata['id'] = intval($_POST['user_id']);
+		$this->_postdata['secret'] = "";
+		$this->_edit_auth_user_id = $this->_postdata['id'];
+
+		if ($this->_myself == 1) {
+			$this->checkAdminAuthMyself();
+		} else {
+			$this->checkAdminUserAuth();
+		}
+
+		$this->_where = ['id' => 'integer'];
+		$this->_fields = ['secret' => 'text'];
+		$this->_tbl = 'init_user';
+		$this->updateTable();
+
+		$logdata['process'] = 'reset_admin_user_secret';
+		if ($this->_myself == 1) {
+			$logdata['process'] = 'reset_admin_myself_secret';
+		}
+		$logdata['value'] = $this->_edit_auth_user_id;
+
+		$this->set_postdata($logdata);
+		$this->saveAdminLog();
+
+		if ($this->_myself == 1) {
+			$this->_adminAuth->setAuthData('secret', '');
+		}
+
 	}
 
 }

@@ -2,7 +2,7 @@
 <div class="sidecolumn navi">
 <dl>
 
-{if $authority['regist']['show']}
+{if $authority['regist'][0]}
 <dt><i class="fa fa-fw fa-square"></i>ユーザー登録</dt>
 <dd><a href="{$init_url}adm/regist/?mode=list_regist"><i class="fa fa-fw fa-caret-right"></i>登録ユーザー({get_regist_count})</a></dd>
 <dd><a href="{$init_url}adm/regist/?mode=list_regist&dm=1"><i class="fa fa-fw fa-caret-right"></i>配信停止({get_regist_count dm=1})</a></dd>
@@ -11,7 +11,7 @@
 
 
 
-{if $authority['regist']['master']}
+{if $authority['regist'][0]}
 <dt><i class="fa fa-fw fa-square"></i>データベース</dt>
 {*<dd {if $mode=="edit_excel"}class="focus"{/if}><a href="{$init_url}adm/export/?mode=edit_excel_entry" ><i class="fa fa-fw fa-caret-right"></i>汎用エントリ書き出し</a></dd>*}
 <dd {if $mode=="edit_excel"}class="focus"{/if}><a href="{$init_url}adm/regist/?mode=edit_excel_regist" ><i class="fa fa-fw fa-caret-right"></i>ユーザーデータ書き出し</a></dd>

@@ -1,5 +1,5 @@
 {if $smarty.const.COMPONENT=="master"}
-{if $authority['master']['show']}
+{if $authority['master'][0]}
 <div class="sidecolumn navi">
 <dl>
 
@@ -17,10 +17,10 @@
 <dt><i class="fa fa-fw fa-square"></i>ログ閲覧</dt>
 
 
-{if $authority['master']['show']}
+{if $authority['master'][0]}
 <dd><a href="{$init_url}adm/master/?mode=list_regist_log"><i class="fa fa-fw fa-caret-right"></i>ユーザーログ</a></dd>
 {/if}
-{if $authority['master']['master']}
+{if $authority['master'][0]==9}
 <dd><a href="{$init_url}adm/master/?mode=list_admin_log"><i class="fa fa-fw fa-caret-right"></i>システムログ</a></dd>
 {/if}
 

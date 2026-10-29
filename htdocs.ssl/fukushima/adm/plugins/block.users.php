@@ -1,10 +1,10 @@
 <?php
 function smarty_block_users($params, $content, &$smarty, &$repeat) {
-	$users = array();
+	$users = [];
 	// データベース関連の情報を得る
 	$pdo = $smarty->getTemplateVars('pdo');
 	$authority = $smarty->getTemplateVars('authority');
-	if (!$authority['master']['show']) {return;}
+	if (!$authority['master'][0]) {return;}
 	// ブロックに入る前の処理
 	if (is_null($content)) {
 		// 初期化
@@ -12,18 +12,18 @@ function smarty_block_users($params, $content, &$smarty, &$repeat) {
 		$smarty->assign('db_error', 0);
 		// 新規カテゴリーの場合（カテゴリー新規作成ページ用）
 		if ($smarty->getTemplateVars('new_user')) {
-			$user = array('id' => 0,
+			$user = ['id' => 0,
 				'username' => '',
-			);
+			];
 			array_push($users, $user);
 		}
 
 		// カテゴリーを読み込む場合
 		else {
 			// カテゴリーをデータベースから読み込む
-			$type = array();
-			$data = array();
-			$where = array();
+			$type = [];
+			$data = [];
+			$where = [];
 
 			$sql = <<< HERE
 select init_user.* from init_user

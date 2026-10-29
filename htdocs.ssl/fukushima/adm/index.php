@@ -18,7 +18,13 @@ if ($auth->getAuth()) {
 
 	$modes = [
 		'welcome' => 1,
-		'migrate_db' => 1,
+//		'migrate_db' => 1,
+		'edit_myself' => 1,
+		'save_myself' => 1,
+		'edit_password' => 1,
+		'save_password' => 1,
+		'reset_myself_secret' => 1,
+		'auth_1st_step' => 1,
 	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
 	if (!isset($_GET['mode'])) {
@@ -35,5 +41,16 @@ if ($auth->getAuth()) {
 		$smarty->assign('errmsg', 'そのようなモードはありません。');
 		$smarty->display('error.tpl');
 	}
+
+} else {
+
+	$modes = [
+		'auth_1st_step' => 1,
+	];
+	// モードに応じたページを表示
+	if (isset($modes[$_GET['mode']]) && $_GET['mode']) {
+		require_once 'admin/' . $_GET['mode'] . '.php';
+	}
+
 }
 ?>

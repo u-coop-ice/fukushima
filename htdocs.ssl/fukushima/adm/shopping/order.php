@@ -12,10 +12,10 @@ require_once 'admSmarty.php';
 //テンプレートディレクトリの追加
 $smarty->setTemplateDir([
 	ETC_DIR . ADM_DIR . 'templates/' . COMPONENT . '/order',
+	ETC_DIR . ADM_DIR . 'templates/common',
 	ETC_DIR . APP_DIR . 'templates/' . COMPONENT,
 	ETC_DIR . APP_DIR . 'templates/common',
 	ETC_DIR . ADM_DIR . 'templates/union',
-	ETC_DIR . ADM_DIR . 'templates/common',
 ]);
 
 $self = "./order.php";
@@ -52,7 +52,7 @@ if ($auth->getAuth()) {
 
 	$smarty->assign('mode', $_GET['mode']);
 
-	$modes = array('welcome' => 1,
+	$modes = ['welcome' => 1,
 		'edit_order' => 1,
 		'confirm' => 1,
 		'regist' => 1,
@@ -65,7 +65,7 @@ if ($auth->getAuth()) {
 		'list_item' => 1,
 		'save_order' => 1,
 		'search_regist' => 1,
-	);
+	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
 	if (!isset($_GET['mode'])) {
 		$_GET['mode'] = 'edit_order';

@@ -12,7 +12,7 @@ if ($auth->getAuth()) {
 
 	$smarty->assign('mode', $_GET['mode']);
 
-	$modes = array('welcome' => 1,
+	$modes = ['welcome' => 1,
 		'list_user' => 1,
 		'show_user' => 1,
 		'edit_user' => 1,
@@ -30,7 +30,8 @@ if ($auth->getAuth()) {
 		'save_code' => 1,
 		'edit_code' => 1,
 		'delete_code' => 1,
-	);
+		'reset_user_secret' => 1,
+	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
 	if (!isset($_GET['mode'])) {
 		$_GET['mode'] = 'welcome';

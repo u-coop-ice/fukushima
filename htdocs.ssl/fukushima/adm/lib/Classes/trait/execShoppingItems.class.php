@@ -258,7 +258,7 @@ HERE;
 
 	public function deleteShoppingItem() {
 
-		if (!$this->_authority['shopping']['delete']) {
+		if ($this->_authority['shopping'][0] < 7) {
 			throw new Exception("実行する権限がありません", 1);
 		}
 

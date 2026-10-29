@@ -1,0 +1,21 @@
+<?php
+
+$result = [];
+try {
+	$pdo->beginTransaction();
+
+	$adm = new adminMasterDB();
+	$adm->setAdminAuth($auth);
+	$adm->resetAdminUserSecret();
+
+	$pdo->commit();
+
+} catch (Exception $e) {
+
+	$pdo->rollBack();
+	$result['error'] = $e->getMessage();
+}
+
+echo json_encode($result);
+exit();
+?>

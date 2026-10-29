@@ -19,7 +19,7 @@ return confirm('宛先を削除してもよろしいですか');
 <p class="alert alert-success deleted">宛先を削除しました。</p>
 {/if}
 
-{if $authority["htkt"]["master"]}
+{if $authority["htkt"][0] == 9}
 <p><a class="btn btn-primary" href="{$self}?mode=edit_category"><i class="fa fa-fw fa-plus"></i>宛先の新規作成</a></p>
 {/if}
 
@@ -47,7 +47,7 @@ return confirm('宛先を削除してもよろしいですか');
 <td>{$category["sort_order"]}</td>
 
 <td class="delete_category_button">
-{if $authority["htkt"]["master"]}
+{if $authority["htkt"][0] == 9}
 {if $category["entry_count"]}
 &nbsp;
 {else}
