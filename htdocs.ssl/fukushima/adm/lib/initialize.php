@@ -414,7 +414,24 @@ function initialize() {
 	];
 	$smarty->assign('authList', $authList);
 
-	$smarty->assign('subAuthList', ['show', 'edit', 'delete', 'master']);
+	$subAuthList = [
+		'regist' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'ask' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'entry' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'reserve' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'member' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'foodservice' => [1 => '閲覧', 3 => '入出金', 7 => '編集', 9 => '管理'],
+		'travel' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+
+		'htkt' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'shopping' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'csc' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'living' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+		'mm' => [1 => '閲覧', 3 => '作成', 7 => '編集', 9 => '管理'],
+	];
+
+	$smarty->assign('subAuthList', $subAuthList);
+	$smarty->assign('subAuthColorList', [1 => 'green', 3 => 'yellow', 7 => 'orange', 9 => 'navy']);
 
 	$init_coopurl = $smarty->getConfigVars('init_coopurl');
 	$smarty->assign('init_coopurl', $init_coopurl);

@@ -61,7 +61,7 @@ trait execAskCategories {
 
 	public function deleteAskCategory() {
 
-		if (!$this->_authority['ask']['delete']) {
+		if ($this->_authority['ask'][0] < 7) {
 			throw new Exception("実行する権限がありません", 1);
 		}
 

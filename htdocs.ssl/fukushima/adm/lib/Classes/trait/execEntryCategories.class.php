@@ -153,7 +153,7 @@ trait execEntryCategories {
 			$this->insertTable();
 			$postdata['id'] = $this->get_last_insertId();
 
-			if ($this->_authority['master']['master'] == 0) {
+			if ($this->_authority[COMPONENT][0] < 9) {
 //user権限に新規カテゴリIDを追加
 				if (is_array($this->_authority[COMPONENT]['category_id'])) {
 					array_push($this->_authority[COMPONENT]['category_id'], intval($postdata['id']));
@@ -196,7 +196,7 @@ trait execEntryCategories {
 
 	public function deleteEntryCategory() {
 
-		if (!$this->_authority['entry']['delete']) {
+		if ($this->_authority[COMPONENT][0] < 7) {
 			throw new Exception("実行する権限がありません", 1);
 		}
 
@@ -231,7 +231,7 @@ trait execEntryCategories {
 			}
 		}
 
-		if ($this->_authority['master']['master'] == 0) {
+		if ($this->_authority[COMPONENT][0] < 9) {
 //user権限のカテゴリIDを削除
 
 			$key = array_search($this->_category_id, $this->_authority[COMPONENT]['category_id']);

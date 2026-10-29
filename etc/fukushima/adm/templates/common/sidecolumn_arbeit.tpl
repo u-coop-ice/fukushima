@@ -5,7 +5,7 @@
 <div><a class="btn btn-primary btn-sm" href="{$init_url}app/arbeit/" target="_blank">求人公開サイト <i class="fa fa-external-link"></i></a></div>
 
 
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 
 <dt>求人情報の公開操作</dt>
 <dd><a href="{$init_url}adm/arbeit/?mode=list_entry&all=1" ><i class="fa fa-list"></i> すべて{arb_entries list=1}({$entry['ct']}){/arb_entries}</a></dd>
@@ -16,20 +16,20 @@
 <dd><a href="{$init_url}adm/arbeit/?mode=list_entry&else=1" ><i class="fa fa-folder-open"></i> その他{arb_entries list=1 else=1}({$entry['ct']}){/arb_entries}</a></dd>
 {/if}
 
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 <dt>求人情報の新規作成</dt>
 <dd><a href="{$init_url}adm/arbeit/?mode=edit_entry&step=1" ><i class="fa fa-edit"></i> 新規作成</a></dd>
 {/if}
 
 <div class="hr"></div>
 
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 <dt>登録企業の操作</dt>
 <dd><a href="{$init_url}adm/arbeit?mode=list_regist"><i class="fa fa-folder-open"></i> 登録企業一覧</a></dd>
 
 
 <div class="hr"></div>
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 <dt>支払状況</dt>
 {foreach from=$paymentList key=k item=v}
 <dd><a href="{$init_url}adm/arbeit/?mode=list_entry&status_payment={$k}" ><i class="fa fa-caret-right"></i> {$v}({arb_entry_count status_payment=$k})</a></dd>
@@ -51,7 +51,7 @@
 {/foreach}
 {/if}
 
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 <dt>家庭教師の公開操作</dt>
 <dd><a href="{$init_url}adm/arbeit/?mode=list_tutor" ><i class="fa fa-list"></i> すべて{arb_tutors list=1}({$tutor['ct']}){/arb_tutors}</a></dd>
 <dd><a href="{$init_url}adm/arbeit/?mode=list_tutor&visible=1" ><i class="fa fa-file-text-o"></i> 公開中{arb_tutors list=1 visible=1}({$tutor['ct']}){/arb_tutors}</a></dd>
@@ -61,21 +61,21 @@
 <dd><a href="{$init_url}adm/arbeit/?mode=list_tutor&else=1" ><i class="fa fa-folder-open"></i> その他{arb_tutors list=1 else=1}({$tutor['ct']}){/arb_tutors}</a></dd>
 {/if}
 
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 <dt>家庭教師の新規作成</dt>
 <dd><a href="{$init_url}adm/arbeit/?mode=edit_tutor" ><i class="fa fa-edit"></i> 新規作成</a></dd>
 {/if}
 
 <div class="hr"></div>
 
-{if $authority['arbeit']['show']}
+{if $authority['arbeit'][0]}
 
 <dt>データベースの操作</dt>
 <dd><a href="{$init_url}adm/arbeit/?mode=edit_excel" >データ書き出し</a></dd>
 {/if}
 
 
-{if $authority['arbeit']['master']}
+{if $authority['arbeit'][0]==9}
 <dt>基本設定</dt>
 <dd><a href="{$init_url}adm/{$smarty.const.COMPONENT}/?mode=show_config" ><i class="fa fa-cogs"></i> 基本設定</a></dd>
 <dd><a href="{$init_url}adm/{$smarty.const.COMPONENT}/?mode=list_category" ><i class="fa fa-cogs"></i> 求人カテゴリ一覧・編集</a></dd>

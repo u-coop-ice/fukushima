@@ -19,37 +19,37 @@
 <ul class="flexnav" data-breakpoint="768">
 <li id="global[home]" {if $smarty.const.COMPONENT=="index.php"}class="focus"{/if}><a href="{$init_url}adm/">HOME</a></li>
 {if $login}
-{if $authority['ask']['show']}
+{if $authority['ask'][0]}
 <li id="global[ask]" {if $smarty.const.COMPONENT=="ask"}class="focus"{/if}><a href="{$init_url}adm/ask/">お問い合せ</a></li>
 {/if}
-{if $authority['entry']['show']}
+{if $authority['entry'][0]}
 <li id="global[entry]" {if $smarty.const.COMPONENT=="entry"}class="focus"{/if}><a href="{$init_url}adm/entry/">汎用エントリ</a></li>
 {/if}
 
-{if $authority['reserve']['show']}
+{if $authority['reserve'][0]}
 <li id="global[reserve]" {if $smarty.const.COMPONENT=="reserve"}class="focus"{/if}><a href="{$init_url}adm/reserve/">日付エントリ</a></li>
 {/if}
 
-{if $authority['member']['show']}
+{if $authority['member'][0]}
 <li id="global[member]" {if $smarty.const.COMPONENT=="member"}class="focus"{/if}><a href="{$init_url}adm/member/">組合員</a></li>
 {/if}
 
 
-{if $authority['living']['show']}
+{if $authority['living'][0]}
 <li id="global[living]" {if $smarty.const.COMPONENT=="living"}class="focus"{/if}><a href="{$init_url}adm/living/">不動産</a></li>
 {/if}
 
-{if $authority['shopping']['show']}
+{if $authority['shopping'][0]}
 <li id="global[shopping]" {if $smarty.const.COMPONENT=="shopping"}class="focus"{/if}><a href="{$init_url}adm/shopping/">ショッピング</a></li>
 {/if}
 
-{if $authority['mm']['show']}
+{if $authority['mm'][0]}
 <li id="global[mm]" {if $smarty.const.COMPONENT=="mm"}class="focus"{/if}><a href="{$init_url}adm/mm/">メール配信</a></li>
 {/if}
-{if $authority['regist']['show']}
+{if $authority['regist'][0]}
 <li id="global[regist]" {if $smarty.const.COMPONENT=="regist"}class="focus"{/if}><a href="{$init_url}adm/regist/">ユーザー</a></li>
 {/if}
-{if $authority['master']['show']}
+{if $authority['master'][0]}
 <li id="global[master]" {if $smarty.const.COMPONENT=="master"}class="focus"{/if}><a href="{$init_url}adm/master/">管理者限定</a></li>
 {/if}
 {/if}

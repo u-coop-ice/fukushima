@@ -204,7 +204,7 @@ $(function(){
 </table>
 
 
-{*if $authority[$smarty.const.COMPONENT]['edit']}
+{*if $authority[$smarty.const.COMPONENT]['edit'][0]}
 {if $regist['status']==-9}
 <form method="post" id="registForm" class="editForm" action="{$init_url}adm/ajax/?mode=edit_regist&regist_id={$app['regist_id']}&app_id={$app['id']}">
 <p class="right"><button class="btn btn-primary btn-sm" type="submit" name="submit" value="登録情報を編集する"><i class="fa fa-fw fa-edit"></i>登録情報を編集する</button></p>

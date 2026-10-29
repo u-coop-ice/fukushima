@@ -1,6 +1,6 @@
 <?php
 function smarty_block_sp_categories($params, $content, &$smarty, &$repeat) {
-	$categories = array();
+	$categories = [];
 	// データベース関連の情報を得る
 	$pdo = $smarty->getTemplateVars('pdo');
 
@@ -24,32 +24,32 @@ function smarty_block_sp_categories($params, $content, &$smarty, &$repeat) {
 			}
 			// カテゴリーのデータを初期化する
 			$data = $res->fetch();
-			$category = array('id' => 0,
+			$category = ['id' => 0,
 				'denomination' => '',
 				'ordermail' => '',
 				'pressmail' => '',
 				'description' => '',
-				'sort_order' => $data['ct'] + 1);
+				'sort_order' => $data['ct'] + 1];
 
-			$category['method'] = array(
-				'sex' => array('use' => 0)
-				, 'number' => array('use' => 0)
-				, 'membership' => array('use' => 0)
-				, 'univ' => array('use' => 0)
-				, 'schoolyear' => array('use' => 0)
-				, 'department' => array('use' => 0)
-				, 'major' => array('use' => 0)
-				, 'new_add' => array('use' => 0)
-				, 'address' => array('use' => 0)
-				, 'student_phone' => array('use' => 0)
-				, 'mobilephone' => array('use' => 0)
-				, 'phonenumber' => array('use' => 0)
-				, 'parent_name' => array('use' => 0)
-				, 'bank' => array('use' => 0)
-				, 'creditcard' => array('use' => 0)
-				, 'memo' => array('use' => 0)
-				, 'agree' => array('use' => 0),
-			);
+			$category['method'] = [
+				'sex' => ['use' => 0]
+				, 'number' => ['use' => 0]
+				, 'membership' => ['use' => 0]
+				, 'univ' => ['use' => 0]
+				, 'schoolyear' => ['use' => 0]
+				, 'department' => ['use' => 0]
+				, 'major' => ['use' => 0]
+				, 'new_add' => ['use' => 0]
+				, 'address' => ['use' => 0]
+				, 'student_phone' => ['use' => 0]
+				, 'mobilephone' => ['use' => 0]
+				, 'phonenumber' => ['use' => 0]
+				, 'parent_name' => ['use' => 0]
+				, 'bank' => ['use' => 0]
+				, 'creditcard' => ['use' => 0]
+				, 'memo' => ['use' => 0]
+				, 'agree' => ['use' => 0],
+			];
 
 			array_push($categories, $category);
 		}
@@ -60,9 +60,9 @@ function smarty_block_sp_categories($params, $content, &$smarty, &$repeat) {
 				$view_category_id = intval($smarty->getTemplateVars('view_category_id'));
 			}
 			// カテゴリーをデータベースから読み込む
-			$type = array();
-			$data = array();
-			$where = array();
+			$type = [];
+			$data = [];
+			$where = [];
 			$sql = <<< HERE
 SELECT c.*,COUNT(sc.id) as child_count
  FROM sp_category AS c
@@ -96,9 +96,9 @@ HERE;
 
 			// 管理者ユーザーの権限整理
 			if ($_SESSION['admin_mode']) {
-				if ($authority["master"]["master"] == 0) {
+				if ($authority["shopping"][0] < 9) {
 					if (is_array($authority["shopping"]["category_id"])) {
-						$ors = array();
+						$ors = [];
 						foreach ($authority["shopping"]["category_id"] as $ac) {
 							array_push($data, $ac);
 							array_push($ors, "c.id = ?\n");
@@ -206,7 +206,7 @@ HERE;
 	// 次のカテゴリーがあれば繰り返しを続け、なければ繰り返しから抜ける
 
 	for ($ii = 1; $ii <= 3; $ii++) {
-		$category['extra' . $ii . '_select'] = str_replace(array("\r\n", "\r", "\n"), ',', trim($category['extra' . $ii . '_select']));
+		$category['extra' . $ii . '_select'] = str_replace(["\r\n", "\r", "\n"], ',', trim($category['extra' . $ii . '_select']));
 		$tmp = explode(",", $category['extra' . $ii . '_select']);
 		array_unshift($tmp, '');
 		$smarty->assign('extra' . $ii . 'List', $tmp);

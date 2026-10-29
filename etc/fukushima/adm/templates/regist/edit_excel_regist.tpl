@@ -78,10 +78,10 @@ $("#component").on("change",function(){
 <div class="pull-left">
 <select class="form-control" id="component" name="component">
 <option value=""></option>
-{if $authority['entry']['master']}
+{if $authority['entry'][0] == 9}
 <option value="entry">汎用エントリ</option>
 {/if}
-{if $authority['shopping']['master']}
+{if $authority['shopping'][0] == 9}
 <option value="shopping">ショッピング</option>
 {/if}
 </select>
