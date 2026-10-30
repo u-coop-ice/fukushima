@@ -1,6 +1,6 @@
 <?php
 function smarty_block_orders($params, $content, &$smarty, &$repeat) {
-	$orders = array();
+	$orders = [];
 	// データベース関連の情報を得る
 	$pdo = $smarty->getTemplateVars('pdo');
 	$pdo_repl = $smarty->getTemplateVars('pdo_repl');
@@ -28,9 +28,9 @@ function smarty_block_orders($params, $content, &$smarty, &$repeat) {
 		$smarty->assign('no_order', 0);
 		$smarty->assign('db_error', 0);
 		// 注文情報をデータベースから読み込む
-		$data = array();
-		$where = array();
-		$or = array();
+		$data = [];
+		$where = [];
+		$or = [];
 
 		$sql4count = <<< HERE
 SELECT COUNT(app.id) AS ct
@@ -144,9 +144,9 @@ HERE;
 		// 管理者モード
 		if ($_SESSION['admin_mode']) {
 
-			if ($authority["master"]["master"] == 0) {
+			if ($authority["shopping"][0] < 9) {
 				if (is_array($authority["shopping"]["category_id"])) {
-					$ors = array();
+					$ors = [];
 					foreach ($authority["shopping"]["category_id"] as $ac) {
 						array_push($data, $ac);
 						array_push($ors, "c.id = ?\n");
