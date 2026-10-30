@@ -41,9 +41,9 @@ HERE;
 	// 管理者モード
 	if ($_SESSION['admin_mode']) {
 
-		if ($authority["master"]["master"] == 0) {
+		if ($authority["shopping"][0] < 9) {
 			if (is_array($authority["shopping"]["category_id"])) {
-				$ors = array();
+				$ors = [];
 				foreach ($authority["shopping"]["category_id"] as $ac) {
 					array_push($data, $ac);
 					array_push($ors, "category.id = ?\n");
