@@ -25,8 +25,9 @@ return confirm('メールマガジンを削除してもよろしいですか');
 <p class="alert alert-success">メールマガジンを削除しました。</p>
 {/if}
 
-
+{if $authority['mm'][0]>=7}
 <p><a class="btn btn-primary" href="{$self}?mode=edit_magazine">メールマガジンの新規作成</a></p>
+{/if}
 
 {if $view_search_word}
 <h5>「{$view_search_word}」の検索結果</h5>
@@ -76,12 +77,14 @@ return confirm('メールマガジンを削除してもよろしいですか');
 <td>{$magazine['sent_count']}</td>
 {else}
 <td class="delete_magazine_button">
+{if $authority['mm'][0]>=7}
 {if $view_status!="sent"}
 <form method="post" action="{$self}?mode=delete_magazine" class="delete_magazine" onsubmit="return deleteCheck();">
 <input type="hidden" name="query" value="{$query}" />
 <input type="hidden" name="id" value="{$magazine['id']}" />
 <button class="btn btn-primary btn-sm" type="submit" value="削除">削除</button>
 </form>
+{/if}
 {/if}
 </td>
 {/if}

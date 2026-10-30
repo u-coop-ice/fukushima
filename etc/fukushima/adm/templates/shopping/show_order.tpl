@@ -287,10 +287,15 @@ $(function(){
 <tr><th>受け取り店舗</th><td>{$order['store']}</td></tr>
 {/if}
 </table>
+
+{if $authority['shopping'][0]>=7}
+
 {if $order["admin_flag"]}
 <div class="pull-right">
 <p class="center"><a class="btn btn-primary" href="{$self}?mode=edit_order&app_id={$order['id']}"><i class="fa fa-fw fa-edit"></i>発送元・発送先を編集する</a></p>
 </div>{/if}
+{/if}
+
 <div class="clearfix"></div>
 
 {/if}{* ship_flag>-9 *}
@@ -466,6 +471,7 @@ $(function(){
 
 <tr><th>メールアドレス</th><td>{$regist['email']}
 {*if $regist["status"]==1*}
+{if $authority['shopping'][0]>=7 && $authority['ask'][0]>=7}
 
 <form class="mailForm" method="post" enctype="multipart/form-data" action="{$self}?mode=edit_mail">
 <input type="hidden" name="app_id" value="{$order['id']}" />
@@ -475,7 +481,7 @@ $(function(){
 </div>
 
 <button class="btn btn-primary" type="submit" name="freemail" value="お申込者へメール作成・送信" title="{$order_cust_email}へシステムからメールを送信します。送信履歴にも反映します。"><i class="fa fa-fw fa-edit"></i>お申込者へメール作成・送信</button>
-
+{/if}
 
 
 </form>

@@ -125,6 +125,7 @@ $(function(){
 {if $add_footer}
 </div><!-- accordion -->
 
+{if $authority['ask'][0]>=7}
 {if $add['user_status']==1}
 {if $add['noreply']<9}
 <div class="center">
@@ -153,6 +154,8 @@ $(function(){
 
 {/if}
 {/if}
+{/if}
+
 {/adds}
 </div>
 
@@ -178,11 +181,13 @@ $(function(){
 {/foreach}
 </table>
 
+{if $authority['entry'][0]>=7}
 {if $app['admin_flag']}
 <form method="post" id="appForm" class="editForm" action="{$self}?mode=edit_app">
 <input type="hidden" name="app_id" value="{$app['id']}" />
 <p class="right"><button class="btn btn-primary btn-sm" type="submit" name="submit" value="お申込み情報を編集する"><i class="fa fa-fw fa-edit"></i>お申込み情報を編集する</button></p>
 </form>
+{/if}
 {/if}
 
 <table class="inputForm" cellspacing="0">
@@ -204,7 +209,7 @@ $(function(){
 </table>
 
 
-{if $authority[$smarty.const.COMPONENT]['edit'][0]}
+{if $authority['regist'][0]>=7}
 {if $regist['status']==-9}
 <form method="post" id="registForm" class="editForm" action="{$init_url}adm/ajax/?mode=edit_regist&regist_id={$app['regist_id']}&app_id={$app['id']}">
 <p class="right"><button class="btn btn-primary btn-sm" type="submit" name="submit" value="登録情報を編集する"><i class="fa fa-fw fa-edit"></i>登録情報を編集する</button></p>
