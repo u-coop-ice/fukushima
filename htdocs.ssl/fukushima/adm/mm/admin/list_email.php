@@ -4,12 +4,18 @@ if (intval($_GET['deleted'])) {
 	$smarty->assign('deleted', 1);
 }
 
-$url_queries = array('mode=list_email');
+$url_queries = ['mode=list_email'];
 
 if (intval($_GET['group_id'])) {
 	$view_group_id = intval($_GET['group_id']);
 	$smarty->assign('view_group_id', $view_group_id);
 	array_push($url_queries, 'group_id=' . $view_group_id);
+
+	$adm = new adminMmDB();
+	$adm->set_mail_group_id($view_group_id);
+	$group = $adm->getMagazineGroup();
+
+	$smarty->assign('group', $group);
 }
 
 if (addslashes($_POST['searchword'])) {

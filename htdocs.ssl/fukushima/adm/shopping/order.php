@@ -52,18 +52,18 @@ if ($auth->getAuth()) {
 
 	$smarty->assign('mode', $_GET['mode']);
 
-	$modes = ['welcome' => 1,
-		'edit_order' => 1,
-		'confirm' => 1,
-		'regist' => 1,
-		'complete' => 1,
-		'add_cart' => 1,
-		'view_cart' => 1,
-		'clear_cart' => 1,
-		'delete_cart_item' => 1,
-		'change_num' => 1,
-		'list_item' => 1,
-		'save_order' => 1,
+	$modes = ['welcome' => 5,
+		'edit_order' => 5,
+		'confirm' => 5,
+		'regist' => 5,
+		'complete' => 5,
+		'add_cart' => 5,
+		'view_cart' => 5,
+		'clear_cart' => 5,
+		'delete_cart_item' => 5,
+		'change_num' => 5,
+		'list_item' => 5,
+		'save_order' => 5,
 		'search_regist' => 1,
 	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
@@ -71,9 +71,21 @@ if ($auth->getAuth()) {
 		$_GET['mode'] = 'edit_order';
 	}
 	// モードに応じたページを表示
-	if ($modes[$_GET['mode']]) {
-		$smarty->assign('show_menu', 1);
-		require_once 'admin/order/' . $_GET['mode'] . '.php';
+	if (isset($modes[$_GET['mode']]) && $modes[$_GET['mode']]) {
+
+		$authority = $smarty->getTemplateVars('authority');
+
+		if ($authority[COMPONENT][0] >= $modes[$_GET['mode']]) {
+
+			$smarty->assign('show_menu', 1);
+			require_once 'admin/' . $_GET['mode'] . '.php';
+
+		} else {
+			$smarty->assign('page_title', 'エラー');
+			$smarty->assign('errmsg', 'この操作に対する管理ユーザー権限がありません。');
+			$smarty->display('error.tpl');
+		}
+
 	}
 	// 存在しないモードを指定された場合はエラーを表示
 	else {
