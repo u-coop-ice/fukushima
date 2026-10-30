@@ -11,7 +11,7 @@
 
 
 
-{if $authority['regist'][0]}
+{if $authority['regist'][0]>=7}
 <dt><i class="fa fa-fw fa-square"></i>データベース</dt>
 {*<dd {if $mode=="edit_excel"}class="focus"{/if}><a href="{$init_url}adm/export/?mode=edit_excel_entry" ><i class="fa fa-fw fa-caret-right"></i>汎用エントリ書き出し</a></dd>*}
 <dd {if $mode=="edit_excel"}class="focus"{/if}><a href="{$init_url}adm/regist/?mode=edit_excel_regist" ><i class="fa fa-fw fa-caret-right"></i>ユーザーデータ書き出し</a></dd>

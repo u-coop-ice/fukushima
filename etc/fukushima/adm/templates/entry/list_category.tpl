@@ -65,7 +65,7 @@ function deleteCheck() {
 {get_app_count category_id=$category['id']}
 <tr{if $is_odd} class="odd"{/if}>
 
-<td style="word-break:break-all;"><a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a><br /><code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/entry/?cd={$category['code']}</code></td>
+<td style="word-break:break-all;">{if $authority['entry'][0]>=7}<a href="{$self}?mode=edit_category&category_id={$category['id']}">{$category['denomination']}</a>{else}{$category['denomination']}{/if}<br /><code class="btn-copy-clipboard" title="クリップボードに保存する"><i class="fa fa-fw fa-clipboard"></i>{$init_url}app/entry/?cd={$category['code']}</code></td>
 
 
 <td style="word-break:break-all;">{if $category['ordermail']}{$category['ordermail']}{else}{$init_ordermail}{/if}</td>

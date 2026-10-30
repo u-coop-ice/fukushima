@@ -13,21 +13,21 @@ if ($auth->getAuth()) {
 
 	$modes = ['welcome' => 1,
 		'list_app' => 1,
-		'edit_app' => 1,
-		'show_app' => 1,
-		'save_app' => 1,
-		'delete_app' => 1,
+		'edit_app' => 7,
+		'show_app' => 7,
+		'save_app' => 7,
+		'delete_app' => 7,
 		'list_category' => 1,
-		'edit_category' => 1,
-		'save_category' => 1,
-		'delete_category' => 1,
-		'delete_entry_all' => 1,
-		'delete_all' => 1,
-		'edit_excel' => 1,
-		'export_excel' => 1,
+		'edit_category' => 7,
+		'save_category' => 7,
+		'delete_category' => 7,
+		'delete_entry_all' => 7,
+		'delete_all' => 7,
+		'edit_excel' => 7,
+		'export_excel' => 7,
 
-		'edit_archived' => 1,
-		'save_archived' => 1,
+		'edit_archived' => 7,
+		'save_archived' => 7,
 
 		'create_entry_stock_multi_table' => 1,
 
@@ -37,9 +37,21 @@ if ($auth->getAuth()) {
 		$_GET['mode'] = 'list_category';
 	}
 	// モードに応じたページを表示
-	if ($modes[$_GET['mode']]) {
-		$smarty->assign('show_menu', 1);
-		require_once 'admin/' . $_GET['mode'] . '.php';
+	if (isset($modes[$_GET['mode']]) && $modes[$_GET['mode']]) {
+
+		$authority = $smarty->getTemplateVars('authority');
+
+		if ($authority[COMPONENT][0] >= $modes[$_GET['mode']]) {
+
+			$smarty->assign('show_menu', 1);
+			require_once 'admin/' . $_GET['mode'] . '.php';
+
+		} else {
+			$smarty->assign('page_title', 'エラー');
+			$smarty->assign('errmsg', 'この操作に対する管理ユーザー権限がありません。');
+			$smarty->display('error.tpl');
+		}
+
 	}
 	// 存在しないモードを指定された場合はエラーを表示
 	else {

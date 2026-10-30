@@ -106,6 +106,7 @@ $(function(){
 {if $add_footer}
 </div><!-- accordion -->
 
+{if $authority['ask'][0]>=7}
 {if $add['user_status']==1}
 {if $add['noreply']<9}
 <div class="center">
@@ -132,6 +133,7 @@ $(function(){
 </div>
 {/if}
 
+{/if}
 {/if}
 {/if}
 {/adds}
