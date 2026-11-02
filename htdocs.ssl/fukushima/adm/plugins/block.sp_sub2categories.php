@@ -23,10 +23,10 @@ function smarty_block_sp_sub2categories($params, $content, &$smarty, &$repeat) {
 			}
 			// カテゴリーのデータを初期化する
 			$data = $res->fetch();
-			$sub2category = array('id' => 0,
+			$sub2category = ['id' => 0,
 				'denomination' => '',
 				'description' => '',
-				'sort_order' => $data['ct'] + 1);
+				'sort_order' => $data['ct'] + 1];
 			array_push($sub2categories, $sub2category);
 			$ctr = 0;
 
@@ -39,9 +39,9 @@ function smarty_block_sp_sub2categories($params, $content, &$smarty, &$repeat) {
 
 			// カテゴリーをデータベースから読み込む
 
-			$where = array();
-			$data = array();
-			$where = array();
+			$where = [];
+			$data = [];
+			$where = [];
 
 			$sql = <<< HERE
 SELECT sc2.*, count(i.id) as entry_count
@@ -87,9 +87,9 @@ HERE;
 				// 管理者ユーザーの権限整理
 			} else if (CURRENT == "adm") {
 				if ($_SESSION['admin_mode']) {
-					if ($authority["master"]["master"] == 0) {
+					if ($authority["shopping"][0] < 9) {
 						if (is_array($authority["shopping"]["category_id"])) {
-							$ors = array();
+							$ors = [];
 							foreach ($authority["shopping"]["category_id"] as $ac) {
 								array_push($data, $ac);
 								array_push($ors, "c.id = ?\n");
