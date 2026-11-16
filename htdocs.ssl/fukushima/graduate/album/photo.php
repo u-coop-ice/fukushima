@@ -15,7 +15,7 @@ include $rootpath . 'include/header2.txt';
 <h2 id="personal">個人写真撮影会のお知らせ<br class="visible-xs-block"><span class="em09">【撮影無料・事前予約不要】</span></h2>
 
 <?php
-if (time() > strtotime("2026-10-19 16:30:00")){
+if (time() > strtotime("2026-12-02 15:00:00")){
 ?>
 <div class="alert alert-danger center" role="alert"><strong>2026年度10月の撮影会は終了しました</strong></div>
 <?php
@@ -24,7 +24,7 @@ if (time() > strtotime("2026-10-19 16:30:00")){
 
 <?php /* <p>個人写真撮影は来春ご卒業予定の<span class="red">学類生全員が対象</span>となっております。このアルバムは福島大学関係各所に寄贈しております。<span class="red">アルバム購入の有無にかかわらず、撮影会にはご参加いただいております</span>。<br>
 撮影は無料、ご予約も不要です。直接会場へお越し下さい。</p> */ ?>
-<p>撮影は無料、ご予約も不要です。直接会場へお越し下さい。</p>
+<p class="bold lead">令和8年度卒業生向けの個人写真撮影会はこの日程が最後になります。</p>
 
 
 
@@ -34,7 +34,7 @@ if (time() > strtotime("2026-10-19 16:30:00")){
 <tr><th data-title="　■ " data-label="対象">対象</th>
 <td colspan="2">令和8年度卒業予定の方</td></tr>
 <tr><th data-title="　■ " data-label="日時" rowspan="">日時</th>
-<td><strong class="em12">10/19(月)　<br class="visible-xs-block">11:30〜16:30</strong></td></tr>
+<td><strong class="em12">12/2(水)　<br class="visible-xs-block">11:30〜15:00</strong></td></tr>
 <tr><th data-title="　■ " data-label="場所">場所</th><td colspan="2">大学会館（生協）2階 大集会室</td>
 </tr>
 </tbody>
@@ -42,7 +42,6 @@ if (time() > strtotime("2026-10-19 16:30:00")){
 </div>
 
 <p class="rev_ind07">※想い出のユニホームやお友達とお揃いの小物などを持っての撮影も大歓迎！どんな風に撮影して欲しいかカメラマンにお気軽にご相談ください。</p>
-
 
 
 <?php /*
