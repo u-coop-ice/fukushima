@@ -1,6 +1,6 @@
 <?php
 function smarty_block_sp_subcategories($params, $content, &$smarty, &$repeat) {
-	$subcategories = array();
+	$subcategories = [];
 	// データベース関連の情報を得る
 	$pdo = $smarty->getTemplateVars('pdo');
 
@@ -25,21 +25,21 @@ function smarty_block_sp_subcategories($params, $content, &$smarty, &$repeat) {
 			}
 			// カテゴリーのデータを初期化する
 			$data = $res->fetch();
-			$subcategory = array('id' => 0,
+			$subcategory = ['id' => 0,
 				'name' => '',
 				'description' => '',
-				'sort_order' => $data['ct'] + 1);
+				'sort_order' => $data['ct'] + 1];
 			array_push($subcategories, $subcategory);
 		}
 		// カテゴリーを読み込む場合
 		else {
 			// カテゴリーをデータベースから読み込む
 
-			$where = array();
+			$where = [];
 
-			$type = array();
-			$data = array();
-			$where = array();
+			$type = [];
+			$data = [];
+			$where = [];
 
 			if (CURRENT == "app") {
 				$sql = <<< HERE
@@ -95,9 +95,9 @@ HERE;
 			if (CURRENT == "adm") {
 				if ($_SESSION['admin_mode']) {
 
-					if ($authority["master"]["master"] == 0) {
+					if ($authority["shopping"][0] < 9) {
 						if (is_array($authority["shopping"]["category_id"])) {
-							$ors = array();
+							$ors = [];
 							foreach ($authority["shopping"]["category_id"] as $ac) {
 								array_push($data, $ac);
 								array_push($ors, "c.id = ?\n");

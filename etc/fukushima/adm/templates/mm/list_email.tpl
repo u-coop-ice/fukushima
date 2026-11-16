@@ -21,7 +21,7 @@ return confirm('アドレスを削除してもよろしいですか');
 
 {* アドレス一覧本体 開始 *}
 <h4 class="page_title">
-{if $view_group_id}{groups id=$view_group_id}【{$group['denomination']}】{$page_title}</h4>
+{if $group['denomination']}【{$group['denomination']}】{/if}{$page_title}</h4>
 
 {if $view_searchword}
 <h5>「{$view_searchword}」の検索結果</h5>
@@ -36,7 +36,6 @@ return confirm('アドレスを削除してもよろしいですか');
 </p>
 {/if}
 
-{/groups}{/if}
 
 {regists group_id=$view_group_id per_page=20}
 {if $regist_header}

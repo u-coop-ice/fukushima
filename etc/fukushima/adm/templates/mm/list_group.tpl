@@ -18,7 +18,9 @@ return confirm('アドレスグループを削除してもよろしいですか'
 {if $deleted}
 <p class="alert alert-success">ユーザーグループを削除しました。</p>
 {/if}
+{if $authority['mm'][0]>=7}
 <p><a class="btn btn-primary" href="{$self}?mode=edit_group"><i class="fa fa-fw fa-plus"></i>ユーザーグループの新規作成</a></p>
+{/if}
 
 {groups}
 {if $group_header}

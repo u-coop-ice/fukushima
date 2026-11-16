@@ -91,7 +91,9 @@ $(function(){
 {include file='regist_union.tpl'}
 <tr><th class="mh" colspan="2">メール配信</th></tr>
 <tr><th>ニュースレーター・生協からのお知らせ</th><td>{$dmList[$regist['dm']|default:0]}
-	<span><a class="btn btn-primary btn-sm update_subscribe_mail" app_id={$regist['id']}><i class="fa fa-fw fa-envelope-o"></i> 配信設定の変更</a></span>
+{if $authority['regist'][0]>=7}
+<span><a class="btn btn-primary btn-sm update_subscribe_mail" app_id={$regist['id']}><i class="fa fa-fw fa-envelope-o"></i> 配信設定の変更</a></span>
+{/if}
 </td></tr>
 
 </table>

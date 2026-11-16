@@ -16,21 +16,21 @@ if ($auth->getAuth()) {
 
 	$smarty->assign('mode', $_GET['mode']);
 
-	$modes = array('welcome' => 1,
+	$modes = ['welcome' => 1,
 		'list_mail' => 1,
 		'show_mail' => 1,
-		'edit_mail' => 1,
-		'update_mail' => 1,
-		'save_mail' => 1,
+		'edit_mail' => 7,
+		'update_mail' => 7,
+		'save_mail' => 7,
 		'show_config' => 1,
-		'edit_config' => 1,
-		'save_config' => 1,
+		'edit_config' => 9,
+		'save_config' => 9,
 		'list_category' => 1,
-		'edit_category' => 1,
-		'save_category' => 1,
-		'delete_category' => 1,
+		'edit_category' => 7,
+		'save_category' => 7,
+		'delete_category' => 7,
 
-	);
+	];
 	// URLでモードが設定されていなければ、「welcome」のモードにする
 	if (!isset($_GET['mode'])) {
 		$_GET['mode'] = 'list_mail';
@@ -39,9 +39,21 @@ if ($auth->getAuth()) {
 		$_GET['add'] = 'ask';
 	}
 	// モードに応じたページを表示
-	if ($modes[$_GET['mode']]) {
-		$smarty->assign('show_menu', 1);
-		require_once 'admin/' . $_GET['mode'] . '.php';
+	if (isset($modes[$_GET['mode']]) && $modes[$_GET['mode']]) {
+
+		$authority = $smarty->getTemplateVars('authority');
+
+		if ($authority[COMPONENT][0] >= $modes[$_GET['mode']]) {
+
+			$smarty->assign('show_menu', 1);
+			require_once 'admin/' . $_GET['mode'] . '.php';
+
+		} else {
+			$smarty->assign('page_title', 'エラー');
+			$smarty->assign('errmsg', 'この操作に対する管理ユーザー権限がありません。');
+			$smarty->display('error.tpl');
+		}
+
 	}
 	// 存在しないモードを指定された場合はエラーを表示
 	else {

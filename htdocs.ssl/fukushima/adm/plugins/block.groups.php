@@ -1,6 +1,6 @@
 <?php
 function smarty_block_groups($params, $content, &$smarty, &$repeat) {
-	$groups = array();
+	$groups = [];
 	// データベース関連の情報を得る
 	$pdo = $smarty->getTemplateVars('pdo');
 
@@ -30,19 +30,19 @@ function smarty_block_groups($params, $content, &$smarty, &$repeat) {
 			}
 			// カテゴリーのデータを初期化する
 			$data = $res->fetch();
-			$group = array('id' => 0,
+			$group = ['id' => 0,
 				'name' => '',
 				'memo' => '',
-				'sort_order' => $data['ct'] + 1);
+				'sort_order' => $data['ct'] + 1];
 			array_push($groups, $group);
 		}
 		// カテゴリーを読み込む場合
 		else {
 			// カテゴリーをデータベースから読み込む
-			$type = array();
-			$data = array();
-			$where = array();
-			$or = array();
+			$type = [];
+			$data = [];
+			$where = [];
+			$or = [];
 			$sql = <<< HERE
 SELECT mg.* FROM mail_group AS mg
 

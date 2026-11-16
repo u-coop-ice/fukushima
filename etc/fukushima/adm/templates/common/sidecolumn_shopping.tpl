@@ -16,13 +16,16 @@
 </dl>
 {/foreach}
 
+{if $authority['shopping'][0]>=7}
 <dd><a href="{$self}?mode=list_exported_no_treatment"><i class="fa fa-check-square"></i> 取扱フラグ一斉更新</a></dd>
 
 <dd><a href="./order.php"><i class="fa fa-shopping-cart"></i> 新規注文作成</a><span class="tag min red">new</span></dd>
-
+{/if}
 <dd><a href="{$self}?mode=list_stock_log"><i class="fa fa-caret-right"></i> 在庫ログ一覧</a></dd>
 
 </dl>
+
+{if $authority['shopping'][0]>=7}
 
 <dl>
 <dt><i class="fa fa-square"></i> 入金管理<span class="min tag">未対応・手配済・取消</span></dt>
@@ -46,8 +49,11 @@
 <dd><a href="{$self}?mode=list_nopaid"><i class="fa fa-envelope-o"></i> 支払い督促メール配信</a></dd>
 
 </dl>
+{/if}
 
 </div>
+
+{if $authority['ask'][0]}
 
 <div class="sidecolumn navi">
 
@@ -57,6 +63,9 @@
 </dl>
 
 </div>
+{/if}
+
+{if $authority['shopping'][0]>=7}
 
 <div class="sidecolumn navi">
 <dl>
@@ -67,6 +76,9 @@
 <dd><a href="{$self}?mode=edit_excel_jp"><i class="fa fa-file-excel-o"></i> 注文データの書き出し<span class="min tag red">ゆうパック</span></a></dd>
 </dl>
 </div>
+{/if}
+
+{if $authority['shopping'][0]>=7}
 
 <div class="sidecolumn navi">
 
@@ -109,7 +121,7 @@
 <dd><a href="{$self}?mode=list_sub2category"><i class="fa fa-list"></i> 孫カテゴリの一覧</a></dd>
 </dl>
 </div>
-
+{/if}
 
 <div class="sidecolumn navi">
 

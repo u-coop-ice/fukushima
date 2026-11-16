@@ -37,9 +37,21 @@ if ($auth->getAuth()) {
 		$_GET['mode'] = 'welcome';
 	}
 	// モードに応じたページを表示
-	if ($modes[$_GET['mode']]) {
-		$smarty->assign('show_menu', 1);
-		require_once 'admin/' . $_GET['mode'] . '.php';
+	if (isset($modes[$_GET['mode']]) && $modes[$_GET['mode']]) {
+
+		$authority = $smarty->getTemplateVars('authority');
+
+		if ($authority[COMPONENT][0] >= $modes[$_GET['mode']]) {
+
+			$smarty->assign('show_menu', 1);
+			require_once 'admin/' . $_GET['mode'] . '.php';
+
+		} else {
+			$smarty->assign('page_title', 'エラー');
+			$smarty->assign('errmsg', 'この操作に対する管理ユーザー権限がありません。');
+			$smarty->display('error.tpl');
+		}
+
 	}
 	// 存在しないモードを指定された場合はエラーを表示
 	else {

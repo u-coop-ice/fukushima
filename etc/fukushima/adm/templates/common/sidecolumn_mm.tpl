@@ -2,7 +2,9 @@
 <div class="sidecolumn navi">
 <dl>
 <dt>メールマガジン</dt>
+{if $authority['mm'][0]>=7}
 <dd><a href="{$self}?mode=edit_magazine"><i class="fa fa-fw fa-pencil"></i>新規作成</a></dd>
+{/if}
 <dd><a href="{$self}?mode=list_magazine&status=sent"><i class="fa fa-fw fa-inbox"></i>送信済みトレイ</a>
 <dl class="pad_l">
 {send sent=1}
@@ -36,7 +38,9 @@
 </dl>
 </dd>
 
+{if $authority['mm'][0]>=9}
 <dd><a href="{$self}?mode=delete_magazine_all"><i class="fa fa-fw fa-trash"></i> メルマガ一括削除</a></dd>
+{/if}
 <dt>登録ユーザー</dt>
 <dd><a href="{$self}?mode=list_email"><i class="fa fa-fw fa-list-ul"></i> 登録ユーザー一覧</a>
 <dl class="pad_l">
@@ -46,7 +50,9 @@
 </dl>
 </dd>
 <dt>ユーザーグループ</dt>
+{if $authority['mm'][0]>=7}
 <dd><a href="{$self}?mode=edit_group"><i class="fa fa-fw fa-plus"></i>グループの新規作成</a></dd>
+{/if}
 <dd><a href="{$self}?mode=list_group"><i class="fa fa-fw fa-list-ul"></i>グループの一覧</a>
 </dd>
 
