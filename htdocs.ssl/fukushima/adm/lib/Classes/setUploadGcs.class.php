@@ -4,11 +4,11 @@ use Google\Cloud\Storage\StorageClient;
 
 class setUploadGcs {
 
-	const PROJECT_ID = 'uc-kimachi';
+	const PROJECT_ID                     = 'uc-kimachi';
 	const GOOGLE_APPLICATION_CREDENTIALS = '/etc/cloud_sql_proxy/UCkimachi-6fe52f3516c3.json';
-	const GOOGLE_GCS_URL = 'https://storage.googleapis.com/';
-	const BUCKET_NAME = 'hachiman-storage';
-	const TMP_FILE = '/var/cache/gcp/tmp.jpg';
+	const GOOGLE_GCS_URL                 = 'https://storage.googleapis.com/';
+	const BUCKET_NAME                    = 'hachiman-wp-storage';
+	const TMP_FILE                       = '/var/cache/gcp/tmp.jpg';
 
 	public function __construct() {
 
@@ -243,7 +243,7 @@ class setUploadGcs {
 
 		$sql .= " FROM {$this->_pfx2}${tbl} WHERE id = ?";
 
-		$data = array(intval($this->_item_id));
+		$data = [intval($this->_item_id)];
 		try {
 			$res = $pdo->prepare($sql);
 			$res->execute($data);
@@ -283,7 +283,7 @@ class setUploadGcs {
 
 		$sql .= " WHERE id = ?";
 
-		$data = array($this->_item_id);
+		$data = [$this->_item_id];
 		try {
 			$res = $pdo->prepare($sql);
 			$res->execute($data);
